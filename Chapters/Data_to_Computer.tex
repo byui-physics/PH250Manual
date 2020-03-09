@@ -649,141 +649,141 @@ ser.close()
 ###############################################################################
 \end{verbatim}
 
-\section{Using an SD Card Reader}
-
-Now that we have a computer reading our data and saving it, you probably
-wondered if we couldn't just save the data on a SD card using the Arduino
-and no computer. That way, we could build a stand-alone data logger! It
-might be necessary to do this if you are going to launch your instrument on
-a high altitude balloon, for example. Then you could take the data on the SD
-card and read it from the card to the computer by putting the whole card in
-your computers SD card slot. To do this we will need an additional piece of
-hardware that can handle an SD card. This is called a SD card reader
-\textquotedblleft breakout board.\textquotedblright \begin{figure}[h!]
-\includegraphics[width=3.614in,height=%
-2.3981in]{PH4CAU00}
-\end{figure}And we will need to wire this to
-our Arduino. There are six pins on our SD card reader board. Those six pins
-need to be wired to the following Arduino pins:
-
-\begin{equation*}
-\begin{tabular}{ll}
-SD Card Reader & Arduino \\ 
-GND & GND \\ 
-VCC & +5V \\ 
-MISO & Pin 12 \\ 
-MOSI & Pin 11 \\ 
-SCK & Pin 13 \\ 
-CS & Pin 10%
-\end{tabular}%
-\end{equation*}
-
-The pin names on the SD card reader board are usually on the back of the
-card.\begin{figure}[h!]
-\includegraphics[width=4.5152in,height=2.5365in]{PH4CAV2N}
-\end{figure}Of course, we will need a sketch
-to tell the Arduino what to do with this new hardware. Here is an example:
-\begin{verbatim}
-////////////////////////////////////////////////////////////////////////////
-//  SD card datalogger
-//
-// This example shows how to log data from three analog sensors
-// to an SD card using the SD library.
-//
-// The circuit:
-// * analog sensors on analog pin 0
-// * SD card attached to SPI bus as follows:
-// * MOSI - pin 11
-// * MISO - pin 12
-// * CLK  - pin 13
-// * CS   - pin 10 (This one we can choose. Pin 10 is convenient
-//                  but we could choose any of the digital pins)
-// created  24 Nov 2010  by Tom Igoe
-// modified 9 Apr 2012  by Tom Igoe
-// Modified 26 Apr 2017 by Todd Lines
-//
-// This example code is in the public domain.
-////////////////////////////////////////////////////////////////////////////
- 
-#include <SPI.h>
-#include <SD.h>
- 
-const int CS_Pin = 10;       // this sets the pin for the CS connection
-                             // to the SD card reader
- 
-////////////////////////////////////////////////////////////////////////////
-void setup() {
-    // Open serial communications and wait for port to open:
-    Serial.begin(9600);    // the 9600 tells our Arduino how fast to send data
- 
-    // Check to see if the serial port is working
-    while (!Serial) {
-        ; // wait for serial port to connect. 
-          // If it is, just keep going (don't do anything)
-    }
-    // Send a message to the Serial Monitor telling us that we are starting
-    //     to use the SD card.
-    Serial.print("Initializing SD card...");
- 
-    // See if the card is present and can be initialized.
-    //    If there is a problem, tell us using the serial monitor.
-    if (!SD.begin(CS_Pin)) {
-        Serial.println("Card failed, or not present");
-        // it didn't start the SD card write, so don't do anything more:
-        return;
-    }
-    // But if the SD card did initialize, tell us on the serial monitor.
-    Serial.println("card initialized.");
-}
- 
-////////////////////////////////////////////////////////////////////////////
-void loop() {
-    // We will have to turn our voltage numbers into text to send to our file
-    // let's make a text variable (called a string) for this
-    String dataString = ""; 
- 
-    // let's choose our analog input  0 to read
-    int analogPin = 0;
- 
-    // read the analog input
-    int sensor = analogRead(analogPin);
- 
-    // make it text
-    dataString += String(sensor);
-  
-    // open the file. note that only one file can be open at a time,
-    // so you have to close this one before opening another.
-    File dataFile = SD.open("datalog.txt", FILE_WRITE);
- 
-    // If the file is available, write to it, but then close it 
-    //   right after. We will only keep the file open while we are 
-    //   writing to it. This is safer. It helps prevent getting files 
-    //   corrupted, and let's the Arduino keep adding to the file after 
-    //   a problem.
-    if (dataFile) {
-        // print our data point
-        dataFile.println(dataString);
- 
-        // close the file for safety
-        dataFile.close();
- 
-        // print to the serial monitor too:
-        Serial.println(dataString);
-    }
- 
-    // if the file isn't open, pop up an error:
-    else {
-        Serial.println("error opening datalog.txt");
-    }
-}
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-\end{verbatim}
-
-Make sure you understand each line of this code. It is a little fancy in
-that it tries to check to make sure the SD card file is working properly and
-warns you if something is wrong. But most of the code is comments. So don't
-be discouraged by the length.
+%\section{Using an SD Card Reader}
+%
+%Now that we have a computer reading our data and saving it, you probably
+%wondered if we couldn't just save the data on a SD card using the Arduino
+%and no computer. That way, we could build a stand-alone data logger! It
+%might be necessary to do this if you are going to launch your instrument on
+%a high altitude balloon, for example. Then you could take the data on the SD
+%card and read it from the card to the computer by putting the whole card in
+%your computers SD card slot. To do this we will need an additional piece of
+%hardware that can handle an SD card. This is called a SD card reader
+%\textquotedblleft breakout board.\textquotedblright \begin{figure}[h!]
+%\includegraphics[width=3.614in,height=%
+%2.3981in]{PH4CAU00}
+%\end{figure}And we will need to wire this to
+%our Arduino. There are six pins on our SD card reader board. Those six pins
+%need to be wired to the following Arduino pins:
+%
+%\begin{equation*}
+%\begin{tabular}{ll}
+%SD Card Reader & Arduino \\ 
+%GND & GND \\ 
+%VCC & +5V \\ 
+%MISO & Pin 12 \\ 
+%MOSI & Pin 11 \\ 
+%SCK & Pin 13 \\ 
+%CS & Pin 10%
+%\end{tabular}%
+%\end{equation*}
+%
+%The pin names on the SD card reader board are usually on the back of the
+%card.\begin{figure}[h!]
+%\includegraphics[width=4.5152in,height=2.5365in]{PH4CAV2N}
+%\end{figure}Of course, we will need a sketch
+%to tell the Arduino what to do with this new hardware. Here is an example:
+%\begin{verbatim}
+%////////////////////////////////////////////////////////////////////////////
+%//  SD card datalogger
+%//
+%// This example shows how to log data from three analog sensors
+%// to an SD card using the SD library.
+%//
+%// The circuit:
+%// * analog sensors on analog pin 0
+%// * SD card attached to SPI bus as follows:
+%// * MOSI - pin 11
+%// * MISO - pin 12
+%// * CLK  - pin 13
+%// * CS   - pin 10 (This one we can choose. Pin 10 is convenient
+%//                  but we could choose any of the digital pins)
+%// created  24 Nov 2010  by Tom Igoe
+%// modified 9 Apr 2012  by Tom Igoe
+%// Modified 26 Apr 2017 by Todd Lines
+%//
+%// This example code is in the public domain.
+%////////////////////////////////////////////////////////////////////////////
+% 
+%#include <SPI.h>
+%#include <SD.h>
+% 
+%const int CS_Pin = 10;       // this sets the pin for the CS connection
+%                             // to the SD card reader
+% 
+%////////////////////////////////////////////////////////////////////////////
+%void setup() {
+%    // Open serial communications and wait for port to open:
+%    Serial.begin(9600);    // the 9600 tells our Arduino how fast to send data
+% 
+%    // Check to see if the serial port is working
+%    while (!Serial) {
+%        ; // wait for serial port to connect. 
+%          // If it is, just keep going (don't do anything)
+%    }
+%    // Send a message to the Serial Monitor telling us that we are starting
+%    //     to use the SD card.
+%    Serial.print("Initializing SD card...");
+% 
+%    // See if the card is present and can be initialized.
+%    //    If there is a problem, tell us using the serial monitor.
+%    if (!SD.begin(CS_Pin)) {
+%        Serial.println("Card failed, or not present");
+%        // it didn't start the SD card write, so don't do anything more:
+%        return;
+%    }
+%    // But if the SD card did initialize, tell us on the serial monitor.
+%    Serial.println("card initialized.");
+%}
+% 
+%////////////////////////////////////////////////////////////////////////////
+%void loop() {
+%    // We will have to turn our voltage numbers into text to send to our file
+%    // let's make a text variable (called a string) for this
+%    String dataString = ""; 
+% 
+%    // let's choose our analog input  0 to read
+%    int analogPin = 0;
+% 
+%    // read the analog input
+%    int sensor = analogRead(analogPin);
+% 
+%    // make it text
+%    dataString += String(sensor);
+%  
+%    // open the file. note that only one file can be open at a time,
+%    // so you have to close this one before opening another.
+%    File dataFile = SD.open("datalog.txt", FILE_WRITE);
+% 
+%    // If the file is available, write to it, but then close it 
+%    //   right after. We will only keep the file open while we are 
+%    //   writing to it. This is safer. It helps prevent getting files 
+%    //   corrupted, and let's the Arduino keep adding to the file after 
+%    //   a problem.
+%    if (dataFile) {
+%        // print our data point
+%        dataFile.println(dataString);
+% 
+%        // close the file for safety
+%        dataFile.close();
+% 
+%        // print to the serial monitor too:
+%        Serial.println(dataString);
+%    }
+% 
+%    // if the file isn't open, pop up an error:
+%    else {
+%        Serial.println("error opening datalog.txt");
+%    }
+%}
+%////////////////////////////////////////////////////////////////////////////
+%////////////////////////////////////////////////////////////////////////////
+%\end{verbatim}
+%
+%Make sure you understand each line of this code. It is a little fancy in
+%that it tries to check to make sure the SD card file is working properly and
+%warns you if something is wrong. But most of the code is comments. So don't
+%be discouraged by the length.
 
 \section{Lab Assignment}
 
@@ -821,18 +821,6 @@ save data correctly. Help if they do not.
 sheet\textquotedblright\ in preparation for your design project later in the
 semester.
 
-\item If there is time...add an SD card reader to your Arduino setup.
 
-\begin{enumerate}
-\item Wire up an SD card reader
-
-\item Write the new sketch. The instructions given above should help.
-
-\item Record data from your Arduino like a simple voltmeter.
-
-\item Check to see if the SD card file has the voltages you expected.
-
-\item Make sure you save your new sketch and record what you did in your lab
-notebook.
 \end{enumerate}
 \end{enumerate}
