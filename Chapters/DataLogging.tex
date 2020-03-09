@@ -1,29 +1,16 @@
 %DataLogging
-It today's lab, we are going to measure temperature. We will use a
-transducer that turns temperature (energy of the air molecules around us)
-into a voltage. So we are still learning to use trasducers. But instead of
-concentrating on validating a physical model for temperature, we are going
-to concentrate on building an independent system to measure temperature, one
-that doesn't have to be connected to our computer.
+It today's lab, we are going to measure temperature. We will use a transducer that turns temperature (energy of the air molecules around us) into a voltage. So we are still learning to use trasducers. But instead of concentrating on validating a physical model for temperature, we are going to concentrate on building an independent system to measure temperature, one that doesn't have to be connected to our computer.
 
-Often we need to have a data collection device that can operate far from our
-computer, but still save data for later use. For example, if you were to
-launch your Arduino-instrument on a high altitude balloon.
+Often we need to have a data collection device that can operate far from our computer, but still save data for later use. For example, if you were to launch your Arduino-instrument on a high altitude balloon.
 
-We already saw a SD card reader before. Some of us got them working. But
-today we all need to be able to have our Arduino collect data and save it
-with no computer attached.
+We already saw a SD card reader before. Some of us got them working. But today we all need to be able to have our Arduino collect data and save it with no computer attached.
 
 \section{Using an SD Card Reader}
 
-Some of us succeeded in incorporating a SD card into our Arduino based
-instruments. But today we will revisit this. To do this we will need a SD
-card and to wire up an SD card breakout board.\begin{figure}[h!]
-\includegraphics[width=3.614in,height=2.3981in%
-]{PH4CAX47}
-\end{figure}Recall that there are six pins on
-our SD card reader board. Those six pins need to be wired to the following
-Arduino pins:
+Some of us succeeded in incorporating a SD card into our Arduino based instruments. But today we will revisit this. To do this we will need a SD card and to wire up an SD card breakout board.\begin{figure}[h!] 
+\includegraphics[width=3.614in,height=2.3981in]{PH4CAX47}
+\end{figure}
+Recall that there are six pins on our SD card reader board. Those six pins need to be wired to the following Arduino pins:
 
 \begin{equation*}
 \begin{tabular}{ll}
@@ -37,15 +24,14 @@ CS & Pin 4%
 \end{tabular}%
 \end{equation*}
 
-The pin names on the SD card reader board are usually on the back of the
-card.\begin{figure}[h!]
+The pin names on the SD card reader board are usually on the back of the card.\begin{figure}[h!]
+	
 \includegraphics[width=4.5152in,height=2.5365in]{PH4CAX48}
 \end{figure} \begin{figure}[h!]
 \includegraphics[width=4.1917in,height=3.1548in%
 ]{PH4CAX49}
-\end{figure}This figure includes a sensor, in
-this case a temperature sensing thermistor. Of course, we will need a sketch
-to tell the Arduino what to do with this new hardware. Here is an example:
+\end{figure}
+This figure includes a sensor, in this case a temperature sensing thermistor. Of course, we will need a sketch to tell the Arduino what to do with this new hardware. Here is an example:
 
 \bigskip
 \begin{verbatim}
@@ -150,46 +136,22 @@ to tell the Arduino what to do with this new hardware. Here is an example:
  
 \end{verbatim}
 
-Make sure you understand each line of this code does. We will modify this to
-include a special sensor today. So you will need to understand exactly what
-it does. It is a little fancy in that it tries to check to make sure the
-file is working properly and warns you if something is wrong. But most of
-the code is comments. So don't be discouraged by the length.
+Make sure you understand each line of this code does. We will modify this to include a special sensor today. So you will need to understand exactly what it does. It is a little fancy in that it tries to check to make sure the file is working properly and warns you if something is wrong. But most of the code is comments. So don't be discouraged by the length.
 
-Note that this is a very basic sketch. You should consider improving this
-sketch (there will be suggestions in the lab assignment below). You may need
-to improve this sketch for your group project.
+Note that this is a very basic sketch. You should consider improving this sketch (there will be suggestions in the lab assignment below). You may need to improve this sketch for your group project.
 
 \section{Time Stamping}
 
-Very often, we need to know exactly when a data point was taken. We saw this
-in our RC circuit lab. Saving data to a SD card could be more useful if we
-knew the collection time of each data point and could save that along with
-the data point, itself. We could use a stop watch and write it down, but
-that defeats our goal of having the computer do the data collection. We want
-the Arduino system to be able to do this on it's own. To do that, we need to
-add another hardware piece to our data logger. We need to add a clock.
+Very often, we need to know exactly when a data point was taken. We saw this in our RC circuit lab. Saving data to a SD card could be more useful if we knew the collection time of each data point and could save that along with the data point, itself. We could use a stop watch and write it down, but that defeats our goal of having the computer do the data collection. We want the Arduino system to be able to do this on it's own. To do that, we need to add another hardware piece to our data logger. We need to add a clock. 
 
-There is a breakout board that is a stand-alone clock. It has it's own
-battery that keeps the clock going when the rest of the instrument is turned
-off. When the Arduino starts up, the data logger code can get the time from
-the breakout board clock. This will allow the data logger to know the exact
-time for each measurement and to place a time stamp on that measurement when
-the data point is recorded. These breakout boards are called Real Time
-Clocks (RTC) and the ones we have are the Adafruit DS3231 Precision RTC
-breakout boards (https://www.adafruit.com/product/3013).\begin{figure}[h!]
-\includegraphics[width=%
-5.1214in,height=1.9294in]{PH4CAX4A}
+There is a breakout board that is a stand-alone clock. It has it's own battery that keeps the clock going when the rest of the instrument is turned off. When the Arduino starts up, the data logger code can get the time from the breakout board clock. This will allow the data logger to know the exact time for each measurement and to place a time stamp on that measurement when the data point is recorded. These breakout boards are called Real Time Clocks (RTC) and the ones we have are the Adafruit DS3231 Precision RTC breakout boards (https://www.adafruit.com/product/3013).
+\begin{figure}[h!]
+\includegraphics[width=5.1214in,height=1.9294in]{PH4CAX4A}
 \end{figure}
 
 \section{Connecting the RTC to an Arduino}
 
-The real time clock uses the I2c bus on the Arduino. A \textquotedblleft
-bus\textquotedblright\ is a set of pins that can be used by more than one
-instrument at a time. Each instrument has a special code or
-\textquotedblleft address\textquotedblright\ to identify it. In your Arduino
-code, you use this address to tell the Arduino processor which instrument to
-get data from.
+The real time clock uses the I2c bus on the Arduino. A \textquotedblleft bus\textquotedblright\ is a set of pins that can be used by more than one instrument at a time. Each instrument has a special code or \textquotedblleft address\textquotedblright\ to identify it. In your Arduino code, you use this address to tell the Arduino processor which instrument to get data from.
 
 The RTC only needs four wires. The wiring is as follows:
 
@@ -203,12 +165,7 @@ SDA & SDA%
 \end{tabular}%
 \end{equation*}
 
-Since this is an Adafruit product, there is a nice tutorial on wiring up the
-RTC and a library to download and use to make it run
-(https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/). The
-Adafruit example code is shown below. I have commented out the section that
-would set the clock. Hopefully your clock will already be set, so you won't
-use that part of the code. If not, ask for help from your Instructor or TA.
+Since this is an Adafruit product, there is a nice tutorial on wiring up the RTC and a library to download and use to make it run (https://learn.adafruit.com/adafruit-ds3231-precision-rtc-breakout/). The Adafruit example code is shown below. I have commented out the section that would set the clock. Hopefully your clock will already be set, so you won't use that part of the code. If not, ask for help from your Instructor or TA.
 
 \bigskip
 \begin{verbatim}
@@ -296,50 +253,26 @@ void loop () {
 
 \bigskip
 
-You will need to modify today's data logger code to use the RTC. You can do
-this by reading the example code and figuring out how it prints the time.
-Then modify this to print to our SD card instead of the serial port.
+You will need to modify today's data logger code to use the RTC. You can do this by reading the example code and figuring out how it prints the time. Then modify this to print to our SD card instead of the serial port. 
 
-For our final group designed lab, you will likely want a RTC. Because our
-real time clocks will have to eventually be resent, it is probably not a
-good idea to solder the breakout board directly into your instrument.
+For our final group designed lab, you will likely want a RTC. Because our real time clocks will have to eventually be resent, it is probably not a good idea to solder the breakout board directly into your instrument.
 
 \section{Lab Assignment}
 
-Work in groups of three to five for this set of problems. We have enough
-equipment for you to each build your own data logger, but work together and
-don't go on to another step until each team member has completed the
-previous step.
+Work in groups of three to five for this set of problems. We have enough equipment for you to each build your own data logger, but work together and don't go on to another step until each team member has completed the previous step.
 
 \begin{enumerate}
 \item Build a datalogger using a SD\ card breakout board.
 
-\item Modify the code to take data from a thermistor (included in your kit)
-and do the math to turn the thermal resistance into a temperature. You will
-have to look at your Arduino kit manual to know how to write this code. You
-can start with the example code, but you will have to modify it for the
-thermistor measurement. Record the temperature on the SD card.
+\item Modify the code to take data from a thermistor (included in your kit) and do the math to turn the thermal resistance into a temperature. You will have to look at your Arduino kit manual to know how to write this code. You can start with the example code, but you will have to modify it for the thermistor measurement. Record the temperature on the SD card.
 
-\item Remove the SD card after the data collection is complete, and make
-sure the data makes sense (compare to a thermometer in the room) and that
-the SD card writing is working.
+\item Remove the SD card after the data collection is complete, and make sure the data makes sense (compare to a thermometer in the room) and that the SD card writing is working.
 
-\item Add a Real time clock (RTC) to your data logger. You will have to
-determine how to code the sketch by looking at the example code and
-modifying the data logger code to use the same RTC commands. It might be a
-good idea to get the example code (and it's libraries) working before you
-try your modified data logger sketch so you can be sure the RTC is working.
+\item Add a Real time clock (RTC) to your data logger. You will have to determine how to code the sketch by looking at the example code and modifying the data logger code to use the same RTC commands. It might be a good idea to get the example code (and it's libraries) working before you try your modified data logger sketch so you can be sure the RTC is working.
 
-\item If there is time, try powering your sensor system on a battery to make
-sure it can operate independently.
+\item If there is time, try powering your sensor system on a battery to make sure it can operate independently.
 
-\item If there is time, switch to the digital temperature and humidly
-sensor. Modify your sketch to read in and output both temperature and
-humidly values. Again you will have to look at the Arduino kit manual to
-figure out how to do this. Check your data file to make sure all is working
+\item If there is time, switch to the digital temperature and humidly sensor. Modify your sketch to read in and output both temperature and humidly values. Again you will have to look at the Arduino kit manual to figure out how to do this. Check your data file to make sure all is working
 \end{enumerate}
 
-%TCIMACRO{\TeXButton{vfill}{\vfill}}%
-%BeginExpansion
-\vfill%
-%EndExpansion
+
