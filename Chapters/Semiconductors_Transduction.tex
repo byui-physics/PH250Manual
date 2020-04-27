@@ -104,37 +104,37 @@ simple voltmeter. The sketch is very simple, It is just our simple voltmeter
 sketch modified to output only the voltage. That will make it much easier to
 grab the data using our Python code. We just need to input a single number
 at a time from the serial port. Here is an example:
-\begin{verbatim}
-////////////////////////////////////////////////////////////////////////////
+ \begin{lstlisting}[language=Arduino]
+/////////////////////////////////////////////////////////
 // very simple voltmeter used to measure light with a LED
 // will measure 0 to 5V only!
 // Voltages outside 0 to 5V will destroy your Arduino!!!
-/////DEFINITIONS////////////////////////////////////////////////////////////
+/////DEFINITIONS/////////////////////////////////////////
 // Define a variable as our analog input pin number
- int AI0 = 0;
+int AI0 = 0;
 // Remember we have to convert from A2D units to voltages
 float delta_v_min=0.0049;   // volts per A2D unit
 // Two more variables to use in calculations
 int value = 0;
 float voltage = 0.0;
-/////SETUP/////////////////////////////////////////////////////////////////
- void setup() {
+/////SETUP///////////////////////////////////////////////
+void setup() {
   // put your setup code here, to run once:
   //Initiate Serial Communication
   Serial.begin(9600);    //9600 baud rate
-    }
-/////LOOP?/////////////////////////////////////////////////////////////////
- void loop() {
+  }
+/////LOOP?///////////////////////////////////////////////
+void loop() {
   // read in the voltage in A2D units form the serial port
   value = analogRead(AI0); 
   // convert to voltage units using delta_v_min
   voltage = value * delta_v_min;
   // send the voltage to the serial port 
   Serial.println(voltage, 4);  
-}
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-\end{verbatim}
+  }
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+ \end{lstlisting}
 
 We also will need a Python code that can not only collect data, but tell us
 when to move our instrument to the next position. And can use a trick from
@@ -201,12 +201,12 @@ for while we move the sensor. The other does the averaging of our voltages.
 Read through the example code and make sure it makes some sense. This code
 is more complicated, so it make take some time to understand what it does.
 If you have questions, ask your instructor or TA.
-\begin{verbatim}
-##########################################################################
-##########################################################################
-#  Code to time a collection and use an average as the data point and the 
-#   standard deviation as the uncertainty. The average and std data is 
-#   stored in a file.
+\begin{python}
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
+#  Code to time a collection and use an average as the data point and  
+#   the standard deviation as the uncertainty. The average and std  
+#   data is stored in a file.
 #
 #  We will use a light sensor, but a noisy one. So we want to average 
 #    the voltage from the light sensor to get a better estimate of 
@@ -221,30 +221,31 @@ If you have questions, ask your instructor or TA.
 # # # 
 #  As usual with data from our Arduino, we need to keep reading data 
 #    from the serial port all the time or it backs up in a buffer. So 
-#    we will keep reading data during the count down, but not do anything 
-#    with the values we read until we have a chance to get the sensor 
-#    in place and our countdown has stopped.
+#    we will keep reading data during the count down, but not do  
+#    anything with the values we read until we have a chance to get  
+#    the sensor in place and our countdown has stopped.
 # # #
 #  We also need to turn our Arduino data from the serial port into a 
 #    number. What comes from the serial port is just text. Think about 
 #    how a Word document is different than an Excel document. We need 
 #    the numbers we are sending from the Arduino to be actual numbers.  
 #    To do this we need to get rid of any extra characters. No spaces, 
-#    no letters, no strange characters. We will use the Regular Expressions 
-#    (re) library to do this. The function re.sub("\n\r\s","",aD) will 
-#    kill new lines (\n) and carriage returns (\r) and any white space (\s)
-#    removing these characters from our data.
+#    no letters, no strange characters. We will use the Regular  
+#    Expressions (re) library to do this. The function  
+#    re.sub("\n\r\s","",aD) will kill new lines 
+#    (\n) and carriage returns (\r) and any white space (\s) 
+#	 removing these characters from our data.
  
-##########################################################################
-# Libraries to import, Time for timing, numpy for mean and std functions, 
-#   and serial for reading the serial port
+#---------------------------------------------------------------------
+# Libraries to import, Time for timing, numpy for mean and  
+#   std functions, and serial for reading the serial port
 import time
 import numpy as np
 import serial
 import re
  
  
-# Define some variables ##################################################
+# Define some variables ----------------------------------------------
 N=10
 #Total number of data points that we want
 timeToWait=15   #seconds How long to wait while we move the sensor
@@ -259,17 +260,17 @@ vStd=0          # A place to put the standard deviation once we calculate it
 aD=0            #Place to put our Arduino data 
 floatAd=0       #Place to put our Arduino data once we have turned it into a float
  
-# Open the serial port ####################################################
+# Open the serial port ------------------------------------------------
 print ('set up serial port')
 ser=serial.Serial('COM3', baudrate=9600, timeout=1)
  
  
-# Open the file ###########################################################
+# Open the file ------------------------------------------------------
 print ('Open the file')
 fileObject=open("C:\\Users\\rtlines\\Documents\\LightSensorData.csv","w")
  
  
-# Collection loop starts here. ############################################
+# Collection loop starts here. ---------------------------------------
 # We will collect  N  average voltage points
 while (i<N):
     #To know how long we wait, we have to know when we start, Get that now.
@@ -330,9 +331,9 @@ while (i<N):
 # And we are done!  Close the file and the serial port
 fileObject.close()
 ser.close()
-##########################################################################
-##########################################################################    
-\end{verbatim}
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------    
+\end{python}
 
 \section{Analysis issues}
 

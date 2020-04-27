@@ -37,25 +37,29 @@ see if Anaconda is in your distribution's repository. If you are not a Linux
 user, you have no idea what that means and can ignore it.}.
 
 When you click on a link, it is likely a dialog box will come up telling you
-that you are downloading something. In windows it looks like this \begin{figure}[h!]
+that you are downloading something. In windows it looks like this 
+\begin{figure}[h!]
 \includegraphics[width=4.5939in,height=2.0721in]{PH4CAU23}
 \end{figure}
 
 Choose \textquotedblleft Save File\textquotedblright\ and when the file is
 downloaded open it to start the installation. You should see something like
-this: \begin{figure}[h!]
+this: 
+\begin{figure}[h!]
 \includegraphics[width=4.1502in,height=3.2361in]{PH4CAU24}
 \end{figure}
 
 Choose \textquotedblleft Next\textquotedblright\ and follow the installation
 instructions. If all goes well, you should have a new set of apps. Here is
-what mine looked like on my Windows 10 computer. \begin{figure}[h!]
+what mine looked like on my Windows 10 computer. 
+\begin{figure}[h!]
 \includegraphics[width=4.8369in,height=%
 3.2448in]{PH4CAU25}
 \end{figure}
 
 The list of the apps has an app called Spyder. Let's launch it to see what
-it does.\begin{figure}[h!]
+it does.
+\begin{figure}[h!]
 \includegraphics[width=5.655in,height=2.4898in]{PH4CAU26}
 \end{figure}
 
@@ -116,7 +120,8 @@ installed, you will be told so, or asked if you wish to update it if an
 update is available. If you don't have PySerial, it will ask you if you want
 to install it. Answer \textquotedblleft yes\textquotedblright\ and PySerial
 will be installed. If any error messages are generated, ask for help from
-your instructor. Hopefully you will see a happy end result like this \begin{figure}[h!]
+your instructor. Hopefully you will see a happy end result like this 
+\begin{figure}[h!]
 \includegraphics[width=6.1445in,height=3.589in]{PH4CAU2B}
 \end{figure}%
 and you will be all ready to start writing code to get data from the serial
@@ -227,13 +232,10 @@ some of the Python code elements we will need, and then give an example code.
 
 The first new code piece is making files for our data. We create a file with
 a line like this (see the actual code below):%
-\begin{equation*}
-\begin{tabular}{l}
-\texttt{fileObject=open("C:$\backslash$$\backslash$%
-Users$\backslash$$\backslash$rtlines$\backslash$$\backslash$Documents$\backslash$%
-$\backslash$data.txt","w")}%
-\end{tabular}%
-\end{equation*}%
+\begin{python}
+	fileObject=open("C:\\Users\\rtlines\\Documents\\data.txt","w")	
+\end{python}
+
 The \textquotedblleft fileObject\textquotedblright\ is a variable that
 contains all the file information like the path and file name. It is way
 easier to type than to include all that information each time we use a file.
@@ -249,12 +251,9 @@ this way.
 The other new code piece is dealing with serial ports. Like with our Arduino
 code, we have to set up the serial port. We do that with the line like the
 this (also see the actual code below).
-
-\begin{equation*}
-\begin{tabular}{l}
-\texttt{ser=serial.Serial('COM6', baudrate = 9600, timeout=1))}%
-\end{tabular}%
-\end{equation*}%
+\begin{python}
+	ser=serial.Serial('COM6', baudrate = 9600, timeout=1)
+\end{python}
 Note that when I was using this code my Arduino was in COM6. But that might
 not be true for you. Use the Arduino app to find out where your Arduino is
 connected. \begin{figure}[h!]
@@ -264,11 +263,9 @@ connected. \begin{figure}[h!]
 The COM port number must match. This looks a little uglier on a Mac, but is
 much the same. Once the serial port is set up, a line like
 
-\begin{equation*}
-\begin{tabular}{l}
-\texttt{arduinoData=ser.readline().decode('ascii')}%
-\end{tabular}%
-\end{equation*}%
+\begin{python}
+	arduinoData=ser.readline().decode('ascii')
+\end{python}
 will read data from the serial port and \textquotedblleft decode
 it\textquotedblright\ so that it is text that we can use in another program.
 The rest of the code writes the data point to a file. I have it calculating
@@ -277,28 +274,25 @@ in a future lab) and outputting that into the file as well.
 
 We are going to want a name for the amount of time in between data points.
 In the example code, the amount of time to delay in between data points is
-named \texttt{sleeptime} and the number of data points is named \texttt{N}.
+named \pyth{sleeptime} and the number of data points is named \pyth{N}.
 
 At the end of the program we close the file
 
-\begin{equation*}
-\begin{tabular}{l}
-\texttt{fileObject.close()}%
-\end{tabular}%
-\end{equation*}%
-and close the serial port%
-\begin{equation*}
-\begin{tabular}{l}
-ser.close()%
-\end{tabular}%
-\end{equation*}%
+\begin{python}
+	fileObject.close()
+\end{python}
+
+\begin{python}
+	ser.close()
+\end{python}}
+
 so that it will be ready to use next time. Your complete code might look
 something like this.
-\begin{verbatim}
-###############################################################################
+\begin{python}
+#---------------------------------------------------------------------
 # Python Code to read a stream of data from the serial port
 #   and save it to a file
-###############################################################################
+#---------------------------------------------------------------------
 #   The idea is to read a series of voltages from an Arduino 
 #   connected to the serial port where the Arduino is being 
 #   used as the Analog to Digital converter. Both the voltage
@@ -322,7 +316,7 @@ something like this.
 #   restart Python.
 #   In windows, closing (after saving) the IDE and reopening it 
 #   might be enough.
-###############################################################################
+#---------------------------------------------------------------------
 # import libraries
 import serial
 import time
@@ -339,7 +333,7 @@ N=20
 #  name so it is easier to use in the code below
 #  This line worked for Brother Lines, but won't work for you as it is.
 #  You need to replace "rtlines" with your username at a minimum.
-dataFile=open("C:\\Users\\rtlines\\Documents\\data2.txt","w")
+dataFile=open('C:\\Users\\rtlines\\Documents\\data2.txt','w')
  
 #the next line opens the serial port for communication
 ser=serial.Serial('COM3', baudrate = 9600, timeout=1)
@@ -389,9 +383,9 @@ print("done with data collection, closing the file and the serial port")
 dataFile.close()
 # Close the serial port   
 ser.close() 
-###############################################################################
-###############################################################################
-\end{verbatim}
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
+\end{python}
 
 Make sure you understand what each line does. Discuss each line with a group
 member or with the instructor. Python code runs one line at a time. That is
@@ -404,41 +398,43 @@ I modified my simple voltmeter to give the time that the data was taken and
 to send both the time and the voltage to the serial port. Here is my sketch
 (remember since it is a simple voltmeter it can only handle $0\unit{V}$ to $%
 +5\unit{V}.$)
-\begin{verbatim}
- 
-////////////////////////////////////////////////////////////////////////////
+
+\begin{lstlisting}[language=Arduino]
+/////////////////////////////////////////////////////////
 // very simple voltmeter that also returns the time since 
 // the data collection started with the voltage.
 // will measure 0 to 5V only!
 // Voltages outside 0 to 5V will destroy your Arduino!!!
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
   int AI0 = 0;
   float delta_v_min=0.0049;   // volts per A2D unit
   int value = 0;
   float voltage = 0.0;
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
    void setup() {
       // put your setup code here, to run once:
       //Initiate Serial Communication
       Serial.begin(9600);    //9600 baud rate
     }
     
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
    void loop() {
-      // read in the voltage in A2D units form the serial port
+      // read in the voltage 
+      // in A2D units form the serial port
       value = analogRead(AI0); 
       Serial.print(" time in milliseconds ");
-      // the millis() function gives the time in milliseconds since the sketch started
+      // the millis() function gives the time 
+      // in milliseconds since the sketch started
       Serial.print(millis()); 
       // convert to voltage units using delta_v_min
       voltage = value * delta_v_min;
       Serial.print(" voltage ");
       Serial.println(voltage, 4);  
   }
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-\end{verbatim}
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+\end{lstlisting}
 
 You can't use the Arduino serial monitor and get data from the serial port
 using Python at the same time. So turn off the serial monitor if it is
@@ -541,11 +537,11 @@ click on \textbf{Tools}, scroll down to \textbf{Port} and write down what is
 written there minus what is in the parenthesis.
 
 \subsection{Mac version of the python code}
-\begin{verbatim}
-###############################################################################
+\begin{python}
+#---------------------------------------------------------------------
 # Python Code to read a stream of data from the serial port
 #   and save it to a file
-###############################################################################
+#---------------------------------------------------------------------
 #   The idea is to read a series of voltages from an Arduino 
 #   connected to the serial port where the Arduino is being 
 #   used as the Analog to Digital converter. Both the voltage
@@ -569,7 +565,7 @@ written there minus what is in the parenthesis.
 #   restart Python.
 #   In windows, closing (after saving) the IDE and reopening it 
 #   might be enough.
-###############################################################################
+#---------------------------------------------------------------------
 # import libraries
 import serial
 import time
@@ -587,18 +583,17 @@ N=20
 #  This line worked for Brother Lines, but won't work for you as it is.
 #  You need to replace "rtlines" with your username at a minimum.
 #  PC version next:
-#dataFile=open("C:\\Users\\rtlines\\Documents\\data.txt","w")
+#  dataFile=open("C:\\Users\\rtlines\\Documents\\data.txt","w")
 #  MAC version next
-\textit{dataFile = open(``/Users/rtlines/Documents/data.csv",``w")
-}
+dataFile = open('/Users/rtlines/Documents/data.csv','w')
+
  
 #the next line opens the serial port for communication
 #  PC version next
 #ser=serial.Serial('COM3', baudrate = 9600, timeout=1)
 #  MAC version next
-\textit{
-ser = serial.Serial(`/dev/cu.usbmodem1411', baudrate = 9600, timeout = 1)
-}
+ser = serial.Serial('/dev/cu.usbmodem1411', baudrate = 9600, timeout = 1)
+
  
 #there will be a delay before the first data point comes from the 
 #  serial port, warn the user so they don't worry.
@@ -645,9 +640,9 @@ print("done with data collection, closing the file and the serial port")
 dataFile.close()
 # Close the serial port   
 ser.close() 
-###############################################################################
-###############################################################################
-\end{verbatim}
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
+\end{python}
 
 %\section{Using an SD Card Reader}
 %
@@ -684,7 +679,7 @@ ser.close()
 %\end{figure}Of course, we will need a sketch
 %to tell the Arduino what to do with this new hardware. Here is an example:
 %\begin{verbatim}
-%////////////////////////////////////////////////////////////////////////////
+%/////////////////////////////////////////////////////////
 %//  SD card datalogger
 %//
 %// This example shows how to log data from three analog sensors
@@ -703,7 +698,7 @@ ser.close()
 %// Modified 26 Apr 2017 by Todd Lines
 %//
 %// This example code is in the public domain.
-%////////////////////////////////////////////////////////////////////////////
+%/////////////////////////////////////////////////////////
 % 
 %#include <SPI.h>
 %#include <SD.h>
@@ -711,7 +706,7 @@ ser.close()
 %const int CS_Pin = 10;       // this sets the pin for the CS connection
 %                             // to the SD card reader
 % 
-%////////////////////////////////////////////////////////////////////////////
+%/////////////////////////////////////////////////////////
 %void setup() {
 %    // Open serial communications and wait for port to open:
 %    Serial.begin(9600);    // the 9600 tells our Arduino how fast to send data
@@ -736,7 +731,7 @@ ser.close()
 %    Serial.println("card initialized.");
 %}
 % 
-%////////////////////////////////////////////////////////////////////////////
+%/////////////////////////////////////////////////////////
 %void loop() {
 %    // We will have to turn our voltage numbers into text to send to our file
 %    // let's make a text variable (called a string) for this
@@ -776,8 +771,8 @@ ser.close()
 %        Serial.println("error opening datalog.txt");
 %    }
 %}
-%////////////////////////////////////////////////////////////////////////////
-%////////////////////////////////////////////////////////////////////////////
+%/////////////////////////////////////////////////////////
+%/////////////////////////////////////////////////////////
 %\end{verbatim}
 %
 %Make sure you understand each line of this code. It is a little fancy in
@@ -792,35 +787,34 @@ ser.close()
 
 \item Using Python, Save Arduino data to a file on your computer
 
-\begin{enumerate}
-\item Wire up a simple voltmeter and load its sketch. Build a simple circuit
-to test like we did back in section (\ref{Voltage Measurement with Meter}).
-Start your Arduino and check to make sure voltages are going to the serial
-port by looking at the serial monitor or plotter.
-
-\item Check with your group members to make sure their simple voltmeters are
-working. Help if they are not.
-
-\item Start your Python system (Spyder or Canopy if you are following the
-instructions given above) and write the program to read the serial port and
-save the data to a file.
-
-\item Close the serial monitor and/or serial plotter. Then run your Python
-code. Check to make sure that the file of data is written properly. The
-voltages written in the file should match what your power supply and circuit
-provided.
-
-\item Make sure you save this program and record what you did in your lab
-notebook.
-
-\item Make sure your lab group members all have Python programs that run and
-save data correctly. Help if they do not.
-\end{enumerate}
+	\begin{enumerate}
+	\item Wire up a simple voltmeter and load its sketch. Build a simple circuit
+	to test like we did back in section (\ref{Voltage Measurement with Meter}).
+	Start your Arduino and check to make sure voltages are going to the serial
+	port by looking at the serial monitor or plotter.
+	
+	\item Check with your group members to make sure their simple voltmeters are
+	working. Help if they are not.
+	
+	\item Start your Python system (Spyder or Canopy if you are following the
+	instructions given above) and write the program to read the serial port and
+	save the data to a file.
+	
+	\item Close the serial monitor and/or serial plotter. Then run your Python
+	code. Check to make sure that the file of data is written properly. The
+	voltages written in the file should match what your power supply and circuit
+	provided.
+	
+	\item Make sure you save this program and record what you did in your lab
+	notebook.
+	
+	\item Make sure your lab group members all have Python programs that run and
+	save data correctly. Help if they do not.
+	\end{enumerate}
 
 \item Together with your group, fill out a \textquotedblleft brainstorming
 sheet\textquotedblright\ in preparation for your design project later in the
 semester.
 
 
-\end{enumerate}
 \end{enumerate}

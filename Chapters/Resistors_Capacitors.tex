@@ -156,71 +156,78 @@ like this:\begin{figure}[h!]
 \includegraphics[width=3.2759in,height=1.9501in]{PH4CAW3A}
 \end{figure}and our sketch will be a little
 like the one from our last lab.
-\begin{verbatim}
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
+ \begin{lstlisting}[language=Arduino]
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 // very simple voltmeter 
 // will measure 0 to 5V only!
 // Voltages outside 0 to 5V will destroy your Arduino!!!
 // Delta_V_shunt must therefore be much less than  5V
-////////////////////////////////////////////////////////////////////////////
-// we want to have voltage vs time, so make a place to store a time value
+/////////////////////////////////////////////////////////
+// we want to have voltage vs time,
+// so make a place to store a time value
   unsigned long time;
- // make some integer variables that identify the analog input pins we will use:
+ // make some integer variables that identify the 
+ // analog input pins we will use:
    int AI0 = 0;
    int AI1 = 1;
- // you also need a place to put the analog to digital converter values 
-// from the Arduino
+ // you also need a place to put the analog to 
+ // digital converter values 
+ // from the Arduino
    int ADC0 = 0;
    int ADC1 = 0;
-// Remember we will have to convert from Analog to digital converter(ADC) units
-// to volts. We need our delta_V_min just like we did in lab 3 
+// Remember we will have to convert from Analog to 
+// digital converter(ADC) units to volts.
+// We need our delta_V_min just like we did in lab 3 
    float delta_v_min=0.0049;   // volts per A2D unit
 // We need a place to put the calculated voltage
 float voltage = 0.0;
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
  void setup() {
   // put your setup code here, to run once:
   //Initiate Serial Communication
   Serial.begin(9600);    //9600 baud rate
 }
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
  void loop() {
-  // Read in the voltages in A2D units form the serial port
+  // Read in the voltages in A2D units form the
+  // serial port
   ADC0 = analogRead(AI0); 
   ADC1 = analogRead(AI1);
   
-  // Convert the voltage across the test resistor to voltage 
+  // Convert the voltage across the 
+  // test resistor to voltage 
   //   units using delta_v_min
   voltage = (ADC1-ADC0) * delta_v_min;
  
   // output the time since we started and the voltage
   Serial.print(" time in sec, ");
-  // this next line uses millis() which gives time in ms since we started
+  // this next line uses millis() which gives time in
+  // ms since we started
   time = millis();
   // convert to seconds and print.
   Serial.print(time/1000.0, 6);  
   Serial.print(", voltage across C, ");
   Serial.println(voltage,6);
 }
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
  
-\end{verbatim}
+ \end{lstlisting}
 
 This is just a voltmeter, but one with two A2D pins and a ground. This
 sketch also gives us time using the millis() function. This function gives
 the number of milliseconds since our experiment began. We can use our python
 code from a previous lab to save the data into a file. I modified the
 previous code just a bit, so here is an updated version.
-\begin{verbatim}
-###############################################################################
-###############################################################################
+ \begin{python}
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
 # Python Code to read a stream of data from the serial port
 #   and save it to a file
-###############################################################################
+#---------------------------------------------------------------------
 #   The idea is to read a series of voltages from an Arduino 
 #   connected to the serial port where the Ardunio is being 
 #   used as the Analog to Digital converter. Both the voltage
@@ -244,7 +251,7 @@ previous code just a bit, so here is an updated version.
 #   restart Python.
 #   In windows, closing (after saving) the IDE and reopening it 
 #   might be enough.
-###############################################################################
+#---------------------------------------------------------------------
 # import libraries
 import serial
 import time
@@ -316,10 +323,10 @@ print("done with data collection, closing the file and the serial port")
 dataFile.close()
 # Close the serial port   
 ser.close() 
-###############################################################################
-###############################################################################
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
  
-\end{verbatim}
+ \end{python}
 
 The resulting data could be plotted in Excel. It might look something like
 this.\begin{figure}[h!]

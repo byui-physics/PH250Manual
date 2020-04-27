@@ -273,18 +273,19 @@ C\textquotedblright\ language, you will recognize some of these changes.
 
 We are ready to write code to blink our LED\ light. Here is an example code.
 We write this code right in the Arduino development environment main window.
-\begin{verbatim}
-////////////////////////////////////////////////////////////////////////////
+\begin{lstlisting}[language=Arduino]
+/////////////////////////////////////////////////////////
 //Arduino Sketch to blink one LED light
-//   Written by Brother Lines (place your name here in your code)
+//   Written by Brother Lines
+//	(place your name here in your code)
 //   Feb 6, 2017
 //
 //   Define our Arduino Variables
 //      We will call pin 13 "ledPin"
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 int ledPin=13;
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 // Arduino setup function comes next
 //    Every Arduino sketch needs a setup function
 //    We will set up our ledPin (pin 13) as an output pin
@@ -293,7 +294,7 @@ void setup() {
  pinMode(ledPin, OUTPUT);
  }
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 // Arduino loop function
 //    Every Arduino sketch has a loop function
 //    This is where we put what we want the Arduino to do
@@ -314,14 +315,14 @@ void loop() {
  // leave in off for 100ms
  delay(100);
  }
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-\end{verbatim}
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+\end{lstlisting}
 
 Notice that we used a lot of comments. There are only ten lines that are
 actually required to make the sketch run.
-\begin{verbatim}
- 
+
+\begin{lstlisting}[language=Arduino] 
 int ledPin=13;
 void setup() {
  pinMode(ledPin, OUTPUT);
@@ -333,7 +334,7 @@ void loop() {
  delay(100);
  }
  
-\end{verbatim}
+\end{lstlisting}
 
 The comments are not required for the sketch to work, but they help us
 remember what we did later. In our class, \textbf{comments are required for
@@ -376,8 +377,8 @@ the proto-board. Your hardware should look something like this.
 \end{figure}We will need to modify our sketch
 (save the old one first so you have a separate copy for reference). Here is
 a suggestion of what the new sketch might look like.
-\begin{verbatim}
-////////////////////////////////////////////////////////////////////////////
+ \begin{lstlisting}[language=Arduino]
+/////////////////////////////////////////////////////////
 //Arduino Sketch to blink one LED light
 //   Written by Brother Lines
 //   Feb 6, 2017
@@ -385,11 +386,11 @@ a suggestion of what the new sketch might look like.
 //   Define our Arduino Variables
 //      We will call pin 13 "ledPin1"
 //      We will call pin 12 "ledPin2"
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 int ledPin1=13;
 int ledPin2=12;
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 void setup() {
  // put your setup code here, to run once:
  // set both pins to OUTPUT
@@ -397,7 +398,7 @@ void setup() {
  pinMode(ledPin2, OUTPUT);
  }
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 void loop() {
  // put your main code here, to run repeatedly:
  // turn on one LED and turn off the other
@@ -405,15 +406,16 @@ void loop() {
  digitalWrite(ledPin2,LOW);
  // wait
  delay(100);
- // now switch so the first LED is off and the second is on
+ // now switch so the first LED is off
+ // and the second is on
  digitalWrite(ledPin1,LOW);
  digitalWrite(ledPin2,HIGH);
  // wait
  delay(100);
  }
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-\end{verbatim}
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+ \end{lstlisting}
 
 Again save your sketch and maybe take a photo of your hardware set up. Place
 both in your lab notebook along with notes on how you got it to work. Make
@@ -453,24 +455,24 @@ to call it a \textquotedblleft loop counter.\textquotedblright
 
 In our Arduino sketch we will test to see if $i$ is even in an if-statement.
 If-statements go like this
-\begin{verbatim}
+ \begin{lstlisting}[language=Arduino]
  if (test condition ) {
    do something;
  }
  else {
    do something else;
  }
-\end{verbatim}
+ \end{lstlisting}
 
 Notice that the parts of the if-statement need curly braces. Our condition
 to test is
-\begin{verbatim}
+ \begin{lstlisting}[language=Arduino]
 i % 2 == 0
-\end{verbatim}
+ \end{lstlisting}
 
 Note that there are two equals signs. That makes it a test for equality
 rather than an assignment. So we will have an if-statement like this
-\begin{verbatim}
+ \begin{lstlisting}[language=Arduino]
 if (i % 2 == 0 ) {
  digitalWrite(ledPin1,HIGH);
  digitalWrite(ledPin2,LOW);
@@ -482,42 +484,42 @@ if (i % 2 == 0 ) {
  delay(1000);
  }
  
-\end{verbatim}
+ \end{lstlisting}
 
 One last addition, our Arduino language has a shortcut for the statement
-\begin{verbatim}
+ \begin{lstlisting}[language=Arduino]
 i=i+1
-\end{verbatim}
+ \end{lstlisting}
 
 It is simply
-\begin{verbatim}
+ \begin{lstlisting}[language=Arduino]
 i++
-\end{verbatim}
+ \end{lstlisting}
 
 We will use this to make $i$ increase by one each time the loop runs. The
 whole code might look like this.
-\begin{verbatim}
-////////////////////////////////////////////////////////////////////////////
-// code to blink two LED's using a mathematical expression to 
-// determine when they should light. Note that the Arduino code
-// is closer to C++ than python.
-////////////////////////////////////////////////////////////////////////////
+ \begin{lstlisting}[language=Arduino]
+/////////////////////////////////////////////////////////
+// code to blink two LED's using a mathematical expression
+// to determine when they should light. Note that the 
+// Arduino code is closer to C++ than python.
+/////////////////////////////////////////////////////////
 int ledPin1=13;
 int ledPin2=12;
 int i=0;
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 void setup() {
  // put your setup code here, to run once:
  pinMode(ledPin1, OUTPUT);
  pinMode(ledPin2, OUTPUT);
  }
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 void loop() {
  // put your main code here, to run repeatedly:
- //if the integer, i, is even light one light, if odd light 
- //the other light
+ // if the integer, i, is even light one light, 
+ // if odd light the other light
  if (i % 2 == 0 ) {
     digitalWrite(ledPin1,HIGH);
     digitalWrite(ledPin2,LOW);
@@ -530,9 +532,9 @@ void loop() {
  }
  i++;
  }
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-\end{verbatim}
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+ \end{lstlisting}
 
 Again save your sketch. You should probably say in your lab notebook that
 you used the previous hardware setup. You might want to describe in your lab
@@ -584,22 +586,22 @@ see if you can figure out what the code should be.
 
 This example is a much more complex version of a mathematical based computer
 control.
-\begin{verbatim}
-////////////////////////////////////////////////////////////////////////////
-// code to blink two LED's using a mathematical expression to 
-// determine when they should light. Note that the Arduino code
-// is closer to C++ than python.
-////////////////////////////////////////////////////////////////////////////
+ \begin{lstlisting}[language=Arduino]
+/////////////////////////////////////////////////////////
+// code to blink two LED's using a mathematical expression
+// to determine when they should light. Note that the
+// Arduino code is closer to C++ than python.
+/////////////////////////////////////////////////////////
 int ledPin1=13;
 int ledPin2=12;
 int i=0; //loop counter
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 int fib_count=0; // number of blinks based on Fibonacci
 int i_max=10; // maximum Fibonacci number before 
  // starting over
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 void setup() {
  // put your setup code here, to run once:
  pinMode(ledPin1, OUTPUT);
@@ -615,7 +617,7 @@ int fib(int x) {
    return fib(x-1) + fib(x-2);
  } 
  
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 void loop() {
  // put your main code here, to run repeatedly:
  // blink the LED's with the number of blinks being 
@@ -649,9 +651,9 @@ void loop() {
  if (i>i_max) i=0;
  }
 }
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-\end{verbatim}
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+ \end{lstlisting}
 
 Again save your sketch. You should probably say in your lab notebook that
 you used the previous hardware setup. You really should describe in your lab
