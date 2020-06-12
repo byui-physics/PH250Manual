@@ -273,559 +273,785 @@ you! We must be very careful to wire our Arduino correctly. Our Arduino can
 measure $0$ to $5\unit{V}.$ But if we switch the $5\unit{V}$ and the $0\unit{%
 V}$ by plugging them into the wrong pin, our Arduino will be damaged and
 will never work the same way again (probably won't work at all!). So wire
-first, then before you connect the Arduino have group member check your
-wiring, then check the wiring with a stand-alone meter (that is why we
-learned to use them last week). Also remember, more than $5\unit{V}$ will
-damage the Arduino. So only put in voltages in the range $0\unit{V}$ to $5%
-\unit{V}.$
 
-We need one wire attached to the pin marked A0. We need another wire
-attached to one of our Arduino ground pins marked GND. And we connect the
-first wire to the positive output of our signal source (say, our power
-supply) and the GND wire to our negative output of our signal source (say
-the negative or ground connection on our power supply). That is all there is
-to it!
 
-\subsection{Seeing the data}
+\section{Building a New Instrument}
 
-Once the code is compiled and uploaded, the Arduino will send data to the
-serial port. The serial monitor can display the data. The serial monitor is
-found under the Arduino Software Tools menu.
+We said before that physicists like to change any measurement they can into
+a voltage measurement. That is because we have devices like our Arduino
+boards that measure voltage. We build new instruments by finding ways to
+turn the measurement that we want to make into a voltage.
 
-\begin{figure}[h!]
-\includegraphics[width=2.0807in,height=3.0744in]{PH4CAU1P}
-\end{figure}You should see something like
-this:
+In order to build a new instrument, we need to understand the quantity that
+we really want to measure. We will need to understand the physics of the
+quantity to make a good new instrument design. Let's take an example.
+Suppose we wish to measure current, but suppose we don't have a current
+setting on our Arduino (because we don't). Could we still make a current
+measurement?
 
-\begin{figure}[h!]
-\includegraphics[width=4.5861in,height=2.3151in]{PH4CAU1Q}
+The secret of instrument design is to understand the physics of the
+measurement we want to make (current) and then see if we can turn that
+measurement into a voltage.
+
+\subsection{Start with the Physics:}
+
+Let's keep thinking of current like water in a hose. Will there be any
+friction associated with the water traveling through the hose? Of course
+there will! We usually call friction in fluids \emph{viscosity}. But it is a
+form of friction, and we can use our PH121 intuition about friction to see
+how it would work. Think of having two hoses, one twice as long as the
+other. Which would you expect to have more friction? \begin{figure}[h!]
+	\includegraphics[width=2.6033in,height=%
+	1.7474in]{PH4CAU0Z}
 \end{figure}
 
-The Arduino Software can also plot the data from the serial port. Here is a
-plot of the same data that we saw on the serial monitor. \begin{figure}[h!]
-\includegraphics[width=%
-3.563in,height=1.8049in]{PH4CAU1R}
-\end{figure}Notice that it plotted our
-voltage values and it also plotted our ADC values. This makes the voltage
-values hard to see. We could fix this by commenting out the lines that print
-the ADC values (putting \textquotedblleft //\textquotedblright\ at the
-beginning of the line). Then those lines won't be executed by the Arduino.
-Then we get just the voltage. \begin{figure}[h!]
-\includegraphics[width=3.2578in,height=1.6475in]{PH4CAU1S}
-\end{figure}Notice that the horizontal axis
-is not exactly time. It is just the data point number. We could convert this
-to time with some calculation if we know how often the Arduino sends us a
-data point. I will leave this as an exercise.
+Our friction experience says that the longer the path, the more the
+friction. The current has longer to interact with the hose, so it
+experiences more friction. Electrical currents are like this. Longer wires
+give more friction.
 
-\section{Extending our voltmeter with a voltage divider\label{Voltmeter with
-Voltage Divider}}
+George Simon Ohm noticed that with long metal wires, there seemed to be a
+linear relationship between the potential difference (voltage), the current,
+and the length of the wire. The longer the wire, the less the current. His
+work was confirmed and expanded on by others, who found that not only length
+mattered, but also the diameter of the wire mattered. The relationship is
+now expressed as%
+\begin{equation*}
+\Delta V=IR
+\end{equation*}%
+$\Delta V$ is our old friend, voltage, and we know $I$ is the symbol for
+current, and $R$ is the slope of the $\Delta V$ vs. $I$ curve. The
+experiments showed this constant $R$ depended on the material. It is like
+our viscosity in hoses. It is the friction. The more the friction, the
+harder it is to get the current through the wire. But like we don't call
+viscosity \textquotedblleft friction,\textquotedblright\ we also don't use
+the word \textquotedblleft friction\textquotedblright\ for this
+friction-like term. We call it \emph{resistance.} We could solve for this
+resistance 
+\begin{equation*}
+R=\frac{\Delta V}{I}
+\end{equation*}%
+or we could plot $\Delta V$ vs. $I$ and the slope of this line would be the
+resistance.\begin{figure}[h!]
+	\includegraphics[width=1.9899in,height=1.3214in]{PH4CAU10}
+\end{figure}Either way, this relationship
+tells us that it takes more potential energy to get the same current if
+there is more resistance.
 
-This Arduino-based voltmeter that we have built is great, but will only let
-us measure voltages in the range $0$ to $5\unit{V}.$ That seems a little
-restrictive. We would like to extend our voltmeter to a larger range, say, $%
-0 $ to $20\unit{V}.$ To do this, we will need to add some electronic
-components and think about what we have learned about voltage, resistance,
-and current. Let's consider this circuit.\begin{figure}[h!]
-\includegraphics[width=1.3932in,height=1.3188in]{PH4CAU1T}
-\end{figure}We have a battery, That will make
-the current flow much like a pump makes water move through pipes.
+This is called \emph{Ohm's law.} The relationship holds well for metals and
+many materials, but, like Hook's law, this \textquotedblleft
+law\textquotedblright\ does not always hold. Devices that do provide a
+constant resistance coefficient, $R,$ are called \emph{resisters. }We will
+use this symbol
 
 \begin{figure}[h!]
-\includegraphics[width=4.2004in,height=2.3229in]{PH4CAU1U}
-\end{figure}The water in a pipe system gains
-potential energy as it moves up. In our circuit we will find that electric
-charge gains potential energy as we move it across a battery. Then the
-charge will move down the wire like water moves down a pipe until it is out
-of potential energy. Notice that the water in a pipe system will lose all
-the potential energy that it gained when the pump raised it to the upper
-tank (see previous figure). That is true of electric charge too. The
-electric current travels from the battery through the resistor, but in doing
-so it loses all the potential energy that the battery gave it by the time it
-returns to the battery.
-
-Now suppose we have two resistors in a circuit. \begin{figure}[h!]
-\includegraphics[width=1.7279in,height=%
-1.5947in]{PH4CAU1V}
+	\includegraphics[width=1.742in,height=0.2794in]{Resister_symbol0}
+\end{figure}for resistors, but they
+often look more like this\begin{figure}[h!]
+	\includegraphics[width=2.2987in,height=0.179in]{PH4CAU11}
 \end{figure}
 
-Our water analogy can still help us understand what will happen. Suppose
-that we have two turbines in our pipe system. \begin{figure}[h!]
-\includegraphics[width=3.5985in,height=%
-1.9934in]{PH4CAU1W}
-\end{figure}The water leaves the high
-potential energy part of the pump, and is put to work turning the first
-turbine. The resistance of the turbine will slow the water current. So when
-the water leaves the turbine, it will have lost some potential energy. Since
-we have a second turbine the current will again be slowed and more potential
-energy will be lost. How much potential energy do we lose as the water
-falls? All of the potential energy that the pump gave it! We must end up
-with the water at the bottom back at the low potential energy. We will find
-this to be true for our electric circuit as well. We will loose some
-potential energy as the electrical energy \textquotedblleft
-falls\textquotedblright\ from the high electric potential \textquotedblleft
-down\textquotedblright\ the first resistor. After the second resistor, we
-can guess that we must be back at the low electric potential we started with.
+Notice that this is important! We have found a way to relate our new
+quantity that we want to measure, current, to a voltage. We know how to
+measure a voltage! Our Ohm's law equation even tells us what extra part we
+need to convert our voltmeter into a current measuring instrument. We will
+need a resistor.
 
-\begin{figure}[h!]
-\includegraphics[width=1.7279in,height=1.5947in]{PH4CAU1X}
-\end{figure}We know that electric potential
-is a potential energy per unit charge. And energies just add up. If 
+\subsubsection{Resistor Code}
+
+Let's pause in our new instrument design for a moment and ask,
+\textquotedblleft how would you know the resistance of a
+resistor?\textquotedblright\ Our multimeters have a resistance measuring
+setting, so you could measure the resistance directly using the meter. But
+many commercially produced resistors come conveniently marked with a color
+code that helps you identify their resistance. The basics of the color code
+are given in the following figure\bigskip \begin{figure}[h!]
+	\includegraphics[width=3.2958in,height=2.4249in]{PH4CAU12}
+\end{figure}
+
+To use the code:
+
+\begin{enumerate}
+	\item Find the tolerance code band. This band is usually brown in our kit
+	resistors and often is set off from the others a little more.
+	
+	\item Read the first color band from the side opposite the tolerance band.
+	This will be the first digit of your resistance. I\ think the example
+	resister on the chart has a yellow first color band, so the first digit of
+	our resistance is $4.$
+	
+	\item Read the second color band. This will be the second digit of your
+	resistance. I\ think the second band of our example resistor is orange, so
+	the second digit would be a $3,$ making our resistance so far $43$
+	
+	\item Read the third color band. This will be the third digit of your
+	resistance. I\ think the second band of our example resistor is red, so the
+	second digit would be a $2,$ making our resistance so far $432$
+	
+	\item Read the forth color band. This is a multiplier. You multiply the
+	first three digits by this amount. For our example resistance, I think the
+	third band is black. Then we multiply $432$ by $1\unit{%
+		%TCIMACRO{\U{3a9}}%
+		%BeginExpansion
+		\Omega%
+		%EndExpansion
+	}$ to get $432\unit{%
+		%TCIMACRO{\U{3a9}}%
+		%BeginExpansion
+		\Omega%
+		%EndExpansion
+	}.$ This is our resistance.
+	
+	\item The tolerance band gives the uncertainty in this value. Our example
+	resistor seems to have a brown tolerance band, which tells us our value is
+	good to $\pm 1\%.$ For our example resistance, $1\%$ would be $0.01\times 432%
+	\unit{%
+		%TCIMACRO{\U{3a9}}%
+		%BeginExpansion
+		\Omega%
+		%EndExpansion
+	}=\allowbreak 4.\,\allowbreak 32\unit{%
+		%TCIMACRO{\U{3a9}}%
+		%BeginExpansion
+		\Omega%
+		%EndExpansion
+	},$ so our resistance is $\left( 432\pm 4\unit{%
+		%TCIMACRO{\U{3a9}}%
+		%BeginExpansion
+		\Omega%
+		%EndExpansion
+	}\right) .$
+\end{enumerate}
+
+We won't memorize the resistor code, but you should be able to find a
+resistance using the code.
+
+If you are in doubt about what color you see on a resistor, our multimeters
+can measure resistance directly. \begin{figure}[h!]
+	\includegraphics[width=3.5426in,height=2.3594in]{PH4CAU13}
+\end{figure}Place the red probe in the
+connector with a $\Omega $ marked on it and turn the dial to the $\Omega $
+setting. Place the probes on either side of the resistance to be measured.
+Be careful/ You are a resistor too. If you touch your hands to the probes
+(common mistake while you try to hold the resistor on the probe ends) you
+may measure your resistance instead of the resistor's! You have a resistance
+of around half a megaohm. This is a general concern, every time you measure
+resistance with a meter you need to take the circuit element (resistor,
+light bulb, whatever) out of the circuit and measure it on it's own.
+Otherwise, you might be measuring the resistance of the rest of the circuit.
+Alligator clips are useful for this.
+
+\subsubsection{Direction of current flow}
+
+There is a historical oddity with current flow. That is that the current
+direction is the direction positive charges would flow. This may seem
+strange, since in good conductors electrons are doing the flowing and they
+are negative! The electrons go the opposite way the current goes. \begin{figure}[h!]
+	\includegraphics[width=3.3373in,height=1.5696in]{PH4CAU14}
+\end{figure}%
+The truth is that it is very hard to tell the difference between positive
+charge flow and negative charge flow the other direction. In fact, only one
+experiment that I know of shows that the charge carriers in metals are
+electrons. And mathematically, the flow of electrons one direction is
+equivalent to the flow of positive charges the other direction.\begin{figure}[h!]
+	\includegraphics[width=%
+	3.8994in,height=3.3961in]{PH4CAU15}
+\end{figure}%
+Worse yet, in biological things it \emph{is} positive ions that flow. So for
+biology a positive charge carrier is just fine.
+
+Ben Franklin chose the direction we now use. He had a 50\% chance of making
+it easy for our electronics lab. But he got it backwards for us (but right
+for biology--and how many electronic things did Ben Franklin have anyway?).
+All this shows just how hard it is to deal with all these things we can't
+see or touch that we study in PH 220.
+
+And even more importantly, in semiconductors--special electronic devices in
+all computers and in our Arduinos--it \emph{is} positive charge that flows.
+In many electrochemical reactions \emph{both} positive and negative charges
+flow. So Mr. Franklin was not really so very wrong. We will stick with the
+convention that \textbf{the current direction is the direction that positive
+	charges would flow regardless of the actual charge carrier motion. }If you
+are like me, this will seem a little backwards, but we all get used to it.
+
+But what makes the electrons or positive charges want to flow in the first
+place? We know the answer to this from earlier in this lab reading. It is
+potential energy. When we connect a metal wire to the terminals of a battery
+we know that the charges in the metal wire ends will experience a difference
+in potential energy. The potential energy difference will set up an electric
+field inside the conductor. \begin{figure}[h!]
+	\includegraphics[width=4.2832in,height=1.0253in]{PH4CAU16}
+\end{figure}
+
+This field makes the free charges move! It causes a force on the little
+electrons. We won't have to measure any fields in our lab today, but you
+should know they are there. The important thing is to realize that voltages
+produce currents. And the amount of current is proportional to the amount of
+voltage. This is just Ohm's law! 
 \begin{equation*}
-\Delta V=RI
+\Delta V=IR
 \end{equation*}%
-is satisfied, then we would expect that adding two resistors would just
-linearly add the effects of the two resistors together%
-\begin{eqnarray*}
-\Delta V_{total} &=&\Delta V_{1}+\Delta V_{2} \\
-&=&R_{1}I+R_{2}I
-\end{eqnarray*}%
-Note that the same current must flow through each of the resistors, since
-the current leaving $R_{1}$ is the current flowing into $R_{2}.$ Then 
+The constant of proportionality is related to how much friction there is for
+the charges in the wire.%
 \begin{equation*}
-\Delta V_{total}=\left( R_{1}+R_{2}\right) I
+I=\frac{1}{R}\Delta V
 \end{equation*}%
-Our current will be 
+It is just the resistance, $R$.\ 
+
+\subsection{Knowing the Physics, Design the new instrument}
+
+Now that we understand electrical current, we have some hope of figuring out
+how to build an instrument to measure that electrical current. From what we
+learned, consider adding in an additional small resistor in our circuit. If
+we take a small resistance, one that is small compared to all the other
+resistances in the circuit, and we put it in the circuit it will slow down
+the current, but not by very much. If the resistance is small enough, we
+won't even notice the change. Then if we measure the voltage across that
+small resistor with a voltmeter, we could mathematically calculate how much
+current we have. Notice that this instrument design has two parts. The first
+is adding some new hardware to our voltmeter (a resistor) and the second is
+adding in some calculation to get our voltmeter reading converted into
+current. 
 \begin{equation*}
-I=\frac{\Delta V_{total}}{R_{1}+R_{2}}
+I=\frac{1}{R}\Delta V
 \end{equation*}
 
-But suppose we measure the potential change across just resistor $R_{2}.$ 
+Let's give this additional small resistor a name. Let's call it the
+\textquotedblleft shunt resistor.\textquotedblright\ 
+\begin{equation*}
+I=\frac{\Delta V_{meter}}{R_{shunt}}
+\end{equation*}%
+Today we will have to do the calculation part by hand. In future labs, we
+would carefully plan for this calculation in our Arduino sketch code.
+
 \begin{figure}[h!]
-\includegraphics[width=1.7625in,height=1.0421in]{PH4CAU1Y}
-\end{figure}what would we expect to get? We
-lost voltage across both $\Delta V_{1}$ and $\Delta V_{2}$ so 
-\begin{equation*}
-\Delta V_{total}=\Delta V_{1}+\Delta V_{2}
-\end{equation*}%
-because we must loose all the $\Delta V_{total}$ given to the current by the
-battery. And 
-\begin{equation*}
-\Delta V_{2}=IR_{2}
-\end{equation*}%
-from Ohm's law. So
+	\includegraphics[width=4.9156in,height=3.9176in]{PH4CAU17}
+\end{figure}
 
+When we are done wiring our new instrument, we will have done something
+really cool. We have turned our current measurement into a voltage
+measurement. We measured something new in terms of a measurement we already
+knew how to make. We will generally try to do this for any type of
+measurement. That is because we are very good at measuring voltage, and not
+so good at measuring other things electronically.
+
+\subsection{Testing the new instrument}
+
+We will need a way to test how good our new instrument works. And
+fortunately we know our multimeters can also measure current. So we can
+build our new instrument an compare it to the measurement made by a
+multimeter. 
 \begin{equation*}
-\Delta V_{2}=\left( \frac{\Delta V_{total}}{R_{1}+R_{2}}\right) R_{2}
+\unit{A}=\frac{\unit{V}}{\unit{%
+		%TCIMACRO{\U{3a9}}%
+		%BeginExpansion
+		\Omega%
+		%EndExpansion
+}}
 \end{equation*}%
-This is only part of the total voltage. And if we have two different
-resistors so that $R_{1}\neq R_{2}$ then we can choose for $\Delta V_{2}$ to
-be nearly as much as $\Delta V_{total}$ or nearly as little as $0$ by
-carefully choosing our two resistances. We call a set of two resistors like
-this a \textquotedblleft voltage divider\textquotedblright\ because it
-divides the battery voltage between the two resistors. If $R_{1}$ is bigger
-than $R_{2}$ then $\Delta V_{1}$ is bigger than $\Delta V_{2}.$
+Recall that to use an ammeter (the new instrument we build, or the one in
+our multimeter), you must break the electric circuit by disconnecting a
+wire. Then you replace that wire with the ammeter. Notice that in the
+diagram below that the bottom wire is now broken. \begin{figure}[h!]
+	\includegraphics[width=1.9372in,height=%
+	1.471in]{PH4CAU18}
+\end{figure}Where a wire was, I have drawn an
+ammeter. The current must flow through the ammeter for us to measure it.
 
-Remember that the input can only withstand $0$ to $5\unit{V}.$ More than
-that can destroy the board! But we want to measure a voltage that varies
-from $0$ to $20\unit{V}.$ We now have a way to do this. We will use a
-voltage divider. The voltage across both resistors will be as much as $20%
-\unit{V},$ but we will measure the voltage across only one of the resistors.
-And we will choose our resistor so that when the total voltage is $20\unit{V}
-$ but the voltage across our resistor is $5\unit{V}$ (or less). Since we
-will know the resistances, we can use a little math to calculate what the
-total voltage was using the voltage measurement from just one of the
-resistors.
+\begin{figure}[h!]
+	\includegraphics[width=4.858in,height=2.2423in]{PH4CAU19}
+\end{figure} Remember, to use our multimeters
+to measure current, we must turn the dial to the $10\unit{A}$ setting AND
+move the red probe to the $10\unit{A}$ connector. Failure to do this may
+result in the fuse blowing. Our meter does not warn you that it lost a fuse,
+it just pays you back by giving really wrong answers. You should be careful
+to connect it right, and be sure it is working (that someone else has not
+blown the fuse before you). Since we have different kinds of multimeters, a
+second is pictured to the right. For this type of meter, put the red lead in
+the connector marked $A$ and turn the dial to the $A$ setting. If the
+currents you are measuring are very small, you might have to switch settings
+once again. Tiny currents can be measured by moving the dial to the $\unit{mA%
+}$ setting AND changing the red probe to the $\unit{mA}$ connector.\begin{figure}[h!]
+	\includegraphics[width=4.9769in,height=2.2928in]{PH4CAU1A}
+\end{figure}
 
-This is like what we did to measure current last lab. We used a voltmeter
-and a resistor and some math to make an ammeter. Today we will use two
-resistors, our Arduino voltmeter, and some math to make a new voltmeter that
-can measure higher voltages. We just need to choose our resistors so that we
-map our $0$ to $20\unit{V}$ to $0$ to $5\unit{V}.$ Once choice might be 
+Our multimeters really measure current in much the same way we are talking
+about for our new Arduino ammeter. They have a series of shunt resistors
+inside of them. When we choose a current measurement setting we are choosing
+a shunt resistor to put in the circuit (inside the meter, but the meter is
+in the circuit). Then the voltmeter will measure the voltage across that
+resistor and use that voltage to calculate the current.
+
+If we create the current meter ourselves, we have to know the resistance
+that we used! That allows us to use the voltage meter to calculate the
+current,%
+\begin{equation*}
+I=\frac{\Delta V_{meter}}{R_{shunt}}
+\end{equation*}%
+but our multimeters are programed to know their own shunt resistances and to
+do this calculation for us.
+
+If you have time (and some won't) in today's lab, we will build the new
+Arduino instrument to measure current , and we will test it with a
+multimeter set in ammeter mode. We will put both in the circuit at the same
+time (see figure \ref{New Instrument and Test}) so we get readings from
+both. Then we can compare and see how well our new instrument works!
+
+\section{Calculating uncertainty, a review}
+
+That is all the new material for today's lab. But I wanted to remind you of
+something you already know.
+
+Back in PH150 you should have gotten a good deal of experience in making
+measurements. We will be going back to experimentation soon, and we will
+need to remember what we learned in PH150 to take the measurements so that
+we can interpret our experimental results. You will remember that every
+measurement has an uncertainty. We have to estimate that uncertainty. It
+turns out that our voltage measurement schemes will introduce a new source
+of uncertainty! And we will have to include this in our uncertainty
+calculations. We will take that on next lab, but in this lab let's review
+how to calculate uncertainties.
+
+This is a \textquotedblleft review.\textquotedblright\ How much of a
+\textquotedblleft review\textquotedblright\ it is may depend on where and
+when you took PH150 or its equivalent. If you are a chemist, you will note
+that our treatment of uncertainty goes beyond what you learned in
+Quantitative Analysis. Let's start by reviewing what a derivative is.
+
+For our purposes, a derivative is a slope of a line. You should recognize
+the equation of a straight line as%
+\begin{equation*}
+y=mx+b
+\end{equation*}%
+The slope $m$ can be written as 
+\begin{equation*}
+m=\frac{dy}{dx}
+\end{equation*}%
+This is nothing magic (or new). It is just a strange way to write $m.$ With
+the slope written this way, the equation of the line could be written as 
+\begin{equation*}
+y=\frac{dy}{dx}x+b
+\end{equation*}%
+But why $dy/dx$? Think of how we find a slope of a line. Back in junior high
+school we called the slope the \textquotedblleft rise over
+run.\textquotedblright\ That is, the change in $y$-value divided by the
+change in the $x$-value.%
+\begin{equation*}
+m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}
+\end{equation*}%
+In physics, we write the change in a variable using the greek letter delta, $%
+\Delta .$ So we could write the slope as%
+\begin{equation*}
+m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\frac{\Delta y}{\Delta x}
+\end{equation*}%
+\ Just to jog your memory, let me write out $\Delta y$%
+\begin{equation*}
+\Delta y=y_{2}-y_{1}
+\end{equation*}%
+and $\Delta x.$ 
+\begin{equation*}
+\Delta x=x_{2}-x_{1}
+\end{equation*}%
+So our straight line equation should be written 
+\begin{equation*}
+y=\frac{\Delta y}{\Delta x}x+b
+\end{equation*}%
+but if we take $\Delta x$ to be very, very small it is customary to write
+the $\Delta x$ as just $dx$ (I guess a \textquotedblleft $d$%
+\textquotedblright\ is smaller than a \textquotedblleft $\Delta $%
+\textquotedblright ). If this is not familiar from Math 112, is should be by
+now from PH121.
+
+In PH121 you learned that the velocity is the slope of the plot of $x$ vs. $%
+t,$ for example, 
+\begin{equation*}
+y=\frac{1}{2}\frac{\unit{m}}{\unit{s}}t+1\unit{m}
+\end{equation*}%
+is an equation giving the $y$ position of an object as a function of time.
+Note that it is a straight line on a $y$ vs. $t$ plot. \begin{figure}[h!]
+	\includegraphics[width=%
+	3.4999in,height=1.868in]{PH4CAU1B}
+\end{figure}The slope of the line is 
+\begin{equation*}
+\frac{dy}{dt}=\frac{1\unit{m}}{2\unit{s}}
+\end{equation*}%
+We can verify that this works by looking at the plot and noting that for
+every two units of time, we go up one position unit. The slope is $1/2\frac{%
+	\unit{m}}{\unit{s}}.$
+
+But not all curves are straight lines. What do we do with curves that, well,
+curve?
+
+One idea is that we could split up the curve into little line segments, each
+with its own slope. We can think of $dy/dt$ as an instantaneous slope, a
+slope of one of the tiny line segments that make up our curve. This is the
+sort of speed measurement that your speedometer gives. The speed might be
+different a short time later. But right now the speed is, say, $0.5\unit{m}/%
+\unit{s}.$
+
+\begin{figure}[h!]
+	\includegraphics[width=3.4385in,height=2.3307in]{PH4CAU1C}
+\end{figure}Really, in defining an
+instantaneous slope we have assumed that the slope near our point on the
+curve is essentially a straight line if $\Delta t$ is small enough.
+
+We can use this idea to interpret our error calculations. Suppose I\ throw a
+ball in the air with a initial speed of $4\unit{m}/\unit{s}$ straight up
+starting from $y_{o}=0$. From PH121 you have learned that the equation for
+predicting how high the ball will go is 
+\begin{equation*}
+y=y_{o}+v_{o}t+\frac{1}{2}at^{2}
+\end{equation*}%
+It says that starting at $y_{o}$ the ball will go higher depending on the
+initial velocity, $v_{o},$ and the acceleration, $a.$ That makes sense.
+
+At a time, $t,$ the ball should be at 
+\begin{equation*}
+y=0+4\frac{\unit{m}}{\unit{s}}t-\frac{1}{2}\left( 9.8\frac{\unit{m}}{\unit{s}%
+	^{2}}\right) t^{2}
+\end{equation*}%
+where $a=-9.8\frac{\unit{m}}{\unit{s}^{2}}$ is the acceleration due to
+gravity. So, knowing this, I could predict how high the ball would go if I\
+pick a particular time, say, $0.15\unit{s}.$ The result should be%
 \begin{eqnarray*}
-R_{1} &=&40\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-} \\
-R_{2} &=&10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}
+	y &=&0+4\frac{\unit{m}}{\unit{s}}\left( 0.15\unit{s}\right) -\frac{1}{2}%
+	\left( 9.8\frac{\unit{m}}{\unit{s}^{2}}\right) \left( 0.15\unit{s}\right)
+	^{2} \\
+	&=&0.489\,75\unit{m}
 \end{eqnarray*}%
-Let's try it. We would get%
-\begin{eqnarray*}
-\Delta V_{2\max } &=&\left( \frac{20\unit{V}}{40\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}+10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}}\right) \left( 10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right) \\
-&=&4.0\unit{V}
-\end{eqnarray*}%
-when $\Delta V_{total}=20\unit{V}$ and 
-\begin{eqnarray*}
-\Delta V_{2\min } &=&\left( \frac{0\unit{V}}{40\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}+10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}}\right) \left( 10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right) \\
-&=&0\unit{V}
-\end{eqnarray*}%
-when $\Delta V_{total}=0\unit{V}.$ Notice that this really didn't work. We
-only got a maximum voltage of $4\unit{V}.$ But this gives us a margin of
-safety. If we give our Arduino more than $5\unit{V}$ we can burn it up. If
-we plan our circuit so we don't get to close to $5\unit{V}$ we are safer. So
-this set of resisters is not a terrible choice.
+This is shown in the next figure with a black line. Solving the equation for 
+$y$ is equivalent to drawing a line up to the curve, then from our spot on
+the curve over to the $y$-axis to find the position.\begin{figure}[h!]
+	\includegraphics[width=3.3434in,height=%
+	2.2295in]{PH4CAU1D}
+\end{figure}
 
-To report out our voltage we need to do this conversion backwards. Say we
-have $\Delta V_{total}=10\unit{V}$ that we are measuring with our new
-instrument. Then 
-\begin{eqnarray*}
-\Delta V_{2} &=&\left( \frac{10\unit{V}}{40\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}+10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}}\right) \left( 10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right) \\
-&=&2\unit{V}
-\end{eqnarray*}
+For our case, we plot a line upward from $0.15\unit{s}$ to the curve, and
+then plot a horizontal line from the intersection to the $y$-axis. We can
+see that we get $4.9\unit{m}.$ Suppose I try to verify this by taking a
+picture of the ball in flight at $0.015\unit{s},$ but my stop watch is only
+good to $\pm 0.005$ seconds. I try to take the picture when the watch is at $%
+0.015\unit{s},$ but I might have taken the picture at $0.01\unit{s}$ or at $%
+0.02\unit{s}$ or anywhere in between. My time has some uncertainty. What
+does the uncertainty in my stop watch time mean for the uncertainty in my $y$
+value?
 
-The $2\unit{V}$ is what we actually measure at the A0 input. But we know
-that this represents $10\unit{V}$ across both resistors, so we want the
-Arduino program to print out $10\unit{V}.$ So we report%
+We can get a good approximation by graphically drawing vertical lines up
+from $t_{\min }$ and $t_{\max }$ to the curve, and then extending horizontal
+lines from the intersections to the $y$-axis. This gives us a $y_{\min }$
+and $y_{\max }.$ Our actual height could be anywhere in between these. This
+is a way to view our uncertainty in $y.$\begin{figure}[h!]
+	\includegraphics[width=4.1658in,height=2.7769in]{PH4CAU1E}
+\end{figure}
+
+We can use this idea to find a general way to calculate uncertainties. We
+could define $\Delta t=t_{\max }-t_{\min }$. If our $\Delta t$ is small
+enough (so we can write it just $dt$), the curve is essentially a straight
+line in the region between $t_{\min }$ and $t_{\max }.$ So if we knew the
+slope of that line (the derivative $dy/dt$) we could easily figure out the $%
+y_{\max }$ and $y_{\min }$ points to get our uncertainty range, at least if
+we stay near our $t_{n}$ part of the curve. Recall that our uncertainty in $%
+y $ is about%
 \begin{equation*}
-\Delta V_{reported}=\frac{\Delta V_{2}}{R_{2}}\left( R_{1}+R_{2}\right)
+\delta y=\frac{y_{\max }-y_{\min }}{2}=\frac{\Delta y}{2}
 \end{equation*}%
-or for our case, since we measured $2\unit{V}$ across our resistor,%
+Remembering that 
 \begin{equation*}
-10\unit{V}=\frac{2\unit{V}}{\left( 10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right) }\left( 40\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}+10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right)
+y=\frac{dy}{dt}t+b
 \end{equation*}%
-We will have to write this math in our code. There is a further
-complication. The Arduino A0 input is giving us a number that represents $0$
-to $4\unit{V}$ for our setup. But that is not what we see on the serial
-port. We see a number from 0 to 1024. We know the $1024$ represents $5\unit{V%
-}$ and the $0$ represents $0\unit{V}.$ So we need to multiply the number
-that comes from our Arduino by $\delta V=4.9\unit{mV}$ once again to get our
-Arduino output into voltage units. So our reported voltage equation is
-something like this. 
+then 
+\begin{eqnarray*}
+	\Delta y &=&y_{\max }-y_{\min } \\
+	&=&\frac{dy}{dt}t_{\max }+b-\frac{dy}{dt}t_{\min }-b \\
+	&=&\frac{dy}{dt}\Delta t
+\end{eqnarray*}%
+From PH150, you will recognize this as almost the uncertainty in a function
+of one variable! But even if you don't recognize it, we can show that this
+is true using our definition of $\delta y$ above. The quantity $\Delta t$ is 
 \begin{equation*}
-\Delta V_{reported}=A2D\times \delta V_{2}\times \frac{1}{R_{2}}\left(
-R_{1}+R_{2}\right)
+\Delta t=t_{\max }-t_{\min }
+\end{equation*}%
+so our uncertainty in $t$ would be 
+\begin{equation*}
+\delta t=\frac{t_{\max }-t_{\min }}{2}=\frac{\Delta t}{2}
+\end{equation*}%
+then 
+\begin{eqnarray*}
+	\delta y &=&\frac{y_{\max }-y_{\min }}{2} \\
+	&=&\frac{1}{2}\frac{dy}{dt}\Delta t \\
+	&=&\frac{dy}{dt}\frac{\Delta t}{2} \\
+	&=&\frac{dy}{dt}\delta t
+\end{eqnarray*}%
+so%
+\begin{equation*}
+\delta y=\frac{dy}{dt}\delta t
+\end{equation*}%
+So our uncertainty in $y$ is just the slope at our point on the curve
+multiplied by our uncertainty in $t.$
+
+But what if we have more than one variable? Say, we have a function $y(x,z),$
+we essentially have a two dimensional slope. Think of a hill, you can go
+down a hill in more than one direction. So we need slope parts for each
+direction we can go.
+
+\begin{figure}[h!]
+	\includegraphics[width=2.5495in,height=2.0133in]{PH4CAU1F}
+\end{figure}%
+\begin{equation*}
+\Delta y=\frac{dy}{dx}x\hat{\imath}+\frac{dy}{dz}z\hat{k}
+\end{equation*}%
+But there is a fix we need to make to this equation that you won't learn for
+several math classes to come. We want to have a slope in the $x$ and $z$
+direction, but we want the slopes to be independent (if you have already
+taken PH121, think of two dimensional motion problems, we split the problem
+into components). The notation for this is%
+\begin{equation*}
+\Delta y_{x}=\frac{\partial y}{\partial x}x
+\end{equation*}%
+\begin{equation*}
+\Delta y_{z}=\frac{\partial y}{\partial z}z
+\end{equation*}%
+where 
+\begin{equation*}
+\frac{\partial y}{\partial x}
+\end{equation*}%
+means the component of the slope just in the $x$ direction. We take a
+derivative of the function $y,$ but assume only $x$ is a variable (treat $z$
+and all $z$ terms with no $x^{\prime }s$ as constants). This lets us
+separate the $x$ and $z$ parts. A special, one variable derivative like $%
+\partial y/\partial x$ is called a \emph{partial derivative} because you
+only take one dimension of the derivative at a time. So, if we wish to find
+the error in some general function $z\left( x,y\right) $ the error is given
+by 
+\begin{equation*}
+\delta y=\sqrt{\left( \frac{\partial y}{\partial x}\right) ^{2}\delta
+	x^{2}+\left( \frac{\partial y}{\partial z}\right) ^{2}\delta z^{2}}
+\end{equation*}%
+This looks a lot like our slope equation. What we are doing is to assuming
+the function $y\left( x,z\right) $ is flat in a small region around the
+point we are studying. then the function has a slope $\partial y/\partial x$
+in the $x$-direction, and $\partial y/\partial z$ in the $y$-direction. Each
+term like 
+\begin{equation*}
+\left( \frac{\partial y}{\partial x}\right) \delta x
+\end{equation*}%
+gives how far off we could be in that direction (the $x$-direction in this
+case). Remember that we have assumed that $y\left( x,z\right) $ is
+essentially flat near our point of interest. The square root may be
+something of a mystery, but remember what you have learned about adding
+vectors in PH121. We add components of a vector to find the magnitude like
+this 
+\begin{equation*}
+V=\sqrt{V_{x}^{2}+V_{y}^{2}}
+\end{equation*}%
+This comes from the Pythagorean theorem. The $x$ and $y$ parts of the vector
+form two sides of a triangle. We want the remaining side. So we use the
+Pythagorean theorem to find the length of the remaining side.
+
+We are doing the same for our small uncertainty lengths. We are just adding
+the $x$ and the $y$ components of the error. We could write our error
+formula for the general case of a function $f$, that depends on $N$
+different variables. 
+\begin{equation*}
+\delta f=\sqrt{\sum_{i=1}^{N}\left( \frac{\partial f}{\partial x_{i}}\right)
+	^{2}\delta x_{i}^{2}}
+\end{equation*}%
+We will use this formula a lot, so make sure you understand what it means
+(ask your instructor for help if it is not clear).
+
+\subsection{How do we find the slope?}
+
+But now we have an equation in terms of slope written as $\partial
+y/\partial x$ or $\partial y/\partial z$, but how would we ever find these
+slopes? Your calculus class has or will teach you how to take a derivative.
+They might not have yet taught you how to take this type of derivative. The
+symbol $\partial $ means that our derivatives are \textquotedblleft
+partial\textquotedblright\ derivatives. This means that we assume all the
+variables other than the one that shows up in the derivative symbol are
+constants for our derivative.
+
+Let's take an example. What is the slope of the function $y=5zx^{3}?$ if we
+calculate the slope only going in the $x$-direction (that is, if we take a
+partial derivative with respect to $x$) we get
+
+\begin{equation*}
+\frac{\partial }{\partial x}\left( 5zx^{3}\right) =5z\left( 3\right)
+x^{3-1}=15zx^{2}
+\end{equation*}%
+notice that we treated $z$ as a constant! That is what we mean when we user
+the symbol $\partial $ and when we say \textquotedblleft partial
+derivative.\textquotedblright\ Let's try another. How about finding the
+slope of $f=7yx^{2}-2x+z$ with respect to the $x$-direction.
+
+\begin{equation*}
+\frac{\partial }{\partial x}\left( 7yx^{2}-2x+z\right) =7y\left( 2\right)
+x^{1}-2(1)x^{0}+z\left( 0\right)
+\end{equation*}%
+The last term illustrates that the slope of a constant is zero, and as we go
+just in the $x$-direction, $z$ is constant. That makes sense. So the change
+in $f$ just due to the last term $(z)$ should be zero. We also remember $%
+x^{0}=1.$ So we are left with 
+\begin{equation*}
+\frac{\partial }{\partial x}\left( 7yx^{2}-2x+z\right) =14yx-2
+\end{equation*}%
+We could also find 
+\begin{equation*}
+\frac{\partial }{\partial y}\left( 7yx^{2}-2x+z\right) =7x^{2}
+\end{equation*}%
+and%
+\begin{equation*}
+\frac{\partial }{\partial z}\left( 7yx^{2}-2x+z\right) =1
 \end{equation*}
 
-All this calculation to get our reported voltage must do something to our
-measurement uncertainty. We could do our usual math to find the reported
-uncertainty, but instead, let's think. Every small voltage $\Delta V_{2}$
-would be multiplied by $\left( \frac{1}{R_{2}}\left( R_{1}+R_{2}\right)
-\right) $ to map it into our original $0\unit{V}$ to $20\unit{V}$ range.
-That should work for our smallest voltage that we can detect, namely $\delta
-V=4.9\unit{mV}.$ That is the smallest value $\Delta V_{2}$ could have. So in
-our $0\unit{V}$ to $20\unit{V}$ range the smallest value this can map to is 
+In our equation for calculating uncertainties, we want to find the
+uncertainty in each dimension (for each variable) and to add these
+uncertainties like components of vectors, so this partial derivative is just
+what we want, the slope of our function in just one direction.
+
+\subsubsection{Tie to statistics}
+
+Back in PH150 you should have learned that for experiments where we repeat
+the same experiment over and over again, our outcome can be given by the
+mean value an our uncertainty can be given by the standard deviation. We
+need to tie our statistical ideas into what we have learned about error
+propagation. Lets go back to our function $f\left( x,z\right) $ the error is
+given by 
 \begin{equation*}
-\delta V_{reported}=\left( \delta V\right) \left( \frac{1}{R_{2}}\left(
-R_{1}+R_{2}\right) \right)
+\delta f=\sqrt{\left( \frac{\partial f}{\partial x}\right) ^{2}\delta
+	x^{2}+\left( \frac{\partial f}{\partial z}\right) ^{2}\delta z^{2}}
 \end{equation*}%
-The first term in parenthesis is essentially $1$ digitizer unit multiplied
-by $\Delta V_{2}$ and the second term in parenthesis converts the $\Delta
-V_{2}$ value into actual volts measured across both resistors.
-
-The quantity $\delta V_{reported}$ gives us our quantization error value for
-our new instrument. Our output will be in multiples of 
+but now we know we could express this in terms of standard deviations
+(provided you don't need to ensure every bit of your data are within your
+uncertainty range). We can write our uncertainties as 
 \begin{equation*}
-V_{reported}=n\times \delta V_{reported}
+\sigma _{f}=\sqrt{\left( \frac{\partial f}{\partial x}\right) ^{2}\sigma
+	_{x}^{2}+\left( \frac{\partial f}{\partial z}\right) ^{2}\sigma _{z}^{2}}
 \end{equation*}%
-Putting in numbers gives 
+So one way to get an estimate of uncertainty like $\delta x$ or $\delta z$
+above is to make many measurements, and use the standard deviation $\sigma
+_{x}$ as an estimate for $\delta x$ and $\sigma _{z}$ for $\delta z.$ This
+is usually not too far off (we will refine this analysis in PH336 for those
+lucky enough to take the course).
+
+We can use connection between $\delta x$ and $\sigma _{x}$ to show that the
+standard deviation of the mean (the best estimate of our uncertainty) is
+given by
+
+\begin{equation*}
+\sigma _{\bar{x}}=\frac{\sigma _{x}}{\sqrt{N}}
+\end{equation*}%
+(a result you should have learned back in PH150). Think of calculating a
+mean value%
+\begin{equation*}
+\bar{x}=\frac{x_{1}+x_{2}+\cdots x_{N}}{N}
+\end{equation*}%
+We can find the uncertainty in this function $\sigma _{\bar{x}}$%
+\begin{equation*}
+\sigma _{\bar{x}}=\sqrt{\left( \frac{\partial \bar{x}}{\partial x_{1}}%
+	\right) ^{2}\sigma _{x_{1}}^{2}+\left( \frac{\partial \bar{x}}{\partial x_{2}%
+	}\right) ^{2}\sigma _{x_{2}}^{2}+\cdots +\left( \frac{\partial \bar{x}}{%
+		\partial x_{N}}\right) ^{2}\sigma _{x_{N}}^{2}}
+\end{equation*}%
+You see we just take the partial derivative of our function $\bar{x}$ with
+respect to each of the variables $x_{i}$ and multiply by the uncertainty in
+that variable written now as a standard deviation $\sigma _{i}.$
+
+For this special case, all of the $x_{i}$ are the same (we are measuring the
+same value over and over in taking an average) and all of the $\sigma _{i}$
+are the same so we just have%
+\begin{equation*}
+\sigma _{\bar{x}}=\sqrt{N\left( \frac{\partial \bar{x}}{\partial x_{1}}%
+	\right) ^{2}\sigma _{x_{1}}^{2}}
+\end{equation*}%
+and we can take the derivative using our rule. Only $x_{1}$ is a variable,
+so we can write the average $\bar{x}$ as 
+\begin{equation*}
+\bar{x}=\frac{x_{1}}{N}+\frac{x_{2}+\cdots x_{N}}{N}
+\end{equation*}%
+This is a polynomial! The first term is $\frac{1}{N}x_{1}$ and the whole
+second term is a constant if we take a partial derivative with respect to $%
+x_{1}$. The derivative is 
 \begin{eqnarray*}
-\delta V_{reported} &=&\left( 4.\,\allowbreak 884\times 10^{-3}\unit{V}%
-\right) \left( \frac{1}{10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}}\left( 40\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}+10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right) \right) \\
-&=&0.024\,42\unit{V} \\
-&=&24.42\unit{mV}
+	\frac{\partial \bar{x}}{\partial x_{1}} &=&\frac{\partial }{\partial x_{1}}%
+	\left( \frac{x_{1}}{N}+\frac{x_{2}+\cdots x_{N}}{N}\right) \\
+	&=&\frac{1}{N}x_{1}^{0}+0 \\
+	&=&\frac{1}{N}
 \end{eqnarray*}%
-This is much bigger than our $4.9\unit{mV}$ uncertainty for the simple
-voltmeter. And this is the cost of using a voltage divider to extend our
-voltage range. For the bigger voltage range we get a bigger uncertainty.
-
-Let's try another example. Suppose we wish to measure $0$ to $20\unit{V}$
-and we look in our case of resistors and find we have the following two
-resistors to use:%
+so our statistical error function is just 
 \begin{eqnarray*}
-R_{1} &=&98\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-} \\
-R_{2} &=&15\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}
-\end{eqnarray*}
-
-We would expect that our $0$ to $20\unit{V}$ would be mapped to a smaller
-range. Let's find that range.%
-\begin{eqnarray*}
-\Delta V_{2\max } &=&\left( \frac{20\unit{V}}{98\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}+15\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}}\right) \left( 15\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right) \\
-&=&2.\,\allowbreak 654\,9\unit{V}
+	\sigma _{\bar{x}} &=&\sqrt{N\left( \frac{1}{N}\right) ^{2}\sigma _{x_{1}}^{2}%
+	} \\
+	&=&\sqrt{\frac{\sigma _{x_{1}}^{2}}{N}} \\
+	&=&\frac{\sigma _{x_{1}}}{\sqrt{N}}
 \end{eqnarray*}%
-So our voltage range at the Arduino A0 input will be $0\unit{V}$ to $%
-2.\,\allowbreak 65\unit{V}.$ This set of resistors won't use the full
-Arduino $0\unit{V}$ to $5\unit{V}$ range. But it will measure $0$ to $20%
-\unit{V}.$ The minimum detectable voltage for this new instrument design for
-our $0$ to $20\unit{V}$ source will be 
-\begin{eqnarray*}
-\delta V_{reported} &=&\left( \delta V_{2}\right) \left( \frac{1}{R_{2}}%
-\left( R_{1}+R_{2}\right) \right) \\
-&=&\left( 4.\,\allowbreak 880\,3\times 10^{-3}\unit{V}\right) \left( \frac{1%
-}{\left( 15\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right) }\left( 98\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}+15\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\right) \right) \\
-&=&3.\,\allowbreak 676\,5\times 10^{-2}\unit{V} \\
-&=&37\unit{mV}
-\end{eqnarray*}
+or, since all the $\sigma _{x_{i}}$ are the same, we can just write this as%
+\begin{equation*}
+\sigma _{\bar{x}}=\frac{\sigma _{x}}{\sqrt{N}}
+\end{equation*}
 
-This uncertainty is much bigger than the uncertainty for our last choice of
-resistors. So $98\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}$ and $15\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}$ are not great choices even though they technically work.
+Notice that in this example we had many $x_{i}$ and that to find the
+uncertainty we just extended our equation from two variables%
+\begin{equation*}
+\sigma _{f}=\sqrt{\left( \frac{\partial f}{\partial x}\right) ^{2}\sigma
+	_{x}^{2}+\left( \frac{\partial f}{\partial z}\right) ^{2}\sigma _{z}^{2}}
+\end{equation*}%
+to $N$ variables%
+\begin{equation*}
+\sigma _{f}=\sqrt{\sum_{i=1}^{N}\left( \frac{\partial f}{\partial x_{i}}%
+	\right) ^{2}\sigma _{i}^{2}}
+\end{equation*}
 
-For your version of the voltmeter in lab, you will choose the resistor
-values to use. Here is an Arduino sketch to implement this extended volt
-meter. In it are the not-so-good $98\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}$ and $15\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-},$ but of course \textbf{you should change the sketch to have your resistor
-values}.
-\begin{lstlisting}[language=Arduino]
-/////////////////////////////////////////////////////////
-// Extended Voltmeter
-// This voltmeter with the values given below
-// is designed to measure a 0 to 20V range with 1024 
-// discrete values of with an uncertainty of about 0.02V
-/////////////////////////////////////////////////////////
- //set up a variable to represent Analog Input 0
-int AI0 = 0;         
-// Resistance of R1(put in your actual value here)
-float R1 = 98000.0; 
-// Resistance of R2(put in your actual value here)  
-float R2 = 15000.0;  
- 
-int ADC_value = 0;    // Place to put the A2D values
-float voltage = 0.0;  // calculated signal voltage
-//mV Arduino's minimum detectable voltage
-float delta_v_min = 0.0049 
- 
-/////////////////////////////////////////////////////////
-void setup() {
-  //Initiate Serial Communication
-  Serial.begin(9600);    //9600 baud rate
-}
- 
-/////////////////////////////////////////////////////////
-void loop() {
-  // read the serial data from AI0
-  ADC_value = analogRead(AI0);
-  // if you want to, print out the channel A2D values. 
-  // Uncomment if you want them.
-  //Serial.print("analog channel value ");
-  //Serial.print(ADC_value);
-  // calculate the signal voltage 
-  voltage=ADC_value*(delta_v_min)*(R1+R2)/R2;
-  // print out the signal voltage
-  Serial.print(" voltage ");
-  Serial.println(voltage, 4);  
-}
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
- \end{lstlisting}
+In this special case, we were trying to show a special result, but we can do
+this for any function with any number of variables. If your function is
+complicated, you just need to take more partial derivative terms under the
+square root.
 
-\bigskip Of course you will want to have another person check your math and
-wiring, and you should check your output voltage with a stand-alone meter
-before you plug into your Arduino.
 
-\section{Practice Problems}
 
-\rule{11cm}{0.03cm}
-
-Here is an example for you to work out on your own before class. Do this and
-compare your result to the results of the other people in your lab group as
-you come into class on lab day.
-
-Suppose we wish to measure $0$ to $15\unit{V}$ and we look in our case of
-resistors and find we have the following two resistors to use:%
-\begin{eqnarray*}
-R_{1} &=&43.2\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-} \\
-R_{2} &=&15.2\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}
-\end{eqnarray*}%
-What range of voltages would we see at the Arduino, and what is the
-quantization error for our measurement?
-
-\rule{11cm}{0.03cm}
-
-\section{Lab Assignment}
-
-\begin{enumerate}
-\item Simple Arduino Voltmeter
-
-\begin{enumerate}
-\item Build a circuit with our power supply and a resistor like we did in
-our last lab. You can choose any resistor. \begin{figure}[h!]
-\includegraphics[width=1.3932in,height=1.3188in]{PH4CAU1Z}
-\end{figure}(see section (\ref{Voltage
-Measurement with Meter}). \begin{figure}[h!]
-\includegraphics[width=1.8507in,height=0.9677in]{PH4CAU20}
-\end{figure}This time write the simple
-voltmeter sketch, wire it up, and measure the voltage across the resistor
-using our Arduino and the serial monitor. Be careful to stay in the $0$ to $5%
-\unit{V}$ range!
-
-\item Calculate the uncertainty due to quantization error for your Arduino
-simple voltmeter
-
-\item Compare your calculated uncertainty to the measured uncertainty that
-you see in your device output. (This is tricky, does the power supply give a
-truly constant voltage?)
-\end{enumerate}
-
-\item Extended Voltmeter Using a Voltage Divider
-
-\begin{enumerate}
-\item Build the voltage divider using two resistors as described in section.
-(\ref{Voltmeter with Voltage Divider}). You will have to think about which
-resistors from our set will work best. Discuss this with your group, or have
-group members try the calculations with different combinations.
-
-\item Use a multimeter to verify that the output of the voltage divider is
-never more than $5\unit{V}$ and never less than $0\unit{V}.$ Take your power
-supply all the way from $0\unit{V}$ to $20\unit{V}$ and watch the multimeter
-to ensure it stays in the $0$ to $5\unit{V}.$ Range.\textbf{\ Do this with a
-multimeter before you hook up your Arduino.} You are making sure everything
-works so you won't destroy your Arduino!
-
-\item \begin{figure}[h!]
-\includegraphics[width=1.8507in,height=0.9677in]{PH4CAU21}
-\end{figure}Write the sketch and then hook
-the output of your voltage divider to the A0 pin and the other side of $%
-R_{2} $ to a GND pin.\begin{figure}[h!]
-\includegraphics[width=2.3851in,height=1.5469in]{PH4CAU22}
-\end{figure}Your voltmeter should now be set
-up. Compile and load the sketch and use the Serial Plotter to watch the
-voltage values as you take the power supply from $0$ to $20\unit{V}$ using
-the serial monitor or plotter. \textbf{Don't go over }$20\unit{V}!$
-
-\item What is the quantization error for this voltmeter? Check to see if
-this matches your values on the serial monitor.
-
-\item Design a voltage divider that will allow the full $0$ to $30\unit{V}$
-range of our power supply to be measured using the Arduino's $0$ to $5\unit{V%
-}$ analog input. What would the quantization error be for this new circuit?
-\end{enumerate}
-\end{enumerate}
+%\subsection{Build a new instrument from an old instrument}
+%
+%\begin{enumerate}
+%\item IF\ THERE\ IS\ TIME, choose a resistor in the $20\unit{k%
+%%TCIMACRO{\U{3a9}}%
+%%BeginExpansion
+%\Omega%
+%%EndExpansion
+%}$ range (say, from about $10\unit{k%
+%%TCIMACRO{\U{3a9}}%
+%%BeginExpansion
+%\Omega%
+%%EndExpansion
+%}$ to about $30\unit{k%
+%%TCIMACRO{\U{3a9}}%
+%%BeginExpansion
+%\Omega%
+%%EndExpansion
+%}$). Choose a shunt resistor in the $200\unit{%
+%%TCIMACRO{\U{3a9}}%
+%%BeginExpansion
+%\Omega%
+%%EndExpansion
+%}$ range. Then set up the circuit to measure a current. \begin{figure}[h!]
+%\includegraphics[width=%
+%3.8744in,height=3.0874in]{PH4CAU1H}
+%\end{figure}%
+%Use an additional multimeter set to measure current to check our
+%voltage-current measurement. Calculate a percent difference to see how well
+%this worked.
+%\end{enumerate}
+%
+%
+%
+%
+%first, then before you connect the Arduino have group member check your
+%wiring, then check the wiring with a stand-alone meter (that is why we
+%learned to use them last week). Also remember, more than $5\unit{V}$ will
+%damage the Arduino. So only put in voltages in the range $0\unit{V}$ to $5%
+%\unit{V}.$
+%
+%We need one wire attached to the pin marked A0. We need another wire
+%attached to one of our Arduino ground pins marked GND. And we connect the
+%first wire to the positive output of our signal source (say, our power
+%supply) and the GND wire to our negative output of our signal source (say
+%the negative or ground connection on our power supply). That is all there is
+%to it!

@@ -6,7 +6,13 @@
 \usepackage{graphicx}
 \usepackage{units}
 \usepackage{hyperref}
+\usepackage{pythonhighlight}
+
 \graphicspath {{figures/}}
+
+\input{arduinoLanguage.tex} % provies color formating for the Arduino Language. It loads and uses the \usepackage{listings}  
+
+
 
 \begin{document}
 
@@ -24,7 +30,7 @@ Science Teaching Majors} }}
 
 
 \chapter{Introduction}
-\input{Chapters/Introduction.tex}
+	\input{Chapters/Introduction.tex}
 
 \mainmatter
 
