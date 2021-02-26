@@ -1,4 +1,5 @@
 %Data_to_Computer
+\chapter{Getting data to the Computer}
 We now have voltage data coming from our Arduino into the computer serial
 port, and we can see that data with the Arduino serial port monitors. But
 suppose we want to analyze our data in another program. How would we get the
@@ -232,21 +233,14 @@ some of the Python code elements we will need, and then give an example code.
 
 The first new code piece is making files for our data. We create a file with
 a line like this (see the actual code below):%
+
 \begin{python}
 	fileObject=open("C:\\Users\\rtlines\\Documents\\data.txt","w")	
 \end{python}
 
-The \textquotedblleft fileObject\textquotedblright\ is a variable that
-contains all the file information like the path and file name. It is way
-easier to type than to include all that information each time we use a file.
-So we will use fileObject variables. In the code below I named the
-fileObject variable \textquotedblleft dataFile.\textquotedblright\ Of
-course, you will have to choose your own path where you will place the data
-file (you can't use mine, because you don't have my computer!) and you will
-need to choose your own file name. Notice the weird double slashes
+The \textquotedblleft fileObject\textquotedblright\ is a variable that contains all the file information like the path and file name. It is way easier to type than to include all that information each time we use a file. So we will use fileObject variables. In the code below I named the fileObject variable \textquotedblleft dataFile.\textquotedblright\ Of course, you will have to choose your own path where you will place the data file (you can't use mine, because you don't have my computer!) and you will need to choose your own file name. Notice the weird double slashes
 \textquotedblleft $\backslash$$\backslash$%
-.\textquotedblright\ These are a Python thing and you need to write the path
-this way.
+.\textquotedblright\ These are a Python thing and you need to write the path this way.
 
 The other new code piece is dealing with serial ports. Like with our Arduino
 code, we have to set up the serial port. We do that with the line like the
@@ -284,7 +278,7 @@ At the end of the program we close the file
 
 \begin{python}
 	ser.close()
-\end{python}}
+\end{python}
 
 so that it will be ready to use next time. Your complete code might look
 something like this.
@@ -642,6 +636,7 @@ dataFile.close()
 ser.close() 
 #---------------------------------------------------------------------
 #---------------------------------------------------------------------
+
 \end{python}
 
 %\section{Using an SD Card Reader}
