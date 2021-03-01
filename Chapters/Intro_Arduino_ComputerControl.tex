@@ -273,9 +273,7 @@ C\textquotedblright\ language, you will recognize some of these changes.
 \subsection{Arduino LED light blink sketch (program)}
 
 We are ready to write code to blink our LED\ light. Here is an example code.
-We write this code right in the Arduino development environment main window.
-
-
+We write this code right in the Arduino development environment main window. You can download it directly \href{https://dtoliphant.github.io/PH250Manual/Code/IntroBlink.ino}{here}
 \lstinputlisting[language=Arduino]{Code/IntroBlink.ino}
 
 
@@ -383,45 +381,9 @@ the proto-board. Your hardware should look something like this.
 \end{figure}We will need to modify our sketch
 (save the old one first so you have a separate copy for reference). Here is
 a suggestion of what the new sketch might look like.
- \begin{lstlisting}[language=Arduino]
-/////////////////////////////////////////////////////////
-//Arduino Sketch to blink one LED light
-//   Written by Brother Lines
-//   Feb 6, 2017
-//
-//   Define our Arduino Variables
-//      We will call pin 13 "ledPin1"
-//      We will call pin 12 "ledPin2"
-/////////////////////////////////////////////////////////
-int ledPin1=13;
-int ledPin2=12;
- 
-/////////////////////////////////////////////////////////
-void setup() {
- // put your setup code here, to run once:
- // set both pins to OUTPUT
- pinMode(ledPin1, OUTPUT);
- pinMode(ledPin2, OUTPUT);
- }
- 
-/////////////////////////////////////////////////////////
-void loop() {
- // put your main code here, to run repeatedly:
- // turn on one LED and turn off the other
- digitalWrite(ledPin1,HIGH);
- digitalWrite(ledPin2,LOW);
- // wait
- delay(100);
- // now switch so the first LED is off
- // and the second is on
- digitalWrite(ledPin1,LOW);
- digitalWrite(ledPin2,HIGH);
- // wait
- delay(100);
- }
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
- \end{lstlisting}
+
+\lstinputlisting[language=Arduino]{Code/IntroBlink2LEDs.ino}
+
 
 Again save your sketch and maybe take a photo of your hardware set up. Place
 both in your lab notebook along with notes on how you got it to work. Make
@@ -504,43 +466,9 @@ i++
 
 We will use this to make $i$ increase by one each time the loop runs. The
 whole code might look like this.
- \begin{lstlisting}[language=Arduino]
-/////////////////////////////////////////////////////////
-// code to blink two LED's using a mathematical expression
-// to determine when they should light. Note that the 
-// Arduino code is closer to C++ than python.
-/////////////////////////////////////////////////////////
-int ledPin1=13;
-int ledPin2=12;
-int i=0;
- 
-/////////////////////////////////////////////////////////
-void setup() {
- // put your setup code here, to run once:
- pinMode(ledPin1, OUTPUT);
- pinMode(ledPin2, OUTPUT);
- }
- 
-/////////////////////////////////////////////////////////
-void loop() {
- // put your main code here, to run repeatedly:
- // if the integer, i, is even light one light, 
- // if odd light the other light
- if (i % 2 == 0 ) {
-    digitalWrite(ledPin1,HIGH);
-    digitalWrite(ledPin2,LOW);
-    delay(1000);
- }
- else {
-    digitalWrite(ledPin1,LOW);
-    digitalWrite(ledPin2,HIGH);
-    delay(1000);
- }
- i++;
- }
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
- \end{lstlisting}
+\lstinputlisting[language=Arduino]{Code/IntroBlink2LEDs_Math.ino}
+
+
 
 Again save your sketch. You should probably say in your lab notebook that
 you used the previous hardware setup. You might want to describe in your lab
@@ -592,74 +520,75 @@ see if you can figure out what the code should be.
 
 This example is a much more complex version of a mathematical based computer
 control.
- \begin{lstlisting}[language=Arduino]
-/////////////////////////////////////////////////////////
-// code to blink two LED's using a mathematical expression
-// to determine when they should light. Note that the
-// Arduino code is closer to C++ than python.
-/////////////////////////////////////////////////////////
-int ledPin1=13;
-int ledPin2=12;
-int i=0; //loop counter
- 
-/////////////////////////////////////////////////////////
-int fib_count=0; // number of blinks based on Fibonacci
-int i_max=10; // maximum Fibonacci number before 
- // starting over
- 
-/////////////////////////////////////////////////////////
-void setup() {
- // put your setup code here, to run once:
- pinMode(ledPin1, OUTPUT);
- pinMode(ledPin2, OUTPUT);
- } 
- 
-int fib(int x) {
- // calculates the Fibonacci sequence using recursion
- if (x==0) 
-    return 0;
- if (x==1)
-   return 1;
-   return fib(x-1) + fib(x-2);
- } 
- 
-/////////////////////////////////////////////////////////
-void loop() {
- // put your main code here, to run repeatedly:
- // blink the LED's with the number of blinks being 
- // the Fibonacci sequence.
- fib_count=fib(i);
- if (i % 2 == 0 ) {
-   // turn off one light
-   digitalWrite(ledPin2,LOW);
-   // now blink the second light fib_count times 
-   for (int n=0; n<fib_count; n++) { 
-      digitalWrite(ledPin1,HIGH);
-      delay(100);
-      digitalWrite(ledPin1,LOW);
-      delay(100);
-   }
- }
- else {
-   // turn off the other light
-   digitalWrite(ledPin1,LOW);
-   // now blink the first light fib_count times
-   for (int n=0; n<fib_count ; n++) { 
-      digitalWrite(ledPin2,HIGH);
-      delay(100);
-      digitalWrite(ledPin2,LOW);
-      delay(100);
-   }
- }
- // increment i
- i++;
- // limit our blinks to the first i_max Fibonacci numbers
- if (i>i_max) i=0;
- }
-}
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
- \end{lstlisting}
+\lstinputlisting[language=Arduino]{Code/IntroFibonacci.ino}
+% \begin{lstlisting}[language=Arduino]
+%/////////////////////////////////////////////////////////
+%// code to blink two LED's using a mathematical expression
+%// to determine when they should light. Note that the
+%// Arduino code is closer to C++ than python.
+%/////////////////////////////////////////////////////////
+%int ledPin1=13;
+%int ledPin2=12;
+%int i=0; //loop counter
+% 
+%/////////////////////////////////////////////////////////
+%int fib_count=0; // number of blinks based on Fibonacci
+%int i_max=10; // maximum Fibonacci number before 
+% // starting over
+% 
+%/////////////////////////////////////////////////////////
+%void setup() {
+% // put your setup code here, to run once:
+% pinMode(ledPin1, OUTPUT);
+% pinMode(ledPin2, OUTPUT);
+% } 
+% 
+%int fib(int x) {
+% // calculates the Fibonacci sequence using recursion
+% if (x==0) 
+%    return 0;
+% if (x==1)
+%   return 1;
+%   return fib(x-1) + fib(x-2);
+% } 
+% 
+%/////////////////////////////////////////////////////////
+%void loop() {
+% // put your main code here, to run repeatedly:
+% // blink the LED's with the number of blinks being 
+% // the Fibonacci sequence.
+% fib_count=fib(i);
+% if (i % 2 == 0 ) {
+%   // turn off one light
+%   digitalWrite(ledPin2,LOW);
+%   // now blink the second light fib_count times 
+%   for (int n=0; n<fib_count; n++) { 
+%      digitalWrite(ledPin1,HIGH);
+%      delay(100);
+%      digitalWrite(ledPin1,LOW);
+%      delay(100);
+%   }
+% }
+% else {
+%   // turn off the other light
+%   digitalWrite(ledPin1,LOW);
+%   // now blink the first light fib_count times
+%   for (int n=0; n<fib_count ; n++) { 
+%      digitalWrite(ledPin2,HIGH);
+%      delay(100);
+%      digitalWrite(ledPin2,LOW);
+%      delay(100);
+%   }
+% }
+% // increment i
+% i++;
+% // limit our blinks to the first i_max Fibonacci numbers
+% if (i>i_max) i=0;
+% }
+%}
+%/////////////////////////////////////////////////////////
+%/////////////////////////////////////////////////////////
+% \end{lstlisting}
 
 Again save your sketch. You should probably say in your lab notebook that
 you used the previous hardware setup. You really should describe in your lab
