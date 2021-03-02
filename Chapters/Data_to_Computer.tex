@@ -282,104 +282,108 @@ At the end of the program we close the file
 
 so that it will be ready to use next time. Your complete code might look
 something like this.
-\begin{python}
-#---------------------------------------------------------------------
-# Python Code to read a stream of data from the serial port
-#   and save it to a file
-#---------------------------------------------------------------------
-#   The idea is to read a series of voltages from an Arduino 
-#   connected to the serial port where the Arduino is being 
-#   used as the Analog to Digital converter. Both the voltage
-#   and the time the voltage was taken are sent to the serial port.
-#
-# We will use two libraries, serial and time
-#   The serial library is used to read the serial port
-#   The time library is used to space out our data collection by
-#   adding a delay in between data points. The amount of time 
-#   to wait in between data points is called "timeBetween." 
-#
-# We may have to install the serial library. If you have the
-#   Anaconda Python for Windows, you can open an Anaconda 
-#   window and use the command 'conda install pyserial'
-#   This must be done before the code can run.
-#
-# Debugging issues:  The Anaconda Python distribution tends to 
-#   hang on to the serial port even if the program does not run. 
-#   If this happens, try sending the python command ser.close()
-#   at the command prompt. If this doesn't work, You may have to 
-#   restart Python.
-#   In windows, closing (after saving) the IDE and reopening it 
-#   might be enough.
-#---------------------------------------------------------------------
-# import libraries
-import serial
-import time
- 
-# define variables for the delay time we wait between data points
-timeBetween=5 #seconds
- 
-# define the number of data points to collect
-N=20
- 
-#the next line opens a file and creates a pointer or handle for that file
-#  to use as a reference. You have to use double slashes in the path.
-#  The pointer, "dataFile" takes the place of all the path and file
-#  name so it is easier to use in the code below
-#  This line worked for Brother Lines, but won't work for you as it is.
-#  You need to replace "rtlines" with your username at a minimum.
-dataFile=open('C:\\Users\\rtlines\\Documents\\data2.txt','w')
- 
-#the next line opens the serial port for communication
-ser=serial.Serial('COM3', baudrate = 9600, timeout=1)
- 
-#there will be a delay before the first data point comes from the 
-#  serial port, warn the user so they don't worry.
-print('getting started...')
- 
-# set our index to zero
-i=0
- 
- 
-# Now for N points, collect data and write it to a file
-while (i<N):    #Begin data collection loop
-    #We will take data every "timeBetween" seconds. We need to know 
-    #   when we start waiting so we can tell if it is time to collect 
-    #   data yet. Use the time.time() to get the current time in seconds
-    #   since Jan 1,1970. Yes that is a weird way to measure time, but 
-    #   computers do it this way.
-    waitStart=time.time()
-    
-    #Data comes to the serial port fast. We will continually read 
-    #  the data as fast as it comes, but only save it every timeBetween
-    #  seconds. The next while loop keeps us reading in data, but only 
-    #  when the current time - waitStart >= timeBetweem will we use 
-    #  the data.
-    while (time.time()-waitStart<timeBetween): #Begin Data read loop
-         # Get data from the serial port
-         # it should have a time and a voltage
-         arduinoData=ser.readline().decode('ascii')
-         # end of the Data read loop
-         
-    # the next line just prints the voltage point on the console so the user 
-    # feels like something is happening.
-    print(arduinoData)
-    # This next line writes combines the time since we started and the Arduino 
-    # value from the serial port into one string
-    writeString=str(arduinoData) #+ " \n"
-    # The next line writes our time plus Arduino value to the file.
-    dataFile.write(writeString)
-    # and finely we increment the loop counter
-    i=i+1      # end Data collection loop   
-    
-# Print out a message saying we are done
-print("done with data collection, closing the file and the serial port")
-# Close the file
-dataFile.close()
-# Close the serial port   
-ser.close() 
-#---------------------------------------------------------------------
-#---------------------------------------------------------------------
-\end{python}
+
+\href{https://dtoliphant.github.io/PH250Manual/Code/Data2Computer_PythonSide_Win.py}{Download here}
+
+\inputpython{Code/Data2Computer_PythonSide_Win.py}{0}{10000}
+%\begin{python}
+%#---------------------------------------------------------------------
+%# Python Code to read a stream of data from the serial port
+%#   and save it to a file
+%#---------------------------------------------------------------------
+%#   The idea is to read a series of voltages from an Arduino 
+%#   connected to the serial port where the Arduino is being 
+%#   used as the Analog to Digital converter. Both the voltage
+%#   and the time the voltage was taken are sent to the serial port.
+%#
+%# We will use two libraries, serial and time
+%#   The serial library is used to read the serial port
+%#   The time library is used to space out our data collection by
+%#   adding a delay in between data points. The amount of time 
+%#   to wait in between data points is called "timeBetween." 
+%#
+%# We may have to install the serial library. If you have the
+%#   Anaconda Python for Windows, you can open an Anaconda 
+%#   window and use the command 'conda install pyserial'
+%#   This must be done before the code can run.
+%#
+%# Debugging issues:  The Anaconda Python distribution tends to 
+%#   hang on to the serial port even if the program does not run. 
+%#   If this happens, try sending the python command ser.close()
+%#   at the command prompt. If this doesn't work, You may have to 
+%#   restart Python.
+%#   In windows, closing (after saving) the IDE and reopening it 
+%#   might be enough.
+%#---------------------------------------------------------------------
+%# import libraries
+%import serial
+%import time
+% 
+%# define variables for the delay time we wait between data points
+%timeBetween=5 #seconds
+% 
+%# define the number of data points to collect
+%N=20
+% 
+%#the next line opens a file and creates a pointer or handle for that file
+%#  to use as a reference. You have to use double slashes in the path.
+%#  The pointer, "dataFile" takes the place of all the path and file
+%#  name so it is easier to use in the code below
+%#  This line worked for Brother Lines, but won't work for you as it is.
+%#  You need to replace "rtlines" with your username at a minimum.
+%dataFile=open('C:\\Users\\rtlines\\Documents\\data2.txt','w')
+% 
+%#the next line opens the serial port for communication
+%ser=serial.Serial('COM3', baudrate = 9600, timeout=1)
+% 
+%#there will be a delay before the first data point comes from the 
+%#  serial port, warn the user so they don't worry.
+%print('getting started...')
+% 
+%# set our index to zero
+%i=0
+% 
+% 
+%# Now for N points, collect data and write it to a file
+%while (i<N):    #Begin data collection loop
+%    #We will take data every "timeBetween" seconds. We need to know 
+%    #   when we start waiting so we can tell if it is time to collect 
+%    #   data yet. Use the time.time() to get the current time in seconds
+%    #   since Jan 1,1970. Yes that is a weird way to measure time, but 
+%    #   computers do it this way.
+%    waitStart=time.time()
+%    
+%    #Data comes to the serial port fast. We will continually read 
+%    #  the data as fast as it comes, but only save it every timeBetween
+%    #  seconds. The next while loop keeps us reading in data, but only 
+%    #  when the current time - waitStart >= timeBetweem will we use 
+%    #  the data.
+%    while (time.time()-waitStart<timeBetween): #Begin Data read loop
+%         # Get data from the serial port
+%         # it should have a time and a voltage
+%         arduinoData=ser.readline().decode('ascii')
+%         # end of the Data read loop
+%         
+%    # the next line just prints the voltage point on the console so the user 
+%    # feels like something is happening.
+%    print(arduinoData)
+%    # This next line writes combines the time since we started and the Arduino 
+%    # value from the serial port into one string
+%    writeString=str(arduinoData) #+ " \n"
+%    # The next line writes our time plus Arduino value to the file.
+%    dataFile.write(writeString)
+%    # and finely we increment the loop counter
+%    i=i+1      # end Data collection loop   
+%    
+%# Print out a message saying we are done
+%print("done with data collection, closing the file and the serial port")
+%# Close the file
+%dataFile.close()
+%# Close the serial port   
+%ser.close() 
+%#---------------------------------------------------------------------
+%#---------------------------------------------------------------------
+%\end{python}
 
 Make sure you understand what each line does. Discuss each line with a group
 member or with the instructor. Python code runs one line at a time. That is
@@ -393,42 +397,47 @@ to send both the time and the voltage to the serial port. Here is my sketch
 (remember since it is a simple voltmeter it can only handle $0\unit{V}$ to $%
 +5\unit{V}.$)
 
-\begin{lstlisting}[language=Arduino]
-/////////////////////////////////////////////////////////
-// very simple voltmeter that also returns the time since 
-// the data collection started with the voltage.
-// will measure 0 to 5V only!
-// Voltages outside 0 to 5V will destroy your Arduino!!!
-/////////////////////////////////////////////////////////
-  int AI0 = 0;
-  float delta_v_min=0.0049;   // volts per A2D unit
-  int value = 0;
-  float voltage = 0.0;
- 
-/////////////////////////////////////////////////////////
-   void setup() {
-      // put your setup code here, to run once:
-      //Initiate Serial Communication
-      Serial.begin(9600);    //9600 baud rate
-    }
-    
-/////////////////////////////////////////////////////////
-   void loop() {
-      // read in the voltage 
-      // in A2D units form the serial port
-      value = analogRead(AI0); 
-      Serial.print(" time in milliseconds ");
-      // the millis() function gives the time 
-      // in milliseconds since the sketch started
-      Serial.print(millis()); 
-      // convert to voltage units using delta_v_min
-      voltage = value * delta_v_min;
-      Serial.print(" voltage ");
-      Serial.println(voltage, 4);  
-  }
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-\end{lstlisting}
+
+
+\href{https://dtoliphant.github.io/PH250Manual/Code/Data2Computer_ArduinoSide_Win.ino}{Download here}
+\lstinputlisting[language=Arduino]{Code/Data2Computer_ArduinoSide_Win.ino}
+%
+%\begin{lstlisting}[language=Arduino]
+%/////////////////////////////////////////////////////////
+%// very simple voltmeter that also returns the time since 
+%// the data collection started with the voltage.
+%// will measure 0 to 5V only!
+%// Voltages outside 0 to 5V will destroy your Arduino!!!
+%/////////////////////////////////////////////////////////
+%  int AI0 = 0;
+%  float delta_v_min=0.0049;   // volts per A2D unit
+%  int value = 0;
+%  float voltage = 0.0;
+% 
+%/////////////////////////////////////////////////////////
+%   void setup() {
+%      // put your setup code here, to run once:
+%      //Initiate Serial Communication
+%      Serial.begin(9600);    //9600 baud rate
+%    }
+%    
+%/////////////////////////////////////////////////////////
+%   void loop() {
+%      // read in the voltage 
+%      // in A2D units form the serial port
+%      value = analogRead(AI0); 
+%      Serial.print(" time in milliseconds ");
+%      // the millis() function gives the time 
+%      // in milliseconds since the sketch started
+%      Serial.print(millis()); 
+%      // convert to voltage units using delta_v_min
+%      voltage = value * delta_v_min;
+%      Serial.print(" voltage ");
+%      Serial.println(voltage, 4);  
+%  }
+%/////////////////////////////////////////////////////////
+%/////////////////////////////////////////////////////////
+%\end{lstlisting}
 
 You can't use the Arduino serial monitor and get data from the serial port
 using Python at the same time. So turn off the serial monitor if it is
@@ -531,249 +540,14 @@ click on \textbf{Tools}, scroll down to \textbf{Port} and write down what is
 written there minus what is in the parenthesis.
 
 \subsection{Mac version of the python code}
-\begin{python}
-#---------------------------------------------------------------------
-# Python Code to read a stream of data from the serial port
-#   and save it to a file
-#---------------------------------------------------------------------
-#   The idea is to read a series of voltages from an Arduino 
-#   connected to the serial port where the Arduino is being 
-#   used as the Analog to Digital converter. Both the voltage
-#   and the time the voltage was taken are sent to the serial port.
-#
-# We will use two libraries, serial and time
-#   The serial library is used to read the serial port
-#   The time library is used to space out our data collection by
-#   adding a delay in between data points. The amount of time 
-#   to wait in between data points is called "timeBetween." 
-#
-# We may have to install the serial library. If you have the
-#   Anaconda Python for Windows, you can open an Anaconda 
-#   window and use the command 'conda install pyserial'
-#   This must be done before the code can run.
-#
-# Debugging issues:  The Anaconda Python distribution tends to 
-#   hang on to the serial port even if the program does not run. 
-#   If this happens, try sending the python command ser.close()
-#   at the command prompt. If this doesn't work, You may have to 
-#   restart Python.
-#   In windows, closing (after saving) the IDE and reopening it 
-#   might be enough.
-#---------------------------------------------------------------------
-# import libraries
-import serial
-import time
- 
-# define variables for the delay time we wait between data points
-timeBetween=5 #seconds
- 
-# define the number of data points to collect
-N=20
- 
-#the next line opens a file and creates a pointer or handle for that file
-#  to use as a reference. You have to use double slashes in the path.
-#  The pointer, "dataFile" takes the place of all the path and file
-#  name so it is easier to use in the code below
-#  This line worked for Brother Lines, but won't work for you as it is.
-#  You need to replace "rtlines" with your username at a minimum.
-#  PC version next:
-#  dataFile=open("C:\\Users\\rtlines\\Documents\\data.txt","w")
-#  MAC version next
-dataFile = open('/Users/rtlines/Documents/data.csv','w')
+\href{https://dtoliphant.github.io/PH250Manual/Code/Data2Computer_PythonSide_Mac.py}{Download here}
 
- 
-#the next line opens the serial port for communication
-#  PC version next
-#ser=serial.Serial('COM3', baudrate = 9600, timeout=1)
-#  MAC version next
-ser = serial.Serial('/dev/cu.usbmodem1411', baudrate = 9600, timeout = 1)
+\inputpython{Code/Data2Computer_PythonSide_Mac.py}{0}{10000}
 
- 
-#there will be a delay before the first data point comes from the 
-#  serial port, warn the user so they don't worry.
-print('getting started...')
- 
-# set our index to zero
-i=0
- 
- 
-# Now for N points, collect data and write it to a file
-while (i<N):    #Begin data collection loop
-    #We will take data every "timeBetween" seconds. We need to know 
-    #   when we start waiting so we can tell if it is time to collect 
-    #   data yet. Use the time.time() to get the current time in seconds
-    #   since Jan 1,1970. Yes that is a weird way to measure time, but 
-    #   computers do it this way.
-    waitStart=time.time()
-    
-    #Data comes to the serial port fast. We will continually read 
-    #  the data as fast as it comes, but only save it every timeBetween
-    #  seconds. The next while loop keeps us reading in data, but only 
-    #  when the current time - waitStart >= timeBetweem will we use 
-    #  the data.
-    while (time.time()-waitStart<timeBetween): #Begin Data read loop
-         # Get data from the serial port
-         # it should have a time and a voltage
-         arduinoData=ser.readline().decode('ascii')
-         # end of the Data read loop
-         
-    # the next line just prints the voltage point on the console so the user 
-    # feels like something is happening.
-    print(arduinoData)
-    # This next line writes combines the time since we started and the Arduino 
-    # value from the serial port into one string
-    writeString=str(arduinoData) #+ " \n"
-    # The next line writes our time plus Arduino value to the file.
-    dataFile.write(writeString)
-    # and finely we increment the loop counter
-    i=i+1      # end Data collection loop   
-    
-# Print out a message saying we are done
-print("done with data collection, closing the file and the serial port")
-# Close the file
-dataFile.close()
-# Close the serial port   
-ser.close() 
-#---------------------------------------------------------------------
-#---------------------------------------------------------------------
-
-\end{python}
-
-%\section{Using an SD Card Reader}
-%
-%Now that we have a computer reading our data and saving it, you probably
-%wondered if we couldn't just save the data on a SD card using the Arduino
-%and no computer. That way, we could build a stand-alone data logger! It
-%might be necessary to do this if you are going to launch your instrument on
-%a high altitude balloon, for example. Then you could take the data on the SD
-%card and read it from the card to the computer by putting the whole card in
-%your computers SD card slot. To do this we will need an additional piece of
-%hardware that can handle an SD card. This is called a SD card reader
-%\textquotedblleft breakout board.\textquotedblright \begin{figure}[h!]
-%\includegraphics[width=3.614in,height=%
-%2.3981in]{PH4CAU00}
-%\end{figure}And we will need to wire this to
-%our Arduino. There are six pins on our SD card reader board. Those six pins
-%need to be wired to the following Arduino pins:
-%
-%\begin{equation*}
-%\begin{tabular}{ll}
-%SD Card Reader & Arduino \\ 
-%GND & GND \\ 
-%VCC & +5V \\ 
-%MISO & Pin 12 \\ 
-%MOSI & Pin 11 \\ 
-%SCK & Pin 13 \\ 
-%CS & Pin 10%
-%\end{tabular}%
-%\end{equation*}
-%
-%The pin names on the SD card reader board are usually on the back of the
-%card.\begin{figure}[h!]
-%\includegraphics[width=4.5152in,height=2.5365in]{PH4CAV2N}
-%\end{figure}Of course, we will need a sketch
-%to tell the Arduino what to do with this new hardware. Here is an example:
-%\begin{verbatim}
-%/////////////////////////////////////////////////////////
-%//  SD card datalogger
-%//
-%// This example shows how to log data from three analog sensors
-%// to an SD card using the SD library.
-%//
-%// The circuit:
-%// * analog sensors on analog pin 0
-%// * SD card attached to SPI bus as follows:
-%// * MOSI - pin 11
-%// * MISO - pin 12
-%// * CLK  - pin 13
-%// * CS   - pin 10 (This one we can choose. Pin 10 is convenient
-%//                  but we could choose any of the digital pins)
-%// created  24 Nov 2010  by Tom Igoe
-%// modified 9 Apr 2012  by Tom Igoe
-%// Modified 26 Apr 2017 by Todd Lines
-%//
-%// This example code is in the public domain.
-%/////////////////////////////////////////////////////////
-% 
-%#include <SPI.h>
-%#include <SD.h>
-% 
-%const int CS_Pin = 10;       // this sets the pin for the CS connection
-%                             // to the SD card reader
-% 
-%/////////////////////////////////////////////////////////
-%void setup() {
-%    // Open serial communications and wait for port to open:
-%    Serial.begin(9600);    // the 9600 tells our Arduino how fast to send data
-% 
-%    // Check to see if the serial port is working
-%    while (!Serial) {
-%        ; // wait for serial port to connect. 
-%          // If it is, just keep going (don't do anything)
-%    }
-%    // Send a message to the Serial Monitor telling us that we are starting
-%    //     to use the SD card.
-%    Serial.print("Initializing SD card...");
-% 
-%    // See if the card is present and can be initialized.
-%    //    If there is a problem, tell us using the serial monitor.
-%    if (!SD.begin(CS_Pin)) {
-%        Serial.println("Card failed, or not present");
-%        // it didn't start the SD card write, so don't do anything more:
-%        return;
-%    }
-%    // But if the SD card did initialize, tell us on the serial monitor.
-%    Serial.println("card initialized.");
-%}
-% 
-%/////////////////////////////////////////////////////////
-%void loop() {
-%    // We will have to turn our voltage numbers into text to send to our file
-%    // let's make a text variable (called a string) for this
-%    String dataString = ""; 
-% 
-%    // let's choose our analog input  0 to read
-%    int analogPin = 0;
-% 
-%    // read the analog input
-%    int sensor = analogRead(analogPin);
-% 
-%    // make it text
-%    dataString += String(sensor);
-%  
-%    // open the file. note that only one file can be open at a time,
-%    // so you have to close this one before opening another.
-%    File dataFile = SD.open("datalog.txt", FILE_WRITE);
-% 
-%    // If the file is available, write to it, but then close it 
-%    //   right after. We will only keep the file open while we are 
-%    //   writing to it. This is safer. It helps prevent getting files 
-%    //   corrupted, and let's the Arduino keep adding to the file after 
-%    //   a problem.
-%    if (dataFile) {
-%        // print our data point
-%        dataFile.println(dataString);
-% 
-%        // close the file for safety
-%        dataFile.close();
-% 
-%        // print to the serial monitor too:
-%        Serial.println(dataString);
-%    }
-% 
-%    // if the file isn't open, pop up an error:
-%    else {
-%        Serial.println("error opening datalog.txt");
-%    }
-%}
-%/////////////////////////////////////////////////////////
-%/////////////////////////////////////////////////////////
-%\end{verbatim}
-%
-%Make sure you understand each line of this code. It is a little fancy in
-%that it tries to check to make sure the SD card file is working properly and
-%warns you if something is wrong. But most of the code is comments. So don't
-%be discouraged by the length.
+Make sure you understand each line of this code. It is a little fancy in
+that it tries to check to make sure the SD card file is working properly and
+warns you if something is wrong. But most of the code is comments. So don't
+be discouraged by the length.
 
 \section{Lab Assignment}
 
