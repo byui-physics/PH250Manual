@@ -1,128 +1,179 @@
-/////////////////////////////////////////////////////////
-// Writes random data to SD card on Datalogger shield.
-/////////////////////////////////////////////////////////
-#include <SPI.h> // Allow SPI interfacing, SD Card
+// ===================================================
+// RobotDyn SD/RTC Arduino shield example
+// Nolan Chandler
+// Last revised: 2020-11-18
+//
+// Meant to serve as a starting point for data logging
+// using both a real-time clock (RTC) and a microSD 
+// card.
+//
+// Collects data at a given rate, and saves them with 
+// a timestamp on the SD card to files called 
+// "LOG000.TXT", "LOG001.TXT", etc. A new file is 
+// opened every N samples to collect another N samples.
+// ===================================================
+
+#include <SPI.h>
 #include <SD.h>
 
-#include "RTClib.h" // Adafruit
+// by Adafruit. Must be manually installed
+#include "RTClib.h" 
 
-// Sketch logs data for 30s, then closes file
-// SD card won't write until
-// file object is closed or flushed
-const unsigned long MAX_TIME = 30000;
-unsigned long start_ts;
-bool running = true;
+const int SD_PIN = 9;
+File logfile;
 
-// SD PIN on our RobotDyn SD/RTC shields
-const int CS_PIN = 9;
-File logger;
 RTC_DS1307 rtc;
 
-// Used in RTClib's DateTime.toString()
-const char FORMAT[] = "YYYY-MM-DD hh:mm:ss";
-const size_t FORMAT_LEN = (sizeof(FORMAT) / sizeof(char));
+float data;
+int i = 0;
+int N = 50; // Number of samples per file
+int waittime_ms = 500; // milliseconds between samples
 
-char date_buf[FORMAT_LEN];
-char filename[24];
+// ====================================================
 
-int data; // "data"
-
-void setup() 
+void setup()
 {
-	// Open serial communications and wait for port to open:
-	Serial.begin(9600);
-	// wait for serial port to connect. 
-	// Needed for native USB port only
-	while (!Serial); 
-	
-	Serial.print("Initializing RTC...");
-	if (!rtc.begin()) {
-		Serial.println("Couldn't find RTC");
-		while (1);
-	}
-	
-	//*****************************************************
-	// the ! means not. 
-	// So this will exicute if the rtc is not running.
-	if (!rtc.isrunning()) { 
-		Serial.println("RTC has not been set!");
-		// following line sets the RTC to the date & time  
-		// this sketch was compiled
-		// rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-		// This line sets the RTC with an explicit 
-		// date & time,for example to set
-		// January 21, 2014 at 3am you would call:
-		// rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
-	}
-	
-	Serial.println("done!");
-	
-	Serial.print("Initializing SD card...");
-	
-	if (!SD.begin(CS_PIN)) { 
-		Serial.println("failed!");
-		while (1);
-	}
-	Serial.println("done!");
-	
-	// Create folder for logs if it doesn't already exist
-	if (!SD.exists("/LOGS/"))
-		SD.mkdir("/LOGS/");
-	
-	// find the first file LOGxxx.TXT that doesn't exist,
-	// then create, open and use that file
-	for (int logn = 0; logn < 1000; logn++) {
-		sprintf(filename, "/LOGS/LOG%03d.TXT", logn);
-		if (!SD.exists(filename)) {
-			logger = SD.open(filename, FILE_WRITE);
-			Serial.print("Opened \'");
-			Serial.print(filename);
-			Serial.println("\' for logging.");
-			break;
-		}
-	}
-	if (!logger) {
-		Serial.print("Failed to open file!");
-		while (1);
-	}
-	
-	// Seed random func with noise
-	randomSeed(analogRead(0)); 
-	start_ts = millis();
+  // Open serial communications
+  Serial.begin(9600);
+
+  init_RTC();
+  
+  // (note 24-hour time: 3pm -> 15)	
+  // This line sets the RTC with an 
+  // explicit date & time, for example: 
+  // to set January 21, 2014 at 3:18pm 
+  // you would use the following line: 
+  // rtc.adjust(DateTime(2014, 1, 21, 15, 18, 0));
+  
+  init_SD();
+
+  logfile = open_next_logfile();
 }
 
-void loop () 
+// ==================================================
+
+void loop ()
 {
-	if (running) {
-		if (millis() - start_ts < MAX_TIME) {
-			DateTime now = rtc.now();
-			
-			memcpy(date_buf, FORMAT, FORMAT_LEN);
-			now.toString(date_buf);
-			
-			// random int is our "data"
-			data = random(-100, 100); 
-			
-			logger.print(date_buf);
-			logger.print(",");
-			logger.print(now.unixtime());
-			logger.print(",");
-			logger.println(data);
-			
-			// write same data to serial
-			Serial.print(date_buf);
-			Serial.print(",");
-			Serial.print(now.unixtime());
-			Serial.print(",");
-			Serial.println(data);
-			
-			delay(750);	    	
-		}
-		else {
-			// Time has elapsed. Write to file and close.
-			running = false;
-			logger.close();
-			Serial.println("Closed file.");
-		}
-	}
+  if (i < N) {
+    // generate a random number
+    data = random(-100, 100); 
+
+    DateTime now = rtc.now();
+
+    // Write the date, time and data to log file
+    // Same as printing to Serial!
+    logfile.print(now.year());
+    logfile.print('-');
+    logfile.print(now.month());
+    logfile.print('-');
+    logfile.print(now.day());
+    logfile.print(' ');
+    logfile.print(now.hour());
+    logfile.print(':');
+    logfile.print(now.minute());
+    logfile.print(':');
+    logfile.print(now.second());
+    logfile.print(',');
+    logfile.print(data);
+    logfile.println();
+
+    // write same data to serial
+    Serial.print(now.year());
+    Serial.print('-');
+    Serial.print(now.month());
+    Serial.print('-');
+    Serial.print(now.day());
+    Serial.print(' ');
+    Serial.print(now.hour());
+    Serial.print(':');
+    Serial.print(now.minute());
+    Serial.print(':');
+    Serial.print(now.second());
+    Serial.print(',');
+    Serial.print(data);
+    Serial.println();
+
+    delay(waittime_ms); //ms
+    i++;
+  }
+
+  // Reached N samples, open the next log 
+  // file to record N more
+  else {
+    logfile.close();
+
+    // comment out the next two lines to stop 
+    // recording after the first file
+    i = 0;
+    logfile = open_next_logfile();
+  }
+}
+
+
+// =========================================
+// initializes the RTC, 
+// and checks to see if it has been set
+// =========================================
+
+void init_RTC()
+{
+  Serial.print("Initializing RTC...");
+
+  if (!rtc.begin()) {
+    Serial.println(" failed!");
+    while (1);
+  }
+
+  Serial.println(" done!");
+
+  if (!rtc.isrunning())
+    Serial.println(
+     "WARNING: RTC has not been previously set");
+
+}
+
+// ======================================================
+// attempts to initialize the SD card for reading/writing
+// ======================================================
+
+void init_SD()
+{
+  Serial.print("Initializing SD card...");
+
+  if (!SD.begin(SD_PIN)) {
+    Serial.println(" failed!");
+    while (1);
+  }
+
+  Serial.println(" done!");
+}
+
+// =======================================================
+// Opens the next available log file in SD:/LOGS/
+// Write to the file using logfile.print() or println(), 
+// just like Serial
+// =======================================================
+
+File open_next_logfile()
+{
+  char filename[24];
+
+  // Create folder for logs if it doesn't already exist
+  if (!SD.exists("/LOGS/"))
+    SD.mkdir("/LOGS/");
+
+  // find the first file LOGxxx.TXT that doesn't exist,
+  // then create, open and use that file
+  for (int logn = 0; logn < 1000; logn++) {
+    sprintf(filename, "/LOGS/LOG%03d.TXT", logn);
+
+    if (!SD.exists(filename)) {
+      Serial.print("Opened \'SD:");
+      Serial.print(filename);
+      Serial.println("\' for logging.");
+      break;
+    }
+  }
+
+  return SD.open(filename, FILE_WRITE);
 }
