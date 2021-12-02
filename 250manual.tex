@@ -1,0 +1,59 @@
+\documentclass{book}
+
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{pythonhighlight}
+
+\graphicspath {{Figures/}}
+
+\input{arduinoLanguage.tex} 
+% provides color formating for the Arduino Language. It loads and uses the 
+% \usepackage{listings}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{{\Huge PH 250}\\
+{\Huge {\Large Intermediate Physics Laboratory}}}
+\author{R Todd Lines\\David Oliphant\\Kevin Kelley}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\vspace*{\fill}
+\copyright 2021 Brigham Young University - Idaho. All rights reserved.
+\tableofcontents
+\listoffigures
+
+\input{Chapters/Preface.tex}
+\input{Chapters/Introduction.tex}
+
+\mainmatter
+
+\part{Computer Interfacing}
+	\input{Chapters/01-Measurement.tex}
+	\input{Chapters/Intro_Arduino_ComputerControl}
+	\input{Chapters/DAQ_Measuremnt_V.tex}
+	\input{Chapters/Data_to_Computer.tex}
+	\input{Chapters/Validation_OhmsLaw.tex}
+
+\part{Testing Models}
+	\input{Chapters/Resistors_Capacitors.tex}
+	%\include{Chapters/Semiconductors_Transduction.tex}
+	\input{Chapters/DataLogging.tex}
+	\input{Chapters/RLC_Circuits_P1.tex}
+	\input{Chapters/RLC_Circuits_P2.tex}
+
+
+\part{Student Designed Experiments}
+	\input{Chapters/Student_Designed_Experiments.tex}
+			
+\end{document}
