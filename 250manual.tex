@@ -1,5 +1,6 @@
 \documentclass{book}
 
+\usepackage[dvipsnames]{xcolor}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -14,6 +15,9 @@
 \input{arduinoLanguage.tex} 
 % provides color formating for the Arduino Language. It loads and uses the 
 % \usepackage{listings}  
+
+\input{macros.tex}
+% Provides macros for several common callouts in the text.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -38,12 +42,14 @@
 
 \mainmatter
 
-\part{Computer Interfacing}
+\part{Making Measurements with Electronics}
 	\input{Chapters/01-Measurement.tex}
-	\input{Chapters/Intro_Arduino_ComputerControl}
 	\input{Chapters/DAQ_Measuremnt_V.tex}
 	\input{Chapters/Data_to_Computer.tex}
 	\input{Chapters/Validation_OhmsLaw.tex}
+
+\part{Electronic Controls}
+	\input{Chapters/Intro_Arduino_ComputerControl}
 
 \part{Testing Models}
 	\input{Chapters/Resistors_Capacitors.tex}

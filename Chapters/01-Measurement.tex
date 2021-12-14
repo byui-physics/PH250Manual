@@ -1,68 +1,156 @@
+%FIXME New chapter "1" will talk about lab notebooks. It will be short.
+% I envision lab notebooks being kept electronically, providing a rubric,
+% having them submit via Canvas, and then peer grading.
+
+%FIXME "Putting it together" discussion of breadboards and soldering! If they
+% aren't getting their own soldering materials, I could set a up a few 
+% stations and have the groups rotate through.
+
+\chapter{Putting Things Together}
+\objectives{
+  \item Describe the characteristics of a well-kept lab notebook.
+  \item Identify where connections are made on a prototyping board.
+  \item Use a prototyping board to create a simple circuit.
+  \item Use the power supply module that come with your Arduino kit
+	with the prototyping board.
+  \item Explain the proper procedures for soldering connections.
+  \item Successfully solder some electrical connections.
+}
+
+\warning{This is a sample warning.}
+
 %01-Measurement.tex
 \chapter{Electrical Measurements}
-Last week we tackled very simple computer control, but we said we also want
-to transfer data from our experiment to our computer. In order to understand
-how to do that, we need to know what things we can measure with electronic
-devices. We will take on this question today, but we will get practice
-making these measurements with special equipment designed just for making
-these measurements. These devices won't send the data they measure to our
-computers, but they will display it so we can see the data.
+
+\objectives{
+  \item Use a power supply to provide a DC voltage.
+  \item Use a function generator to provide an AC voltage.
+  \item Use a multimeter to measure DC and AC voltages.
+  \item Use an oscilloscope to measure DC and AC voltages.
+  \item Using the DC voltmeter functionality of a multimeter, build a simple
+  ammeter.
+  \item Using the DC voltmeter functionality of a multimeter, build a simple
+  ohmmeter.
+}
+
+\review{
+  \item Electric potential and electric potential difference.
+  \item DC potentials.
+  \item AC potentials.
+}
+
+Our focus for this lab is making some basic measurements using stand-alone
+instruments, including a multimeter and an oscilloscope. 
+We will be using these instruments throughout the semester
+as ``safety checks'', helping us avoid destroying other sensors and
+instruments with inappropriate voltages. Understanding how to use this basic
+instrumentation is also a valuable skill to have outside of physics. If you
+know how to use a multimeter, you will be able to troubleshoot electrical
+problems with your car and your household appliances, possibly saving yourself 
+hundreds to thousands of dollars in service calls!
 
 Once we know how to make some basic measurements with these stand-alone
-instruments, then we can consider how we would make a new instrument to
-measure something else. We will build a current measuring device, an \emph{%
-ammeter} out of electrical components and a \emph{voltmeter}. This will be
-something we do over and over again. We will build a new instrument using
-instruments we already know and some electrical equipment.
+instruments, then are then prepared to design new instruments that measure
+other things. We'll get a taste of that in today's lab. Your multimeter can
+measure current and resistance, but we'll just use the voltmeter setting and
+build our own current meter (\textit{ammeter}) and resistance meter
+(\textit{ohmmeter}).
 
-This lab consists of a large pre-reading section that will give you
-background information, and then at the end an assignment where I\ will ask
-you to practice making these measurements with our equipment. Notice this is
-different than last week's lab reading. Last week the reading went step by
-step through the assignment. This week the assignment is at the end and you
-will have to think through how to do the problems as a group.
+\section{What we measure: Voltage}
+\label{sec:voltage_with_meter}
 
-\section{What we measure: Voltage (and Current)\label{Voltage Measurement
-with Meter}}
+Ultimately, all electronic instruments measure a difference in electric 
+potential (i.e. a difference in voltage). Any other quantity that we want
+to measure with electronic instrumentation - be that electric current, electric 
+resistance, relative humidity, temperature, light intensity - with electronic 
+instrumentation must first be changed into a potential difference.
 
-The two easiest electrical measurements to make are voltage and current
-measurements. So physicists try to turn all other types of measurements into
-voltage or current measurements. You may want to measure relative humidity.
-But to record relative humidity on our computer we need to convert relative
-humidity into a voltage or current! We will do experiments that do this type
-of conversion, but first, let's learn about voltage and current so we can
-see how electronic systems measure them.
+By definition, electric potential is the electric potential energy per
+unit charge. An electric potential difference is the difference in potential
+at two different points in space. In other words, if I measure the potential
+at two points ($V_a$ and $V_b$), the potential difference between those two
+points ($\Delta V_{ab}$) is
+\begin{equation}
+	\Delta V_{ab}=V_b-V_a.
+\end{equation}
+The beautiful thing about a potential \textit{difference} is that it is 
+independent of my choice of where the potential energy is equal to zero.
 
-Voltage is really \textquotedblleft electrical potential
-difference,\textquotedblright\ which is the difference between electrical
-potential energy per unit charge at two different circuit locations. Last
-lab we said voltage was a comparison, and this is the comparison. We compare
-the potential energy at two different circuit locations, only we divide the
-potential energy by the charge of an electron.
-
-To get a feel for how this works, think of a change in gravitational
-potential energy, $\Delta U_{g}$. If we wanted to measure the difference in
-potential energy between the top of a hill and the bottom of a hill, we
+To get a feel for how this works, think about gravitational
+potential energy, $U_{g}$. We usually think about this energy in terms of an
+elevation. If an object of mass $m$ is located at a vertical position $y$,
+the gravitational potential energy of the object is given by $U_g=mgy$. 
+If we wanted to measure the difference in
+potential energy between the top of a hill and the bottom of a hill
+(\ref{fig:gravity_potential}), we
 would need to place some sort of device both at the top and at the bottom of
-the hill. \begin{figure}[h!]
+the hill (probably a device that measures altitude). 
+The potential energy difference would then be
+\begin{equation}
+	\Delta U_g=mgy_{top}-mgy_{bottom}
+\end{equation}
+where $y_{top}$ and $y_{bottom}$ are the altitudes and the top and bottom of
+the hill, respectively. This potential energy difference 
+depends only on the difference in altitude between the top and bottom
+of the hill.
+
+\begin{figure}[htbp]
+\centering
 \includegraphics[width=3.3537in,height=1.9977in]{PH4CAU0F}
-\end{figure}We have to do the same thing in
-our electrical case. We need two \textquotedblleft
-probes,\textquotedblright\ one placed at the high potential and one placed
-at the low potential. For example, we could have the circuit that you see in
-the next figure.\begin{figure}[h!]
-\includegraphics[width=2.9438in,height=1.3353in]{PH4CAU0G}
-\end{figure}The positive end of the battery
+\label{fig:gravity_potential}
+\caption[Gravitational potential energy difference.]{The gravitational
+potential energy difference between the top and bottom of a hill.}
+\end{figure}
+
+Similarly, if I want to measure the electric potential difference (or voltage
+difference) between two points in a circuit, I have to place some sort of
+measuring device at each of the two points. The device I need, it turns out,
+is quite simple. It's just a piece of conducting material that we call a 
+``probe''. These probes are placed at the two points (one at high potential,
+and the other at low potential), and transfer the electric
+potential to a volt meter (we'll discuss how the voltmeter works shortly).
+
+% HERE %
+For example, we could have the circuit that you see in
+Figure \ref{fig:simplest_circuit_voltmeter}.
+The positive end of the battery
 is like the top of the hill. It provides a high electrical potential energy.
-So we put one probe at the top of the \textquotedblleft
-hill\textquotedblright\ or the plus side of the battery, and the other on
-the bottom of the \textquotedblleft hill\textquotedblright\ or minus side of
-the battery. The negative side of the battery provides a low electrical
+So we put one probe at the top of the ``hill'' (the positive side of the 
+battery), and the other at the bottom of the ``hill'' (or the negative side of
+the battery). 
+
+\begin{figure}[h!]
+\includegraphics[width=2.9438in,height=1.3353in]{PH4CAU0G}
+\end{figure}
+
+The negative side of the battery provides a low electrical
 potential energy. \emph{\ }With this we measure how high our potential
 \textquotedblleft hill\textquotedblright\ is. The difference between these
 two measurements is called \emph{voltage. }You should ask yourself
 \textquotedblleft what would happen if you got the probes
 backward?\textquotedblright\ 
+
+WHAT IS POTENTIAL DIFFERENCE
+
+SOURCES OF POTENTIAL DIFFERENCE
+
+HOW IS IT MEASURED
+
+ANALOG TO DIGITAL
+
+USING THE MULTIMETER TO MEASURE DC VOLTAGE
+
+TIME VARYING VOLTAGE (AC)
+
+SOURCES OF AC VOLTAGE
+
+MULTIMETER SET TO MEASURE AT 60 HZ
+
+USE IT...
+
+FAILS AT OTHER FREQUENCIES. NEED A DIFFERENT DEVICE: OSCILLOSCOPE
+
+%%% HERE %%%
 
 In the next figure you can see how to actually perform this voltage
 measurement with one of our meters.\begin{figure}[h!]

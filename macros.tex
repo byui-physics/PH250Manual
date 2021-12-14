@@ -1,0 +1,56 @@
+% Macros used in the textbook (avoids rewriting a bunch of LaTeX markup...
+
+\newcommand{\objectives}[1]
+{
+  \begin{center}
+  \setlength{\fboxsep}{15pt}
+  \fcolorbox{Black}{Apricot}
+  {
+    \begin{minipage}{0.80\textwidth}
+    \begin{center}
+    \textbf{OBJECTIVES}
+    \end{center}
+    \begin{itemize} #1 \end{itemize}
+    \end{minipage}
+  }
+  \end{center}
+}
+
+\newcommand{\review}[1]
+{
+  \begin{center}
+  \setlength{\fboxsep}{15pt}
+  \fcolorbox{Black}{Aquamarine}
+  {
+    \begin{minipage}{0.80\textwidth}
+    \begin{center}
+    \textbf{ITEMS TO REVIEW}
+    \end{center}
+    Please review the following concepts in your electricity and magnetism
+    textbook.
+    \begin{itemize} #1 \end{itemize}
+    \end{minipage}
+  }
+  \end{center}
+}
+
+\newcommand{\warning}[1]
+{
+  \begin{center}
+  \setlength{\fboxsep}{10pt}
+  \fcolorbox{Black}{Red}
+  {
+%    \begin{minipage}
+    \fcolorbox{Black}{Yellow}
+    {
+      \begin{center}
+      \color{Red}
+      \textbf{WARNING}
+      \end{center}
+%      #1
+    }
+%    \end{minipage}
+  }
+  \end{center}
+}
+
