@@ -1,5 +1,7 @@
 \documentclass{book}
 
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -13,6 +15,8 @@
 \graphicspath {{Figures/}}
 
 \input{arduinoLanguage.tex} % provies color formating for the Arduino Language. It loads and uses the \usepackage{listings}  
+\input{macros.tex} % Provides the macros for the objectives and review boxes
+% at the top of each chapter.
 
 
 %\newenvironment{python}{\begin{lstlisting}[language=Python]}{\end{lstlisting}}
@@ -24,7 +28,7 @@
 \title{{\Huge PH 250}\\
 {\Huge {\Large Intermediate Physics Laboratory for Physics and Physical
 Science Teaching Majors} }}
-\author{R Todd Lines\\ David Oliphant}
+\author{R Todd Lines\\ David Oliphant\\ Kevin Kelley}
 
 \date{\today}
 \maketitle

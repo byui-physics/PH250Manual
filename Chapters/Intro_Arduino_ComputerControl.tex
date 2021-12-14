@@ -1,27 +1,57 @@
 %Intro_Arduino_ComputerControl
-\chapter{Introduction to the Arduino and Computer Control}
-In PH250 we have a goal of getting our computers to talk to our physics
-experiments (see the course syllabus). This comes in two forms. One is to
-have the computer control the experiment. For example, we could have the
-computer turn on our apparatus, or turn it off. The second form is having
-the experimental device provide data to the computer that we can later
-analyze. In both cases, we need a piece of electronics that goes between the
-experimental measuring devices and the computer. These electronic pieces are
+\chapter{Introduction to the Arduino}
+
+\objectives{
+\item Explain how to use a prototyping board, including the identification of
+which pins are electrically connected.
+\item Demostrate proper soldering technique.
+\item Describe the two primary functions included in every Arduino sketch, when
+they are called, and what they do.
+\item Compile and upload sketches to an Arduino.
+\item Demonstrate the use of digital output on the Arduino by constructing 
+several circuits involving blinking lights.
+}
+
+\review{
+\item Voltage (electric potential).
+\item Current.
+\item Resistance.
+\item Diodes and LEDs.
+}
+
+There are two ways in which we want our computers to communicate with our
+physics experiments:
+\begin{enumerate}
+\item Have the computer control the experiment. For example, we could have the
+computer turn on our apparatus, or turn it off. 
+\item Have the experimental device provide data to the computer. The computer
+can then record this data for later analysis.
+\end{enumerate}
+In both cases, we need something that goes between the
+experimental measuring devices and the computer. These go-between pieces are
 often called Data Acquisition (DAQ) boards. There are many different forms
-of DAQ's. They can cost anywhere from a few dollars to many thousands of
+of DAQs. They can cost anywhere from a few dollars to many thousands of
 dollars.
 
-We will use a DAQ developed for learning. It is low cost because it's
-developers placed the plans for it in the open-source world so that no one
-would get royalties (including themselves) for the design. Thus board
-manufacturer's pay less, so we pay less. It is low cost, but not low
-quality. They named their DAQ \textquotedblleft Arduino.\textquotedblright\ 
+In this lab, we will use a low cost DAQ, the plans for which the 
+developers placed in the open-source world so that no one
+would get royalties (including themselves) for the design (this is why the
+boards are inexpensive). It is low cost, but not low
+quality. The developers named their DAQ the ``Arduino''. There are many
+different variations on the Arduino. We will specifically be using the
+Arduino UNO.
 
-The Arduino is fragile, like all DAQ's. We will need to be careful with our
-Arduino's. They will be destroyed by putting too large a voltage (something
-we will discuss as we go) or electrical current (also something you will
-study in PH220) into the input pins. They also can be destroyed by being
-dropped or squashed, so some caution is warranted.
+Like all DAQs, the Arduino is fragile, so we will need to exercise some 
+caution. Arduinos can be destroyed by putting too large a voltage or electrical 
+current into the input pins. They also can be destroyed by mechanical means, 
+such as being dropped or crushed.
+
+
+
+
+
+
+
 
 Let's start our study of computer control by controlling something simple
 with our Arduino DAQ. Earlier we though about turning an apparatus on or
