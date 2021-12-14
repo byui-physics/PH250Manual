@@ -1,0 +1,83 @@
+nohup: ignoring input
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.350: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.351: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.351: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.351: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:35:37.351: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+** (evince:514757): CRITICAL **: 12:35:37.351: ev_page_cache_get_annot_mapping: assertion 'page >= 0 && page < cache->n_pages' failed
+
+** (evince:514757): CRITICAL **: 12:35:37.351: ev_page_cache_get_annot_mapping: assertion 'page >= 0 && page < cache->n_pages' failed
+
+** (evince:514757): CRITICAL **: 12:35:37.351: ev_page_cache_get_annot_mapping: assertion 'page >= 0 && page < cache->n_pages' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed
+
+(evince:514757): Gtk-CRITICAL **: 12:37:52.853: gtk_tree_model_foreach: assertion 'GTK_IS_TREE_MODEL (model)' failed

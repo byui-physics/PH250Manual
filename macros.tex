@@ -1,0 +1,88 @@
+% Macros used in the textbook (avoids rewriting a bunch of LaTeX markup...
+
+% Objectives box
+
+\newcommand{\objectives}[1]
+{
+  \begin{center}
+  \begin{tcolorbox}[enhanced jigsaw,
+		    colframe=Black,
+	  	    colback=Apricot,
+		    width=\textwidth,
+		    arc=3mm, auto outer arc,
+		    drop shadow={Apricot!50!gray!80}
+		   ]
+  \begin{center}
+  \textbf{OBJECTIVES}
+  \end{center}
+  At the conclusion of these laboratory activities, you should be able to do
+  each of the following:
+  \begin{itemize} #1 \end{itemize}
+  \end{tcolorbox}
+  \end{center}
+}
+
+% Items to review box.
+
+\newcommand{\review}[1]
+{
+  \begin{center}
+  \begin{tcolorbox}[enhanced jigsaw,
+		    colframe=Black,
+	  	    colback=Aquamarine,
+		    width=\textwidth,
+		    arc=3mm, auto outer arc,
+		    drop shadow={Aquamarine!50!gray!80}
+		   ]
+  \begin{center}
+  \textbf{ITEMS TO REVIEW}
+  \end{center}
+    Please review the following concepts in your electricity and magnetism
+    textbook.
+  \begin{itemize} #1 \end{itemize}
+  \end{tcolorbox}
+  \end{center}
+}
+
+% Lab activity portion
+
+\newcommand{\activity}[1]
+{
+  \begin{center}
+  \begin{tcolorbox}[enhanced jigsaw,
+		    colframe=Black,
+	  	    colback=SpringGreen,
+		    width=\textwidth,
+		    arc=3mm, auto outer arc,
+		    drop shadow={SpringGreen!50!gray!80}
+		   ]
+  \begin{center}
+  \textbf{LAB ACTIVITY}
+  \end{center}
+  #1
+  \end{tcolorbox}
+  \end{center}
+}
+
+
+
+\newcommand{\warning}[1]
+{
+  \begin{center}
+  \setlength{\fboxsep}{10pt}
+  \fcolorbox{Black}{Red}
+  {
+%    \begin{minipage}
+    \fcolorbox{Black}{Yellow}
+    {
+      \begin{center}
+      \color{Red}
+      \textbf{WARNING}
+      \end{center}
+%      #1
+    }
+%    \end{minipage}
+  }
+  \end{center}
+}
+

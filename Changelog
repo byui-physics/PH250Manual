@@ -1,0 +1,20 @@
+2021-12-14 Kevin Kelley <kelleyk@byui.edu>
+
+	* PH250_Lab_Manual_1.0.tex: added self to list of authors, included
+	macros.tex file to provide objectives boxes and items to review boxes.
+	Also using package xcolor with option dvipsnames.
+
+	* macros.tex: new file. Defines macros for objectives boxes and 
+	items to review boxes, among other things.
+
+	* Chapters/Intro_Arduino_ComputerControl.tex: Changed the name of the
+	chapter (shortened) so it fits in the page headers.
+
+	* Chapters/Intro_Arduino_ComputerControl.tex: Added list of
+	objectives, items to review, and labeled/captioned/referenced all
+	figures. Also commented out the exercises where the arduino produced
+	lights blinking in the Fibonacci sequence, and inserted a discussion
+	on soldering. (I figured this was a good place for that discussion,
+	along with learning about breadboards.) Finally, I've edited the text
+	for clarity, brevity, and reducing the details on the physics that
+	they will have already learned in PH220/PH223 during the first block.
