@@ -4,92 +4,92 @@
 \contentsline {section}{\numberline {1.1}Building circuits}{4}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Temporary circuits: the prototyping board}{4}{subsection.1.1.1}%
 \contentsline {subsection}{\numberline {1.1.2}Durable circuits: soldering}{8}{subsection.1.1.2}%
-\contentsline {chapter}{\numberline {2}Introduction to Electrical Measuring Devices (Not Step-by-step)}{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}What we measure: Voltage (and Current)}{13}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Stand-Alone Experimental Hardware}{15}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Power Supply}{16}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Signal Generator}{17}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Voltmeter}{17}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Oscilloscope}{19}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Current}{23}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Measuring Current}{24}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Building a New Instrument}{25}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Start with the Physics:}{26}{subsection.2.4.1}%
-\contentsline {subsubsection}{Resistor Code}{28}{section*.37}%
-\contentsline {subsubsection}{Direction of current flow}{29}{section*.40}%
-\contentsline {subsection}{\numberline {2.4.2}Knowing the Physics, Design the new instrument}{31}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Testing the new instrument}{32}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Calculating uncertainty, a review}{34}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}How do we find the slope?}{40}{subsection.2.5.1}%
-\contentsline {subsubsection}{Tie to statistics}{41}{section*.53}%
-\contentsline {section}{\numberline {2.6}Practice Measurements}{43}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Use a Multimeter}{43}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Use an Oscilloscope}{44}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Build a new instrument from an old instrument}{44}{subsection.2.6.3}%
-\contentsline {chapter}{\numberline {3}First DAQ Measurements: Voltage}{47}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Building a voltmeter}{49}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Wiring the simple voltmeter}{53}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Seeing the data}{53}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Extending our voltmeter with a voltage divider}{55}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Practice Problems}{62}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Lab Assignment}{62}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Getting data to the Computer}{65}{chapter.4}%
-\contentsline {section}{\numberline {4.1}How to get Python}{65}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Getting Anaconda Python}{66}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Getting the PySerial library for Anaconda.}{67}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Getting data from the Arduino}{71}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Getting Pyserial if you have a Mac}{76}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Anaconda Mac Users 4.1.2}{76}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Canopy Mac Users 4.2.1}{76}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Manually install pyserial through the terminal on a Mac. Coding in emacs/VI}{76}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Mac Pathway and Port Notation}{77}{subsection.4.3.4}%
-\contentsline {subsubsection}{Mac Pathway}{77}{section*.89}%
-\contentsline {subsubsection}{Mac Port}{77}{section*.90}%
-\contentsline {subsection}{\numberline {4.3.5}Mac version of the python code}{77}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Lab Assignment}{80}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Validation of Ohm's Law}{81}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Ohm's Law Revisited}{81}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Measuring current with our Arduino}{82}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Actually making an Arduino measure current}{84}{subsection.5.1.2}%
-\contentsline {subsubsection}{Choosing shunt resistors}{87}{section*.97}%
-\contentsline {subsection}{\numberline {5.1.3}Finding Uncertainty in a calculated value}{89}{subsection.5.1.3}%
-\contentsline {subsubsection}{Iterate to find an optimal value}{91}{section*.99}%
-\contentsline {subsection}{\numberline {5.1.4}Using statistics to calculate uncertainty}{93}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}Philosophical warning}{98}{subsection.5.1.5}%
-\contentsline {section}{\numberline {5.2}Proposals}{99}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Statement of the experimental problem}{99}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Procedures and anticipated difficulties}{100}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Proposed analysis and expected results}{100}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Preliminary List of equipment needed}{101}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Designing the Experiment}{101}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Using Uncertainty to refine experimental design.}{101}{subsection.5.2.6}%
-\contentsline {section}{\numberline {5.3}Lab Assignment}{105}{section.5.3}%
-\contentsline {part}{II\hspace {1em}Testing Models}{107}{part.2}%
-\contentsline {chapter}{\numberline {6}Resistors and Capacitors}{109}{chapter.6}%
-\contentsline {section}{\numberline {6.1}The Model to Test}{109}{section.6.1}%
-\contentsline {section}{\numberline {6.2}The Instrument}{111}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}LoggerPro Curve Fitting.}{116}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Lab Assignment}{125}{section.6.3}%
-\contentsline {chapter}{\numberline {7}DataLogging}{127}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Arduino Shields}{127}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Data Logger Shield}{128}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Set up}{129}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Lab Assignment}{134}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Inductance and Series RLC Circuits Part 1}{135}{chapter.8}%
-\contentsline {section}{\numberline {8.1}The Model: Self Inductance}{135}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Inductance of a solenoid}{136}{subsection.8.1.1}%
-\contentsline {section}{\numberline {8.2}RLC Series circuits}{137}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Lab Assignment}{140}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Inductance and Series RLC circuits Part 2}{143}{chapter.9}%
-\contentsline {section}{\numberline {9.1}The Instrument}{143}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Sampling Theory, a complication}{147}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Lab Assignment}{150}{section.9.3}%
-\contentsline {part}{III\hspace {1em}Student Designed Experiments}{153}{part.3}%
-\contentsline {chapter}{\numberline {10}Student Designed Experiments}{155}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Proposal}{155}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Performing the experiment}{156}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Written report}{156}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Oral report}{156}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Lab Notebook}{157}{section.10.5}%
-\contentsline {subsection}{\numberline {10.5.1}Designing the Experiment}{157}{subsection.10.5.1}%
-\contentsline {subsection}{\numberline {10.5.2}Performing the Experiment}{158}{subsection.10.5.2}%
+\contentsline {chapter}{\numberline {2}Introduction to Electrical Measuring Devices (Not Step-by-step)}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}What we measure: Voltage (and Current)}{15}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Stand-Alone Experimental Hardware}{17}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Power Supply}{18}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Signal Generator}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Voltmeter}{19}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Oscilloscope}{21}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Current}{25}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Measuring Current}{26}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Building a New Instrument}{27}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Start with the Physics:}{28}{subsection.2.4.1}%
+\contentsline {subsubsection}{Resistor Code}{30}{section*.42}%
+\contentsline {subsubsection}{Direction of current flow}{31}{section*.45}%
+\contentsline {subsection}{\numberline {2.4.2}Knowing the Physics, Design the new instrument}{33}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Testing the new instrument}{34}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Calculating uncertainty, a review}{36}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}How do we find the slope?}{42}{subsection.2.5.1}%
+\contentsline {subsubsection}{Tie to statistics}{43}{section*.58}%
+\contentsline {section}{\numberline {2.6}Practice Measurements}{45}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Use a Multimeter}{45}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Use an Oscilloscope}{46}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Build a new instrument from an old instrument}{46}{subsection.2.6.3}%
+\contentsline {chapter}{\numberline {3}First DAQ Measurements: Voltage}{49}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Building a voltmeter}{51}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Wiring the simple voltmeter}{55}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Seeing the data}{55}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Extending our voltmeter with a voltage divider}{57}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Practice Problems}{64}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Lab Assignment}{64}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Getting data to the Computer}{67}{chapter.4}%
+\contentsline {section}{\numberline {4.1}How to get Python}{67}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Getting Anaconda Python}{68}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Getting the PySerial library for Anaconda.}{69}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Getting data from the Arduino}{73}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Getting Pyserial if you have a Mac}{78}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Anaconda Mac Users 4.1.2}{78}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Canopy Mac Users 4.2.1}{78}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Manually install pyserial through the terminal on a Mac. Coding in emacs/VI}{78}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Mac Pathway and Port Notation}{79}{subsection.4.3.4}%
+\contentsline {subsubsection}{Mac Pathway}{79}{section*.94}%
+\contentsline {subsubsection}{Mac Port}{79}{section*.95}%
+\contentsline {subsection}{\numberline {4.3.5}Mac version of the python code}{79}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Lab Assignment}{82}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Validation of Ohm's Law}{83}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ohm's Law Revisited}{83}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Measuring current with our Arduino}{84}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Actually making an Arduino measure current}{86}{subsection.5.1.2}%
+\contentsline {subsubsection}{Choosing shunt resistors}{89}{section*.102}%
+\contentsline {subsection}{\numberline {5.1.3}Finding Uncertainty in a calculated value}{91}{subsection.5.1.3}%
+\contentsline {subsubsection}{Iterate to find an optimal value}{93}{section*.104}%
+\contentsline {subsection}{\numberline {5.1.4}Using statistics to calculate uncertainty}{95}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Philosophical warning}{100}{subsection.5.1.5}%
+\contentsline {section}{\numberline {5.2}Proposals}{101}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Statement of the experimental problem}{101}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Procedures and anticipated difficulties}{102}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Proposed analysis and expected results}{102}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Preliminary List of equipment needed}{103}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Designing the Experiment}{103}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Using Uncertainty to refine experimental design.}{103}{subsection.5.2.6}%
+\contentsline {section}{\numberline {5.3}Lab Assignment}{107}{section.5.3}%
+\contentsline {part}{II\hspace {1em}Testing Models}{109}{part.2}%
+\contentsline {chapter}{\numberline {6}Resistors and Capacitors}{111}{chapter.6}%
+\contentsline {section}{\numberline {6.1}The Model to Test}{111}{section.6.1}%
+\contentsline {section}{\numberline {6.2}The Instrument}{113}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}LoggerPro Curve Fitting.}{118}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Lab Assignment}{127}{section.6.3}%
+\contentsline {chapter}{\numberline {7}DataLogging}{129}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Arduino Shields}{129}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Data Logger Shield}{130}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Set up}{131}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Lab Assignment}{136}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Inductance and Series RLC Circuits Part 1}{137}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The Model: Self Inductance}{137}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Inductance of a solenoid}{138}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}RLC Series circuits}{139}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Lab Assignment}{142}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Inductance and Series RLC circuits Part 2}{145}{chapter.9}%
+\contentsline {section}{\numberline {9.1}The Instrument}{145}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Sampling Theory, a complication}{149}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Lab Assignment}{152}{section.9.3}%
+\contentsline {part}{III\hspace {1em}Student Designed Experiments}{155}{part.3}%
+\contentsline {chapter}{\numberline {10}Student Designed Experiments}{157}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Proposal}{157}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Performing the experiment}{158}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Written report}{158}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Oral report}{158}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Lab Notebook}{159}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Designing the Experiment}{159}{subsection.10.5.1}%
+\contentsline {subsection}{\numberline {10.5.2}Performing the Experiment}{160}{subsection.10.5.2}%

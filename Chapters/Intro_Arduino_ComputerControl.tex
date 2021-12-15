@@ -268,8 +268,88 @@ This is done by plunging the tip of the soldering iron in and out of the tip
 cleaner several times. At this point, we'll also dip the tip very briefly 
 into the flux paste, and then clean the tip again. Finally, we'll melt a small 
 amount of solder onto the tip, and then clean it a third time. At this point,
-the tip should be clean and shining with solder.
+the tip should be clean and shining with solder, similar to Figure
+\ref{fig:solder_ready}.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{solder_ready}
+\caption[A clean soldering iron tip]{A clean soldering iron tip, ready for
+use.}
+\label{fig:solder_ready}
+\end{figure}
 
+The next step is to start putting elements on the perfboard. Components with
+leads can usually be held in place prior to soldering by bending the leads on
+the backside of the board. These bent leads can also conveniently be used as
+wires between components as well. In Figure \ref{fig:component_preparation},
+all of the components for the circuit have been placed on the boards, and 
+the leads bent to make electrical connections. Normally you would only add a 
+few components at a time, solder those into place, then add more.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.4\textwidth]{component_preparation_a}
+\includegraphics[width=0.4\textwidth]{component_preparation_b}
+\caption[Components added to a perfboard, ready for soldering]{Components added
+to a perfboard, ready for soldering. Note how, on the back side of the 
+perfboard, the leads have been bent to hold the components in place as well as
+act as wires.}
+\label{fig:component_preparation}
+\end{figure}
+
+Now to apply the solder. Rather than trying to hold the entire spool of 
+solder, it's easiest to use the soldering iron to burn off a three or so inch
+segment instead. A key thing to remember is that you should
+\textit{\textbf{heat the work, not the solder}}. If you just touch the solder
+with the soldering iron, it will melt, and it might even transfer onto the
+parts you are trying to solder. However, the flux tends to move to the 
+surface of hot metal, and you'll basically end up with a ball of solder that
+is insulated from the work by a thin layer of flux. This is referred to as a
+\textit{cold solder} joint, and will likely not provide a lasting electrical
+connection. By heating the work and then melting the solder onto the work,
+you'll end up with good connections. 
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{heat_the_work}
+\caption[Heat the work, not the solder!]{Heat the work, not the solder!}
+\label{fig:heat_the_work}
+\end{figure}
+
+Once the iron is removed from the working area, the solder will cool and set
+very quickly.
+This process is repeated for each of the
+connections. Figure \ref{fig:soldering_almost_done} shows the results with just
+a few connections left to solder. In this figure, you'll note that one of the
+clamps on the helping hands is holding the wire in place.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{soldering_almost_done}
+\caption[Soldering project near completion]{The soldering project near 
+completion. The connections to the 9 V battery connector still need to be
+soldered. Note that one of the clamps of the helping hands is holding the red
+wire in place.}
+\label{fig:soldering_almost_done}
+\end{figure}
+
+Once all of the soldering is complete, you'll have some tails of wire and
+component lead sticking out. Use a set of close clipping wire cutters to remove
+these extra and unnecessary pieces of metal. Now our project is complete
+(see Figure \ref{fig:soldering_complete}. Note that the finished product is
+significantly more durable than what we had on the prototyping board, and also
+significantly smaller. (The perfboard used here is 4 cm by 6 cm, and clearly a much smaller board could have been used.
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{soldering_complete}
+\caption[The completed soldering project]{The completed soldering project.}
+\label{fig:soldering_complete}
+\end{figure}
+
+\activity{
+Successfully complete three or more soldering connections.
+}
+
+Now that we've seen how to design, build, and solder circuits, let's look at
+controlling our circuit using an Arduino.
 
 
 
