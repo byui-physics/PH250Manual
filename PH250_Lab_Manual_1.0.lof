@@ -1,5 +1,4 @@
 \addvspace {10\p@ }
-\addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces An empty prototyping board}}{5}{figure.caption.7}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Typical connections on a prototyping board}}{5}{figure.caption.8}%
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Connecting power to a prototyping board}}{6}{figure.caption.9}%
@@ -13,15 +12,20 @@
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Heat the work, not the solder!}}{12}{figure.caption.17}%
 \contentsline {figure}{\numberline {1.12}{\ignorespaces Soldering project near completion}}{12}{figure.caption.18}%
 \contentsline {figure}{\numberline {1.13}{\ignorespaces The completed soldering project}}{13}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces A printed circuit board}}{13}{figure.caption.20}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces The digital ports on an Arduino}}{15}{figure.caption.21}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces The Arduino connected to the LED circuit}}{15}{figure.caption.22}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Schematic diagram for the blink circuit}}{16}{figure.caption.23}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces The Arduino IDE}}{20}{figure.caption.24}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Top of a prototyping shield\relax }}{130}{figure.caption.140}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Bottom of a prototyping shield\relax }}{130}{figure.caption.141}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Top of Data Logger Shield\relax }}{131}{figure.caption.142}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Top of a prototyping shield\relax }}{138}{figure.caption.145}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Bottom of a prototyping shield\relax }}{138}{figure.caption.146}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Top of Data Logger Shield\relax }}{139}{figure.caption.147}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
