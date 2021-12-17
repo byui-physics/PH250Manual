@@ -1,5 +1,29 @@
 %Intro_El_Measurment
-\chapter{Introduction to Electrical Measuring Devices (Not Step-by-step)}
+\chapter{Electrical Measuring Devices}
+
+\objectives
+{
+\item Demonstrate the use of a DC power supply and a signal generator.
+\item Use a multimeter to measure DC voltage and current.
+\item Demonstrate the basic functionality of an oscilloscope, including
+channel selection, setting the volts per division, the time per division, and
+the triggering level.
+\item Use an oscilloscope to measure DC voltage and AC frequency and voltage.
+\item Demonstrate how current measurements are derived from voltage 
+measurements by building a simple ammeter device, utilizing a stand alone
+volt meter.
+\item In each of these activities, identify and quantify the sources of
+uncertainty in your measurements.
+}
+
+\review
+{
+\item Electric potential and potential difference.
+\item Electric current.
+\item Resistance and Ohm's law.
+\item AC and DC potentials.
+}
+
 Last week we tackled very simple computer control, but we said we also want
 to transfer data from our experiment to our computer. In order to understand
 how to do that, we need to know what things we can measure with electronic
@@ -12,26 +36,22 @@ Once we know how to make some basic measurements with these stand-alone
 instruments, then we can consider how we would make a new instrument to
 measure something else. We will build a current measuring device, an \emph{%
 ammeter} out of electrical components and a \emph{voltmeter}. This will be
-something we do over and over again. We will build a new instrument using
+something we do over and over again - building new instruments using
 instruments we already know and some electrical equipment.
 
 This lab consists of a large pre-reading section that will give you
-background information, and then at the end an assignment where I\ will ask
-you to practice making these measurements with our equipment. Notice this is
-different than last week's lab reading. Last week the reading went step by
-step through the assignment. This week the assignment is at the end and you
-will have to think through how to do the problems as a group.
+background information. It will describe the various stand-alone devices, along
+with some electromagnetic theory. Scattered throughout, you will be asked to 
+practice making these measurements with our equipment. 
 
-\section{What we measure: Voltage (and Current)\label{Voltage Measurement
+\section{What We Measure: Voltage
+\label{Voltage Measurement
 with Meter}}
 
-The two easiest electrical measurements to make are voltage and current
-measurements. So physicists try to turn all other types of measurements into
-voltage or current measurements. You may want to measure relative humidity.
-But to record relative humidity on our computer we need to convert relative
-humidity into a voltage or current! We will do experiments that do this type
-of conversion, but first, let's learn about voltage and current so we can
-see how electronic systems measure them.
+Ultimately, all of our electronic sensors measure one thing: voltage. 
+You may want to measure something else, say relative humidity.
+To record relative humidity on our computer we need to first
+(somehow) convert relative humidity into a voltage. 
 
 Voltage is really \textquotedblleft electrical potential
 difference,\textquotedblright\ which is the difference between electrical
@@ -44,15 +64,32 @@ To get a feel for how this works, think of a change in gravitational
 potential energy, $\Delta U_{g}$. If we wanted to measure the difference in
 potential energy between the top of a hill and the bottom of a hill, we
 would need to place some sort of device both at the top and at the bottom of
-the hill. \begin{figure}[h!]
-\includegraphics[width=3.3537in,height=1.9977in]{PH4CAU0F}
-\end{figure}We have to do the same thing in
+the hill, as in Figure \ref{fig:grav_energy}.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0F}
+\caption[Gravitational energy difference]{Gravitational energy
+difference. In order to measure the difference in gravitational potential 
+energy from the bottom of the hill to the top, we would need to know the
+altitude at each position. Note that the difference in the two potential
+energies is independent of where zero point of the $y$ coordinate is.}
+\label{fig:grav_energy}
+\end{figure}
+
+We have to do the same thing in
 our electrical case. We need two \textquotedblleft
 probes,\textquotedblright\ one placed at the high potential and one placed
 at the low potential. For example, we could have the circuit that you see in
-the next figure.\begin{figure}[h!]
-\includegraphics[width=2.9438in,height=1.3353in]{PH4CAU0G}
-\end{figure}The positive end of the battery
+Figure \ref{fig:basic_circuit_voltmeter}.
+\begin{figure}[hbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0G}
+\caption[Electric potential difference]{Electric potential difference.
+As with gravitational energy, we measure the potential at two different points
+and compare the two measurements.}
+\label{fig:basic_circuit_voltmeter}
+\end{figure}
+The positive end of the battery
 is like the top of the hill. It provides a high electrical potential energy.
 So we put one probe at the top of the \textquotedblleft
 hill\textquotedblright\ or the plus side of the battery, and the other on
@@ -60,13 +97,25 @@ the bottom of the \textquotedblleft hill\textquotedblright\ or minus side of
 the battery. The negative side of the battery provides a low electrical
 potential energy. \emph{\ }With this we measure how high our potential
 \textquotedblleft hill\textquotedblright\ is. The difference between these
-two measurements is called \emph{voltage. }You should ask yourself
-\textquotedblleft what would happen if you got the probes
-backward?\textquotedblright\ 
+two measurements is called \emph{voltage. } 
 
-In the next figure you can see how to actually perform this voltage
-measurement with one of our meters.\begin{figure}[h!]
-\includegraphics[width=5.5997in,height=3.614in]{PH4CAU0H}
+You should ask yourself
+\textquotedblleft what would happen if you got the probes
+backward?\textquotedblright\ The potential difference is the same, but the
+probe we thought was at the high potential is at the low potential, and
+\textit{vice-versa}. The result is that our reading will change by a 
+negative sign.
+
+In Figure \ref{fig:measuring_voltage} 
+you can see how to actually perform this voltage
+measurement with one of our meters.
+\begin{figure}[htbp!]
+\includegraphics[width=\textwidth]{PH4CAU0H}
+\caption[Measuring voltage with a multimeter]{Measuring voltage with a 
+multimeter. The red probe is placed on the lead of the resistor connected
+to the high potential of the power source, and the black probe is placed on
+the lead connected to the low potential of the power source.}
+\label{fig:measuring_voltage}
 \end{figure}
 
 We say we measure voltage \textquotedblleft across\textquotedblright\ a
@@ -77,10 +126,10 @@ capacitors, etc., often lie down, and we measure \textquotedblleft
 across\textquotedblright\ them by putting the positive probe on the high
 potential side and the negative probe on the low potential side. Even though
 the battery is lying down, we are still measuring a higher and lower
-potential energy difference. Knowing a little about voltage, let's look at
+potential energy difference. Knowing a little about voltage, let's now look at
 our devices that produce voltages and then the devices that measure voltages.
 
-\section{Stand-Alone Experimental Hardware}
+\section{Sources of DC and AC potentials}
 
 In today's lab we will study four hardware devices. A power supply, a signal
 generator, a multimeter,and an oscilloscope. We will call these
@@ -91,19 +140,22 @@ generator make voltage signals. The other two devices measure them. Let's
 look at the power supply and signal generator first, then take on the
 measuring devices.
 
-\subsection{Power Supply}
+\subsection{DC Power Supply}
 
-A power supply is like an adjustable battery. Batteries have fixed voltages.
-But a power supply may have an adjustable voltage. \begin{figure}[h!]
-\includegraphics[width=3.9237in,height=%
-3.0191in]{PH4CAU0I}
-\end{figure}Usually a power supply takes
-electrical energy from the wall outlets and converts that energy into the
+When most people think about sources of DC potentials, they will first 
+think about batteries. Of course, we use batteries in many applications in
+today's world, and they power circuits designed to work on a single, specific
+DC voltage. 
+
+A DC power supply is like an adjustable battery.
+An example can be seen in Figure \ref{fig:dc_power_supply}.
+Usually a power supply takes
+electrical energy from a wall outlet and converts that energy into the
 specific voltage range that we want for our experiment. So it is like a
 battery, but must be plugged into the wall. Our power supplies are designed
 to keep us safe. They are current limited, meaning that they try not to give
-too much charge flowing through our wires. Sometimes this is a problem
-because they are too limited. There is a current limiting knob that you can
+too much charge flowing through our wires. (Sometimes this is a problem
+because they are too limited.) There is a current limiting knob that you can
 turn to allow a little more current. Be careful when you use this. The
 voltage may jump wildly when you turn the current knob! It is best to turn
 all the knobs down as low as they will go before you turn on the power
@@ -111,7 +163,14 @@ supply. Then, after turning on the power supply, increase the current knob
 about half a turn and then slowly turn the voltage knob up to your desired
 voltage. If the voltage stops increasing, turn the voltage knob back down a
 bit, and turn up your current limiter knob some more. Then try your voltage
-knob again.
+knob again. Other devices are typically connected to a power supply using
+wires with ``banana'' connectors at the end.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0I}
+\caption[A DC power supply]{A DC power supply.}
+\label{fig:dc_power_supply}
+\end{figure}
 
 Some of our electrical devices are quite delicate, and will literally burn
 up if you apply too much current or voltage. In today's lab, we will
@@ -120,12 +179,12 @@ components come out later.
 
 \subsection{Signal Generator}
 
-\begin{figure}[h!]
-\includegraphics[width=5.093in,height=2.4348in]{PH4CAU0J}
-\end{figure}The signal generator is a fancy
-power supply. It makes changing voltages. It can make voltages in sine,
+The signal generator is basically a fancy
+power supply. 
+An example can be seen in Figure \ref{fig:signal_generator}.
+It makes voltages that change over time in sine,
 square, and triangle patterns. These time-varying signals have a maximum
-voltage (called the amplitude) . We will use both the wave output and a
+voltage (called the amplitude). We will use both the wave output and a
 timing signal that the wave generator creates. Each has their own Bayonet
 Neill--Concelman connector (usually just called a BNC connector) on the
 front of the signal generator. You will need a cable with BNC connectors on
@@ -137,71 +196,127 @@ amplitude (voltage) too high or we run the risk of destroying our measuring
 devices. Again turn the amplitude (voltage) down before you connect the box
 to our electrical components. Then turn up the voltage to what you want in a
 safe way.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0J}
+\caption[A signal generator]{A signal generator.}
+\label{fig:signal_generator}
+\end{figure}
 
+Different brands and types of signal generators are operated differently.
+We will focus on the one shown in Figure \ref{fig:signal_generator}.
 There are frequency range buttons (using the shift button) near the middle
 of the device panel. To change the frequency, you use the shift and range
 buttons to set which digit you are adjusting, then turn the frequency knob
 to make the change. An annoying feature of our frequency generators is that
 you must push the \textquotedblleft output on\textquotedblright\ button or
 they don't output a signal. When everything is set up right, we get a sine
-wave (or square wave, or triangle wave) out. Here is a signal from the
+wave (or square wave, or triangle wave) out. 
+Figure \ref{fig:signal_generator_output} shows a signal from the
 signal generator displayed on one of our measuring devices, the
-oscilloscope. \begin{figure}[h!]
-\includegraphics[width=3.6262in,height=2.7882in]{PH4CAU0K}
+oscilloscope. 
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0K}
+\caption[Sine wave output from a signal generator]{Sine wave output from
+a signal generator, displayed on an oscilloscope.}
+\label{fig:signal_generator_output}
 \end{figure}
 
-Of course, simple batteries are sources of voltage, and so are many other
-things.
+A household power outlet is also a source of sinusoidally varying voltage, but
+with two limitations. First, the amplitude of the signal is (hopefully) always
+at the same set value (170 Volts in the United States), and the sine wave
+always has the same frequency (60 Hz in the United States). A signal generator 
+provides far more flexibility in both the amplitude and frequency of the signal,
+as well as the wave form.
 
-\subsection{Voltmeter}
+\section{Instruments for Measuring Voltage}
+
+Now that we've met a few sources of voltages, lets consider some stand alone
+devices that can measure those voltages.
+
+\subsection{Voltmeters}
 
 Our first measurement device is voltmeter. It measures the electric
 potential (voltage) between its two leads (sometimes called
-\textquotedblleft probes\textquotedblright ). Here is a picture of one of
-our multi-meters set to measure voltage.\begin{figure}[h!]
-\includegraphics[width=3.116in,height=2.3266in]{PH4CAU0L}
-\end{figure}The display is set to read
+\textquotedblleft probes\textquotedblright ). Figure
+\ref{fig:voltemeter_one} shows an example of a
+multimeter set to measure voltage.
+The display is set to read
 voltage by turning the dial to the $\unit{V}$ position. There are often two
 voltage settings. The one that has a wavy line next to it is alternating
-voltage. The one that has a straight line with three dots under it is the
-direct current (DC) voltage. These words might not mean much to you yet
-because you are just starting PH220. So for now, we will just use the DC
-voltage setting. As you learn more, we may use the alternating voltage
-setting. The leads (probes) should be connected to the COM (common) and $%
+current (AC) voltage. 
+The one that has a straight line with three dots under it is the
+direct current (DC) voltage. 
+For now, we will just use the DC
+voltage setting. 
+The leads (probes) should be connected to the COM (common) and $%
 \unit{V}\unit{%
 %TCIMACRO{\U{3a9}}%
 %BeginExpansion
 \Omega%
 %EndExpansion
-}\unit{Hz}$ connectors. Note that connecting your probe leads to the wrong
-position can blow the fuse (or worse) in your meter and make subsequent
-readings very wrong. You should make sure you don't do this, and watch to
-make sure someone else has not done this before you. If the meter seems
-crazy, it just may be. We have several different voltmeter models. Here is a
-picture of a different model.
+}\unit{Hz}$ connectors. 
 
-\begin{figure}[h!]
-\includegraphics[width=2.9199in,height=1.962in]{PH4CAU0M}
-\end{figure}You will notice that there are
-other settings besides volts. Our meters are all multi-meters. That means
-that they can measure more than one thing. We will use several of the
-settings throughout the semester.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0L}
+\caption[A multimeter set to measure DC voltage]{A multimeter set to 
+measure DC voltage.}
+\label{fig:voltemeter_one}
+\end{figure}
 
-\subsection{Oscilloscope}
+Note that connecting your probe leads to the wrong
+position can blow the fuse (or worse) in your meter, causing the meter to
+stop working altogether or display incorrect measurements. 
+You should make sure you don't do this, and watch to
+make sure someone else has not done this before you. If the meter seems to
+be behaving oddly, it may be an indication someone who used it before you
+connected the probes incorrectly! 
 
-Our next device, the oscilloscope, is just a fancy voltmeter. Unlike the
-multimeter, it usually just measures voltage. But it does it with flare!
+For reference, Figure \ref{fig:voltmeter_two} shows a
+picture of a different model of multimeter.
 
-The oscilloscope can measure changing voltages very accurately and usually
-has a way to graph the changing voltage. The standard is a voltage vs. time
-graph. A sinusoidally varying voltage should look something like this when
-plotted. \begin{figure}[h!]
-\includegraphics[width=4.4997in,height=3.0007in]{PH4CAU0N}
-\end{figure}And that is what our oscilloscope
-does. We should see something like this on the oscilloscope screen. From our
-discussion of the signal generator, you know that this is just what we see.%
-\begin{figure}[h!]
-\includegraphics[width=2.998in,height=1.9993in]{PH4CAU0O}
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0M}
+\caption[A different model of multimeter]{A different model of multimeter,
+also set to measure DC voltage.}
+\label{fig:voltmeter_two}
+\end{figure}
+
+You will notice that multimeters have
+other settings besides volts. They are designed to be able to measure more 
+than one thing. Ultimately, however, each of these other measurements are
+in actuality derived from voltage measurements. We will likely use some of
+the other settings on the multimeter during the semester.
+
+\subsection{Oscilloscopes}
+
+Our next device, the oscilloscope, is just a fancy voltmeter. A voltmeter
+only displays a single number, giving us no additional details other
+that what the currently measured voltage is. The oscilloscope measures 
+voltage \textit{as a function of time}, providing us with significantly more
+information. The downside is that, where a multimeter is pretty simple to 
+set up and use, an oscilloscope is a far more complex peice of equipment.
+
+The oscilloscope can accurately and precisely measure changing voltages 
+and usually
+has a way to graph the changing voltage as a function of time. 
+A sinusoidally varying voltage should look something like Figure 
+\ref{fig:sine_voltage} when
+plotted. 
+This plot represents what our oscilloscope
+does. We should see something like Figure \ref{fig:sine_voltage} 
+on the oscilloscope screen. 
+In figure \ref{fig:signal_generator_output}, found in our
+discussion of the signal generator, you know that this is just what we see.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0N}
+\caption[Sinusoidally varying voltage]{Sinusoidally varying voltage. This
+is the type of information an oscilloscope is designed to display.}
+\label{fig:sine_voltage}
 \end{figure}
 
 If the changing voltage is periodic, the oscilloscope has a way to use this
@@ -209,108 +324,224 @@ fact to stabilize the graph so you can see the details more clearly. This
 stabilization is called \textquotedblleft triggering\textquotedblright\ and
 on our oscilloscopes there are buttons and knobs on the right hand side of
 the oscilloscope that adjust the triggering to make the graph more stable
-(or less stable). The photograph of the sine wave above was taken by
-stabilizing a sine wave from our signal generator. The oscilloscope starts
+(or less stable). The photograph of the sine wave 
+found in Figure \ref{signal_generator_output} was taken by
+stabilizing a sine wave from a signal generator. The oscilloscope starts
 plotting at the same part of the wave each time, so the periodic signal
 seems to stand still. To do this we must \textquotedblleft
 trigger\textquotedblright\ the graph at some good starting point. Our
-oscilloscopes have a build-in circuit that can watch for the same part of a
+oscilloscopes have a built-in circuit that can watch for the same part of a
 signal and start the graph in the same place each time. One of the knobs
-adjusts the trigger point. \begin{figure}[h!]
-\includegraphics[width=4.23in,height=3.2659in]{PH4CAU0P}
-\end{figure}The other controls adjust the
+adjusts the trigger point. This knob can be seen in Figure
+\ref{fig:oscilloscope_control_a}.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=\textwidth]{PH4CAU0P}
+\caption[Some of the controls on an oscilloscope]{Some of the controls
+on an oscilloscope, including the scale adjustments and triggering controls.}
+\label{fig:oscilloscope_control_a}
+\end{figure}
+
+The other labeled controls in Figure \ref{fig:oscilloscope_control_a} adjust the
 horizontal and vertical axes. The vertical axis is voltage, and the voltage
 axis control is next to the signal input toward the bottom middle of the
 front panel. To the right of this is the horizontal axis control, which is
 time. You can choose how many volts per division with one knob and how many
 seconds (or fractions of seconds) per division you have on your graph with
-another knob. In the next figure you can see a signal on the oscilloscope
-screen. \begin{figure}[h!]
-\includegraphics[width=4.2505in,height=1.9718in]{PH4CAU0Q}
-\end{figure}In the bottom left-hand corner
-there is a red dot and a voltage given. This is the voltage displayed across
-the whole screen. Since when this photo was take the voltage knob was set to 
-$2\unit{V}$, this means that the bottom of the screen represents $-1\unit{V}$
-and the top of the screen represents $+1\unit{V}.$ \begin{figure}[h!]
-\includegraphics[width=3.9364in,height=%
-3.3076in]{PH4CAU0R}
+another knob. 
+
+% FIXME Is this information correct? I'm pretty sure the oscilloscope 
+% display is for the volts/division.
+In addition to displaying the measured voltage signal, the oscilloscope screen
+shows us information about the settings of the oscilloscope. In Figure
+\ref{fig:oscilloscope_display_a}, at the lower left hand corner, 
+there is a red dot next to a number. This number tells us the voltage
+represented by each vertical division (square) on the display. 
+When the picture in Figure \ref{fig:oscilloscope_display_a} was taken,
+the voltage knob was set to 2 V per division, so the amplitude of this 
+signal is somewhere around 3 V.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=\textwidth]{PH4CAU0Q_corrected}
+\caption[The display of an oscilloscope]{The display of an oscilloscope, with 
+the volts per division set to 2 V. The signal seen on the generator has an
+amplitude of approximately 1.5 divisions, or 3 V.}
+\label{fig:oscilloscope_display_a}
 \end{figure}
 
-There are two signal inputs because our oscilloscopes can look at two
+%\begin{figure}[h!]
+%\includegraphics[width=3.9364in,height=%
+%3.3076in]{PH4CAU0R}
+%\end{figure}
+
+Most oscilloscopes have two signal inputs, meaning we can look at two
 different voltage signals at the same time. Each signal input is called a
 \textquotedblleft channel.\textquotedblright\ Each channel has it's own
 voltage scale knob and voltage scale indicator in the bottom left-hand
 corner. They share the same time scale.
-
 The channel inputs each have a BNC connector. We use oscilloscope probes
-connected to these connectors. Notice that since there are two channels, an
-oscilloscope can measure two voltages at once. But that means we may need
-two probes!
+connected to these connectors. 
+If we want to measure two voltages at once, we need
+two sets of probes!
 
 To check that our oscilloscope is working correctly we can measure a known
-voltage, say, the voltage of a regular battery.
+voltage, say, the voltage of a regular battery for example. What would we 
+expect to see? Since the battery provides a constant voltage, we should
+simply see a straight line on the oscilloscope, with the position of the line
+corresponding to the voltage of the battery. For example, if I was using a 
+1.5 V battery, and had the oscilloscope set to 0.5 Volts per division, I
+would expect to see a straight line at the third division on the display.
 
-\begin{figure}[h!]
-\includegraphics[width=4.0836in,height=1.9458in]{PH4CAU0S}
-\end{figure}Notice that I changed the voltage
-scale knob position so that now the oscilloscope screen has a $10\unit{V}$
-total potential change. That means that we have $5\unit{V}$ at the top of
-the screen and $-5\unit{V}$ at the bottom of the screen. The screen is
-divided into little boxes. There are five rows of boxes from the bottom to
-the top of the screen. Each box represents $1/10$ of the total voltage.
-Since we have $\Delta V=10\unit{V},$ each box represents $\Delta V=1\unit{V}%
-. $ So our battery voltage should give us one and a half boxes. And that is
-just what we got.
+%\begin{figure}[h!]
+%\includegraphics[width=4.0836in,height=1.9458in]{PH4CAU0S}
+%\end{figure}Notice that I changed the voltage
+%scale knob position so that now the oscilloscope screen has a $10\unit{V}$
+%total potential change. That means that we have $5\unit{V}$ at the top of
+%the screen and $-5\unit{V}$ at the bottom of the screen. The screen is
+%divided into little boxes. There are five rows of boxes from the bottom to
+%the top of the screen. Each box represents $1/10$ of the total voltage.
+%Since we have $\Delta V=10\unit{V},$ each box represents $\Delta V=1\unit{V}%
+%. $ So our battery voltage should give us one and a half boxes. And that is
+%just what we got.
 
-But sometimes the oscilloscope does not get the right voltage. If this
-happens we need to calibrate the oscilloscope. Every time we use an
-Oscilloscope it is a good idea to check it to make sure it working well. Our
-oscilloscopes have a test voltage to use just for this purpose.
-
-\begin{figure}[h!]
-\includegraphics[width=5.3982in,height=2.4742in]{PH4CAU0T}
+Sometimes the oscilloscope does not get the right voltage. If this
+happens we need to calibrate the oscilloscope. (Every time we use an
+oscilloscope it is a good idea to check it to make sure it working well.) Our
+oscilloscopes have a test voltage to use just for this purpose. The location
+of the calibration signal source can be seen in Figure
+\ref{fig:oscilloscope_calibration}. 
+The calibration source makes a $5\unit{V}$ square wave. 
+By connecting the channel probes to the calibration source, a square wave
+should be seen on the display (you may have to change the time per division
+to see the wave form). If the top of the wave crosses at 5V on the display,
+and the bottom of the wave crosses at the voltage axis, then the oscilloscope
+is properly calibrated. If the oscilloscope is not properly calibrated, you
+can find the procedures for doing so in the user manual (search 
+online for the manual
+of the model you are using).
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=\textwidth]{PH4CAU0T}
+\caption[Oscilloscope calibration source]{Oscilloscope calibration source, 
+built in to the oscilloscope. The source produces a 5V square wave, which can
+be tested using the channel probes.}
+\label{fig:oscilloscope_calibration}
 \end{figure}
 
-The calibration source makes a $5\unit{V}$ square wave (try it to see what
-that looks like!). If we use this calibration source we should get something
-like what you see in the next figure. \begin{figure}[h!]
-\includegraphics[width=4.2004in,height=1.9623in]{PH4CAU0U}
-\end{figure}If you don't get $5\unit{V},$
-then some thing is wrong and you will need to go through the oscilloscope's
-calibration procedure. That is in the oscilloscope manual and you can find
-the manual on-line.
+%(try it to see what
+%that looks like!). If we use this calibration source we should get something
+%like what you see in the next figure. \begin{figure}[h!]
+%\includegraphics[width=4.2004in,height=1.9623in]{PH4CAU0U}
+%\end{figure}If you don't get $5\unit{V},$
+%then some thing is wrong and you will need to go through the oscilloscope's
+%calibration procedure. That is in the oscilloscope manual and you can find
+%the manual on-line.
 
-\section{Current}
+\section{Measurement Uncertainty: A Review}
+
+As you are aware, every measurement comes with some uncertainty, and voltage
+measurements are no exception. The multimeters only display voltages to a 
+specific decimal point, leaving us uncertain of what the next digit would be.
+Thus, the precision of the last digit of the display is the minimum amount
+of uncertainty we would have in that measurement. 
+
+There are potentially other sources of uncertainty as well. If I was using an
+analog voltmeter (something we won't do in this lab), I would be making a 
+judgment about which mark on the scale the needle was the closest to. This is
+akin to using a ruler to measure a distance. 
+
+Digital multimeters, such as ours, operate using an analog-to-digital converter
+(ADC). We'll be learning more about ADCs later in the semester. For now, it is
+sufficient to note that an ADC introduces some additional uncertainty into 
+measurements obtained using digital voltmeters. (However, the relative size 
+of these ADC uncertainties in a modern digital voltmeter is probably far less
+than the uncertainty from the limited number of digits on the display).
+
+Note that at this point we haven't even considered the question of whether
+the meters are reading accurately or not. It is always a good idea to check
+the calibration of your equipment!
+ 
+The oscilloscope presents some additional challenges when it comes to 
+uncertainty. It doesn't provide a nice digital readout like the multimeter.
+When we ``read'' voltages or times from the oscilloscope, we are making
+a judgment as to which division the signal is the closest to. Even if I'm 
+pretty good at making judgments, I probably can't depend on my measurement 
+being any more precise than the smallest division mark on the screen.
+
+Keep these uncertainties in mind as you complete the following activities.
+
+\activity{
+Practice measuring voltage using a multimeter and an oscilloscope.
+\begin{itemize}
+\item Measure the voltage of a D cell or 9V battery using the multimeter. How
+certain is this measurement? What measurement do you get if you reverse the
+probes of the multimeter? (Remember that by ``reversing'' the probes, it means
+you touch the ends of the probes to the ``wrong'' sides of the battery. Do 
+not reverse the ports that the probes are plugged into on the multimeter!)
+\item Build the circuit from Figure \ref{fig:measuring_voltage}, and provide
+a modest amount of voltage to the resistor using the power supply. (If you
+put too much current through a resistor, it will literally burn up. Keep the
+current down to a few hundred milliamps at most.) Use the multimeter to measure
+the voltage across the resistor. Compare this reading to the voltage reading 
+on the power supply. Do they agree? Do they agree within the uncertainties? If
+they did not agree, which reading would you trust more? Why?
+\item Measure the voltage of a battery using an oscilloscope. How 
+certain is this measurement? Can you improve the relative precision of the
+measurement by changing the settings on the oscilloscope? What happens to the
+measurement if you reverse the probes? Which device is typically better for
+measuring battery voltage: the multimeter or the oscilloscope? Why?
+\item Generate a sinusoidal signal using a signal generator. Display the signal
+on the oscilloscope. Report the amplitude and frequency of the signal as 
+measured by the oscilloscope, along with their uncertainties. Compare these
+readings to those indicated by the signal generator.
+\end{itemize}
+}
+
+
+
+% FIXME Start here!
+
+
+\section{Measuring Something Else: Current}
 
 Our multimeters have a current setting as well as a voltage setting. Current
-is a flow of charge. This is like a water current, which is a flow of water.
-Only we have a different thing flowing. We have a flow of charge. In the
-wires in our Arduino, the moving charged things are (mostly) electrons. We
-can write the flow of something as 
-\begin{equation*}
+is a flow of charge. This is like a water current, which is a flow of water,
+only we have charge flowing instead of water. We can write the flow of charge
+as
+\begin{equation}
 I=\frac{\Delta Q}{\Delta t}
-\end{equation*}%
+\end{equation}
 where for us $\Delta Q$ is the amount of charge that has gone by in the time 
-$\Delta t.$ Physicists use the letter $I$ for electrical current.
+$\Delta t.$ Physicists normally use the letter $I$ to represent electrical 
+current.
 
 We should take a minute to think about what to expect when we allow charge
 to flow. Think of a garden hose. If the hose is full of water, then when we
 open the faucet, water immediately comes out. The water that leaves the
 faucet is far from the open end of the hose, though. We have to wait for it
 to travel the entire length of the hose. But we get water out of the hose
-immediately! Why? \begin{figure}[h!]
-\includegraphics[width=1.4547in,height=1.8228in]{PH4CAU0V}
-\end{figure}The new water coming in causes a
-pressure change that is transmitted through the hose. The water at the open
+immediately! Why? 
+The new water coming in causes a
+pressure change that is transmitted almost instantly 
+through the hose, and the water at the open
 end is pushed out. You can tell this is the case because the water
 immediately leaving the hose is warm and tastes like plastic hose. After a
 while, the water is colder and cleaner.
+%\begin{figure}[h!]
+%\includegraphics[width=1.4547in,height=1.8228in]{PH4CAU0V}
+%\end{figure}
 
-Current is a little bit like this. When we flip a light switch, the
+Current behaves in the same way. When we flip a light switch, the
 electrons near the switch start to flow. But there are already free
 electrons in the wire. These experience a push that makes the light turn on
 almost instantly. But the electrons that turn on the light are not the ones
 that just went through the switch.
+
+Pictured another way, turning on the switch connects the wires to an electric
+potential. This potential results in an electric field propagating very 
+quickly (like at speeds close to the speed of light) through the wires. As 
+soon as that electric field hits any point of the wire, the free 
+electrons there begin to move.
 
 \subsection{Measuring Current}
 
@@ -320,144 +551,160 @@ the pipe from the city water system to a meter. The water flows through the
 meter and then goes into the pipe that brings water to the house. That way,
 the meter can't miss any of the water (and the city can't miss any of your
 payment!). The same is true for electrical current. To measure electrical
-current, we need to remove part of our circuit, and replace it with the
-meter to force the flow of electrical current to go through the meter. A
-schematic diagram of this might look like this: \begin{figure}[h!]
-\includegraphics[width=3.8484in,height=%
-2.3981in]{PH4CAU0W}
-\end{figure}In this diagram, you can see that
+current, we need to break open the circuit and install a meter through which
+all of the current must flow, as in Figure \ref{fig:measuring_current}.
+In this diagram, you can see that
 the electric current must go through the current meter. In fact, it couldn't
 go anywhere else because part of the original circuit wire is missing. This
-is just what we want. To actually perform this measurement with one of our
-multimeters you could set up a circuit like the one in the following figure. 
-\begin{figure}[h!]
-\includegraphics[width=3.8821in,height=3.2707in]{PH4CAU0X}
-\end{figure}There is one more important thing
+is just what we want. 
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0W}
+\caption[Measuring current]{Measuring current. The current meter must
+be positioned such that all of the current flows through the meter.}
+\label{fig:measuring_current}
+\end{figure}
+
+To actually perform this measurement with one of our
+multimeters you could set up a circuit like the one in Figure
+\ref{fig:measuring_current_b}. 
+There is one more important thing
 to do to make this work. We need to change the meter settings. And there are
 two separate changes. The first is to switch the probe connections. One
 probe stays in the COM or common connector, but the other needs to move to
-the connector marked with an \textquotedblleft A.\textquotedblright\ Here is
-an example showing the changes with two kinds of multimeters. \begin{figure}[h!]
-\includegraphics[width=%
-4.858in,height=2.2423in]{PH4CAU0Y}
-\end{figure}The \textquotedblleft
+the connector marked with an \textquotedblleft A\textquotedblright\. 
+The \textquotedblleft
 A\textquotedblright\ stands for the standard unit of electrical current, the
 Ampere or Amp. With the multimeter set up like this we would call it an 
 \emph{ammeter}. Ammeters measure electrical current.
+Figure \ref{fig:multimeters_amps} shows the probe connections for measuring
+current with two kinds of multimeters. 
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU0X}
+\caption[Measuring current with a multimeter]{Measuring current with a
+multimeter.}
+\label{fig:measuring_current_b}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=\textwidth]{PH4CAU0Y}
+\caption[Two multimeters prepared for measuring current]{Two multimeters
+prepared for measuring current.}
+\label{fig:multimeters_amps}
+\end{figure}
 
-\section{Building a New Instrument}
+Many
+multimeters have two ports for measuring current, one for milliamps (mA), and
+one for Amps (A). If you don't know what the current is that you are trying 
+measure, it's always a good idea to start with the probe connected to the port
+designed to measure Amps. Too high a current will burn a fuse in the 
+multimeter, or worse yet, destroy the multimeter.
+
+\subsection{How an Ammeter Works}
 
 We said before that physicists like to change any measurement they can into
-a voltage measurement. That is because we have devices like our Arduino
-boards that measure voltage. We build new instruments by finding ways to
-turn the measurement that we want to make into a voltage.
+a voltage measurement, because, ultimately, that is the only thing that we
+can measure with electronics. So, if we want to measure current, the first
+thing we need to do is transform a current into a voltage.
 
-In order to build a new instrument, we need to understand the quantity that
-we really want to measure. We will need to understand the physics of the
-quantity to make a good new instrument design. Let's take an example.
-Suppose we wish to measure current, but suppose we don't have a current
-setting on our Arduino (because we don't). Could we still make a current
-measurement?
+This is true not only for current, but for any other quantity that we would
+like to measure electroncially. 
+In order to build a new instrument, we need to understand the physics of the 
+thing that we really want to measure. 
 
-The secret of instrument design is to understand the physics of the
-measurement we want to make (current) and then see if we can turn that
-measurement into a voltage.
-
-\subsection{Start with the Physics:}
+\subsubsection{Ohm's Law}
 
 Let's keep thinking of current like water in a hose. Will there be any
 friction associated with the water traveling through the hose? Of course
 there will! We usually call friction in fluids \emph{viscosity}. But it is a
-form of friction, and we can use our PH121 intuition about friction to see
+form of friction, and we can use our intuition about friction to see
 how it would work. Think of having two hoses, one twice as long as the
-other. Which would you expect to have more friction? \begin{figure}[h!]
-\includegraphics[width=2.6033in,height=%
-1.7474in]{PH4CAU0Z}
-\end{figure}
-
+other. Which would you expect to have more friction? 
+%\begin{figure}[h!]
+%\includegraphics[width=2.6033in,height=%
+%1.7474in]{PH4CAU0Z}
+%\end{figure}
 Our friction experience says that the longer the path, the more the
-friction. The current has longer to interact with the hose, so it
-experiences more friction. Electrical currents are like this. Longer wires
+current interacts with the hose. The more the current interacts with the hose,
+the more friction it will experience. 
+Electrical currents are like this. Longer wires
 give more friction.
 
 George Simon Ohm noticed that with long metal wires, there seemed to be a
 linear relationship between the potential difference (voltage), the current,
-and the length of the wire. The longer the wire, the less the current. His
+and the length of the wire. The longer the wire, the less current a given
+voltage would produce. His
 work was confirmed and expanded on by others, who found that not only length
 mattered, but also the diameter of the wire mattered. The relationship is
-now expressed as%
-\begin{equation*}
+now expressed as
+\begin{equation}
 \Delta V=IR
-\end{equation*}%
-$\Delta V$ is our old friend, voltage, and we know $I$ is the symbol for
-current, and $R$ is the slope of the $\Delta V$ vs. $I$ curve. The
-experiments showed this constant $R$ depended on the material. It is like
+\end{equation}
+an equation referred to as \emph{Ohm's law}. The
+$\Delta V$ is our old friend, voltage, and the $I$ represents
+current. The $R$ in the equation represents the ``friction'' provided by the 
+ciruit.
+Experiments show that this constant $R$ depends on the material. It is like
 our viscosity in hoses. It is the friction. The more the friction, the
 harder it is to get the current through the wire. But like we don't call
 viscosity \textquotedblleft friction,\textquotedblright\ we also don't use
 the word \textquotedblleft friction\textquotedblright\ for this
 friction-like term. We call it \emph{resistance.} We could solve for this
 resistance 
-\begin{equation*}
+\begin{equation}
 R=\frac{\Delta V}{I}
-\end{equation*}%
+\end{equation}
 or we could plot $\Delta V$ vs. $I$ and the slope of this line would be the
-resistance.\begin{figure}[h!]
-\includegraphics[width=1.9899in,height=1.3214in]{PH4CAU10}
-\end{figure}Either way, this relationship
+resistance.
+Either way, this relationship
 tells us that it takes more potential energy to get the same current if
 there is more resistance.
 
-This is called \emph{Ohm's law.} The relationship holds well for metals and
-many materials, but, like Hook's law, this \textquotedblleft
+%\begin{figure}[h!]
+%\includegraphics[width=1.9899in,height=1.3214in]{PH4CAU10}
+%\end{figure}
+
+Ohm's law holds well for metals and
+many materials, but, like Hooke's law, this \textquotedblleft
 law\textquotedblright\ does not always hold. Devices that do provide a
-constant resistance coefficient, $R,$ are called \emph{resisters. }We will
-use this symbol
-
-\begin{figure}[h!]
-\includegraphics[width=1.742in,height=0.2794in]{Resister_symbol0}
-\end{figure}for resistors, but they
-often look more like this\begin{figure}[h!]
-\includegraphics[width=2.2987in,height=0.179in]{PH4CAU11}
+constant resistance coefficient $R$ are called \emph{resistors}. In schematic
+diagrams, resistors are usually represented by zig-zag lines or by rectangles.
+In reality, they look more like Figure \ref{fig:resistor}.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.6\textwidth]{PH4CAU11}
+\caption[A resistor]{A resistor. The colored bands indicate the resistance.}
+\label{fig:resistor}
 \end{figure}
-
-Notice that this is important! We have found a way to relate our new
-quantity that we want to measure, current, to a voltage. We know how to
-measure a voltage! Our Ohm's law equation even tells us what extra part we
-need to convert our voltmeter into a current measuring instrument. We will
-need a resistor.
 
 \subsubsection{Resistor Code}
 
-Let's pause in our new instrument design for a moment and ask,
-\textquotedblleft how would you know the resistance of a
-resistor?\textquotedblright\ Our multimeters have a resistance measuring
-setting, so you could measure the resistance directly using the meter. But
-many commercially produced resistors come conveniently marked with a color
+Many commercially produced resistors come conveniently marked with a color
 code that helps you identify their resistance. The basics of the color code
-are given in the following figure\bigskip \begin{figure}[h!]
-\includegraphics[width=3.2958in,height=2.4249in]{PH4CAU12}
+are seen in Figure \ref{fig:resistor_code}.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU12}
+\caption[Resistor code]{Resistor code. The use of this code is
+described in the text.}
+\label{fig:resistor_code}
 \end{figure}
 
-To use the code:
-
+To use the code, do the following:
 \begin{enumerate}
 \item Find the tolerance code band. This band is usually brown in our kit
 resistors and often is set off from the others a little more.
-
 \item Read the first color band from the side opposite the tolerance band.
 This will be the first digit of your resistance. I\ think the example
 resister on the chart has a yellow first color band, so the first digit of
 our resistance is $4.$
-
 \item Read the second color band. This will be the second digit of your
 resistance. I\ think the second band of our example resistor is orange, so
 the second digit would be a $3,$ making our resistance so far $43$
-
 \item Read the third color band. This will be the third digit of your
 resistance. I\ think the second band of our example resistor is red, so the
 second digit would be a $2,$ making our resistance so far $432$
-
 \item Read the forth color band. This is a multiplier. You multiply the
 first three digits by this amount. For our example resistance, I think the
 third band is black. Then we multiply $432$ by $1\unit{%
@@ -471,7 +718,6 @@ third band is black. Then we multiply $432$ by $1\unit{%
 \Omega%
 %EndExpansion
 }.$ This is our resistance.
-
 \item The tolerance band gives the uncertainty in this value. Our example
 resistor seems to have a brown tolerance band, which tells us our value is
 good to $\pm 1\%.$ For our example resistance, $1\%$ would be $0.01\times 432%
@@ -497,11 +743,11 @@ We won't memorize the resistor code, but you should be able to find a
 resistance using the code.
 
 If you are in doubt about what color you see on a resistor, our multimeters
-can measure resistance directly. \begin{figure}[h!]
-\includegraphics[width=3.5426in,height=2.3594in]{PH4CAU13}
-\end{figure}Place the red probe in the
+can measure resistance directly. 
+Place the red probe in the
 connector with a $\Omega $ marked on it and turn the dial to the $\Omega $
-setting. Place the probes on either side of the resistance to be measured.
+setting, as seen in Figure \ref{fig:multimeter_ohms}.
+Place the probes on either side of the resistance to be measured.
 Be careful/ You are a resistor too. If you touch your hands to the probes
 (common mistake while you try to hold the resistor on the probe ends) you
 may measure your resistance instead of the resistor's! You have a resistance
@@ -510,9 +756,18 @@ resistance with a meter you need to take the circuit element (resistor,
 light bulb, whatever) out of the circuit and measure it on it's own.
 Otherwise, you might be measuring the resistance of the rest of the circuit.
 Alligator clips are useful for this.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=\textwidth]{PH4CAU13}
+\caption[Multimeters prepared to measure resistance]{Multimeters prepared
+to measure resistance.}
+\label{fig:multimeter_ohms}
+\end{figure}
 
-\subsubsection{Direction of current flow}
+\subsubsection{A Note on the Direction of Current Flow}
 
+
+% FIXME HERE
 There is a historical oddity with current flow. That is that the current
 direction is the direction positive charges would flow. This may seem
 strange, since in good conductors electrons are doing the flowing and they
@@ -567,6 +822,23 @@ the charges in the wire.%
 I=\frac{1}{R}\Delta V
 \end{equation*}%
 It is just the resistance, $R$.\ 
+
+
+
+
+
+
+
+
+
+
+
+
+Notice that this is important! We have found a way to relate our new
+quantity that we want to measure, current, to a voltage. We know how to
+measure a voltage! Our Ohm's law equation even tells us what extra part we
+need to convert our voltmeter into a current measuring instrument. We will
+need a resistor.
 
 \subsection{Knowing the Physics, Design the new instrument}
 

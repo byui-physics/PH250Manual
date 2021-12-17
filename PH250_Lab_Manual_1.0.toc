@@ -12,28 +12,30 @@
 \contentsline {subsection}{\numberline {1.2.2}The Arduino sketch: an introduction}{16}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Compiling and uploading the sketch}{19}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}Adding More Complexity}{21}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Introduction to Electrical Measuring Devices (Not Step-by-step)}{23}{chapter.2}%
-\contentsline {section}{\numberline {2.1}What we measure: Voltage (and Current)}{23}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Stand-Alone Experimental Hardware}{25}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Power Supply}{26}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Signal Generator}{27}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Voltmeter}{27}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Oscilloscope}{29}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Current}{33}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Measuring Current}{34}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Building a New Instrument}{35}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Start with the Physics:}{36}{subsection.2.4.1}%
-\contentsline {subsubsection}{Resistor Code}{38}{section*.49}%
-\contentsline {subsubsection}{Direction of current flow}{39}{section*.52}%
-\contentsline {subsection}{\numberline {2.4.2}Knowing the Physics, Design the new instrument}{41}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Testing the new instrument}{42}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Calculating uncertainty, a review}{44}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}How do we find the slope?}{50}{subsection.2.5.1}%
-\contentsline {subsubsection}{Tie to statistics}{51}{section*.65}%
-\contentsline {section}{\numberline {2.6}Practice Measurements}{53}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Use a Multimeter}{53}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Use an Oscilloscope}{54}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Build a new instrument from an old instrument}{54}{subsection.2.6.3}%
+\contentsline {chapter}{\numberline {2}Electrical Measuring Devices}{23}{chapter.2}%
+\contentsline {section}{\numberline {2.1}What We Measure: Voltage }{24}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Sources of DC and AC potentials}{26}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}DC Power Supply}{27}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Signal Generator}{28}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Instruments for Measuring Voltage}{29}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Voltmeters}{29}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Oscilloscopes}{31}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Measurement Uncertainty: A Review}{34}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Measuring Something Else: Current}{35}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Measuring Current}{36}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}How an Ammeter Works}{38}{subsection.2.5.2}%
+\contentsline {subsubsection}{Ohm's Law}{38}{section*.40}%
+\contentsline {subsubsection}{Resistor Code}{39}{section*.42}%
+\contentsline {subsubsection}{A Note on the Direction of Current Flow}{41}{section*.45}%
+\contentsline {subsection}{\numberline {2.5.3}Knowing the Physics, Design the new instrument}{43}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Testing the new instrument}{44}{subsection.2.5.4}%
+\contentsline {section}{\numberline {2.6}Calculating uncertainty, a review}{46}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}How do we find the slope?}{52}{subsection.2.6.1}%
+\contentsline {subsubsection}{Tie to statistics}{53}{section*.58}%
+\contentsline {section}{\numberline {2.7}Practice Measurements}{55}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Use a Multimeter}{55}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Use an Oscilloscope}{56}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Build a new instrument from an old instrument}{56}{subsection.2.7.3}%
 \contentsline {chapter}{\numberline {3}First DAQ Measurements: Voltage}{57}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Building a voltmeter}{59}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Wiring the simple voltmeter}{63}{subsection.3.1.1}%
@@ -51,17 +53,17 @@
 \contentsline {subsection}{\numberline {4.3.2}Canopy Mac Users 4.2.1}{86}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Manually install pyserial through the terminal on a Mac. Coding in emacs/VI}{86}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Mac Pathway and Port Notation}{87}{subsection.4.3.4}%
-\contentsline {subsubsection}{Mac Pathway}{87}{section*.101}%
-\contentsline {subsubsection}{Mac Port}{87}{section*.102}%
+\contentsline {subsubsection}{Mac Pathway}{87}{section*.94}%
+\contentsline {subsubsection}{Mac Port}{87}{section*.95}%
 \contentsline {subsection}{\numberline {4.3.5}Mac version of the python code}{87}{subsection.4.3.5}%
 \contentsline {section}{\numberline {4.4}Lab Assignment}{90}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Validation of Ohm's Law}{91}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Ohm's Law Revisited}{91}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Measuring current with our Arduino}{92}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Actually making an Arduino measure current}{94}{subsection.5.1.2}%
-\contentsline {subsubsection}{Choosing shunt resistors}{97}{section*.109}%
+\contentsline {subsubsection}{Choosing shunt resistors}{97}{section*.102}%
 \contentsline {subsection}{\numberline {5.1.3}Finding Uncertainty in a calculated value}{99}{subsection.5.1.3}%
-\contentsline {subsubsection}{Iterate to find an optimal value}{101}{section*.111}%
+\contentsline {subsubsection}{Iterate to find an optimal value}{101}{section*.104}%
 \contentsline {subsection}{\numberline {5.1.4}Using statistics to calculate uncertainty}{103}{subsection.5.1.4}%
 \contentsline {subsection}{\numberline {5.1.5}Philosophical warning}{108}{subsection.5.1.5}%
 \contentsline {section}{\numberline {5.2}Proposals}{109}{section.5.2}%

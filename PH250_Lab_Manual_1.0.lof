@@ -18,14 +18,32 @@
 \contentsline {figure}{\numberline {1.17}{\ignorespaces Schematic diagram for the blink circuit}}{16}{figure.caption.23}%
 \contentsline {figure}{\numberline {1.18}{\ignorespaces The Arduino IDE}}{20}{figure.caption.24}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Gravitational energy difference}}{25}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Electric potential difference}}{25}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Measuring voltage with a multimeter}}{26}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A DC power supply}}{27}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces A signal generator}}{28}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Sine wave output from a signal generator}}{29}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces A multimeter set to measure DC voltage}}{30}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces A different model of multimeter}}{30}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Sinusoidally varying voltage}}{31}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Some of the controls on an oscilloscope}}{32}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces The display of an oscilloscope}}{33}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Oscilloscope calibration source}}{34}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Measuring current}}{37}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Measuring current with a multimeter}}{37}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Two multimeters prepared for measuring current}}{38}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces A resistor}}{39}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Resistor code}}{40}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Multimeters prepared to measure resistance}}{41}{figure.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Top of a prototyping shield\relax }}{138}{figure.caption.145}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Bottom of a prototyping shield\relax }}{138}{figure.caption.146}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Top of Data Logger Shield\relax }}{139}{figure.caption.147}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Top of a prototyping shield\relax }}{138}{figure.caption.138}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Bottom of a prototyping shield\relax }}{138}{figure.caption.139}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Top of Data Logger Shield\relax }}{139}{figure.caption.140}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
