@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.12.1)  17 DEC 2021 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.1)  20 DEC 2021 08:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -830,38 +830,38 @@ Chapter 1.
 [3
 
 ]
-<Figures/protoboard_blank.png, id=692, 1027.84pt x 332.24126pt>
+<Figures/protoboard_blank.png, id=681, 1027.84pt x 332.24126pt>
 File: Figures/protoboard_blank.png Graphic file (type png)
 <use Figures/protoboard_blank.png>
 Package pdftex.def Info: Figures/protoboard_blank.png  used on input line 74.
 (pdftex.def)             Requested size: 276.00105pt x 89.21458pt.
  [4]
-<Figures/protoboard_connections.jpg, id=700, 246.6816pt x 79.7379pt>
+<Figures/protoboard_connections.jpg, id=690, 246.6816pt x 79.7379pt>
 File: Figures/protoboard_connections.jpg Graphic file (type jpg)
 <use Figures/protoboard_connections.jpg>
 Package pdftex.def Info: Figures/protoboard_connections.jpg  used on input line
  99.
 (pdftex.def)             Requested size: 276.00105pt x 89.2231pt.
-<Figures/protoboard_example_a.jpg, id=702, 1284.8pt x 963.6pt>
+<Figures/protoboard_example_a.jpg, id=692, 1284.8pt x 963.6pt>
 File: Figures/protoboard_example_a.jpg Graphic file (type jpg)
 <use Figures/protoboard_example_a.jpg>
 Package pdftex.def Info: Figures/protoboard_example_a.jpg  used on input line 1
 28.
 (pdftex.def)             Requested size: 276.00105pt x 206.99352pt.
  [5 <./Figures/protoboard_blank.png> <./Figures/protoboard_connections.jpg>]
-<Figures/protoboard_example_b.jpg, id=711, 1284.8pt x 963.6pt>
+<Figures/protoboard_example_b.jpg, id=701, 1284.8pt x 963.6pt>
 File: Figures/protoboard_example_b.jpg Graphic file (type jpg)
 <use Figures/protoboard_example_b.jpg>
 Package pdftex.def Info: Figures/protoboard_example_b.jpg  used on input line 1
 46.
 (pdftex.def)             Requested size: 276.00105pt x 206.99352pt.
-<Figures/protoboard_example_c.jpg, id=713, 1284.8pt x 963.6pt>
+<Figures/protoboard_example_c.jpg, id=703, 1284.8pt x 963.6pt>
 File: Figures/protoboard_example_c.jpg Graphic file (type jpg)
 <use Figures/protoboard_example_c.jpg>
 Package pdftex.def Info: Figures/protoboard_example_c.jpg  used on input line 1
 65.
 (pdftex.def)             Requested size: 276.00105pt x 206.99352pt.
-<Figures/protoboard_example_d.jpg, id=715, 1284.8pt x 963.6pt>
+<Figures/protoboard_example_d.jpg, id=705, 1284.8pt x 963.6pt>
 File: Figures/protoboard_example_d.jpg Graphic file (type jpg)
 <use Figures/protoboard_example_d.jpg>
 Package pdftex.def Info: Figures/protoboard_example_d.jpg  used on input line 1
@@ -870,36 +870,36 @@ Package pdftex.def Info: Figures/protoboard_example_d.jpg  used on input line 1
  [6 <./Figures/protoboard_example_a.jpg>] [7 <./Figures/protoboard_example_b.jp
 g> <./Figures/protoboard_example_c.jpg>] [8 <./Figures/protoboard_example_d.jpg
 >]
-<Figures/soldering_equipment.jpg, id=729, 1284.8pt x 504.88625pt>
+<Figures/soldering_equipment.jpg, id=719, 1284.8pt x 504.88625pt>
 File: Figures/soldering_equipment.jpg Graphic file (type jpg)
 <use Figures/soldering_equipment.jpg>
 Package pdftex.def Info: Figures/soldering_equipment.jpg  used on input line 24
 5.
 (pdftex.def)             Requested size: 276.00105pt x 108.45596pt.
-<Figures/perfboard.jpg, id=731, 1284.8pt x 722.7pt>
+<Figures/perfboard.jpg, id=721, 1284.8pt x 722.7pt>
 File: Figures/perfboard.jpg Graphic file (type jpg)
 <use Figures/perfboard.jpg>
 Package pdftex.def Info: Figures/perfboard.jpg  used on input line 261.
 (pdftex.def)             Requested size: 276.00105pt x 155.24513pt.
-<Figures/solder_ready.jpg, id=733, 1276.77pt x 602.25pt>
+<Figures/solder_ready.jpg, id=723, 1276.77pt x 602.25pt>
 File: Figures/solder_ready.jpg Graphic file (type jpg)
 <use Figures/solder_ready.jpg>
 Package pdftex.def Info: Figures/solder_ready.jpg  used on input line 277.
 (pdftex.def)             Requested size: 276.00105pt x 130.18881pt.
  [9] [10 <./Figures/soldering_equipment.jpg> <./Figures/perfboard.jpg>]
-<Figures/component_preparation_a.jpg, id=743, 642.4pt x 642.4pt>
+<Figures/component_preparation_a.jpg, id=733, 642.4pt x 642.4pt>
 File: Figures/component_preparation_a.jpg Graphic file (type jpg)
 <use Figures/component_preparation_a.jpg>
 Package pdftex.def Info: Figures/component_preparation_a.jpg  used on input lin
 e 292.
 (pdftex.def)             Requested size: 137.9979pt x 137.99568pt.
-<Figures/component_preparation_b.jpg, id=744, 642.4pt x 642.4pt>
+<Figures/component_preparation_b.jpg, id=734, 642.4pt x 642.4pt>
 File: Figures/component_preparation_b.jpg Graphic file (type jpg)
 <use Figures/component_preparation_b.jpg>
 Package pdftex.def Info: Figures/component_preparation_b.jpg  used on input lin
 e 293.
 (pdftex.def)             Requested size: 137.9979pt x 137.99568pt.
-<Figures/heat_the_work.jpg, id=745, 1284.8pt x 481.8pt>
+<Figures/heat_the_work.jpg, id=735, 1284.8pt x 481.8pt>
 File: Figures/heat_the_work.jpg Graphic file (type jpg)
 <use Figures/heat_the_work.jpg>
 Package pdftex.def Info: Figures/heat_the_work.jpg  used on input line 314.
@@ -907,38 +907,38 @@ Package pdftex.def Info: Figures/heat_the_work.jpg  used on input line 314.
 
 [11 <./Figures/solder_ready.jpg> <./Figures/component_preparation_a.jpg> <./Fig
 ures/component_preparation_b.jpg>]
-<Figures/soldering_almost_done.jpg, id=753, 1284.8pt x 481.8pt>
+<Figures/soldering_almost_done.jpg, id=743, 1284.8pt x 481.8pt>
 File: Figures/soldering_almost_done.jpg Graphic file (type jpg)
 <use Figures/soldering_almost_done.jpg>
 Package pdftex.def Info: Figures/soldering_almost_done.jpg  used on input line 
 327.
 (pdftex.def)             Requested size: 276.00105pt x 103.49675pt.
-<Figures/soldering_complete.jpg, id=755, 1284.8pt x 963.6pt>
+<Figures/soldering_complete.jpg, id=745, 1284.8pt x 963.6pt>
 File: Figures/soldering_complete.jpg Graphic file (type jpg)
 <use Figures/soldering_complete.jpg>
 Package pdftex.def Info: Figures/soldering_complete.jpg  used on input line 343
 .
 (pdftex.def)             Requested size: 276.00105pt x 206.99352pt.
-<Figures/pcb.jpg, id=757, 308.352pt x 173.448pt>
+<Figures/pcb.jpg, id=747, 308.352pt x 173.448pt>
 File: Figures/pcb.jpg Graphic file (type jpg)
 <use Figures/pcb.jpg>
 Package pdftex.def Info: Figures/pcb.jpg  used on input line 358.
 (pdftex.def)             Requested size: 276.00105pt x 155.25218pt.
  [12 <./Figures/heat_the_work.jpg> <./Figures/soldering_almost_done.jpg>] [13 <
 ./Figures/soldering_complete.jpg> <./Figures/pcb.jpg>]
-<Figures/arduino_left.jpg, id=769, 1043.9pt x 722.7pt>
+<Figures/arduino_left.jpg, id=759, 1043.9pt x 722.7pt>
 File: Figures/arduino_left.jpg Graphic file (type jpg)
 <use Figures/arduino_left.jpg>
 Package pdftex.def Info: Figures/arduino_left.jpg  used on input line 407.
 (pdftex.def)             Requested size: 276.00105pt x 191.07349pt.
-<Figures/arduino_connected.jpg, id=771, 1284.8pt x 963.6pt>
+<Figures/arduino_connected.jpg, id=761, 1284.8pt x 963.6pt>
 File: Figures/arduino_connected.jpg Graphic file (type jpg)
 <use Figures/arduino_connected.jpg>
 Package pdftex.def Info: Figures/arduino_connected.jpg  used on input line 421.
 
 (pdftex.def)             Requested size: 276.00105pt x 206.99352pt.
  [14] [15 <./Figures/arduino_left.jpg> <./Figures/arduino_connected.jpg>]
-<Figures/blink_circuit.jpg, id=785, 1465.475pt x 369.38pt>
+<Figures/blink_circuit.jpg, id=775, 1465.475pt x 369.38pt>
 File: Figures/blink_circuit.jpg Graphic file (type jpg)
 <use Figures/blink_circuit.jpg>
 Package pdftex.def Info: Figures/blink_circuit.jpg  used on input line 455.
@@ -968,7 +968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 632--633
 
  []
 
-<Figures/ide.jpg, id=833, 600.2425pt x 385.44pt>
+<Figures/ide.jpg, id=823, 600.2425pt x 385.44pt>
 File: Figures/ide.jpg Graphic file (type jpg)
 <use Figures/ide.jpg>
 Package pdftex.def Info: Figures/ide.jpg  used on input line 645.
@@ -987,54 +987,54 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [23
 
 ]
-<Figures/PH4CAU0F.jpg, id=918, 299.61937pt x 177.66376pt>
+<Figures/PH4CAU0F.jpg, id=907, 299.61937pt x 177.66376pt>
 File: Figures/PH4CAU0F.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0F.jpg>
 Package pdftex.def Info: Figures/PH4CAU0F.jpg  used on input line 70.
 (pdftex.def)             Requested size: 276.00105pt x 163.67221pt.
-<Figures/PH4CAU0G.jpg, id=920, 262.73157pt x 118.19156pt>
+<Figures/PH4CAU0G.jpg, id=909, 262.73157pt x 118.19156pt>
 File: Figures/PH4CAU0G.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0G.jpg>
 Package pdftex.def Info: Figures/PH4CAU0G.jpg  used on input line 86.
 (pdftex.def)             Requested size: 276.00105pt x 124.1661pt.
 
 [24] [25 <./Figures/PH4CAU0F.jpg> <./Figures/PH4CAU0G.jpg>]
-<Figures/PH4CAU0H.jpg, id=932, 642.90187pt x 414.04688pt>
+<Figures/PH4CAU0H.jpg, id=922, 642.90187pt x 414.04688pt>
 File: Figures/PH4CAU0H.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0H.jpg>
 Package pdftex.def Info: Figures/PH4CAU0H.jpg  used on input line 113.
 (pdftex.def)             Requested size: 345.0pt x 222.19836pt.
  [26 <./Figures/PH4CAU0H.jpg>]
-<Figures/PH4CAU0I.jpg, id=938, 350.81062pt x 269.50688pt>
+<Figures/PH4CAU0I.jpg, id=928, 350.81062pt x 269.50688pt>
 File: Figures/PH4CAU0I.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0I.jpg>
 Package pdftex.def Info: Figures/PH4CAU0I.jpg  used on input line 170.
 (pdftex.def)             Requested size: 276.00105pt x 212.04861pt.
  [27 <./Figures/PH4CAU0I.jpg>]
-<Figures/PH4CAU0J.jpg, id=944, 455.45157pt x 216.81pt>
+<Figures/PH4CAU0J.jpg, id=934, 455.45157pt x 216.81pt>
 File: Figures/PH4CAU0J.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0J.jpg>
 Package pdftex.def Info: Figures/PH4CAU0J.jpg  used on input line 201.
 (pdftex.def)             Requested size: 276.00105pt x 131.38713pt.
-<Figures/PH4CAU0K.jpg, id=947, 323.70938pt x 248.42813pt>
+<Figures/PH4CAU0K.jpg, id=937, 323.70938pt x 248.42813pt>
 File: Figures/PH4CAU0K.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0K.jpg>
 Package pdftex.def Info: Figures/PH4CAU0K.jpg  used on input line 220.
 (pdftex.def)             Requested size: 276.00105pt x 211.82828pt.
  [28 <./Figures/PH4CAU0J.jpg>]
-<Figures/PH4CAU0L.jpg, id=953, 1386.68062pt x 1032.10594pt>
+<Figures/PH4CAU0L.jpg, id=943, 1386.68062pt x 1032.10594pt>
 File: Figures/PH4CAU0L.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0L.jpg>
 Package pdftex.def Info: Figures/PH4CAU0L.jpg  used on input line 263.
 (pdftex.def)             Requested size: 276.00105pt x 205.42537pt.
  [29 <./Figures/PH4CAU0K.jpg>]
-<Figures/PH4CAU0M.jpg, id=960, 1298.60156pt x 868.74562pt>
+<Figures/PH4CAU0M.jpg, id=950, 1298.60156pt x 868.74562pt>
 File: Figures/PH4CAU0M.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0M.jpg>
 Package pdftex.def Info: Figures/PH4CAU0M.jpg  used on input line 282.
 (pdftex.def)             Requested size: 276.00105pt x 184.6292pt.
  [30 <./Figures/PH4CAU0L.jpg> <./Figures/PH4CAU0M.jpg>]
-<Figures/PH4CAU0N.jpg, id=968, 1264.725pt x 790.45313pt>
+<Figures/PH4CAU0N.jpg, id=958, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAU0N.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0N.jpg>
 Package pdftex.def Info: Figures/PH4CAU0N.jpg  used on input line 316.
@@ -1044,20 +1044,20 @@ Package pdftex.def Info: Figures/PH4CAU0N.jpg  used on input line 316.
 LaTeX Warning: Reference `signal_generator_output' on page 31 undefined on inpu
 t line 328.
 
-<Figures/PH4CAU0P.jpg, id=970, 377.91188pt x 291.33844pt>
+<Figures/PH4CAU0P.jpg, id=960, 377.91188pt x 291.33844pt>
 File: Figures/PH4CAU0P.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0P.jpg>
 Package pdftex.def Info: Figures/PH4CAU0P.jpg  used on input line 339.
 (pdftex.def)             Requested size: 345.0pt x 265.96747pt.
 [31 <./Figures/PH4CAU0N.jpg>]
-<Figures/PH4CAU0Q_corrected.jpg, id=978, 318.43968pt x 175.40532pt>
+<Figures/PH4CAU0Q_corrected.jpg, id=968, 318.43968pt x 175.40532pt>
 File: Figures/PH4CAU0Q_corrected.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0Q_corrected.jpg>
 Package pdftex.def Info: Figures/PH4CAU0Q_corrected.jpg  used on input line 365
 .
 (pdftex.def)             Requested size: 345.0pt x 190.03444pt.
  [32 <./Figures/PH4CAU0P.jpg>]
-<Figures/PH4CAU0T.jpg, id=984, 483.30562pt x 220.57407pt>
+<Figures/PH4CAU0T.jpg, id=974, 483.30562pt x 220.57407pt>
 File: Figures/PH4CAU0T.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0T.jpg>
 Package pdftex.def Info: Figures/PH4CAU0T.jpg  used on input line 424.
@@ -1066,20 +1066,20 @@ Package pdftex.def Info: Figures/PH4CAU0T.jpg  used on input line 424.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33 <./Figures/PH4CAU0Q_corrected.jpg>] [34 <./Figures/PH4CAU0T.jpg>] [35]
-<Figures/PH4CAU0W.jpg, id=1001, 344.03531pt x 213.79875pt>
+<Figures/PH4CAU0W.jpg, id=991, 344.03531pt x 213.79875pt>
 File: Figures/PH4CAU0W.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0W.jpg>
-Package pdftex.def Info: Figures/PH4CAU0W.jpg  used on input line 562.
+Package pdftex.def Info: Figures/PH4CAU0W.jpg  used on input line 557.
 (pdftex.def)             Requested size: 276.00105pt x 171.51878pt.
-<Figures/PH4CAU0X.jpg, id=1004, 347.04657pt x 292.09125pt>
+<Figures/PH4CAU0X.jpg, id=994, 347.04657pt x 292.09125pt>
 File: Figures/PH4CAU0X.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0X.jpg>
-Package pdftex.def Info: Figures/PH4CAU0X.jpg  used on input line 584.
+Package pdftex.def Info: Figures/PH4CAU0X.jpg  used on input line 579.
 (pdftex.def)             Requested size: 276.00105pt x 232.30501pt.
-<Figures/PH4CAU0Y.jpg, id=1005, 434.37282pt x 199.49532pt>
+<Figures/PH4CAU0Y.jpg, id=995, 434.37282pt x 199.49532pt>
 File: Figures/PH4CAU0Y.jpg Graphic file (type jpg)
 <use Figures/PH4CAU0Y.jpg>
-Package pdftex.def Info: Figures/PH4CAU0Y.jpg  used on input line 591.
+Package pdftex.def Info: Figures/PH4CAU0Y.jpg  used on input line 586.
 (pdftex.def)             Requested size: 345.0pt x 158.45798pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1087,162 +1087,61 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [36]
 [37 <./Figures/PH4CAU0W.jpg> <./Figures/PH4CAU0X.jpg>] [38 <./Figures/PH4CAU0Y.
 jpg>]
-<Figures/PH4CAU11.jpg, id=1021, 204.765pt x 14.30344pt>
+<Figures/PH4CAU11.jpg, id=1011, 204.765pt x 14.30344pt>
 File: Figures/PH4CAU11.jpg Graphic file (type jpg)
 <use Figures/PH4CAU11.jpg>
-Package pdftex.def Info: Figures/PH4CAU11.jpg  used on input line 676.
+Package pdftex.def Info: Figures/PH4CAU11.jpg  used on input line 671.
 (pdftex.def)             Requested size: 207.0021pt x 14.46053pt.
-<Figures/PH4CAU12.jpg, id=1023, 246.1697pt x 180.675pt>
+<Figures/PH4CAU12.jpg, id=1013, 246.1697pt x 180.675pt>
 File: Figures/PH4CAU12.jpg Graphic file (type jpg)
 <use Figures/PH4CAU12.jpg>
-Package pdftex.def Info: Figures/PH4CAU12.jpg  used on input line 688.
+Package pdftex.def Info: Figures/PH4CAU12.jpg  used on input line 683.
 (pdftex.def)             Requested size: 276.00105pt x 202.57791pt.
  [39 <./Figures/PH4CAU11.jpg>]
-<Figures/PH4CAU13.jpg, id=1036, 316.18124pt x 210.03468pt>
+<Figures/PH4CAU13.jpg, id=1026, 316.18124pt x 210.03468pt>
 File: Figures/PH4CAU13.jpg Graphic file (type jpg)
 <use Figures/PH4CAU13.jpg>
-Package pdftex.def Info: Figures/PH4CAU13.jpg  used on input line 761.
+Package pdftex.def Info: Figures/PH4CAU13.jpg  used on input line 756.
 (pdftex.def)             Requested size: 345.0pt x 229.19606pt.
-<Figures/PH4CAU14.jpg, id=1037, 298.11375pt x 139.27031pt>
+<Figures/PH4CAU14.jpg, id=1027, 298.11375pt x 139.27031pt>
 File: Figures/PH4CAU14.jpg Graphic file (type jpg)
 <use Figures/PH4CAU14.jpg>
-Package pdftex.def Info: Figures/PH4CAU14.jpg  used on input line 775.
-(pdftex.def)             Requested size: 241.18878pt x 113.43735pt.
-<Figures/PH4CAU15.jpg, id=1038, 348.55219pt x 303.38344pt>
-File: Figures/PH4CAU15.jpg Graphic file (type jpg)
-<use Figures/PH4CAU15.jpg>
-Package pdftex.def Info: Figures/PH4CAU15.jpg  used on input line 783.
-(pdftex.def)             Requested size: 281.82045pt x 245.43832pt.
+Package pdftex.def Info: Figures/PH4CAU14.jpg  used on input line 770.
+(pdftex.def)             Requested size: 276.00105pt x 128.94626pt.
 
 Underfull \vbox (badness 6110) has occurred while \output is active []
 
  [40 <./Figures/PH4CAU12.jpg>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[41 <./Figures/PH4CAU13.jpg> <./Figures/PH4CAU14.jpg>]
-<Figures/PH4CAU16.jpg, id=1053, 1265.47781pt x 772.38562pt>
-File: Figures/PH4CAU16.jpg Graphic file (type jpg)
-<use Figures/PH4CAU16.jpg>
-Package pdftex.def Info: Figures/PH4CAU16.jpg  used on input line 808.
-(pdftex.def)             Requested size: 309.53307pt x 74.09631pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42 <./Figures/PH4CAU15.jpg>]
-<Figures/PH4CAU17.jpg, id=1059, 353.82187pt x 281.55188pt>
+<Figures/PH4CAU15.jpg, id=1036, 348.55219pt x 303.38344pt>
+File: Figures/PH4CAU15.jpg Graphic file (type jpg)
+<use Figures/PH4CAU15.jpg>
+Package pdftex.def Info: Figures/PH4CAU15.jpg  used on input line 796.
+(pdftex.def)             Requested size: 276.00105pt x 240.24431pt.
+ [41 <./Figures/PH4CAU13.jpg> <./Figures/PH4CAU14.jpg>]
+[42 <./Figures/PH4CAU15.jpg>]
+<Figures/PH4CAU17.jpg, id=1049, 353.82187pt x 281.55188pt>
 File: Figures/PH4CAU17.jpg Graphic file (type jpg)
 <use Figures/PH4CAU17.jpg>
-Package pdftex.def Info: Figures/PH4CAU17.jpg  used on input line 870.
-(pdftex.def)             Requested size: 355.2571pt x 283.14503pt.
-
-Overfull \hbox (10.2571pt too wide) in paragraph at lines 870--871
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[43 <./Figures/PH4CAU16.jpg>]
-<Figures/PH4CAU18.jpg, id=1065, 1241.38782pt x 770.12718pt>
-File: Figures/PH4CAU18.jpg Graphic file (type jpg)
-<use Figures/PH4CAU18.jpg>
-Package pdftex.def Info: Figures/PH4CAU18.jpg  used on input line 899.
-(pdftex.def)             Requested size: 140.00052pt x 106.30116pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Figures/PH4CAU19.jpg, id=1066, 434.37282pt x 199.49532pt>
-File: Figures/PH4CAU19.jpg Graphic file (type jpg)
-<use Figures/PH4CAU19.jpg>
-Package pdftex.def Info: Figures/PH4CAU19.jpg  used on input line 904.
-(pdftex.def)             Requested size: 351.10434pt x 162.05605pt.
-
-Overfull \hbox (6.10434pt too wide) in paragraph at lines 904--905
-[][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Figures/PH4CAU1A.jpg, id=1067, 444.91219pt x 204.01219pt>
-File: Figures/PH4CAU1A.jpg Graphic file (type jpg)
-<use Figures/PH4CAU1A.jpg>
-Package pdftex.def Info: Figures/PH4CAU1A.jpg  used on input line 917.
-(pdftex.def)             Requested size: 359.67764pt x 165.70969pt.
-
-Overfull \hbox (14.67764pt too wide) in paragraph at lines 917--918
-[][] 
- []
-
-[44 <./Figures/PH4CAU17.jpg>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `New Instrument and Test' on page 45 undefined on inpu
-t line 939.
-
-[45 <./Figures/PH4CAU18.jpg> <./Figures/PH4CAU19.jpg>] [46 <./Figures/PH4CAU1A.
-jpg>]
-<Figures/PH4CAU1B.jpg, id=1084, 1264.725pt x 790.45313pt>
-File: Figures/PH4CAU1B.jpg Graphic file (type jpg)
-<use Figures/PH4CAU1B.jpg>
-Package pdftex.def Info: Figures/PH4CAU1B.jpg  used on input line 1015.
-(pdftex.def)             Requested size: 252.92122pt x 134.99037pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Figures/PH4CAU1C.jpg, id=1085, 184.43906pt x 124.96687pt>
-File: Figures/PH4CAU1C.jpg Graphic file (type jpg)
-<use Figures/PH4CAU1C.jpg>
-Package pdftex.def Info: Figures/PH4CAU1C.jpg  used on input line 1035.
-(pdftex.def)             Requested size: 248.50072pt x 168.45773pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[47] [48 <./Figures/PH4CAU1B.jpg> <./Figures/PH4CAU1C.jpg>]
-<Figures/PH4CAU1D.jpg, id=1099, 1264.725pt x 790.45313pt>
-File: Figures/PH4CAU1D.jpg Graphic file (type jpg)
-<use Figures/PH4CAU1D.jpg>
-Package pdftex.def Info: Figures/PH4CAU1D.jpg  used on input line 1068.
-(pdftex.def)             Requested size: 241.61252pt x 161.12727pt.
-<Figures/PH4CAU1E.jpg, id=1100, 223.58531pt x 149.05687pt>
-File: Figures/PH4CAU1E.jpg Graphic file (type jpg)
-<use Figures/PH4CAU1E.jpg>
-Package pdftex.def Info: Figures/PH4CAU1E.jpg  used on input line 1086.
-(pdftex.def)             Requested size: 301.09021pt x 200.69951pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[49 <./Figures/PH4CAU1D.jpg>] [50 <./Figures/PH4CAU1E.jpg>]
-<Figures/PH4CAU1F.jpg, id=1111, 227.34938pt x 179.16937pt>
+Package pdftex.def Info: Figures/PH4CAU17.jpg  used on input line 871.
+(pdftex.def)             Requested size: 345.0pt x 274.53558pt.
+ [43] [44 <./Figures/PH4CAU17.jpg>]
+<Figures/derivative.jpg, id=1063, 366.36874pt x 257.96375pt>
+File: Figures/derivative.jpg Graphic file (type jpg)
+<use Figures/derivative.jpg>
+Package pdftex.def Info: Figures/derivative.jpg  used on input line 1115.
+(pdftex.def)             Requested size: 276.00105pt x 194.34616pt.
+ [45] [46 <./Figures/derivative.jpg>]
+<Figures/PH4CAU1F.jpg, id=1080, 227.34938pt x 179.16937pt>
 File: Figures/PH4CAU1F.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1F.jpg>
-Package pdftex.def Info: Figures/PH4CAU1F.jpg  used on input line 1140.
-(pdftex.def)             Requested size: 184.25606pt x 145.51187pt.
- [51 <./Figures/PH4CAU1F.jpg>] [52] [53] [54]
-<Figures/PH4CAU1G.jpg, id=1134, 262.73157pt x 118.19156pt>
-File: Figures/PH4CAU1G.jpg Graphic file (type jpg)
-<use Figures/PH4CAU1G.jpg>
-Package pdftex.def Info: Figures/PH4CAU1G.jpg  used on input line 1367.
-(pdftex.def)             Requested size: 212.75526pt x 96.5047pt.
- [55 <./Figures/PH4CAU1G.jpg>]
-<Figures/PH4CAU1H.jpg, id=1144, 353.82187pt x 281.55188pt>
-File: Figures/PH4CAU1H.jpg Graphic file (type jpg)
-<use Figures/PH4CAU1H.jpg>
-Package pdftex.def Info: Figures/PH4CAU1H.jpg  used on input line 1429.
-(pdftex.def)             Requested size: 280.0075pt x 223.1281pt.
-) [56 <./Figures/PH4CAU1H.jpg>] (./Chapters/DAQ_Measuremnt_V.tex
+Package pdftex.def Info: Figures/PH4CAU1F.jpg  used on input line 1218.
+(pdftex.def)             Requested size: 276.00105pt x 217.51462pt.
+ [47] [48 <./Figures/PH4CAU1F.jpg>])
+(./Chapters/DAQ_Measuremnt_V.tex [49] [50
+
+]
 Chapter 3.
-<Figures/PH4CAU1I.jpg, id=1161, 338.01282pt x 269.50688pt>
+<Figures/PH4CAU1I.jpg, id=1107, 338.01282pt x 269.50688pt>
 File: Figures/PH4CAU1I.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1I.jpg>
 Package pdftex.def Info: Figures/PH4CAU1I.jpg  used on input line 26.
@@ -1250,7 +1149,7 @@ Package pdftex.def Info: Figures/PH4CAU1I.jpg  used on input line 26.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAU1J.jpg, id=1162, 316.93407pt x 123.46124pt>
+<Figures/PH4CAU1J.jpg, id=1108, 316.93407pt x 123.46124pt>
 File: Figures/PH4CAU1J.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1J.jpg>
 Package pdftex.def Info: Figures/PH4CAU1J.jpg  used on input line 36.
@@ -1258,32 +1157,30 @@ Package pdftex.def Info: Figures/PH4CAU1J.jpg  used on input line 36.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAU1K.jpg, id=1163, 1298.60156pt x 868.74562pt>
+<Figures/PH4CAU1K.jpg, id=1109, 1298.60156pt x 868.74562pt>
 File: Figures/PH4CAU1K.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1K.jpg>
 Package pdftex.def Info: Figures/PH4CAU1K.jpg  used on input line 49.
 (pdftex.def)             Requested size: 211.01035pt x 141.78589pt.
-[57
-
-] [58 <./Figures/PH4CAU1I.jpg> <./Figures/PH4CAU1J.jpg> <./Figures/PH4CAU1K.jpg
->]
-<Figures/PH4CAU1L.jpg, id=1175, 250.68657pt x 130.23656pt>
+[51] [52 <./Figures/PH4CAU1I.jpg> <./Figures/PH4CAU1J.jpg> <./Figures/PH4CAU1K.
+jpg>]
+<Figures/PH4CAU1L.jpg, id=1122, 250.68657pt x 130.23656pt>
 File: Figures/PH4CAU1L.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1L.jpg>
 Package pdftex.def Info: Figures/PH4CAU1L.jpg  used on input line 67.
 (pdftex.def)             Requested size: 203.0091pt x 106.12099pt.
- [59 <./Figures/PH4CAU1L.jpg>]
-<Figures/PH4CAU1M.jpg, id=1182, 427.5975pt x 283.81032pt>
+ [53 <./Figures/PH4CAU1L.jpg>]
+<Figures/PH4CAU1M.jpg, id=1129, 427.5975pt x 283.81032pt>
 File: Figures/PH4CAU1M.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1M.jpg>
 Package pdftex.def Info: Figures/PH4CAU1M.jpg  used on input line 102.
 (pdftex.def)             Requested size: 170.68364pt x 113.56541pt.
-<Figures/PH4CAU1N.jpg, id=1183, 284.56313pt x 261.22594pt>
+<Figures/PH4CAU1N.jpg, id=1130, 284.56313pt x 261.22594pt>
 File: Figures/PH4CAU1N.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1N.jpg>
 Package pdftex.def Info: Figures/PH4CAU1N.jpg  used on input line 110.
 (pdftex.def)             Requested size: 230.32118pt x 211.50015pt.
- [60 <./Figures/PH4CAU1M.jpg> <./Figures/PH4CAU1N.jpg>] [61] (./Code/DAQ_voltme
+ [54 <./Figures/PH4CAU1M.jpg> <./Figures/PH4CAU1N.jpg>] [55] (./Code/DAQ_voltme
 ter.ino
 Overfull \hbox (3.00354pt too wide) in paragraph at lines 14--15
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
@@ -1296,13 +1193,13 @@ Overfull \hbox (3.00354pt too wide) in paragraph at lines 29--30
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[62])
-<Figures/PH4CAU1O.jpg, id=1237, 250.68657pt x 130.23656pt>
+[56])
+<Figures/PH4CAU1O.jpg, id=1185, 250.68657pt x 130.23656pt>
 File: Figures/PH4CAU1O.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1O.jpg>
 Package pdftex.def Info: Figures/PH4CAU1O.jpg  used on input line 227.
 (pdftex.def)             Requested size: 133.7545pt x 69.9352pt.
-<Figures/PH4CAU1P.jpg, id=1238, 258.21469pt x 382.42876pt>
+<Figures/PH4CAU1P.jpg, id=1186, 258.21469pt x 382.42876pt>
 File: Figures/PH4CAU1P.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1P.jpg>
 Package pdftex.def Info: Figures/PH4CAU1P.jpg  used on input line 253.
@@ -1311,7 +1208,7 @@ Package pdftex.def Info: Figures/PH4CAU1P.jpg  used on input line 253.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAU1Q.jpg, id=1239, 410.2828pt x 206.27063pt>
+<Figures/PH4CAU1Q.jpg, id=1187, 410.2828pt x 206.27063pt>
 File: Figures/PH4CAU1Q.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1Q.jpg>
 Package pdftex.def Info: Figures/PH4CAU1Q.jpg  used on input line 258.
@@ -1319,24 +1216,24 @@ Package pdftex.def Info: Figures/PH4CAU1Q.jpg  used on input line 258.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAU1R.jpg, id=1240, 318.43968pt x 160.34906pt>
+<Figures/PH4CAU1R.jpg, id=1188, 318.43968pt x 160.34906pt>
 File: Figures/PH4CAU1R.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1R.jpg>
 Package pdftex.def Info: Figures/PH4CAU1R.jpg  used on input line 264.
 (pdftex.def)             Requested size: 257.49742pt x 130.44232pt.
-<Figures/PH4CAU1S.jpg, id=1241, 417.05812pt x 210.03468pt>
+<Figures/PH4CAU1S.jpg, id=1189, 417.05812pt x 210.03468pt>
 File: Figures/PH4CAU1S.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1S.jpg>
 Package pdftex.def Info: Figures/PH4CAU1S.jpg  used on input line 271.
 (pdftex.def)             Requested size: 235.441pt x 119.06401pt.
-[63 <./Figures/PH4CAU1O.jpg>]
+[57 <./Figures/PH4CAU1O.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAU1T.jpg, id=1254, 123.46124pt x 116.68594pt>
+<Figures/PH4CAU1T.jpg, id=1202, 123.46124pt x 116.68594pt>
 File: Figures/PH4CAU1T.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1T.jpg>
 Package pdftex.def Info: Figures/PH4CAU1T.jpg  used on input line 286.
@@ -1344,8 +1241,8 @@ Package pdftex.def Info: Figures/PH4CAU1T.jpg  used on input line 286.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64 <./Figures/PH4CAU1P.jpg> <./Figures/PH4CAU1Q.jpg>]
-<Figures/PH4CAU1U.jpg, id=1261, 375.65344pt x 207.02344pt>
+ [58 <./Figures/PH4CAU1P.jpg> <./Figures/PH4CAU1Q.jpg>]
+<Figures/PH4CAU1U.jpg, id=1209, 375.65344pt x 207.02344pt>
 File: Figures/PH4CAU1U.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1U.jpg>
 Package pdftex.def Info: Figures/PH4CAU1U.jpg  used on input line 291.
@@ -1354,13 +1251,13 @@ Package pdftex.def Info: Figures/PH4CAU1U.jpg  used on input line 291.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[65 <./Figures/PH4CAU1R.jpg> <./Figures/PH4CAU1S.jpg> <./Figures/PH4CAU1T.jpg>]
-<Figures/PH4CAU1V.jpg, id=1270, 153.57375pt x 141.52875pt>
+[59 <./Figures/PH4CAU1R.jpg> <./Figures/PH4CAU1S.jpg> <./Figures/PH4CAU1T.jpg>]
+<Figures/PH4CAU1V.jpg, id=1218, 153.57375pt x 141.52875pt>
 File: Figures/PH4CAU1V.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1V.jpg>
 Package pdftex.def Info: Figures/PH4CAU1V.jpg  used on input line 305.
 (pdftex.def)             Requested size: 124.87677pt x 115.25096pt.
-<Figures/PH4CAU1W.jpg, id=1271, 493.0922pt x 272.51813pt>
+<Figures/PH4CAU1W.jpg, id=1219, 493.0922pt x 272.51813pt>
 File: Figures/PH4CAU1W.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1W.jpg>
 Package pdftex.def Info: Figures/PH4CAU1W.jpg  used on input line 311.
@@ -1368,13 +1265,13 @@ Package pdftex.def Info: Figures/PH4CAU1W.jpg  used on input line 311.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[66 <./Figures/PH4CAU1U.jpg> <./Figures/PH4CAU1V.jpg>]
-<Figures/PH4CAU1X.jpg, id=1279, 153.57375pt x 141.52875pt>
+[60 <./Figures/PH4CAU1U.jpg> <./Figures/PH4CAU1V.jpg>]
+<Figures/PH4CAU1X.jpg, id=1226, 153.57375pt x 141.52875pt>
 File: Figures/PH4CAU1X.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1X.jpg>
 Package pdftex.def Info: Figures/PH4CAU1X.jpg  used on input line 327.
 (pdftex.def)             Requested size: 124.87677pt x 115.25096pt.
-<Figures/PH4CAU1Y.jpg, id=1280, 156.585pt x 91.84312pt>
+<Figures/PH4CAU1Y.jpg, id=1227, 156.585pt x 91.84312pt>
 File: Figures/PH4CAU1Y.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1Y.jpg>
 Package pdftex.def Info: Figures/PH4CAU1Y.jpg  used on input line 351.
@@ -1383,44 +1280,44 @@ Package pdftex.def Info: Figures/PH4CAU1Y.jpg  used on input line 351.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[67 <./Figures/PH4CAU1W.jpg> <./Figures/PH4CAU1X.jpg>] [68 <./Figures/PH4CAU1Y.
-jpg>] [69] [70] (./Code/DAQ_Extended_voltmeter.ino) [71]
-<Figures/PH4CAU1Z.jpg, id=1347, 123.46124pt x 116.68594pt>
+[61 <./Figures/PH4CAU1W.jpg> <./Figures/PH4CAU1X.jpg>] [62 <./Figures/PH4CAU1Y.
+jpg>] [63] [64] (./Code/DAQ_Extended_voltmeter.ino) [65]
+<Figures/PH4CAU1Z.jpg, id=1297, 123.46124pt x 116.68594pt>
 File: Figures/PH4CAU1Z.jpg Graphic file (type jpg)
 <use Figures/PH4CAU1Z.jpg>
 Package pdftex.def Info: Figures/PH4CAU1Z.jpg  used on input line 699.
 (pdftex.def)             Requested size: 100.69254pt x 95.31451pt.
-<Figures/PH4CAU20.jpg, id=1349, 250.68657pt x 130.23656pt>
+<Figures/PH4CAU20.jpg, id=1299, 250.68657pt x 130.23656pt>
 File: Figures/PH4CAU20.jpg Graphic file (type jpg)
 <use Figures/PH4CAU20.jpg>
 Package pdftex.def Info: Figures/PH4CAU20.jpg  used on input line 702.
 (pdftex.def)             Requested size: 133.7545pt x 69.9352pt.
- [72 <./Figures/PH4CAU1Z.jpg> <./Figures/PH4CAU20.jpg>]
-<Figures/PH4CAU21.jpg, id=1359, 250.68657pt x 130.23656pt>
+ [66 <./Figures/PH4CAU1Z.jpg> <./Figures/PH4CAU20.jpg>]
+<Figures/PH4CAU21.jpg, id=1309, 250.68657pt x 130.23656pt>
 File: Figures/PH4CAU21.jpg Graphic file (type jpg)
 <use Figures/PH4CAU21.jpg>
 Package pdftex.def Info: Figures/PH4CAU21.jpg  used on input line 732.
 (pdftex.def)             Requested size: 133.7545pt x 69.9352pt.
-<Figures/PH4CAU22.jpg, id=1360, 212.29312pt x 137.01187pt>
+<Figures/PH4CAU22.jpg, id=1310, 212.29312pt x 137.01187pt>
 File: Figures/PH4CAU22.jpg Graphic file (type jpg)
 <use Figures/PH4CAU22.jpg>
 Package pdftex.def Info: Figures/PH4CAU22.jpg  used on input line 736.
 (pdftex.def)             Requested size: 172.3776pt x 111.79643pt.
- [73 <./Figures/PH4CAU21.jpg> <./Figures/PH4CAU22.jpg>]) (./Chapters/Data_to_Co
-mputer.tex [74]
+ [67 <./Figures/PH4CAU21.jpg> <./Figures/PH4CAU22.jpg>]) (./Chapters/Data_to_Co
+mputer.tex [68]
 Chapter 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75
+ [69
 
 ]
-<Figures/PH4CAU23.jpg, id=1384, 411.03563pt x 184.43906pt>
+<Figures/PH4CAU23.jpg, id=1334, 411.03563pt x 184.43906pt>
 File: Figures/PH4CAU23.jpg Graphic file (type jpg)
 <use Figures/PH4CAU23.jpg>
 Package pdftex.def Info: Figures/PH4CAU23.jpg  used on input line 43.
 (pdftex.def)             Requested size: 332.00252pt x 149.7494pt.
-<Figures/PH4CAU24.jpg, id=1385, 371.13657pt x 289.08pt>
+<Figures/PH4CAU24.jpg, id=1335, 371.13657pt x 289.08pt>
 File: Figures/PH4CAU24.jpg Graphic file (type jpg)
 <use Figures/PH4CAU24.jpg>
 Package pdftex.def Info: Figures/PH4CAU24.jpg  used on input line 50.
@@ -1429,7 +1326,7 @@ Package pdftex.def Info: Figures/PH4CAU24.jpg  used on input line 50.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAU25.jpg, id=1386, 432.86719pt x 289.83281pt>
+<Figures/PH4CAU25.jpg, id=1336, 432.86719pt x 289.83281pt>
 File: Figures/PH4CAU25.jpg Graphic file (type jpg)
 <use Figures/PH4CAU25.jpg>
 Package pdftex.def Info: Figures/PH4CAU25.jpg  used on input line 58.
@@ -1442,7 +1339,7 @@ Overfull \hbox (4.5769pt too wide) in paragraph at lines 57--59
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAU26.jpg, id=1387, 669.2503pt x 293.59688pt>
+<Figures/PH4CAU26.jpg, id=1337, 669.2503pt x 293.59688pt>
 File: Figures/PH4CAU26.jpg Graphic file (type jpg)
 <use Figures/PH4CAU26.jpg>
 Package pdftex.def Info: Figures/PH4CAU26.jpg  used on input line 64.
@@ -1456,16 +1353,16 @@ Overfull \hbox (63.70163pt too wide) in paragraph at lines 64--65
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: Reference `Canopy' on page 76 undefined on input line 88.
+LaTeX Warning: Reference `Canopy' on page 70 undefined on input line 88.
 
-[76 <./Figures/PH4CAU23.jpg>] [77 <./Figures/PH4CAU24.jpg> <./Figures/PH4CAU25.
+[70 <./Figures/PH4CAU23.jpg>] [71 <./Figures/PH4CAU24.jpg> <./Figures/PH4CAU25.
 jpg>]
-<Figures/PH4CAU27.jpg, id=1402, 315.42844pt x 258.21469pt>
+<Figures/PH4CAU27.jpg, id=1351, 315.42844pt x 258.21469pt>
 File: Figures/PH4CAU27.jpg Graphic file (type jpg)
 <use Figures/PH4CAU27.jpg>
 Package pdftex.def Info: Figures/PH4CAU27.jpg  used on input line 98.
 (pdftex.def)             Requested size: 255.06245pt x 209.07pt.
-<Figures/PH4CAU28.jpg, id=1403, 612.03656pt x 356.0803pt>
+<Figures/PH4CAU28.jpg, id=1352, 612.03656pt x 356.0803pt>
 File: Figures/PH4CAU28.jpg Graphic file (type jpg)
 <use Figures/PH4CAU28.jpg>
 Package pdftex.def Info: Figures/PH4CAU28.jpg  used on input line 103.
@@ -1478,8 +1375,8 @@ Overfull \hbox (36.80281pt too wide) in paragraph at lines 103--104
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[78 <./Figures/PH4CAU26.jpg> <./Figures/PH4CAU27.jpg>]
-<Figures/PH4CAU29.jpg, id=1410, 620.3175pt x 361.35pt>
+[72 <./Figures/PH4CAU26.jpg> <./Figures/PH4CAU27.jpg>]
+<Figures/PH4CAU29.jpg, id=1359, 620.3175pt x 361.35pt>
 File: Figures/PH4CAU29.jpg Graphic file (type jpg)
 <use Figures/PH4CAU29.jpg>
 Package pdftex.def Info: Figures/PH4CAU29.jpg  used on input line 109.
@@ -1489,13 +1386,13 @@ Overfull \hbox (28.37654pt too wide) in paragraph at lines 109--110
 [][] 
  []
 
-<Figures/PH4CAU2A.jpg, id=1411, 620.3175pt x 361.35pt>
+<Figures/PH4CAU2A.jpg, id=1360, 620.3175pt x 361.35pt>
 File: Figures/PH4CAU2A.jpg Graphic file (type jpg)
 <use Figures/PH4CAU2A.jpg>
 Package pdftex.def Info: Figures/PH4CAU2A.jpg  used on input line 118.
 (pdftex.def)             Requested size: 309.68472pt x 180.74623pt.
-[79 <./Figures/PH4CAU28.jpg> <./Figures/PH4CAU29.jpg>]
-<Figures/PH4CAU2B.jpg, id=1418, 550.30594pt x 320.69812pt>
+[73 <./Figures/PH4CAU28.jpg> <./Figures/PH4CAU29.jpg>]
+<Figures/PH4CAU2B.jpg, id=1367, 550.30594pt x 320.69812pt>
 File: Figures/PH4CAU2B.jpg Graphic file (type jpg)
 <use Figures/PH4CAU2B.jpg>
 Package pdftex.def Info: Figures/PH4CAU2B.jpg  used on input line 126.
@@ -1505,13 +1402,13 @@ Overfull \hbox (99.07437pt too wide) in paragraph at lines 126--127
 [][] 
  []
 
-[80 <./Figures/PH4CAU2A.jpg> <./Figures/PH4CAU2B.jpg>]
-<Figures/PH4CAV2K.jpg, id=1425, 452.4403pt x 124.96687pt>
+[74 <./Figures/PH4CAU2A.jpg> <./Figures/PH4CAU2B.jpg>]
+<Figures/PH4CAV2K.jpg, id=1374, 452.4403pt x 124.96687pt>
 File: Figures/PH4CAV2K.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2K.jpg>
 Package pdftex.def Info: Figures/PH4CAV2K.jpg  used on input line 210.
 (pdftex.def)             Requested size: 331.18306pt x 92.44353pt.
-<Figures/PH4CAV2L.jpg, id=1426, 424.58624pt x 116.68594pt>
+<Figures/PH4CAV2L.jpg, id=1375, 424.58624pt x 116.68594pt>
 File: Figures/PH4CAV2L.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2L.jpg>
 Package pdftex.def Info: Figures/PH4CAV2L.jpg  used on input line 216.
@@ -1519,8 +1416,8 @@ Package pdftex.def Info: Figures/PH4CAV2L.jpg  used on input line 216.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-) [81 <./Figures/PH4CAV2K.jpg> <./Figures/PH4CAV2L.jpg>]
-<Figures/PH4CAV2M.jpg, id=1433, 438.13687pt x 333.49594pt>
+) [75 <./Figures/PH4CAV2K.jpg> <./Figures/PH4CAV2L.jpg>]
+<Figures/PH4CAV2M.jpg, id=1382, 438.13687pt x 333.49594pt>
 File: Figures/PH4CAV2M.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2M.jpg>
 Package pdftex.def Info: Figures/PH4CAV2M.jpg  used on input line 254.
@@ -1530,11 +1427,11 @@ Overfull \hbox (8.81924pt too wide) in paragraph at lines 254--255
 [][] 
  []
 
-[82 <./Figures/PH4CAV2M.jpg>] (./Code/Data2Computer_PythonSide_Win.py [83]
+[76 <./Figures/PH4CAV2M.jpg>] (./Code/Data2Computer_PythonSide_Win.py [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84])
-(./Code/Data2Computer_ArduinoSide_Win.ino [85]) [86]
+ [78])
+(./Code/Data2Computer_ArduinoSide_Win.ino [79]) [80]
 Overfull \hbox (4.03397pt too wide) in paragraph at lines 519--524
 \OT1/cmr/m/it/10 = open(\/Users/rtlines/Documents/data.csv",\w")\OT1/cmr/m/n/10
  . This is in the form of /User-
@@ -1546,13 +1443,13 @@ Overfull \hbox (5.30463pt too wide) in paragraph at lines 533--541
 e-rial.Serial(`/dev/cu.usbmodem1411',
  []
 
-(./Code/Data2Computer_PythonSide_Mac.py [87]
+(./Code/Data2Computer_PythonSide_Mac.py [81]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [88])
-[89]) (./Chapters/Validation_OhmsLaw.tex [90]
+ [82])
+[83]) (./Chapters/Validation_OhmsLaw.tex [84]
 Chapter 5.
-<Figures/PH4CAV2O.jpg, id=1746, 1264.725pt x 790.45313pt>
+<Figures/PH4CAV2O.jpg, id=1696, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAV2O.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2O.jpg>
 Package pdftex.def Info: Figures/PH4CAV2O.jpg  used on input line 33.
@@ -1560,7 +1457,7 @@ Package pdftex.def Info: Figures/PH4CAV2O.jpg  used on input line 33.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAV2P.jpg, id=1747, 1264.725pt x 790.45313pt>
+<Figures/PH4CAV2P.jpg, id=1697, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAV2P.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2P.jpg>
 Package pdftex.def Info: Figures/PH4CAV2P.jpg  used on input line 38.
@@ -1568,28 +1465,28 @@ Package pdftex.def Info: Figures/PH4CAV2P.jpg  used on input line 38.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[91
+[85
 
 ]
-<Figures/PH4CAV2Q.jpg, id=1752, 292.84406pt x 146.04562pt>
+<Figures/PH4CAV2Q.jpg, id=1702, 292.84406pt x 146.04562pt>
 File: Figures/PH4CAV2Q.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2Q.jpg>
 Package pdftex.def Info: Figures/PH4CAV2Q.jpg  used on input line 62.
 (pdftex.def)             Requested size: 236.94768pt x 118.88014pt.
- [92 <./Figures/PH4CAV2O.jpg> <./Figures/PH4CAV2P.jpg> <./Figures/PH4CAV2Q.jpg>
+ [86 <./Figures/PH4CAV2O.jpg> <./Figures/PH4CAV2P.jpg> <./Figures/PH4CAV2Q.jpg>
 ]
-<Figures/PH4CAV2R.jpg, id=1760, 334.24875pt x 244.66406pt>
+<Figures/PH4CAV2R.jpg, id=1710, 334.24875pt x 244.66406pt>
 File: Figures/PH4CAV2R.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2R.jpg>
 Package pdftex.def Info: Figures/PH4CAV2R.jpg  used on input line 87.
 (pdftex.def)             Requested size: 270.27588pt x 198.18799pt.
- [93 <./Figures/PH4CAV2R.jpg>]
-<Figures/PH4CAV2S.jpg, id=1766, 380.92313pt x 278.54062pt>
+ [87 <./Figures/PH4CAV2R.jpg>]
+<Figures/PH4CAV2S.jpg, id=1716, 380.92313pt x 278.54062pt>
 File: Figures/PH4CAV2S.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2S.jpg>
 Package pdftex.def Info: Figures/PH4CAV2S.jpg  used on input line 114.
 (pdftex.def)             Requested size: 307.75554pt x 225.37865pt.
-<Figures/PH4CAV2T.jpg, id=1767, 375.65344pt x 258.21469pt>
+<Figures/PH4CAV2T.jpg, id=1717, 375.65344pt x 258.21469pt>
 File: Figures/PH4CAV2T.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2T.jpg>
 Package pdftex.def Info: Figures/PH4CAV2T.jpg  used on input line 120.
@@ -1603,60 +1500,59 @@ Overfull \hbox (3.00354pt too wide) in paragraph at lines 1--2
 [][][][][][][][][][] 
  []
 
-[94 <./Figures/PH4CAV2S.jpg>]
+[88 <./Figures/PH4CAV2S.jpg>]
 Overfull \hbox (3.00354pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[95 <./Figures/PH4CAV2T.jpg>])
+[89 <./Figures/PH4CAV2T.jpg>])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [96]
-<Figures/PH4CAV2U.jpg, id=1853, 416.30531pt x 261.22594pt>
+ [90]
+<Figures/PH4CAV2U.jpg, id=1802, 416.30531pt x 261.22594pt>
 File: Figures/PH4CAV2U.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2U.jpg>
 Package pdftex.def Info: Figures/PH4CAV2U.jpg  used on input line 169.
 (pdftex.def)             Requested size: 336.2653pt x 211.50015pt.
 
-[97 <./Figures/PH4CAV2U.jpg>] [98] [99] [100] [101]
-<Figures/PH4CAV2V.jpg, id=1878, 1264.725pt x 790.45313pt>
+[91 <./Figures/PH4CAV2U.jpg>] [92] [93] [94] [95]
+<Figures/PH4CAV2V.jpg, id=1828, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAV2V.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2V.jpg>
 Package pdftex.def Info: Figures/PH4CAV2V.jpg  used on input line 617.
 (pdftex.def)             Requested size: 325.1927pt x 102.36449pt.
- [102 <./Figures/PH4CAV2V.jpg>]
-<Figures/PH4CAV2W.jpg, id=1884, 318.43968pt x 243.91125pt>
+ [96 <./Figures/PH4CAV2V.jpg>]
+<Figures/PH4CAV2W.jpg, id=1834, 318.43968pt x 243.91125pt>
 File: Figures/PH4CAV2W.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2W.jpg>
 Package pdftex.def Info: Figures/PH4CAV2W.jpg  used on input line 696.
 (pdftex.def)             Requested size: 257.49742pt x 197.62285pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAV2X.jpg, id=1885, 354.57469pt x 271.76532pt>
+<Figures/PH4CAV2X.jpg, id=1835, 354.57469pt x 271.76532pt>
 File: Figures/PH4CAV2X.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2X.jpg>
 Package pdftex.def Info: Figures/PH4CAV2X.jpg  used on input line 708.
 (pdftex.def)             Requested size: 286.63042pt x 220.00844pt.
-[103] [104 <./Figures/PH4CAV2W.jpg> <./Figures/PH4CAV2X.jpg>]
-<Figures/PH4CAV2Y.jpg, id=1896, 334.24875pt x 268.00125pt>
+[97] [98 <./Figures/PH4CAV2W.jpg> <./Figures/PH4CAV2X.jpg>]
+<Figures/PH4CAV2Y.jpg, id=1846, 334.24875pt x 268.00125pt>
 File: Figures/PH4CAV2Y.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2Y.jpg>
 Package pdftex.def Info: Figures/PH4CAV2Y.jpg  used on input line 741.
 (pdftex.def)             Requested size: 270.27588pt x 216.93668pt.
-<Figures/PH4CAV2Z.jpg, id=1897, 368.87813pt x 281.55188pt>
+<Figures/PH4CAV2Z.jpg, id=1847, 368.87813pt x 281.55188pt>
 File: Figures/PH4CAV2Z.jpg Graphic file (type jpg)
 <use Figures/PH4CAV2Z.jpg>
 Package pdftex.def Info: Figures/PH4CAV2Z.jpg  used on input line 746.
 (pdftex.def)             Requested size: 298.12546pt x 227.93976pt.
-<Figures/PH4CAV30.jpg, id=1898, 355.3275pt x 270.25969pt>
+<Figures/PH4CAV30.jpg, id=1848, 355.3275pt x 270.25969pt>
 File: Figures/PH4CAV30.jpg Graphic file (type jpg)
 <use Figures/PH4CAV30.jpg>
 Package pdftex.def Info: Figures/PH4CAV30.jpg  used on input line 750.
 (pdftex.def)             Requested size: 287.19559pt x 218.81842pt.
-<Figures/PH4CAV31.jpg, id=1899, 828.09375pt x 393.72093pt>
+<Figures/PH4CAV31.jpg, id=1849, 828.09375pt x 393.72093pt>
 File: Figures/PH4CAV31.jpg Graphic file (type jpg)
 <use Figures/PH4CAV31.jpg>
 Package pdftex.def Info: Figures/PH4CAV31.jpg  used on input line 754.
@@ -1671,22 +1567,22 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAV32.jpg, id=1900, 242.40562pt x 246.1697pt>
+<Figures/PH4CAV32.jpg, id=1850, 242.40562pt x 246.1697pt>
 File: Figures/PH4CAV32.jpg Graphic file (type jpg)
 <use Figures/PH4CAV32.jpg>
 Package pdftex.def Info: Figures/PH4CAV32.jpg  used on input line 765.
 (pdftex.def)             Requested size: 196.38075pt x 199.44518pt.
-<Figures/PH4CAV33.jpg, id=1901, 279.29344pt x 252.19218pt>
+<Figures/PH4CAV33.jpg, id=1851, 279.29344pt x 252.19218pt>
 File: Figures/PH4CAV33.jpg Graphic file (type jpg)
 <use Figures/PH4CAV33.jpg>
 Package pdftex.def Info: Figures/PH4CAV33.jpg  used on input line 769.
 (pdftex.def)             Requested size: 226.06876pt x 204.25145pt.
-<Figures/PH4CAV34.jpg, id=1902, 523.20468pt x 285.31593pt>
+<Figures/PH4CAV34.jpg, id=1852, 523.20468pt x 285.31593pt>
 File: Figures/PH4CAV34.jpg Graphic file (type jpg)
 <use Figures/PH4CAV34.jpg>
 Package pdftex.def Info: Figures/PH4CAV34.jpg  used on input line 772.
 (pdftex.def)             Requested size: 306.75609pt x 167.75156pt.
-<Figures/PH4CAW35.jpg, id=1903, 571.38469pt x 184.43906pt>
+<Figures/PH4CAW35.jpg, id=1853, 571.38469pt x 184.43906pt>
 File: Figures/PH4CAW35.jpg Graphic file (type jpg)
 <use Figures/PH4CAW35.jpg>
 Package pdftex.def Info: Figures/PH4CAW35.jpg  used on input line 779.
@@ -1696,7 +1592,7 @@ Overfull \hbox (116.06662pt too wide) in paragraph at lines 778--780
 [][] 
  []
 
-[105 <./Figures/PH4CAV2Y.jpg>]
+[99 <./Figures/PH4CAV2Y.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1706,71 +1602,71 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[106 <./Figures/PH4CAV2Z.jpg> <./Figures/PH4CAV30.jpg>]
+[100 <./Figures/PH4CAV2Z.jpg> <./Figures/PH4CAV30.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[107 <./Figures/PH4CAV31.jpg> <./Figures/PH4CAV32.jpg>] [108 <./Figures/PH4CAV3
-3.jpg> <./Figures/PH4CAV34.jpg>] [109 <./Figures/PH4CAW35.jpg>] [110] [111]
+[101 <./Figures/PH4CAV31.jpg> <./Figures/PH4CAV32.jpg>] [102 <./Figures/PH4CAV3
+3.jpg> <./Figures/PH4CAV34.jpg>] [103 <./Figures/PH4CAW35.jpg>] [104] [105]
 Overfull \hbox (35.16837pt too wide) detected at line 1047
 [][] \OT1/cmr/m/n/10 = [][] = 1129\OML/cmm/m/it/10 : \OT1/cmr/m/n/10 0
 []
  []
 
-[112]
+[106]
 Overfull \hbox (31.18224pt too wide) detected at line 1136
 [][] \OT1/cmr/m/n/10 = [][] = 282\OML/cmm/m/it/10 : \OT1/cmr/m/n/10 24
 []
  []
 
-[113] [114]
-<Figures/PH4CAW36.jpg, id=1966, 250.68657pt x 130.23656pt>
+[107] [108]
+<Figures/PH4CAW36.jpg, id=1915, 250.68657pt x 130.23656pt>
 File: Figures/PH4CAW36.jpg Graphic file (type jpg)
 <use Figures/PH4CAW36.jpg>
 Package pdftex.def Info: Figures/PH4CAW36.jpg  used on input line 1271.
 (pdftex.def)             Requested size: 133.7545pt x 69.9352pt.
-) [115 <./Figures/PH4CAW36.jpg>] [116
+) [109 <./Figures/PH4CAW36.jpg>] [110
 
-] [117] [118]
+] [111] [112]
 (./Chapters/Resistors_Capacitors.tex
 Chapter 6.
-<Figures/PH4CAW37.jpg, id=1997, 148.30406pt x 148.30406pt>
+<Figures/PH4CAW37.jpg, id=1947, 148.30406pt x 148.30406pt>
 File: Figures/PH4CAW37.jpg Graphic file (type jpg)
 <use Figures/PH4CAW37.jpg>
 Package pdftex.def Info: Figures/PH4CAW37.jpg  used on input line 15.
 (pdftex.def)             Requested size: 120.69588pt x 120.69588pt.
-[119
+[113
 
  <./Figures/PH4CAW37.jpg>]
-<Figures/PH4CAW38.jpg, id=2005, 1264.725pt x 790.45313pt>
+<Figures/PH4CAW38.jpg, id=1955, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAW38.jpg Graphic file (type jpg)
 <use Figures/PH4CAW38.jpg>
 Package pdftex.def Info: Figures/PH4CAW38.jpg  used on input line 72.
 (pdftex.def)             Requested size: 208.74782pt x 114.18459pt.
- [120 <./Figures/PH4CAW38.jpg>]
-<Figures/PH4CAW39.jpg, id=2011, 198.7425pt x 164.11313pt>
+ [114 <./Figures/PH4CAW38.jpg>]
+<Figures/PH4CAW39.jpg, id=1961, 198.7425pt x 164.11313pt>
 File: Figures/PH4CAW39.jpg Graphic file (type jpg)
 <use Figures/PH4CAW39.jpg>
 Package pdftex.def Info: Figures/PH4CAW39.jpg  used on input line 149.
 (pdftex.def)             Requested size: 161.31714pt x 133.37663pt.
- [121]
-<Figures/PH4CAW3A.jpg, id=2016, 433.62pt x 257.46187pt>
+ [115]
+<Figures/PH4CAW3A.jpg, id=1966, 433.62pt x 257.46187pt>
 File: Figures/PH4CAW3A.jpg Graphic file (type jpg)
 <use Figures/PH4CAW3A.jpg>
 Package pdftex.def Info: Figures/PH4CAW3A.jpg  used on input line 157.
 (pdftex.def)             Requested size: 236.75159pt x 140.9366pt.
 
-(./Code/RC_Volts_vsTime.ino [122 <./Figures/PH4CAW39.jpg> <./Figures/PH4CAW3A.j
-pg>]) [123] (./Code/RC_ReadSaveFile.py [124]
+(./Code/RC_Volts_vsTime.ino [116 <./Figures/PH4CAW39.jpg> <./Figures/PH4CAW3A.j
+pg>]) [117] (./Code/RC_ReadSaveFile.py [118]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [125])
-<Figures/PH4CAX3B.jpg, id=2197, 259.7203pt x 155.83218pt>
+ [119])
+<Figures/PH4CAX3B.jpg, id=2147, 259.7203pt x 155.83218pt>
 File: Figures/PH4CAX3B.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3B.jpg>
 Package pdftex.def Info: Figures/PH4CAX3B.jpg  used on input line 183.
 (pdftex.def)             Requested size: 210.31284pt x 126.74887pt.
-<Figures/PH4CAX3C.jpg, id=2198, 236.38312pt x 199.49532pt>
+<Figures/PH4CAX3C.jpg, id=2148, 236.38312pt x 199.49532pt>
 File: Figures/PH4CAX3C.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3C.jpg>
 Package pdftex.def Info: Figures/PH4CAX3C.jpg  used on input line 206.
@@ -1779,7 +1675,7 @@ Package pdftex.def Info: Figures/PH4CAX3C.jpg  used on input line 206.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX3D.jpg, id=2199, 453.94594pt x 184.43906pt>
+<Figures/PH4CAX3D.jpg, id=2149, 453.94594pt x 184.43906pt>
 File: Figures/PH4CAX3D.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3D.jpg>
 Package pdftex.def Info: Figures/PH4CAX3D.jpg  used on input line 211.
@@ -1789,7 +1685,7 @@ Overfull \hbox (21.56516pt too wide) in paragraph at lines 211--212
 [][] 
  []
 
-<Figures/PH4CAX3E.jpg, id=2200, 287.57437pt x 260.47313pt>
+<Figures/PH4CAX3E.jpg, id=2150, 287.57437pt x 260.47313pt>
 File: Figures/PH4CAX3E.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3E.jpg>
 Package pdftex.def Info: Figures/PH4CAX3E.jpg  used on input line 215.
@@ -1800,7 +1696,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX3F.jpg, id=2201, 463.7325pt x 248.42813pt>
+<Figures/PH4CAX3F.jpg, id=2151, 463.7325pt x 248.42813pt>
 File: Figures/PH4CAX3F.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3F.jpg>
 Package pdftex.def Info: Figures/PH4CAX3F.jpg  used on input line 221.
@@ -1810,12 +1706,12 @@ Overfull \hbox (29.38297pt too wide) in paragraph at lines 220--222
 [][] 
  []
 
-<Figures/PH4CAX3G.jpg, id=2202, 120.45pt x 129.48375pt>
+<Figures/PH4CAX3G.jpg, id=2152, 120.45pt x 129.48375pt>
 File: Figures/PH4CAX3G.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3G.jpg>
 Package pdftex.def Info: Figures/PH4CAX3G.jpg  used on input line 225.
 (pdftex.def)             Requested size: 98.31934pt x 105.5688pt.
-<Figures/PH4CAX3H.jpg, id=2203, 402.00188pt x 255.95625pt>
+<Figures/PH4CAX3H.jpg, id=2153, 402.00188pt x 255.95625pt>
 File: Figures/PH4CAX3H.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3H.jpg>
 Package pdftex.def Info: Figures/PH4CAX3H.jpg  used on input line 228.
@@ -1829,8 +1725,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[126 <./Figures/PH4CAX3B.jpg>]
-<Figures/PH4CAX3I.jpg, id=2213, 389.95688pt x 145.29282pt>
+[120 <./Figures/PH4CAX3B.jpg>]
+<Figures/PH4CAX3I.jpg, id=2163, 389.95688pt x 145.29282pt>
 File: Figures/PH4CAX3I.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3I.jpg>
 Package pdftex.def Info: Figures/PH4CAX3I.jpg  used on input line 242.
@@ -1842,8 +1738,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Underfull \vbox (badness 1275) has occurred while \output is active []
 
- [127 <./Figures/PH4CAX3C.jpg> <./Figures/PH4CAX3D.jpg>]
-<Figures/PH4CAX3J.jpg, id=2220, 408.02437pt x 257.46187pt>
+ [121 <./Figures/PH4CAX3C.jpg> <./Figures/PH4CAX3D.jpg>]
+<Figures/PH4CAX3J.jpg, id=2170, 408.02437pt x 257.46187pt>
 File: Figures/PH4CAX3J.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3J.jpg>
 Package pdftex.def Info: Figures/PH4CAX3J.jpg  used on input line 265.
@@ -1852,7 +1748,7 @@ Package pdftex.def Info: Figures/PH4CAX3J.jpg  used on input line 265.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX3K.jpg, id=2221, 458.46281pt x 245.41687pt>
+<Figures/PH4CAX3K.jpg, id=2171, 458.46281pt x 245.41687pt>
 File: Figures/PH4CAX3K.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3K.jpg>
 Package pdftex.def Info: Figures/PH4CAX3K.jpg  used on input line 271.
@@ -1862,7 +1758,7 @@ Overfull \hbox (25.14261pt too wide) in paragraph at lines 271--272
 [][] 
  []
 
-<Figures/PH4CAX3L.jpg, id=2222, 206.27063pt x 182.93344pt>
+<Figures/PH4CAX3L.jpg, id=2172, 206.27063pt x 182.93344pt>
 File: Figures/PH4CAX3L.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3L.jpg>
 Package pdftex.def Info: Figures/PH4CAX3L.jpg  used on input line 276.
@@ -1870,11 +1766,11 @@ Package pdftex.def Info: Figures/PH4CAX3L.jpg  used on input line 276.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[128 <./Figures/PH4CAX3E.jpg> <./Figures/PH4CAX3F.jpg>]
+[122 <./Figures/PH4CAX3E.jpg> <./Figures/PH4CAX3F.jpg>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX3M.jpg, id=2230, 232.61906pt x 240.9pt>
+<Figures/PH4CAX3M.jpg, id=2180, 232.61906pt x 240.9pt>
 File: Figures/PH4CAX3M.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3M.jpg>
 Package pdftex.def Info: Figures/PH4CAX3M.jpg  used on input line 284.
@@ -1882,7 +1778,7 @@ Package pdftex.def Info: Figures/PH4CAX3M.jpg  used on input line 284.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX3N.jpg, id=2231, 389.20406pt x 336.50719pt>
+<Figures/PH4CAX3N.jpg, id=2181, 389.20406pt x 336.50719pt>
 File: Figures/PH4CAX3N.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3N.jpg>
 Package pdftex.def Info: Figures/PH4CAX3N.jpg  used on input line 290.
@@ -1890,17 +1786,17 @@ Package pdftex.def Info: Figures/PH4CAX3N.jpg  used on input line 290.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX3O.jpg, id=2232, 268.75406pt x 278.54062pt>
+<Figures/PH4CAX3O.jpg, id=2182, 268.75406pt x 278.54062pt>
 File: Figures/PH4CAX3O.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3O.jpg>
 Package pdftex.def Info: Figures/PH4CAX3O.jpg  used on input line 295.
 (pdftex.def)             Requested size: 217.56247pt x 225.37865pt.
-<Figures/PH4CAX3P.jpg, id=2233, 388.45125pt x 280.79906pt>
+<Figures/PH4CAX3P.jpg, id=2183, 388.45125pt x 280.79906pt>
 File: Figures/PH4CAX3P.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3P.jpg>
 Package pdftex.def Info: Figures/PH4CAX3P.jpg  used on input line 299.
 (pdftex.def)             Requested size: 313.88509pt x 227.30888pt.
-[129 <./Figures/PH4CAX3G.jpg> <./Figures/PH4CAX3H.jpg> <./Figures/PH4CAX3I.jpg>
+[123 <./Figures/PH4CAX3G.jpg> <./Figures/PH4CAX3H.jpg> <./Figures/PH4CAX3I.jpg>
 ]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1908,7 +1804,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX3Q.jpg, id=2241, 455.45157pt x 243.91125pt>
+<Figures/PH4CAX3Q.jpg, id=2191, 455.45157pt x 243.91125pt>
 File: Figures/PH4CAX3Q.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3Q.jpg>
 Package pdftex.def Info: Figures/PH4CAX3Q.jpg  used on input line 308.
@@ -1921,27 +1817,27 @@ Overfull \hbox (22.76012pt too wide) in paragraph at lines 308--309
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[130 <./Figures/PH4CAX3J.jpg> <./Figures/PH4CAX3K.jpg>] [131 <./Figures/PH4CAX3
+[124 <./Figures/PH4CAX3J.jpg> <./Figures/PH4CAX3K.jpg>] [125 <./Figures/PH4CAX3
 L.jpg> <./Figures/PH4CAX3M.jpg>]
 Overfull \vbox (4.50865pt too high) has occurred while \output is active []
 
 
-[132 <./Figures/PH4CAX3N.jpg> <./Figures/PH4CAX3O.jpg>] [133 <./Figures/PH4CAX3
-P.jpg> <./Figures/PH4CAX3Q.jpg>] [134]
-<Figures/PH4CAX3R.jpg, id=2272, 148.30406pt x 148.30406pt>
+[126 <./Figures/PH4CAX3N.jpg> <./Figures/PH4CAX3O.jpg>] [127 <./Figures/PH4CAX3
+P.jpg> <./Figures/PH4CAX3Q.jpg>] [128]
+<Figures/PH4CAX3R.jpg, id=2222, 148.30406pt x 148.30406pt>
 File: Figures/PH4CAX3R.jpg Graphic file (type jpg)
 <use Figures/PH4CAX3R.jpg>
 Package pdftex.def Info: Figures/PH4CAX3R.jpg  used on input line 379.
 (pdftex.def)             Requested size: 120.69588pt x 120.69588pt.
- [135 <./Figures/PH4CAX3R.jpg>])
-(./Chapters/DataLogging.tex [136]
+ [129 <./Figures/PH4CAX3R.jpg>])
+(./Chapters/DataLogging.tex [130]
 Chapter 7.
-<Figures/20200309_133406.jpg, id=2290, 4047.12pt x 3035.34pt>
+<Figures/20200309_133406.jpg, id=2240, 4047.12pt x 3035.34pt>
 File: Figures/20200309_133406.jpg Graphic file (type jpg)
 <use Figures/20200309_133406.jpg>
 Package pdftex.def Info: Figures/20200309_133406.jpg  used on input line 13.
 (pdftex.def)             Requested size: 261.15765pt x 173.26628pt.
-<Figures/20200309_133450.jpg, id=2291, 4047.12pt x 3035.34pt>
+<Figures/20200309_133450.jpg, id=2241, 4047.12pt x 3035.34pt>
 File: Figures/20200309_133450.jpg Graphic file (type jpg)
 <use Figures/20200309_133450.jpg>
 Package pdftex.def Info: Figures/20200309_133450.jpg  used on input line 17.
@@ -1952,16 +1848,16 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[137
+[131
 
-] [138 <./Figures/20200309_133406.jpg> <./Figures/20200309_133450.jpg>]
-<Figures/20200310_110036.jpg, id=2303, 4047.12pt x 3035.34pt>
+] [132 <./Figures/20200309_133406.jpg> <./Figures/20200309_133450.jpg>]
+<Figures/20200310_110036.jpg, id=2252, 4047.12pt x 3035.34pt>
 File: Figures/20200310_110036.jpg Graphic file (type jpg)
 <use Figures/20200310_110036.jpg>
 Package pdftex.def Info: Figures/20200310_110036.jpg  used on input line 35.
 (pdftex.def)             Requested size: 261.15765pt x 173.26628pt.
 
-[139 <./Figures/20200310_110036.jpg>] (./Code/DataLog.ino [140] [141] [142]
+[133 <./Figures/20200310_110036.jpg>] (./Code/DataLog.ino [134] [135] [136]
 Overfull \hbox (3.00354pt too wide) in paragraph at lines 151--152
 [][][][][][][][][][][][] 
  []
@@ -1971,9 +1867,9 @@ Overfull \hbox (3.00354pt too wide) in paragraph at lines 155--157
 [][][][][][][][][][][][] 
  []
 
-[143])) (./Chapters/RLC_Circuits_P1.tex [144]
+[137])) (./Chapters/RLC_Circuits_P1.tex [138]
 Chapter 8.
-<Figures/PH4CAX4B.jpg, id=2522, 158.09062pt x 82.80937pt>
+<Figures/PH4CAX4B.jpg, id=2471, 158.09062pt x 82.80937pt>
 File: Figures/PH4CAX4B.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4B.jpg>
 Package pdftex.def Info: Figures/PH4CAX4B.jpg  used on input line 34.
@@ -1981,16 +1877,16 @@ Package pdftex.def Info: Figures/PH4CAX4B.jpg  used on input line 34.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[145
+[139
 
-] [146 <./Figures/PH4CAX4B.jpg>]
-<Figures/PH4CAX4C.jpg, id=2532, 1084.05pt x 770.12718pt>
+] [140 <./Figures/PH4CAX4B.jpg>]
+<Figures/PH4CAX4C.jpg, id=2482, 1084.05pt x 770.12718pt>
 File: Figures/PH4CAX4C.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4C.jpg>
 Package pdftex.def Info: Figures/PH4CAX4C.jpg  used on input line 113.
 (pdftex.def)             Requested size: 132.85931pt x 102.62305pt.
- [147 <./Figures/PH4CAX4C.jpg>]
-<Figures/PH4CAX4D.jpg, id=2539, 602.25pt x 453.94594pt>
+ [141 <./Figures/PH4CAX4C.jpg>]
+<Figures/PH4CAX4D.jpg, id=2489, 602.25pt x 453.94594pt>
 File: Figures/PH4CAX4D.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4D.jpg>
 Package pdftex.def Info: Figures/PH4CAX4D.jpg  used on input line 166.
@@ -1999,8 +1895,8 @@ Package pdftex.def Info: Figures/PH4CAX4D.jpg  used on input line 166.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[148] [149 <./Figures/PH4CAX4D.jpg>]
-<Figures/PH4CAX4E.jpg, id=2551, 1264.725pt x 790.45313pt>
+[142] [143 <./Figures/PH4CAX4D.jpg>]
+<Figures/PH4CAX4E.jpg, id=2501, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAX4E.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4E.jpg>
 Package pdftex.def Info: Figures/PH4CAX4E.jpg  used on input line 259.
@@ -2009,33 +1905,33 @@ Package pdftex.def Info: Figures/PH4CAX4E.jpg  used on input line 259.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[150]
+[144]
 
-LaTeX Warning: Reference `Criticall Damping Criteria' on page 151 undefined on 
+LaTeX Warning: Reference `Criticall Damping Criteria' on page 145 undefined on 
 input line 290.
 
-<Figures/PH4CAX4F.jpg, id=2559, 415.5525pt x 199.49532pt>
+<Figures/PH4CAX4F.jpg, id=2509, 415.5525pt x 199.49532pt>
 File: Figures/PH4CAX4F.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4F.jpg>
 Package pdftex.def Info: Figures/PH4CAX4F.jpg  used on input line 293.
 (pdftex.def)             Requested size: 336.03769pt x 162.05605pt.
-<Figures/PH4CAX4G.jpg, id=2560, 377.91188pt x 283.0575pt>
+<Figures/PH4CAX4G.jpg, id=2510, 377.91188pt x 283.0575pt>
 File: Figures/PH4CAX4G.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4G.jpg>
 Package pdftex.def Info: Figures/PH4CAX4G.jpg  used on input line 300.
 (pdftex.def)             Requested size: 305.7033pt x 229.2969pt.
-[151 <./Figures/PH4CAX4E.jpg> <./Figures/PH4CAX4F.jpg>])
-(./Chapters/RLC_Circuits_P2.tex [152 <./Figures/PH4CAX4G.jpg>]
+[145 <./Figures/PH4CAX4E.jpg> <./Figures/PH4CAX4F.jpg>])
+(./Chapters/RLC_Circuits_P2.tex [146 <./Figures/PH4CAX4G.jpg>]
 Chapter 9.
-<Figures/PH4CAX4H.jpg, id=2579, 1264.725pt x 790.45313pt>
+<Figures/PH4CAX4H.jpg, id=2529, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAX4H.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4H.jpg>
 Package pdftex.def Info: Figures/PH4CAX4H.jpg  used on input line 17.
 (pdftex.def)             Requested size: 325.1734pt x 131.5529pt.
-[153
+[147
 
  <./Figures/PH4CAX4H.jpg>]
-<Figures/PH4CAX4I.jpg, id=2585, 172.39406pt x 120.45pt>
+<Figures/PH4CAX4I.jpg, id=2535, 172.39406pt x 120.45pt>
 File: Figures/PH4CAX4I.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4I.jpg>
 Package pdftex.def Info: Figures/PH4CAX4I.jpg  used on input line 28.
@@ -2046,7 +1942,7 @@ Overfull \hbox (0.83394pt too wide) in paragraph at lines 52--60
 are all grounded through
  []
 
-<Figures/PH4CAX4J.jpg, id=2586, 439.6425pt x 217.5628pt>
+<Figures/PH4CAX4J.jpg, id=2536, 439.6425pt x 217.5628pt>
 File: Figures/PH4CAX4J.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4J.jpg>
 Package pdftex.def Info: Figures/PH4CAX4J.jpg  used on input line 70.
@@ -2059,18 +1955,18 @@ Overfull \hbox (10.39067pt too wide) in paragraph at lines 69--71
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX4K.jpg, id=2587, 356.83313pt x 271.0125pt>
+<Figures/PH4CAX4K.jpg, id=2537, 356.83313pt x 271.0125pt>
 File: Figures/PH4CAX4K.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4K.jpg>
 Package pdftex.def Info: Figures/PH4CAX4K.jpg  used on input line 75.
 (pdftex.def)             Requested size: 288.3853pt x 219.38245pt.
-[154 <./Figures/PH4CAX4I.jpg>]
+[148 <./Figures/PH4CAX4I.jpg>]
 Underfull \vbox (badness 1194) has occurred while \output is active []
 
- [155 <./Figures/PH4CAX4J.jpg> <./Figures/PH4CAX4K.jpg>] (./Code/RLCPart2_pm5Vs
+ [149 <./Figures/PH4CAX4J.jpg> <./Figures/PH4CAX4K.jpg>] (./Code/RLCPart2_pm5Vs
 ignal.ino
-[156])
-<Figures/PH4CAX4L.jpg, id=2621, 1264.725pt x 790.45313pt>
+[150])
+<Figures/PH4CAX4L.jpg, id=2570, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAX4L.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4L.jpg>
 Package pdftex.def Info: Figures/PH4CAX4L.jpg  used on input line 145.
@@ -2079,18 +1975,18 @@ Package pdftex.def Info: Figures/PH4CAX4L.jpg  used on input line 145.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[157]
-<Figures/PH4CAX4M.jpg, id=2650, 1264.725pt x 790.45313pt>
+[151]
+<Figures/PH4CAX4M.jpg, id=2599, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAX4M.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4M.jpg>
 Package pdftex.def Info: Figures/PH4CAX4M.jpg  used on input line 167.
 (pdftex.def)             Requested size: 325.1734pt x 118.18895pt.
-<Figures/PH4CAX4N.jpg, id=2651, 1264.725pt x 790.45313pt>
+<Figures/PH4CAX4N.jpg, id=2600, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAX4N.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4N.jpg>
 Package pdftex.def Info: Figures/PH4CAX4N.jpg  used on input line 175.
 (pdftex.def)             Requested size: 325.1734pt x 118.18895pt.
-<Figures/PH4CAX4O.jpg, id=2652, 1264.725pt x 790.45313pt>
+<Figures/PH4CAX4O.jpg, id=2601, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAX4O.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4O.jpg>
 Package pdftex.def Info: Figures/PH4CAX4O.jpg  used on input line 181.
@@ -2102,7 +1998,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX4P.jpg, id=2653, 1264.725pt x 790.45313pt>
+<Figures/PH4CAX4P.jpg, id=2602, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAX4P.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4P.jpg>
 Package pdftex.def Info: Figures/PH4CAX4P.jpg  used on input line 186.
@@ -2110,8 +2006,8 @@ Package pdftex.def Info: Figures/PH4CAX4P.jpg  used on input line 186.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[158 <./Figures/PH4CAX4L.jpg> <./Figures/PH4CAX4M.jpg>]
-<Figures/PH4CAX4Q.jpg, id=2660, 1264.725pt x 790.45313pt>
+[152 <./Figures/PH4CAX4L.jpg> <./Figures/PH4CAX4M.jpg>]
+<Figures/PH4CAX4Q.jpg, id=2610, 1264.725pt x 790.45313pt>
 File: Figures/PH4CAX4Q.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4Q.jpg>
 Package pdftex.def Info: Figures/PH4CAX4Q.jpg  used on input line 213.
@@ -2120,13 +2016,13 @@ Package pdftex.def Info: Figures/PH4CAX4Q.jpg  used on input line 213.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[159 <./Figures/PH4CAX4N.jpg> <./Figures/PH4CAX4O.jpg> <./Figures/PH4CAX4P.jpg>
+[153 <./Figures/PH4CAX4N.jpg> <./Figures/PH4CAX4O.jpg> <./Figures/PH4CAX4P.jpg>
 ]
 
-LaTeX Warning: Reference `Criticall Damping Criteria' on page 160 undefined on 
+LaTeX Warning: Reference `Criticall Damping Criteria' on page 154 undefined on 
 input line 230.
 
-<Figures/PH4CAX4R.jpg, id=2669, 415.5525pt x 199.49532pt>
+<Figures/PH4CAX4R.jpg, id=2619, 415.5525pt x 199.49532pt>
 File: Figures/PH4CAX4R.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4R.jpg>
 Package pdftex.def Info: Figures/PH4CAX4R.jpg  used on input line 233.
@@ -2134,20 +2030,20 @@ Package pdftex.def Info: Figures/PH4CAX4R.jpg  used on input line 233.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/PH4CAX4S.jpg, id=2670, 250.68657pt x 130.23656pt>
+<Figures/PH4CAX4S.jpg, id=2620, 250.68657pt x 130.23656pt>
 File: Figures/PH4CAX4S.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4S.jpg>
 Package pdftex.def Info: Figures/PH4CAX4S.jpg  used on input line 252.
 (pdftex.def)             Requested size: 203.0091pt x 106.12099pt.
-[160 <./Figures/PH4CAX4Q.jpg>]) [161 <./Figures/PH4CAX4R.jpg> <./Figures/PH4CAX
-4S.jpg>] [162
+[154 <./Figures/PH4CAX4Q.jpg>]) [155 <./Figures/PH4CAX4R.jpg> <./Figures/PH4CAX
+4S.jpg>] [156
 
-] [163] [164] (./Chapters/Student_Designed_Experiments.tex
+] [157] [158] (./Chapters/Student_Designed_Experiments.tex
 Chapter 10.
-[165
+[159
 
 ]
-<Figures/PH4CAX4T.jpg, id=2717, 367.3725pt x 543.53062pt>
+<Figures/PH4CAX4T.jpg, id=2667, 367.3725pt x 543.53062pt>
 File: Figures/PH4CAX4T.jpg Graphic file (type jpg)
 <use Figures/PH4CAX4T.jpg>
 Package pdftex.def Info: Figures/PH4CAX4T.jpg  used on input line 65.
@@ -2163,7 +2059,7 @@ LaTeX Warning: Float too large for page by 14.08911pt on input line 66.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[166] [167] [168]) [169] [170 <./Figures/PH4CAX4T.jpg>]
+[160] [161] [162]) [163] [164 <./Figures/PH4CAX4T.jpg>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
 
@@ -2171,49 +2067,49 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
 Package rerunfilecheck Info: File `PH250_Lab_Manual_1.0.out' has not changed.
-(rerunfilecheck)             Checksum: CF25BEA640EE24202AAA5F1FB2D09B81;7174.
+(rerunfilecheck)             Checksum: 4421E3636DFE2953A3D8331F371B55E2;6871.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 28733 strings out of 481239
- 561952 string characters out of 5920377
- 1294638 words of memory out of 5000000
- 41993 multiletter control sequences out of 15000+600000
+ 28642 strings out of 483107
+ 560446 string characters out of 5964631
+ 1290286 words of memory out of 5000000
+ 41680 multiletter control sequences out of 15000+600000
  546288 words of font info for 77 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 59 hyphenation exceptions out of 8191
  64i,11n,103p,880b,2171s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
-fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/uc
-rr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on PH250_Lab_Manual_1.0.pdf (184 pages, 16307937 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} </home/kevin/.tex
+live2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on PH250_Lab_Manual_1.0.pdf (178 pages, 15917050 bytes).
 PDF statistics:
- 3137 PDF objects out of 3580 (max. 8388607)
- 2726 compressed objects within 28 object streams
- 1439 named destinations out of 1440 (max. 500000)
- 1663 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3082 PDF objects out of 3580 (max. 8388607)
+ 2687 compressed objects within 27 object streams
+ 1419 named destinations out of 1440 (max. 500000)
+ 1586 words of extra memory for PDF output out of 10000 (max. 10000000)
 

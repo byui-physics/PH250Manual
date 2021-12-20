@@ -497,11 +497,6 @@ readings to those indicated by the signal generator.
 \end{itemize}
 }
 
-
-
-% FIXME Start here!
-
-
 \section{Measuring Something Else: Current}
 
 Our multimeters have a current setting as well as a voltage setting. Current
@@ -543,7 +538,7 @@ quickly (like at speeds close to the speed of light) through the wires. As
 soon as that electric field hits any point of the wire, the free 
 electrons there begin to move.
 
-\subsection{Measuring Current}
+\subsection{Current is a Flow}
 
 Because current is a flow, to measure current we must put a meter into that
 flow. In a house, if you want to measure how much water is used, you connect
@@ -601,7 +596,7 @@ measure, it's always a good idea to start with the probe connected to the port
 designed to measure Amps. Too high a current will burn a fuse in the 
 multimeter, or worse yet, destroy the multimeter.
 
-\subsection{How an Ammeter Works}
+\subsection{The Physics of Measuring Electric Current}
 
 We said before that physicists like to change any measurement they can into
 a voltage measurement, because, ultimately, that is the only thing that we
@@ -766,675 +761,789 @@ to measure resistance.}
 
 \subsubsection{A Note on the Direction of Current Flow}
 
-
-% FIXME HERE
 There is a historical oddity with current flow. That is that the current
 direction is the direction positive charges would flow. This may seem
 strange, since in good conductors electrons are doing the flowing and they
-are negative! The electrons go the opposite way the current goes. \begin{figure}[h!]
-\includegraphics[width=3.3373in,height=1.5696in]{PH4CAU14}
-\end{figure}%
+are negative! The electrons go the opposite way the current goes. 
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU14}
+\caption[Electron flow v. current]{Electron flow v. current flow. The 
+usual charge carriers in circuits, the electrons, are negatively
+charged, and move opposite the direction of the conventional current.}
+\label{fig:electron_flow}
+\end{figure}
+
 The truth is that it is very hard to tell the difference between positive
-charge flow and negative charge flow the other direction. In fact, only one
-experiment that I know of shows that the charge carriers in metals are
-electrons. And mathematically, the flow of electrons one direction is
-equivalent to the flow of positive charges the other direction.\begin{figure}[h!]
-\includegraphics[width=%
-3.8994in,height=3.3961in]{PH4CAU15}
-\end{figure}%
-Worse yet, in biological things it \emph{is} positive ions that flow. So for
-biology a positive charge carrier is just fine.
+charge flow and negative charge flow the other direction. 
+%In fact, only one
+%experiment that I know of shows that the charge carriers in metals are
+%electrons. 
+As it turns out, mathematically, the flow of electrons one direction is
+equivalent to the flow of positive charges the other direction, as seen
+in Figure \ref{fig:charge_current}.
+Why don't we then just redefine current to be the flow of negative charge.
+For one thing, there are cases where it is positive charges that the charge
+carriers in a current. In biological systems, 
+it is positive ions that flow, thus the resulting current arises from
+positive charge carriers.
+Moreover, in semiconductors (special electronic devices in
+all computers and in our Arduinos) it is positive charge that flows.
+In many electrochemical reactions \emph{both} positive and negative charges
+flow. 
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU15}
+\caption[Mathematical equivalence of positive and negative charge carriers]
+{Mathematical equivalence of positive and negative charge carriers flowing
+in opposite directions}
+\label{fig:charge_current}
+\end{figure}
 
 Ben Franklin chose the direction we now use. He had a 50\% chance of making
 it easy for our electronics lab. But he got it backwards for us (but right
 for biology--and how many electronic things did Ben Franklin have anyway?).
 All this shows just how hard it is to deal with all these things we can't
-see or touch that we study in PH 220.
+see or touch that we study electricity and magnetism.
 
-And even more importantly, in semiconductors--special electronic devices in
-all computers and in our Arduinos--it \emph{is} positive charge that flows.
-In many electrochemical reactions \emph{both} positive and negative charges
-flow. So Mr. Franklin was not really so very wrong. We will stick with the
+
+We will stick with the
 convention that \textbf{the current direction is the direction that positive
-charges would flow regardless of the actual charge carrier motion. }If you
-are like me, this will seem a little backwards, but we all get used to it.
+charges would flow regardless of the actual charge carrier motion.}
+This may seem a little backwards at first, but we all get used to it.
 
-But what makes the electrons or positive charges want to flow in the first
+What makes the electrons or positive charges want to flow in the first
 place? We know the answer to this from earlier in this lab reading. It is
 potential energy. When we connect a metal wire to the terminals of a battery
 we know that the charges in the metal wire ends will experience a difference
 in potential energy. The potential energy difference will set up an electric
-field inside the conductor. \begin{figure}[h!]
-\includegraphics[width=4.2832in,height=1.0253in]{PH4CAU16}
-\end{figure}
-
-This field makes the free charges move! It causes a force on the little
-electrons. We won't have to measure any fields in our lab today, but you
+field inside the conductor. 
+This field causes the free charges to experience a force, which subsequently 
+causes their motion. 
+We won't have to measure any fields in our lab today, but you
 should know they are there. The important thing is to realize that voltages
 produce currents. And the amount of current is proportional to the amount of
-voltage. This is just Ohm's law! 
-\begin{equation*}
-\Delta V=IR
-\end{equation*}%
-The constant of proportionality is related to how much friction there is for
-the charges in the wire.%
-\begin{equation*}
-I=\frac{1}{R}\Delta V
-\end{equation*}%
-It is just the resistance, $R$.\ 
+voltage, which is just Ohm's law once again.
+%\begin{equation*}
+%\Delta V=IR
+%\end{equation*}%
+%The constant of proportionality is related to how much friction there is for
+%the charges in the wire.%
+%\begin{equation*}
+%I=\frac{1}{R}\Delta V
+%\end{equation*}%
+%It is just the resistance, $R$.\ 
+%
+%\begin{figure}[h!]
+%\includegraphics[width=4.2832in,height=1.0253in]{PH4CAU16}
+%\end{figure}
 
+\subsection{How to Build an Ammeter}
 
+Ohm's law gives us a way to relate current to voltage, provided that we
+have a resistor of known resistance. Knowing how to measure voltage, we can
+therefore also measure current.
 
-
-
-
-
-
-
-
-
-
-Notice that this is important! We have found a way to relate our new
-quantity that we want to measure, current, to a voltage. We know how to
-measure a voltage! Our Ohm's law equation even tells us what extra part we
-need to convert our voltmeter into a current measuring instrument. We will
-need a resistor.
-
-\subsection{Knowing the Physics, Design the new instrument}
-
-Now that we understand electrical current, we have some hope of figuring out
-how to build an instrument to measure that electrical current. From what we
-learned, consider adding in an additional small resistor in our circuit. If
-we take a small resistance, one that is small compared to all the other
-resistances in the circuit, and we put it in the circuit it will slow down
-the current, but not by very much. If the resistance is small enough, we
+Consider adding an additional small resistor to our previous circuit
+(Figure \ref{fig:measuring_voltage}), as seen in 
+Figure \ref{fig:ammeter_construction}. If
+we take a small resistance (one that is small compared to all the other
+resistances in the circuit) and put it in the circuit, it will slow
+the current more, but not by very much. If the resistance is small enough, we
 won't even notice the change. Then if we measure the voltage across that
 small resistor with a voltmeter, we could mathematically calculate how much
-current we have. Notice that this instrument design has two parts. The first
+current we have. 
+Let's give this additional small resistor a name. Let's call it the
+\textquotedblleft shunt resistor.\textquotedblright\ 
+
+Notice that this instrument design has two parts. The first
 is adding some new hardware to our voltmeter (a resistor) and the second is
 adding in some calculation to get our voltmeter reading converted into
 current. 
-\begin{equation*}
-I=\frac{1}{R}\Delta V
-\end{equation*}
-
-Let's give this additional small resistor a name. Let's call it the
-\textquotedblleft shunt resistor.\textquotedblright\ 
-\begin{equation*}
+\begin{equation}
 I=\frac{\Delta V_{meter}}{R_{shunt}}
-\end{equation*}%
-Today we will have to do the calculation part by hand. In future labs, we
-would carefully plan for this calculation in our Arduino sketch code.
+\end{equation}
+Today we will do the calculation by hand. In future labs, we will use code
+to carry out calculations, so it happens automatically.
 
-\begin{figure}[h!]
-\includegraphics[width=4.9156in,height=3.9176in]{PH4CAU17}
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=\textwidth]{PH4CAU17}
+\caption[Building an ammeter]{Building an ammeter. The process includes
+adding a shunt resistor to the ciruit and measuring the voltage across the
+shunt resistor. When this measured voltage is known along with the 
+shunt resistance, current can be calculated. The portion of this circuit
+constituting the ammeter is enclosed in the dotted red line. In this 
+circuit, an additional multimeter, measuring current directly, is 
+included.}
+\label{fig:ammeter_construction}
 \end{figure}
 
-When we are done wiring our new instrument, we will have done something
-really cool. We have turned our current measurement into a voltage
-measurement. We measured something new in terms of a measurement we already
-knew how to make. We will generally try to do this for any type of
-measurement. That is because we are very good at measuring voltage, and not
-so good at measuring other things electronically.
+Remember that when we try to make any sort of measurement using electronics,
+the first step is to convert the thing we are trying to measure into a 
+voltage, as we have done here.
 
-\subsection{Testing the new instrument}
+\subsection{Testing the New Instrument}
 
-We will need a way to test how good our new instrument works. And
-fortunately we know our multimeters can also measure current. So we can
-build our new instrument an compare it to the measurement made by a
-multimeter. 
-\begin{equation*}
-\unit{A}=\frac{\unit{V}}{\unit{%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}}
-\end{equation*}%
-Recall that to use an ammeter (the new instrument we build, or the one in
-our multimeter), you must break the electric circuit by disconnecting a
-wire. Then you replace that wire with the ammeter. Notice that in the
-diagram below that the bottom wire is now broken. \begin{figure}[h!]
-\includegraphics[width=1.9372in,height=%
-1.471in]{PH4CAU18}
-\end{figure}Where a wire was, I have drawn an
-ammeter. The current must flow through the ammeter for us to measure it.
+Any time we build a new instrument, we need to verify that it is working
+correctly. In this case, we are fortunate that our multimeters can also measure
+current. By comparing the current we measure with our new instrument to the 
+current indicated by the multimeter, we can validate our new instrument.
 
-\begin{figure}[h!]
-\includegraphics[width=4.858in,height=2.2423in]{PH4CAU19}
-\end{figure} Remember, to use our multimeters
-to measure current, we must turn the dial to the $10\unit{A}$ setting AND
-move the red probe to the $10\unit{A}$ connector. Failure to do this may
-result in the fuse blowing. Our meter does not warn you that it lost a fuse,
-it just pays you back by giving really wrong answers. You should be careful
-to connect it right, and be sure it is working (that someone else has not
-blown the fuse before you). Since we have different kinds of multimeters, a
-second is pictured to the right. For this type of meter, put the red lead in
-the connector marked $A$ and turn the dial to the $A$ setting. If the
-currents you are measuring are very small, you might have to switch settings
-once again. Tiny currents can be measured by moving the dial to the $\unit{mA%
-}$ setting AND changing the red probe to the $\unit{mA}$ connector.\begin{figure}[h!]
-\includegraphics[width=4.9769in,height=2.2928in]{PH4CAU1A}
+Remember that in order for a multimeter to measure current, the current must
+flow through it. We have to break the circuit somewhere and place the
+multimeter into the flow, as done in Figures \ref{fig:measuring_current},
+\ref{fig:measuring_current_b}, and
+\ref{fig:ammeter_construction}.
+
+Also remember that when you are using a multimeter to measure current, you
+want to start by assuming that the current will be high. Turn the dial of 
+the multimeter to the highest current setting, and make sure that the red
+probe is connected to the right port on the multimeter. If the multimeter 
+reads zero current, it could mean (a) that the fuse in the multimeter is blown
+(you can check this by trying to measure a known current, say from a DC power
+source that displays the current as well), or (b) the current is smaller than
+what the multimeter can read on the current setting. In the latter case, you
+will need to change the dial on the multimeter to a lower current setting and
+reconnect the red probe to a different port.
+
+%\begin{figure}[h!]
+%\includegraphics[width=4.858in,height=2.2423in]{PH4CAU19}
+%\end{figure} Remember, to use our multimeters
+%to measure current, we must turn the dial to the $10\unit{A}$ setting AND
+%move the red probe to the $10\unit{A}$ connector. Failure to do this may
+%result in the fuse blowing. Our meter does not warn you that it lost a fuse,
+%it just pays you back by giving really wrong answers. You should be careful
+%to connect it right, and be sure it is working (that someone else has not
+%blown the fuse before you). Since we have different kinds of multimeters, a
+%second is pictured to the right. For this type of meter, put the red lead in
+%the connector marked $A$ and turn the dial to the $A$ setting. If the
+%currents you are measuring are very small, you might have to switch settings
+%once again. Tiny currents can be measured by moving the dial to the $\unit{mA%
+%}$ setting AND changing the red probe to the $\unit{mA}$ connector.\begin{figure}[h!]
+%\includegraphics[width=4.9769in,height=2.2928in]{PH4CAU1A}
+%\end{figure}
+%
+%Our multimeters really measure current in much the same way we are talking
+%about for our new Arduino ammeter. They have a series of shunt resistors
+%inside of them. When we choose a current measurement setting we are choosing
+%a shunt resistor to put in the circuit (inside the meter, but the meter is
+%in the circuit). Then the voltmeter will measure the voltage across that
+%resistor and use that voltage to calculate the current.
+
+As it turns out, when a multimeter measures current, it uses the same 
+method we have been discussing. The multimeter includes a few networks of
+small, known resistances. The current is sent through the appropriate 
+resistor network, and the voltage across that network is measured. The
+multimeter then calculates the current and displays it. 
+
+%If we create the current meter ourselves, we have to know the resistance
+%that we used! That allows us to use the voltage meter to calculate the
+%current,%
+%\begin{equation*}
+%I=\frac{\Delta V_{meter}}{R_{shunt}}
+%\end{equation*}%
+%but our multimeters are programed to know their own shunt resistances and to
+%do this calculation for us.
+%
+%If you have time (and some won't) in today's lab, we will build the new
+%Arduino instrument to measure current , and we will test it with a
+%multimeter set in ammeter mode. We will put both in the circuit at the same
+%time (see figure \ref{New Instrument and Test}) so we get readings from
+%both. Then we can compare and see how well our new instrument works!
+
+After we calculate the current from our known shunt resistance and
+measured voltage across the shunt resistor, we can compare it to the current
+displayed by the multimeter. It the two numbers agree, we can be confident
+that our newly built ammeter is working properly.
+
+However, there is a complication. Recall that every measurement carries an
+amount of uncertainty, and current measurements are no different. It's 
+pretty easy for us to judge the amount of uncertainty that the multimeter 
+reading has, but our calculated value for current has uncertainty coming from
+two sources: the resistance of the shunt resistor and the measured voltage
+across the shunt resistor. Now is probably a good time to review how 
+measurement uncertainty propagates into our calculations.
+
+\section{Propagation of Uncertainty: A Review}
+
+Every measurement has an uncertainty, so any quantity calculated from a 
+measurement has an uncertainty also. If there are multiple measurements going
+into a calculation, we have to account for multiple uncertainties. This is 
+most easily done using derivatives.
+
+%This is a \textquotedblleft review.\textquotedblright\ How much of a
+%\textquotedblleft review\textquotedblright\ it is may depend on where and
+%when you took PH150 or its equivalent. If you are a chemist, you will note
+%that our treatment of uncertainty goes beyond what you learned in
+%Quantitative Analysis. Let's start by reviewing what a derivative is.
+%
+%For our purposes, a derivative is a slope of a line. You should recognize
+%the equation of a straight line as%
+%\begin{equation*}
+%y=mx+b
+%\end{equation*}%
+%The slope $m$ can be written as 
+%\begin{equation*}
+%m=\frac{dy}{dx}
+%\end{equation*}%
+%This is nothing magic (or new). It is just a strange way to write $m.$ With
+%the slope written this way, the equation of the line could be written as 
+%\begin{equation*}
+%y=\frac{dy}{dx}x+b
+%\end{equation*}%
+%But why $dy/dx$? Think of how we find a slope of a line. Back in junior high
+%school we called the slope the \textquotedblleft rise over
+%run.\textquotedblright\ That is, the change in $y$-value divided by the
+%change in the $x$-value.%
+%\begin{equation*}
+%m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}
+%\end{equation*}%
+%In physics, we write the change in a variable using the greek letter delta, $%
+%\Delta .$ So we could write the slope as%
+%\begin{equation*}
+%m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\frac{\Delta y}{\Delta x}
+%\end{equation*}%
+%\ Just to jog your memory, let me write out $\Delta y$%
+%\begin{equation*}
+%\Delta y=y_{2}-y_{1}
+%\end{equation*}%
+%and $\Delta x.$ 
+%\begin{equation*}
+%\Delta x=x_{2}-x_{1}
+%\end{equation*}%
+%So our straight line equation should be written 
+%\begin{equation*}
+%y=\frac{\Delta y}{\Delta x}x+b
+%\end{equation*}%
+%but if we take $\Delta x$ to be very, very small it is customary to write
+%the $\Delta x$ as just $dx$ (I guess a \textquotedblleft $d$%
+%\textquotedblright\ is smaller than a \textquotedblleft $\Delta $%
+%\textquotedblright ). If this is not familiar from Math 112, is should be by
+%now from PH121.
+%
+%In PH121 you learned that the velocity is the slope of the plot of $x$ vs. $%
+%t,$ for example, 
+%\begin{equation*}
+%y=\frac{1}{2}\frac{\unit{m}}{\unit{s}}t+1\unit{m}
+%\end{equation*}%
+%is an equation giving the $y$ position of an object as a function of time.
+%Note that it is a straight line on a $y$ vs. $t$ plot. \begin{figure}[h!]
+%\includegraphics[width=%
+%3.4999in,height=1.868in]{PH4CAU1B}
+%\end{figure}The slope of the line is 
+%\begin{equation*}
+%\frac{dy}{dt}=\frac{1\unit{m}}{2\unit{s}}
+%\end{equation*}%
+%We can verify that this works by looking at the plot and noting that for
+%every two units of time, we go up one position unit. The slope is $1/2\frac{%
+%\unit{m}}{\unit{s}}.$
+
+%But not all curves are straight lines. What do we do with curves that, well,
+%curve?
+
+%One idea is that we could split up the curve into little line segments, each
+%with its own slope. We can think of $dy/dt$ as an instantaneous slope, a
+%slope of one of the tiny line segments that make up our curve. This is the
+%sort of speed measurement that your speedometer gives. The speed might be
+%different a short time later. But right now the speed is, say, $0.5\unit{m}/%
+%\unit{s}.$
+
+%\begin{figure}[h!]
+%\includegraphics[width=3.4385in,height=2.3307in]{PH4CAU1C}
+%\end{figure}Really, in defining an
+%instantaneous slope we have assumed that the slope near our point on the
+%curve is essentially a straight line if $\Delta t$ is small enough.
+
+%We can use this idea to interpret our error calculations. Suppose I\ throw a
+%ball in the air with a initial speed of $4\unit{m}/\unit{s}$ straight up
+%starting from $y_{o}=0$. From PH121 you have learned that the equation for
+%predicting how high the ball will go is 
+%\begin{equation*}
+%y=y_{o}+v_{o}t+\frac{1}{2}at^{2}
+%\end{equation*}%
+%It says that starting at $y_{o}$ the ball will go higher depending on the
+%initial velocity, $v_{o},$ and the acceleration, $a.$ That makes sense.
+
+%At a time, $t,$ the ball should be at 
+%\begin{equation*}
+%y=0+4\frac{\unit{m}}{\unit{s}}t-\frac{1}{2}\left( 9.8\frac{\unit{m}}{\unit{s}%
+%^{2}}\right) t^{2}
+%\end{equation*}%
+%where $a=-9.8\frac{\unit{m}}{\unit{s}^{2}}$ is the acceleration due to
+%gravity. So, knowing this, I could predict how high the ball would go if I\
+%pick a particular time, say, $0.15\unit{s}.$ The result should be%
+%\begin{eqnarray*}
+%y &=&0+4\frac{\unit{m}}{\unit{s}}\left( 0.15\unit{s}\right) -\frac{1}{2}%
+%\left( 9.8\frac{\unit{m}}{\unit{s}^{2}}\right) \left( 0.15\unit{s}\right)
+%^{2} \\
+%&=&0.489\,75\unit{m}
+%\end{eqnarray*}%
+%This is shown in the next figure with a black line. Solving the equation for 
+%$y$ is equivalent to drawing a line up to the curve, then from our spot on
+%the curve over to the $y$-axis to find the position.\begin{figure}[h!]
+%\includegraphics[width=3.3434in,height=%
+%2.2295in]{PH4CAU1D}
+%\end{figure}
+
+%For our case, we plot a line upward from $0.15\unit{s}$ to the curve, and
+%then plot a horizontal line from the intersection to the $y$-axis. We can
+%see that we get $4.9\unit{m}.$ Suppose I try to verify this by taking a
+%picture of the ball in flight at $0.015\unit{s},$ but my stop watch is only
+%good to $\pm 0.005$ seconds. I try to take the picture when the watch is at $%
+%0.015\unit{s},$ but I might have taken the picture at $0.01\unit{s}$ or at $%
+%0.02\unit{s}$ or anywhere in between. My time has some uncertainty. What
+%does the uncertainty in my stop watch time mean for the uncertainty in my $y$
+%value?
+
+%We can get a good approximation by graphically drawing vertical lines up
+%from $t_{\min }$ and $t_{\max }$ to the curve, and then extending horizontal
+%lines from the intersections to the $y$-axis. This gives us a $y_{\min }$
+%and $y_{\max }.$ Our actual height could be anywhere in between these. This
+%is a way to view our uncertainty in $y.$\begin{figure}[h!]
+%\includegraphics[width=4.1658in,height=2.7769in]{PH4CAU1E}
+%\end{figure}
+
+The derivative of a function at a particular point tells us how quickly
+the function is changing at that point. Imagine that we have some function
+$y(x)$. The derivative of the function with respect to time, $dy/dx$, at
+a particular position $x$, can be represented by the tangent line that goes 
+through the point $y(x)$, as seen in 
+Figure \ref{fig:derivative}. 
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{derivative}
+\caption[Using derivatives to approximate uncertainties]{Using derivatives to
+approximate uncertainties. The black dot represents the value of the function
+at a specific point. The red dots represent the values of the function at
+two other points bracketing the uncertainty in the independent variable. The
+blue points show the same two values on the tangent line.}
+\label{fig:derivative}
 \end{figure}
 
-Our multimeters really measure current in much the same way we are talking
-about for our new Arduino ammeter. They have a series of shunt resistors
-inside of them. When we choose a current measurement setting we are choosing
-a shunt resistor to put in the circuit (inside the meter, but the meter is
-in the circuit). Then the voltmeter will measure the voltage across that
-resistor and use that voltage to calculate the current.
+Now suppose there is an uncertainty $\delta x$ in the position $x$.
+Because of that uncertainty in $x$, I would also have some uncertainty in $y$.
+I have two ways I could determine the range of possible values that
+$y(x)$ could take on:
+\begin{enumerate}
+    \item I could simply calculate the value of $y(x)$ at the extreme possible
+        values of $x$, i.e. calculate $y(x-\delta x)$ and $y(x+\delta x)$.
+        These two values are represented by the red dots in 
+        Figure \ref{fig:derivative}. As long as $y(x)$ is monotonically 
+        increasing or decreasing in the range $x\pm\delta x$, then these 
+        two values of will represent the highest and lowest possible values 
+        of $y(x)$ for the range of possible values in $x$.
+    \item As long as $\delta x$ is small, I could approximate the function 
+        $y(x)$ as a line. The values of the function at the extreme ends of 
+        our range of $x$ are represented by the blue dots in Figure 
+        \ref{fig:derivative}.
+        The equation of this tangent line is 
+        \begin{equation}
+            f(x)=mx+b
+        \end{equation}
+        where the slope $m$ is the derivative of $y(x)$ at $x$, i.e.
+        \begin{equation}
+            f(x)=\frac{dy}{dx}x+b
+        \end{equation}
+        It is understood, in this equation and those that follow, that the 
+        derivative $dy/dx$ is evaluated at our particular $x$.
+        The intercept $b$ is unknown at this point, but it turns out we won't 
+        need it anyway. If I now wanted to estimate how much $y(x)$ changes
+        as I go from $x$ to $x+\delta x$, I
+        could make use of this line:
+        \begin{eqnarray*}
+            y(x+\delta x)-y(x) \\
+            &\approx&
+            f(x+\delta x)-f(x) \\
+            &=&
+            \left[\frac{dy}{dx}(x+\delta x)+b\right]-
+            \left[\frac{dy}{dx}x+b\right]\\
+            &=&
+            \frac{dy}{dx}x + 
+            \frac{dy}{dx}\delta x + b -
+            \frac{dy}{dx}x - b
+        \end{eqnarray*}
+        In the last line of this equation, the two
+        $\frac{dy}{dx}x$ cancel, as do the two 
+        unknown intercepts $b$, leaving us with
+        \begin{equation*}
+            y(x+\delta x)-y(x) \approx \frac{dy}{dx}\delta x
+        \end{equation*}
+        or simply
+        \begin{equation}
+            y(x+\delta x) \approx y(x)+\frac{dy}{dx}\delta x
+        \end{equation}
+        Similarly, if we considered the value of $y(x)$ at $x-\delta x$, 
+        we would obtain
+        \begin{equation}
+            y(x-\delta x) \approx y(x)-\frac{dy}{dx}\delta x
+        \end{equation}
+        We can see that in this approximation, an uncertainty $\delta x$ in 
+        the variable $x$ yields a consistent variation in $y(x))$. 
+        Consequently, we write
+        the uncertainty in $y(x)$ as
+        \begin{equation}
+            \delta y\approx\frac{dy}{dx}\delta x
+        \end{equation}            
+\end{enumerate}
+Since our measurement uncertainties will almost always be relatively small,
+we will be making use of the second method almost exclusively.
 
-If we create the current meter ourselves, we have to know the resistance
-that we used! That allows us to use the voltage meter to calculate the
-current,%
-\begin{equation*}
-I=\frac{\Delta V_{meter}}{R_{shunt}}
-\end{equation*}%
-but our multimeters are programed to know their own shunt resistances and to
-do this calculation for us.
+What if our calculated value depends on more than one measurement? In other
+words, what if instead of an $y(x)$ I have an $y(x,z)$, where $x$ and $z$
+both represent measured quantities with uncertainties $\delta x$ and
+$\delta z$? We can easily find the uncertainty that arises in $y(x,z)$ from
+each of the two measurements independently by using partial derivatives. We
+would obtain
+\begin{eqnarray}
+    \delta y_x &\approx& \frac{\partial y}{\partial x}\delta x\\
+    \delta y_z &\approx& \frac{\partial y}{\partial z}\delta z
+\end{eqnarray}
+The question now remains, how to we ``add'' these two uncertainties together?
 
-If you have time (and some won't) in today's lab, we will build the new
-Arduino instrument to measure current , and we will test it with a
-multimeter set in ammeter mode. We will put both in the circuit at the same
-time (see figure \ref{New Instrument and Test}) so we get readings from
-both. Then we can compare and see how well our new instrument works!
-
-\section{Calculating uncertainty, a review}
-
-That is all the new material for today's lab. But I wanted to remind you of
-something you already know.
-
-Back in PH150 you should have gotten a good deal of experience in making
-measurements. We will be going back to experimentation soon, and we will
-need to remember what we learned in PH150 to take the measurements so that
-we can interpret our experimental results. You will remember that every
-measurement has an uncertainty. We have to estimate that uncertainty. It
-turns out that our voltage measurement schemes will introduce a new source
-of uncertainty! And we will have to include this in our uncertainty
-calculations. We will take that on next lab, but in this lab let's review
-how to calculate uncertainties.
-
-This is a \textquotedblleft review.\textquotedblright\ How much of a
-\textquotedblleft review\textquotedblright\ it is may depend on where and
-when you took PH150 or its equivalent. If you are a chemist, you will note
-that our treatment of uncertainty goes beyond what you learned in
-Quantitative Analysis. Let's start by reviewing what a derivative is.
-
-For our purposes, a derivative is a slope of a line. You should recognize
-the equation of a straight line as%
-\begin{equation*}
-y=mx+b
-\end{equation*}%
-The slope $m$ can be written as 
-\begin{equation*}
-m=\frac{dy}{dx}
-\end{equation*}%
-This is nothing magic (or new). It is just a strange way to write $m.$ With
-the slope written this way, the equation of the line could be written as 
-\begin{equation*}
-y=\frac{dy}{dx}x+b
-\end{equation*}%
-But why $dy/dx$? Think of how we find a slope of a line. Back in junior high
-school we called the slope the \textquotedblleft rise over
-run.\textquotedblright\ That is, the change in $y$-value divided by the
-change in the $x$-value.%
-\begin{equation*}
-m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}
-\end{equation*}%
-In physics, we write the change in a variable using the greek letter delta, $%
-\Delta .$ So we could write the slope as%
-\begin{equation*}
-m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\frac{\Delta y}{\Delta x}
-\end{equation*}%
-\ Just to jog your memory, let me write out $\Delta y$%
-\begin{equation*}
-\Delta y=y_{2}-y_{1}
-\end{equation*}%
-and $\Delta x.$ 
-\begin{equation*}
-\Delta x=x_{2}-x_{1}
-\end{equation*}%
-So our straight line equation should be written 
-\begin{equation*}
-y=\frac{\Delta y}{\Delta x}x+b
-\end{equation*}%
-but if we take $\Delta x$ to be very, very small it is customary to write
-the $\Delta x$ as just $dx$ (I guess a \textquotedblleft $d$%
-\textquotedblright\ is smaller than a \textquotedblleft $\Delta $%
-\textquotedblright ). If this is not familiar from Math 112, is should be by
-now from PH121.
-
-In PH121 you learned that the velocity is the slope of the plot of $x$ vs. $%
-t,$ for example, 
-\begin{equation*}
-y=\frac{1}{2}\frac{\unit{m}}{\unit{s}}t+1\unit{m}
-\end{equation*}%
-is an equation giving the $y$ position of an object as a function of time.
-Note that it is a straight line on a $y$ vs. $t$ plot. \begin{figure}[h!]
-\includegraphics[width=%
-3.4999in,height=1.868in]{PH4CAU1B}
-\end{figure}The slope of the line is 
-\begin{equation*}
-\frac{dy}{dt}=\frac{1\unit{m}}{2\unit{s}}
-\end{equation*}%
-We can verify that this works by looking at the plot and noting that for
-every two units of time, we go up one position unit. The slope is $1/2\frac{%
-\unit{m}}{\unit{s}}.$
-
-But not all curves are straight lines. What do we do with curves that, well,
-curve?
-
-One idea is that we could split up the curve into little line segments, each
-with its own slope. We can think of $dy/dt$ as an instantaneous slope, a
-slope of one of the tiny line segments that make up our curve. This is the
-sort of speed measurement that your speedometer gives. The speed might be
-different a short time later. But right now the speed is, say, $0.5\unit{m}/%
-\unit{s}.$
-
-\begin{figure}[h!]
-\includegraphics[width=3.4385in,height=2.3307in]{PH4CAU1C}
-\end{figure}Really, in defining an
-instantaneous slope we have assumed that the slope near our point on the
-curve is essentially a straight line if $\Delta t$ is small enough.
-
-We can use this idea to interpret our error calculations. Suppose I\ throw a
-ball in the air with a initial speed of $4\unit{m}/\unit{s}$ straight up
-starting from $y_{o}=0$. From PH121 you have learned that the equation for
-predicting how high the ball will go is 
-\begin{equation*}
-y=y_{o}+v_{o}t+\frac{1}{2}at^{2}
-\end{equation*}%
-It says that starting at $y_{o}$ the ball will go higher depending on the
-initial velocity, $v_{o},$ and the acceleration, $a.$ That makes sense.
-
-At a time, $t,$ the ball should be at 
-\begin{equation*}
-y=0+4\frac{\unit{m}}{\unit{s}}t-\frac{1}{2}\left( 9.8\frac{\unit{m}}{\unit{s}%
-^{2}}\right) t^{2}
-\end{equation*}%
-where $a=-9.8\frac{\unit{m}}{\unit{s}^{2}}$ is the acceleration due to
-gravity. So, knowing this, I could predict how high the ball would go if I\
-pick a particular time, say, $0.15\unit{s}.$ The result should be%
-\begin{eqnarray*}
-y &=&0+4\frac{\unit{m}}{\unit{s}}\left( 0.15\unit{s}\right) -\frac{1}{2}%
-\left( 9.8\frac{\unit{m}}{\unit{s}^{2}}\right) \left( 0.15\unit{s}\right)
-^{2} \\
-&=&0.489\,75\unit{m}
-\end{eqnarray*}%
-This is shown in the next figure with a black line. Solving the equation for 
-$y$ is equivalent to drawing a line up to the curve, then from our spot on
-the curve over to the $y$-axis to find the position.\begin{figure}[h!]
-\includegraphics[width=3.3434in,height=%
-2.2295in]{PH4CAU1D}
+If $x$ and $z$ are independent variables, then we would end up adding the
+two uncertainties in quadrature (which is a fancy way of saying we'll use
+the Pythagorean theorem). The reason for this can be seen in Figure 
+\ref{fig:2d_derivative}. If I had a variation in both $x$ and $z$, the 
+total variation would be represented by a diagonal line, and the three
+lines together would form a right triangle. The result is that our total
+uncertainty in $y(x,z)$ becomes
+\begin{equation}
+    \delta y=\sqrt{\delta y_x^2+\delta y_z^2}=
+    \sqrt{\left(\frac{\partial y}{\partial x}\delta x\right)^2+
+    \left(\frac{\partial y}{\partial z}\delta z\right)^2}
+\end{equation}
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.8\textwidth]{PH4CAU1F}
+\caption[Variation in a function of two variables]{Variation in a 
+function of two variables}
+\label{fig:2d_derivative}
 \end{figure}
 
-For our case, we plot a line upward from $0.15\unit{s}$ to the curve, and
-then plot a horizontal line from the intersection to the $y$-axis. We can
-see that we get $4.9\unit{m}.$ Suppose I try to verify this by taking a
-picture of the ball in flight at $0.015\unit{s},$ but my stop watch is only
-good to $\pm 0.005$ seconds. I try to take the picture when the watch is at $%
-0.015\unit{s},$ but I might have taken the picture at $0.01\unit{s}$ or at $%
-0.02\unit{s}$ or anywhere in between. My time has some uncertainty. What
-does the uncertainty in my stop watch time mean for the uncertainty in my $y$
-value?
+If our calculated value had more than two measurements associated with it, 
+we would just iterate this process a few more times. the result would be
+\begin{equation}
+    \delta y=\sqrt{\sum_i \left(\frac{\partial y}{\partial x_i}\delta x_i\right)^2}
+\end{equation}
+where the $x_i$ and $\delta x_i$ would represent the measurements and their
+respective uncertainties.
 
-We can get a good approximation by graphically drawing vertical lines up
-from $t_{\min }$ and $t_{\max }$ to the curve, and then extending horizontal
-lines from the intersections to the $y$-axis. This gives us a $y_{\min }$
-and $y_{\max }.$ Our actual height could be anywhere in between these. This
-is a way to view our uncertainty in $y.$\begin{figure}[h!]
-\includegraphics[width=4.1658in,height=2.7769in]{PH4CAU1E}
-\end{figure}
 
-We can use this idea to find a general way to calculate uncertainties. We
-could define $\Delta t=t_{\max }-t_{\min }$. If our $\Delta t$ is small
-enough (so we can write it just $dt$), the curve is essentially a straight
-line in the region between $t_{\min }$ and $t_{\max }.$ So if we knew the
-slope of that line (the derivative $dy/dt$) we could easily figure out the $%
-y_{\max }$ and $y_{\min }$ points to get our uncertainty range, at least if
-we stay near our $t_{n}$ part of the curve. Recall that our uncertainty in $%
-y $ is about%
-\begin{equation*}
-\delta y=\frac{y_{\max }-y_{\min }}{2}=\frac{\Delta y}{2}
-\end{equation*}%
-Remembering that 
-\begin{equation*}
-y=\frac{dy}{dt}t+b
-\end{equation*}%
-then 
-\begin{eqnarray*}
-\Delta y &=&y_{\max }-y_{\min } \\
-&=&\frac{dy}{dt}t_{\max }+b-\frac{dy}{dt}t_{\min }-b \\
-&=&\frac{dy}{dt}\Delta t
-\end{eqnarray*}%
-From PH150, you will recognize this as almost the uncertainty in a function
-of one variable! But even if you don't recognize it, we can show that this
-is true using our definition of $\delta y$ above. The quantity $\Delta t$ is 
-\begin{equation*}
-\Delta t=t_{\max }-t_{\min }
-\end{equation*}%
-so our uncertainty in $t$ would be 
-\begin{equation*}
-\delta t=\frac{t_{\max }-t_{\min }}{2}=\frac{\Delta t}{2}
-\end{equation*}%
-then 
-\begin{eqnarray*}
-\delta y &=&\frac{y_{\max }-y_{\min }}{2} \\
-&=&\frac{1}{2}\frac{dy}{dt}\Delta t \\
-&=&\frac{dy}{dt}\frac{\Delta t}{2} \\
-&=&\frac{dy}{dt}\delta t
-\end{eqnarray*}%
-so%
-\begin{equation*}
-\delta y=\frac{dy}{dt}\delta t
-\end{equation*}%
-So our uncertainty in $y$ is just the slope at our point on the curve
-multiplied by our uncertainty in $t.$
 
-But what if we have more than one variable? Say, we have a function $y(x,z),$
-we essentially have a two dimensional slope. Think of a hill, you can go
-down a hill in more than one direction. So we need slope parts for each
-direction we can go.
 
-\begin{figure}[h!]
-\includegraphics[width=2.5495in,height=2.0133in]{PH4CAU1F}
-\end{figure}%
-\begin{equation*}
-\Delta y=\frac{dy}{dx}x\hat{\imath}+\frac{dy}{dz}z\hat{k}
-\end{equation*}%
-But there is a fix we need to make to this equation that you won't learn for
-several math classes to come. We want to have a slope in the $x$ and $z$
-direction, but we want the slopes to be independent (if you have already
-taken PH121, think of two dimensional motion problems, we split the problem
-into components). The notation for this is%
-\begin{equation*}
-\Delta y_{x}=\frac{\partial y}{\partial x}x
-\end{equation*}%
-\begin{equation*}
-\Delta y_{z}=\frac{\partial y}{\partial z}z
-\end{equation*}%
-where 
-\begin{equation*}
-\frac{\partial y}{\partial x}
-\end{equation*}%
-means the component of the slope just in the $x$ direction. We take a
-derivative of the function $y,$ but assume only $x$ is a variable (treat $z$
-and all $z$ terms with no $x^{\prime }s$ as constants). This lets us
-separate the $x$ and $z$ parts. A special, one variable derivative like $%
-\partial y/\partial x$ is called a \emph{partial derivative} because you
-only take one dimension of the derivative at a time. So, if we wish to find
-the error in some general function $z\left( x,y\right) $ the error is given
-by 
-\begin{equation*}
-\delta y=\sqrt{\left( \frac{\partial y}{\partial x}\right) ^{2}\delta
-x^{2}+\left( \frac{\partial y}{\partial z}\right) ^{2}\delta z^{2}}
-\end{equation*}%
-This looks a lot like our slope equation. What we are doing is to assuming
-the function $y\left( x,z\right) $ is flat in a small region around the
-point we are studying. then the function has a slope $\partial y/\partial x$
-in the $x$-direction, and $\partial y/\partial z$ in the $y$-direction. Each
-term like 
-\begin{equation*}
-\left( \frac{\partial y}{\partial x}\right) \delta x
-\end{equation*}%
-gives how far off we could be in that direction (the $x$-direction in this
-case). Remember that we have assumed that $y\left( x,z\right) $ is
-essentially flat near our point of interest. The square root may be
-something of a mystery, but remember what you have learned about adding
-vectors in PH121. We add components of a vector to find the magnitude like
-this 
-\begin{equation*}
-V=\sqrt{V_{x}^{2}+V_{y}^{2}}
-\end{equation*}%
-This comes from the Pythagorean theorem. The $x$ and $y$ parts of the vector
-form two sides of a triangle. We want the remaining side. So we use the
-Pythagorean theorem to find the length of the remaining side.
 
-We are doing the same for our small uncertainty lengths. We are just adding
-the $x$ and the $y$ components of the error. We could write our error
-formula for the general case of a function $f$, that depends on $N$
-different variables. 
-\begin{equation*}
-\delta f=\sqrt{\sum_{i=1}^{N}\left( \frac{\partial f}{\partial x_{i}}\right)
-^{2}\delta x_{i}^{2}}
-\end{equation*}%
-We will use this formula a lot, so make sure you understand what it means
-(ask your instructor for help if it is not clear).
+%We can use this idea to find a general way to calculate uncertainties. We
+%could define $\Delta t=t_{\max }-t_{\min }$. If our $\Delta t$ is small
+%enough (so we can write it just $dt$), the curve is essentially a straight
+%line in the region between $t_{\min }$ and $t_{\max }.$ So if we knew the
+%slope of that line (the derivative $dy/dt$) we could easily figure out the $%
+%y_{\max }$ and $y_{\min }$ points to get our uncertainty range, at least if
+%we stay near our $t_{n}$ part of the curve. Recall that our uncertainty in $%
+%y $ is about%
+%\begin{equation*}
+%\delta y=\frac{y_{\max }-y_{\min }}{2}=\frac{\Delta y}{2}
+%\end{equation*}%
+%Remembering that 
+%\begin{equation*}
+%y=\frac{dy}{dt}t+b
+%\end{equation*}%
+%then 
+%\begin{eqnarray*}
+%\Delta y &=&y_{\max }-y_{\min } \\
+%&=&\frac{dy}{dt}t_{\max }+b-\frac{dy}{dt}t_{\min }-b \\
+%&=&\frac{dy}{dt}\Delta t
+%\end{eqnarray*}%
+%From PH150, you will recognize this as almost the uncertainty in a function
+%of one variable! But even if you don't recognize it, we can show that this
+%is true using our definition of $\delta y$ above. The quantity $\Delta t$ is 
+%\begin{equation*}
+%\Delta t=t_{\max }-t_{\min }
+%\end{equation*}%
+%so our uncertainty in $t$ would be 
+%\begin{equation*}
+%\delta t=\frac{t_{\max }-t_{\min }}{2}=\frac{\Delta t}{2}
+%\end{equation*}%
+%then 
+%\begin{eqnarray*}
+%\delta y &=&\frac{y_{\max }-y_{\min }}{2} \\
+%&=&\frac{1}{2}\frac{dy}{dt}\Delta t \\
+%&=&\frac{dy}{dt}\frac{\Delta t}{2} \\
+%&=&\frac{dy}{dt}\delta t
+%\end{eqnarray*}%
+%so%
+%\begin{equation*}
+%\delta y=\frac{dy}{dt}\delta t
+%\end{equation*}%
+%So our uncertainty in $y$ is just the slope at our point on the curve
+%multiplied by our uncertainty in $t.$
 
-\subsection{How do we find the slope?}
+%But what if we have more than one variable? Say, we have a function $y(x,z),$
+%we essentially have a two dimensional slope. Think of a hill, you can go
+%down a hill in more than one direction. So we need slope parts for each
+%direction we can go.
 
-But now we have an equation in terms of slope written as $\partial
-y/\partial x$ or $\partial y/\partial z$, but how would we ever find these
-slopes? Your calculus class has or will teach you how to take a derivative.
-They might not have yet taught you how to take this type of derivative. The
-symbol $\partial $ means that our derivatives are \textquotedblleft
-partial\textquotedblright\ derivatives. This means that we assume all the
-variables other than the one that shows up in the derivative symbol are
-constants for our derivative.
+%\begin{figure}[h!]
+%\includegraphics[width=2.5495in,height=2.0133in]{PH4CAU1F}
+%\end{figure}%
+%\begin{equation*}
+%\Delta y=\frac{dy}{dx}x\hat{\imath}+\frac{dy}{dz}z\hat{k}
+%\end{equation*}%
+%But there is a fix we need to make to this equation that you won't learn for
+%several math classes to come. We want to have a slope in the $x$ and $z$
+%direction, but we want the slopes to be independent (if you have already
+%taken PH121, think of two dimensional motion problems, we split the problem
+%into components). The notation for this is%
+%\begin{equation*}
+%\Delta y_{x}=\frac{\partial y}{\partial x}x
+%\end{equation*}%
+%\begin{equation*}
+%\Delta y_{z}=\frac{\partial y}{\partial z}z
+%\end{equation*}%
+%where 
+%\begin{equation*}
+%\frac{\partial y}{\partial x}
+%\end{equation*}%
+%means the component of the slope just in the $x$ direction. We take a
+%derivative of the function $y,$ but assume only $x$ is a variable (treat $z$
+%and all $z$ terms with no $x^{\prime }s$ as constants). This lets us
+%separate the $x$ and $z$ parts. A special, one variable derivative like $%
+%\partial y/\partial x$ is called a \emph{partial derivative} because you
+%only take one dimension of the derivative at a time. So, if we wish to find
+%the error in some general function $z\left( x,y\right) $ the error is given
+%by 
+%\begin{equation*}
+%\delta y=\sqrt{\left( \frac{\partial y}{\partial x}\right) ^{2}\delta
+%x^{2}+\left( \frac{\partial y}{\partial z}\right) ^{2}\delta z^{2}}
+%\end{equation*}%
+%This looks a lot like our slope equation. What we are doing is to assuming
+%the function $y\left( x,z\right) $ is flat in a small region around the
+%point we are studying. then the function has a slope $\partial y/\partial x$
+%in the $x$-direction, and $\partial y/\partial z$ in the $y$-direction. Each
+%term like 
+%\begin{equation*}
+%\left( \frac{\partial y}{\partial x}\right) \delta x
+%\end{equation*}%
+%gives how far off we could be in that direction (the $x$-direction in this
+%case). Remember that we have assumed that $y\left( x,z\right) $ is
+%essentially flat near our point of interest. The square root may be
+%something of a mystery, but remember what you have learned about adding
+%vectors in PH121. We add components of a vector to find the magnitude like
+%this 
+%\begin{equation*}
+%V=\sqrt{V_{x}^{2}+V_{y}^{2}}
+%\end{equation*}%
+%This comes from the Pythagorean theorem. The $x$ and $y$ parts of the vector
+%form two sides of a triangle. We want the remaining side. So we use the
+%Pythagorean theorem to find the length of the remaining side.
 
-Let's take an example. What is the slope of the function $y=5zx^{3}?$ if we
-calculate the slope only going in the $x$-direction (that is, if we take a
-partial derivative with respect to $x$) we get
+%We are doing the same for our small uncertainty lengths. We are just adding
+%the $x$ and the $y$ components of the error. We could write our error
+%formula for the general case of a function $f$, that depends on $N$
+%different variables. 
+%\begin{equation*}
+%\delta f=\sqrt{\sum_{i=1}^{N}\left( \frac{\partial f}{\partial x_{i}}\right)
+%^{2}\delta x_{i}^{2}}
+%\end{equation*}%
+%We will use this formula a lot, so make sure you understand what it means
+%(ask your instructor for help if it is not clear).
 
-\begin{equation*}
-\frac{\partial }{\partial x}\left( 5zx^{3}\right) =5z\left( 3\right)
-x^{3-1}=15zx^{2}
-\end{equation*}%
-notice that we treated $z$ as a constant! That is what we mean when we user
-the symbol $\partial $ and when we say \textquotedblleft partial
-derivative.\textquotedblright\ Let's try another. How about finding the
-slope of $f=7yx^{2}-2x+z$ with respect to the $x$-direction.
+%\subsection{How do we find the slope?}
 
-\begin{equation*}
-\frac{\partial }{\partial x}\left( 7yx^{2}-2x+z\right) =7y\left( 2\right)
-x^{1}-2(1)x^{0}+z\left( 0\right)
-\end{equation*}%
-The last term illustrates that the slope of a constant is zero, and as we go
-just in the $x$-direction, $z$ is constant. That makes sense. So the change
-in $f$ just due to the last term $(z)$ should be zero. We also remember $%
-x^{0}=1.$ So we are left with 
-\begin{equation*}
-\frac{\partial }{\partial x}\left( 7yx^{2}-2x+z\right) =14yx-2
-\end{equation*}%
-We could also find 
-\begin{equation*}
-\frac{\partial }{\partial y}\left( 7yx^{2}-2x+z\right) =7x^{2}
-\end{equation*}%
-and%
-\begin{equation*}
-\frac{\partial }{\partial z}\left( 7yx^{2}-2x+z\right) =1
-\end{equation*}
+%But now we have an equation in terms of slope written as $\partial
+%y/\partial x$ or $\partial y/\partial z$, but how would we ever find these
+%slopes? Your calculus class has or will teach you how to take a derivative.
+%They might not have yet taught you how to take this type of derivative. The
+%symbol $\partial $ means that our derivatives are \textquotedblleft
+%partial\textquotedblright\ derivatives. This means that we assume all the
+%variables other than the one that shows up in the derivative symbol are
+%constants for our derivative.
 
-In our equation for calculating uncertainties, we want to find the
-uncertainty in each dimension (for each variable) and to add these
-uncertainties like components of vectors, so this partial derivative is just
-what we want, the slope of our function in just one direction.
+%Let's take an example. What is the slope of the function $y=5zx^{3}?$ if we
+%calculate the slope only going in the $x$-direction (that is, if we take a
+%partial derivative with respect to $x$) we get
+
+%\begin{equation*}
+%\frac{\partial }{\partial x}\left( 5zx^{3}\right) =5z\left( 3\right)
+%x^{3-1}=15zx^{2}
+%\end{equation*}%
+%notice that we treated $z$ as a constant! That is what we mean when we user
+%the symbol $\partial $ and when we say \textquotedblleft partial
+%derivative.\textquotedblright\ Let's try another. How about finding the
+%slope of $f=7yx^{2}-2x+z$ with respect to the $x$-direction.
+
+%\begin{equation*}
+%\frac{\partial }{\partial x}\left( 7yx^{2}-2x+z\right) =7y\left( 2\right)
+%x^{1}-2(1)x^{0}+z\left( 0\right)
+%\end{equation*}%
+%The last term illustrates that the slope of a constant is zero, and as we go
+%just in the $x$-direction, $z$ is constant. That makes sense. So the change
+%in $f$ just due to the last term $(z)$ should be zero. We also remember $%
+%x^{0}=1.$ So we are left with 
+%\begin{equation*}
+%\frac{\partial }{\partial x}\left( 7yx^{2}-2x+z\right) =14yx-2
+%\end{equation*}%
+%We could also find 
+%\begin{equation*}
+%\frac{\partial }{\partial y}\left( 7yx^{2}-2x+z\right) =7x^{2}
+%\end{equation*}%
+%and%
+%\begin{equation*}
+%\frac{\partial }{\partial z}\left( 7yx^{2}-2x+z\right) =1
+%\end{equation*}
+
+%In our equation for calculating uncertainties, we want to find the
+%uncertainty in each dimension (for each variable) and to add these
+%uncertainties like components of vectors, so this partial derivative is just
+%what we want, the slope of our function in just one direction.
 
 \subsubsection{Tie to statistics}
 
-Back in PH150 you should have learned that for experiments where we repeat
+For experiments where we repeat
 the same experiment over and over again, our outcome can be given by the
 mean value an our uncertainty can be given by the standard deviation. We
 need to tie our statistical ideas into what we have learned about error
-propagation. Lets go back to our function $f\left( x,z\right) $ the error is
+propagation. Lets go back to our function $y\left( x,z\right) $ the error is
 given by 
 \begin{equation*}
-\delta f=\sqrt{\left( \frac{\partial f}{\partial x}\right) ^{2}\delta
-x^{2}+\left( \frac{\partial f}{\partial z}\right) ^{2}\delta z^{2}}
-\end{equation*}%
-but now we know we could express this in terms of standard deviations
-(provided you don't need to ensure every bit of your data are within your
-uncertainty range). We can write our uncertainties as 
+    \delta y=
+    \sqrt{\left(\frac{\partial y}{\partial x}\delta x\right)^2+
+    \left(\frac{\partial y}{\partial z}\delta z\right)^2}
+\end{equation*}
+If instead of uncertainties in $x$ and $z$, what we had were standard 
+deviations $\sigma_x$ and $\sigma_z$, we would find the standard deviation in
+$y$ as
 \begin{equation*}
-\sigma _{f}=\sqrt{\left( \frac{\partial f}{\partial x}\right) ^{2}\sigma
-_{x}^{2}+\left( \frac{\partial f}{\partial z}\right) ^{2}\sigma _{z}^{2}}
-\end{equation*}%
-So one way to get an estimate of uncertainty like $\delta x$ or $\delta z$
+    \sigma_y=
+    \sqrt{\left(\frac{\partial y}{\partial x}\sigma_x\right)^2+
+    \left(\frac{\partial y}{\partial z}\sigma_z\right)^2}
+\end{equation*}
+When measured values are subject to fluctuation, 
+one way to get an estimate of uncertainty like $\delta x$ or $\delta z$
 above is to make many measurements, and use the standard deviation $\sigma
 _{x}$ as an estimate for $\delta x$ and $\sigma _{z}$ for $\delta z.$ This
-is usually not too far off (we will refine this analysis in PH336 for those
-lucky enough to take the course).
+is usually not too far off.
 
-We can use connection between $\delta x$ and $\sigma _{x}$ to show that the
-standard deviation of the mean (the best estimate of our uncertainty) is
-given by
+%We can use connection between $\delta x$ and $\sigma _{x}$ to show that the
+%standard deviation of the mean (the best estimate of our uncertainty) is
+%given by
 
-\begin{equation*}
-\sigma _{\bar{x}}=\frac{\sigma _{x}}{\sqrt{N}}
-\end{equation*}%
-(a result you should have learned back in PH150). Think of calculating a
-mean value%
-\begin{equation*}
-\bar{x}=\frac{x_{1}+x_{2}+\cdots x_{N}}{N}
-\end{equation*}%
-We can find the uncertainty in this function $\sigma _{\bar{x}}$%
-\begin{equation*}
-\sigma _{\bar{x}}=\sqrt{\left( \frac{\partial \bar{x}}{\partial x_{1}}%
-\right) ^{2}\sigma _{x_{1}}^{2}+\left( \frac{\partial \bar{x}}{\partial x_{2}%
-}\right) ^{2}\sigma _{x_{2}}^{2}+\cdots +\left( \frac{\partial \bar{x}}{%
-\partial x_{N}}\right) ^{2}\sigma _{x_{N}}^{2}}
-\end{equation*}%
-You see we just take the partial derivative of our function $\bar{x}$ with
-respect to each of the variables $x_{i}$ and multiply by the uncertainty in
-that variable written now as a standard deviation $\sigma _{i}.$
+%\begin{equation*}
+%\sigma _{\bar{x}}=\frac{\sigma _{x}}{\sqrt{N}}
+%\end{equation*}%
+%(a result you should have learned back in PH150). Think of calculating a
+%mean value%
+%\begin{equation*}
+%\bar{x}=\frac{x_{1}+x_{2}+\cdots x_{N}}{N}
+%\end{equation*}%
+%We can find the uncertainty in this function $\sigma _{\bar{x}}$%
+%\begin{equation*}
+%\sigma _{\bar{x}}=\sqrt{\left( \frac{\partial \bar{x}}{\partial x_{1}}%
+%\right) ^{2}\sigma _{x_{1}}^{2}+\left( \frac{\partial \bar{x}}{\partial x_{2}%
+%}\right) ^{2}\sigma _{x_{2}}^{2}+\cdots +\left( \frac{\partial \bar{x}}{%
+%\partial x_{N}}\right) ^{2}\sigma _{x_{N}}^{2}}
+%\end{equation*}%
+%You see we just take the partial derivative of our function $\bar{x}$ with
+%respect to each of the variables $x_{i}$ and multiply by the uncertainty in
+%that variable written now as a standard deviation $\sigma _{i}.$
 
-For this special case, all of the $x_{i}$ are the same (we are measuring the
-same value over and over in taking an average) and all of the $\sigma _{i}$
-are the same so we just have%
+%For this special case, all of the $x_{i}$ are the same (we are measuring the
+%same value over and over in taking an average) and all of the $\sigma _{i}$
+%are the same so we just have%
+%\begin{equation*}
+%\sigma _{\bar{x}}=\sqrt{N\left( \frac{\partial \bar{x}}{\partial x_{1}}%
+%\right) ^{2}\sigma _{x_{1}}^{2}}
+%\end{equation*}%
+%and we can take the derivative using our rule. Only $x_{1}$ is a variable,
+%so we can write the average $\bar{x}$ as 
+%\begin{equation*}
+%\bar{x}=\frac{x_{1}}{N}+\frac{x_{2}+\cdots x_{N}}{N}
+%\end{equation*}%
+%This is a polynomial! The first term is $\frac{1}{N}x_{1}$ and the whole
+%second term is a constant if we take a partial derivative with respect to $%
+%x_{1}$. The derivative is 
+%\begin{eqnarray*}
+%\frac{\partial \bar{x}}{\partial x_{1}} &=&\frac{\partial }{\partial x_{1}}%
+%\left( \frac{x_{1}}{N}+\frac{x_{2}+\cdots x_{N}}{N}\right) \\
+%&=&\frac{1}{N}x_{1}^{0}+0 \\
+%&=&\frac{1}{N}
+%\end{eqnarray*}%
+%so our statistical error function is just 
+%\begin{eqnarray*}
+%\sigma _{\bar{x}} &=&\sqrt{N\left( \frac{1}{N}\right) ^{2}\sigma _{x_{1}}^{2}%
+%} \\
+%&=&\sqrt{\frac{\sigma _{x_{1}}^{2}}{N}} \\
+%&=&\frac{\sigma _{x_{1}}}{\sqrt{N}}
+%\end{eqnarray*}%
+%or, since all the $\sigma _{x_{i}}$ are the same, we can just write this as%
+%\begin{equation*}
+%\sigma _{\bar{x}}=\frac{\sigma _{x}}{\sqrt{N}}
+%\end{equation*}
+
+%Notice that in this example we had many $x_{i}$ and that to find the
+%uncertainty we just extended our equation from two variables%
+%\begin{equation*}
+%\sigma _{f}=\sqrt{\left( \frac{\partial f}{\partial x}\right) ^{2}\sigma
+%_{x}^{2}+\left( \frac{\partial f}{\partial z}\right) ^{2}\sigma _{z}^{2}}
+%\end{equation*}%
+%to $N$ variables%
+%\begin{equation*}
+%\sigma _{f}=\sqrt{\sum_{i=1}^{N}\left( \frac{\partial f}{\partial x_{i}}%
+%\right) ^{2}\sigma _{i}^{2}}
+%\end{equation*}
+
+%In this special case, we were trying to show a special result, but we can do
+%this for any function with any number of variables. If your function is
+%complicated, you just need to take more partial derivative terms under the
+%square root.
+
+\section{Calculating the Uncertainty in Current}
+
+Getting back to our home brewed ammeter now, we were calculating the current
+from a known resistance and measured voltage, via the equation
 \begin{equation*}
-\sigma _{\bar{x}}=\sqrt{N\left( \frac{\partial \bar{x}}{\partial x_{1}}%
-\right) ^{2}\sigma _{x_{1}}^{2}}
-\end{equation*}%
-and we can take the derivative using our rule. Only $x_{1}$ is a variable,
-so we can write the average $\bar{x}$ as 
-\begin{equation*}
-\bar{x}=\frac{x_{1}}{N}+\frac{x_{2}+\cdots x_{N}}{N}
-\end{equation*}%
-This is a polynomial! The first term is $\frac{1}{N}x_{1}$ and the whole
-second term is a constant if we take a partial derivative with respect to $%
-x_{1}$. The derivative is 
-\begin{eqnarray*}
-\frac{\partial \bar{x}}{\partial x_{1}} &=&\frac{\partial }{\partial x_{1}}%
-\left( \frac{x_{1}}{N}+\frac{x_{2}+\cdots x_{N}}{N}\right) \\
-&=&\frac{1}{N}x_{1}^{0}+0 \\
-&=&\frac{1}{N}
-\end{eqnarray*}%
-so our statistical error function is just 
-\begin{eqnarray*}
-\sigma _{\bar{x}} &=&\sqrt{N\left( \frac{1}{N}\right) ^{2}\sigma _{x_{1}}^{2}%
-} \\
-&=&\sqrt{\frac{\sigma _{x_{1}}^{2}}{N}} \\
-&=&\frac{\sigma _{x_{1}}}{\sqrt{N}}
-\end{eqnarray*}%
-or, since all the $\sigma _{x_{i}}$ are the same, we can just write this as%
-\begin{equation*}
-\sigma _{\bar{x}}=\frac{\sigma _{x}}{\sqrt{N}}
+I=\frac{V_{m}}{R_{s}}
 \end{equation*}
+(the $m$ subscript indicates ``measured'' and the $s$ subscript indicates
+``shunt'').
+The resistors we are using typically have a tolerance of about 5\%, meaning 
+that the relative uncertainty in the resistance (as read from the colored 
+bands on the resistor) is 5\%, or $\delta R_{s}=0.05 R_{s}$. The uncertainty
+in our voltage reading is (probably) just the precision of the multimeter
+display for that measurement.
 
-Notice that in this example we had many $x_{i}$ and that to find the
-uncertainty we just extended our equation from two variables%
-\begin{equation*}
-\sigma _{f}=\sqrt{\left( \frac{\partial f}{\partial x}\right) ^{2}\sigma
-_{x}^{2}+\left( \frac{\partial f}{\partial z}\right) ^{2}\sigma _{z}^{2}}
-\end{equation*}%
-to $N$ variables%
-\begin{equation*}
-\sigma _{f}=\sqrt{\sum_{i=1}^{N}\left( \frac{\partial f}{\partial x_{i}}%
-\right) ^{2}\sigma _{i}^{2}}
-\end{equation*}
+To find the uncertainty in the current, I would need to know the partial 
+derivatives
+\begin{eqnarray*}
+    \frac{\partial I}{\partial V_m}&=&\frac{1}{R_s}\\
+    \frac{\partial I}{\partial R_s}&=&-\frac{V_m}{R_s^2}
+\end{eqnarray*}
+and the uncertainty in the current would therefore be
+\begin{equation}
+    \delta I=\sqrt{
+        \left(\frac{1}{R_s}\delta V_m\right)^2+
+        \left(\frac{V_m}{R_s^2}\delta R_s\right)^2}
+\end{equation}
+where we've dropped the negative sign for the derivative with respect to $R_s$, 
+since it will go away when squaring that term anyway.
 
-In this special case, we were trying to show a special result, but we can do
-this for any function with any number of variables. If your function is
-complicated, you just need to take more partial derivative terms under the
-square root.
-
-\section{Practice Measurements}
-
-\subsection{Use a Multimeter}
-
-\begin{enumerate}
-\item Measure the voltage of a D-Cell battery with a voltmeter. Report the
-value you get from the measurement and the uncertainty.
-
-\item Set up the circuit described in section (\ref{Voltage Measurement with
-Meter}). The figure is repeated below. Measure the voltage with a
-multimeter. \textbf{The indicator on the power supply is not very accurate},
-but it can serve as a check to see if we are way off. So compare the power
-supply voltage indicator to the meter indicator. Are they the same (you
-should think of the uncertainty in both meters and answer using the
-uncertainties)
-\begin{figure}[h!]
-\includegraphics[width=2.9438in,height=1.3353in]{PH4CAU1G}
-\end{figure}
-
-\item Modify your circuit described in section (\ref{Voltage Measurement
-with Meter}) and change the settings of your multimeter so that you measure
-the current in the circuit. Compare your ammeter measurement to the current
-shown on the power supply indicator.
-\end{enumerate}
-
-\subsection{Use an Oscilloscope}
-
-\begin{enumerate}
-\item Predict what you will see on an oscilloscope if you measure the
-voltage of a D-Cell battery. Make sure your lab table agrees on your
-prediction before you go on.
-
-\item Use the oscilloscope to measure the voltage of a D-Cell battery.
-
-\item Practice interpreting oscilloscope screens
-
-\begin{enumerate}
-\item Figure out what the markings on the Oscilloscope screen mean.
-
-\item Figure out what the voltage scale is and how to change it
-
-\item Figure out what the time scale is and how to change it
-\end{enumerate}
-
-\item Generate a sinusoidal signal using the stand alone Function Generator.
-
-\item Measure and display this signal using the stand alone digital
-oscilloscope.
-
-\item Report the amplitude and the frequency (and their uncertainties) of
-the measured signal and compare to the signal generator settings.
-\end{enumerate}
-
-\subsection{Build a new instrument from an old instrument}
-
-\begin{enumerate}
-\item IF\ THERE\ IS\ TIME, choose a resistor in the $20\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}$ range (say, from about $10\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}$ to about $30\unit{k%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}$). Choose a shunt resistor in the $200\unit{%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}$ range. Then set up the circuit to measure a current. \begin{figure}[h!]
-\includegraphics[width=%
-3.8744in,height=3.0874in]{PH4CAU1H}
-\end{figure}%
-Use an additional multimeter set to measure current to check our
-voltage-current measurement. Calculate a percent difference to see how well
-this worked.
-\end{enumerate}
-
-%TCIMACRO{\TeXButton{\vspace*{\fill}}{\vspace*{\fill}}}%
-%BeginExpansion
-\vspace*{\fill}%
-%EndExpansion
-\pagebreak
+\activity
+{
+    Build an ammeter from a shunt resistor and voltmeter.
+    \begin{itemize}
+        \item Choose a resistor in the 10-50 k$\Omega$ range. Use this as the
+            resistor for the primary part of the circuit.
+        \item Choose a shunt resistor with maybe a few hundred Ohms of 
+            resistance. Use the colored bands to determine the resistance and
+            tolerance of this resistor.
+        \item Set up the circuit in Figure \ref{fig:ammeter_construction}.
+        \item Turn on the DC power supply to provide voltage. Record the
+            voltage drop across the shunt resistor along with its uncertainty,
+            as well as the current
+            read by the second multimeter and its uncertainty.
+        \item Calculate the current, and its associated uncertainty, from
+            your shunt resistance and measured voltage.
+        \item Compare your calculated current to the reading on the second
+            multimeter. How well did your ammeter work?
+    \end{itemize}
+}
