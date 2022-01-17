@@ -56,12 +56,20 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces A water pump system with two turbines}}{63}{figure.caption.64}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Measuring voltage in a voltage divider}}{63}{figure.caption.65}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Anaconda download confirmation}}{72}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The Anaconda installer welcome screen}}{73}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Anaconda apps on the Windows 10 start menu}}{73}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The Spyder IDE}}{74}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Installing Pyserial in the Anaconda Prompt window}}{75}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Pyserial installation complete}}{76}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces A representation of data at the serial port}}{76}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Finding which serial port the Arduino is connected to}}{78}{figure.caption.73}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Top of a prototyping shield\relax }}{134}{figure.caption.122}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Bottom of a prototyping shield\relax }}{134}{figure.caption.123}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Top of Data Logger Shield\relax }}{135}{figure.caption.124}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Top of a prototyping shield\relax }}{134}{figure.caption.117}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Bottom of a prototyping shield\relax }}{134}{figure.caption.118}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Top of Data Logger Shield\relax }}{135}{figure.caption.119}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

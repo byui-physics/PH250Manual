@@ -41,27 +41,23 @@
 \contentsline {subsection}{\numberline {3.1.5}Seeing the data}{59}{subsection.3.1.5}%
 \contentsline {section}{\numberline {3.2}Extending our voltmeter with a voltage divider}{61}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Practice Problems}{68}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Getting data to the Computer}{71}{chapter.4}%
-\contentsline {section}{\numberline {4.1}How to get Python}{71}{section.4.1}%
+\contentsline {chapter}{\numberline {4}Getting Data to the Computer}{71}{chapter.4}%
+\contentsline {section}{\numberline {4.1}How to get Python}{72}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Getting Anaconda Python}{72}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Getting the PySerial library for Anaconda.}{73}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Getting data from the Arduino}{77}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Getting Pyserial if you have a Mac}{82}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Anaconda Mac Users 4.1.2}{82}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Canopy Mac Users 4.2.1}{82}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Manually install pyserial through the terminal on a Mac. Coding in emacs/VI}{82}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Mac Pathway and Port Notation}{83}{subsection.4.3.4}%
-\contentsline {subsubsection}{Mac Pathway}{83}{section*.78}%
-\contentsline {subsubsection}{Mac Port}{83}{section*.79}%
-\contentsline {subsection}{\numberline {4.3.5}Mac version of the python code}{83}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Lab Assignment}{86}{section.4.4}%
+\contentsline {subsection}{\numberline {4.1.2}Getting the PySerial library for Anaconda}{74}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Getting data from the Arduino}{75}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Getting Pyserial if you have a Mac}{81}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Anaconda Mac Users 4.1.2}{81}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Manually install Pyserial using the Terminal app}{82}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Mac Paths and Port Notation}{82}{subsection.4.3.3}%
+\contentsline {subsubsection}{Mac Port}{82}{section*.74}%
 \contentsline {chapter}{\numberline {5}Validation of Ohm's Law}{87}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Ohm's Law Revisited}{87}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Measuring current with our Arduino}{88}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Actually making an Arduino measure current}{90}{subsection.5.1.2}%
-\contentsline {subsubsection}{Choosing shunt resistors}{93}{section*.86}%
+\contentsline {subsubsection}{Choosing shunt resistors}{93}{section*.81}%
 \contentsline {subsection}{\numberline {5.1.3}Finding Uncertainty in a calculated value}{95}{subsection.5.1.3}%
-\contentsline {subsubsection}{Iterate to find an optimal value}{97}{section*.88}%
+\contentsline {subsubsection}{Iterate to find an optimal value}{97}{section*.83}%
 \contentsline {subsection}{\numberline {5.1.4}Using statistics to calculate uncertainty}{99}{subsection.5.1.4}%
 \contentsline {subsection}{\numberline {5.1.5}Philosophical warning}{104}{subsection.5.1.5}%
 \contentsline {section}{\numberline {5.2}Proposals}{105}{section.5.2}%

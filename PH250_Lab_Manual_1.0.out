@@ -37,59 +37,56 @@
 \BOOKMARK [2][-]{subsection.3.1.5}{Seeing the data}{section.3.1}% 37
 \BOOKMARK [1][-]{section.3.2}{Extending our voltmeter with a voltage divider}{chapter.3}% 38
 \BOOKMARK [1][-]{section.3.3}{Practice Problems}{chapter.3}% 39
-\BOOKMARK [0][-]{chapter.4}{Getting data to the Computer}{part.1}% 40
+\BOOKMARK [0][-]{chapter.4}{Getting Data to the Computer}{part.1}% 40
 \BOOKMARK [1][-]{section.4.1}{How to get Python}{chapter.4}% 41
 \BOOKMARK [2][-]{subsection.4.1.1}{Getting Anaconda Python}{section.4.1}% 42
-\BOOKMARK [2][-]{subsection.4.1.2}{Getting the PySerial library for Anaconda.}{section.4.1}% 43
+\BOOKMARK [2][-]{subsection.4.1.2}{Getting the PySerial library for Anaconda}{section.4.1}% 43
 \BOOKMARK [1][-]{section.4.2}{Getting data from the Arduino}{chapter.4}% 44
 \BOOKMARK [1][-]{section.4.3}{Getting Pyserial if you have a Mac}{chapter.4}% 45
 \BOOKMARK [2][-]{subsection.4.3.1}{Anaconda Mac Users 4.1.2}{section.4.3}% 46
-\BOOKMARK [2][-]{subsection.4.3.2}{Canopy Mac Users 4.2.1}{section.4.3}% 47
-\BOOKMARK [2][-]{subsection.4.3.3}{Manually install pyserial through the terminal on a Mac. Coding in emacs/VI}{section.4.3}% 48
-\BOOKMARK [2][-]{subsection.4.3.4}{Mac Pathway and Port Notation}{section.4.3}% 49
-\BOOKMARK [2][-]{subsection.4.3.5}{Mac version of the python code}{section.4.3}% 50
-\BOOKMARK [1][-]{section.4.4}{Lab Assignment}{chapter.4}% 51
-\BOOKMARK [0][-]{chapter.5}{Validation of Ohm's Law}{part.1}% 52
-\BOOKMARK [1][-]{section.5.1}{Ohm's Law Revisited}{chapter.5}% 53
-\BOOKMARK [2][-]{subsection.5.1.1}{Measuring current with our Arduino}{section.5.1}% 54
-\BOOKMARK [2][-]{subsection.5.1.2}{Actually making an Arduino measure current}{section.5.1}% 55
-\BOOKMARK [2][-]{subsection.5.1.3}{Finding Uncertainty in a calculated value}{section.5.1}% 56
-\BOOKMARK [2][-]{subsection.5.1.4}{Using statistics to calculate uncertainty}{section.5.1}% 57
-\BOOKMARK [2][-]{subsection.5.1.5}{Philosophical warning}{section.5.1}% 58
-\BOOKMARK [1][-]{section.5.2}{Proposals}{chapter.5}% 59
-\BOOKMARK [2][-]{subsection.5.2.1}{Statement of the experimental problem}{section.5.2}% 60
-\BOOKMARK [2][-]{subsection.5.2.2}{Procedures and anticipated difficulties}{section.5.2}% 61
-\BOOKMARK [2][-]{subsection.5.2.3}{Proposed analysis and expected results}{section.5.2}% 62
-\BOOKMARK [2][-]{subsection.5.2.4}{Preliminary List of equipment needed}{section.5.2}% 63
-\BOOKMARK [2][-]{subsection.5.2.5}{Designing the Experiment}{section.5.2}% 64
-\BOOKMARK [2][-]{subsection.5.2.6}{Using Uncertainty to refine experimental design.}{section.5.2}% 65
-\BOOKMARK [1][-]{section.5.3}{Lab Assignment}{chapter.5}% 66
-\BOOKMARK [-1][-]{part.2}{II Testing Models}{}% 67
-\BOOKMARK [0][-]{chapter.6}{Resistors and Capacitors}{part.2}% 68
-\BOOKMARK [1][-]{section.6.1}{The Model to Test}{chapter.6}% 69
-\BOOKMARK [1][-]{section.6.2}{The Instrument}{chapter.6}% 70
-\BOOKMARK [2][-]{subsection.6.2.1}{LoggerPro Curve Fitting.}{section.6.2}% 71
-\BOOKMARK [1][-]{section.6.3}{Lab Assignment}{chapter.6}% 72
-\BOOKMARK [0][-]{chapter.7}{DataLogging}{part.2}% 73
-\BOOKMARK [1][-]{section.7.1}{Arduino Shields}{chapter.7}% 74
-\BOOKMARK [1][-]{section.7.2}{Data Logger Shield}{chapter.7}% 75
-\BOOKMARK [1][-]{section.7.3}{Set up}{chapter.7}% 76
-\BOOKMARK [1][-]{section.7.4}{Lab Assignment}{chapter.7}% 77
-\BOOKMARK [0][-]{chapter.8}{Inductance and Series RLC Circuits Part 1}{part.2}% 78
-\BOOKMARK [1][-]{section.8.1}{The Model: Self Inductance}{chapter.8}% 79
-\BOOKMARK [2][-]{subsection.8.1.1}{Inductance of a solenoid}{section.8.1}% 80
-\BOOKMARK [1][-]{section.8.2}{RLC Series circuits}{chapter.8}% 81
-\BOOKMARK [1][-]{section.8.3}{Lab Assignment}{chapter.8}% 82
-\BOOKMARK [0][-]{chapter.9}{Inductance and Series RLC circuits Part 2}{part.2}% 83
-\BOOKMARK [1][-]{section.9.1}{The Instrument}{chapter.9}% 84
-\BOOKMARK [1][-]{section.9.2}{Sampling Theory, a complication}{chapter.9}% 85
-\BOOKMARK [1][-]{section.9.3}{Lab Assignment}{chapter.9}% 86
-\BOOKMARK [-1][-]{part.3}{III Student Designed Experiments}{}% 87
-\BOOKMARK [0][-]{chapter.10}{Student Designed Experiments}{part.3}% 88
-\BOOKMARK [1][-]{section.10.1}{Proposal}{chapter.10}% 89
-\BOOKMARK [1][-]{section.10.2}{Performing the experiment}{chapter.10}% 90
-\BOOKMARK [1][-]{section.10.3}{Written report}{chapter.10}% 91
-\BOOKMARK [1][-]{section.10.4}{Oral report}{chapter.10}% 92
-\BOOKMARK [1][-]{section.10.5}{Lab Notebook}{chapter.10}% 93
-\BOOKMARK [2][-]{subsection.10.5.1}{Designing the Experiment}{section.10.5}% 94
-\BOOKMARK [2][-]{subsection.10.5.2}{Performing the Experiment}{section.10.5}% 95
+\BOOKMARK [2][-]{subsection.4.3.2}{Manually install Pyserial using the Terminal app}{section.4.3}% 47
+\BOOKMARK [2][-]{subsection.4.3.3}{Mac Paths and Port Notation}{section.4.3}% 48
+\BOOKMARK [0][-]{chapter.5}{Validation of Ohm's Law}{part.1}% 49
+\BOOKMARK [1][-]{section.5.1}{Ohm's Law Revisited}{chapter.5}% 50
+\BOOKMARK [2][-]{subsection.5.1.1}{Measuring current with our Arduino}{section.5.1}% 51
+\BOOKMARK [2][-]{subsection.5.1.2}{Actually making an Arduino measure current}{section.5.1}% 52
+\BOOKMARK [2][-]{subsection.5.1.3}{Finding Uncertainty in a calculated value}{section.5.1}% 53
+\BOOKMARK [2][-]{subsection.5.1.4}{Using statistics to calculate uncertainty}{section.5.1}% 54
+\BOOKMARK [2][-]{subsection.5.1.5}{Philosophical warning}{section.5.1}% 55
+\BOOKMARK [1][-]{section.5.2}{Proposals}{chapter.5}% 56
+\BOOKMARK [2][-]{subsection.5.2.1}{Statement of the experimental problem}{section.5.2}% 57
+\BOOKMARK [2][-]{subsection.5.2.2}{Procedures and anticipated difficulties}{section.5.2}% 58
+\BOOKMARK [2][-]{subsection.5.2.3}{Proposed analysis and expected results}{section.5.2}% 59
+\BOOKMARK [2][-]{subsection.5.2.4}{Preliminary List of equipment needed}{section.5.2}% 60
+\BOOKMARK [2][-]{subsection.5.2.5}{Designing the Experiment}{section.5.2}% 61
+\BOOKMARK [2][-]{subsection.5.2.6}{Using Uncertainty to refine experimental design.}{section.5.2}% 62
+\BOOKMARK [1][-]{section.5.3}{Lab Assignment}{chapter.5}% 63
+\BOOKMARK [-1][-]{part.2}{II Testing Models}{}% 64
+\BOOKMARK [0][-]{chapter.6}{Resistors and Capacitors}{part.2}% 65
+\BOOKMARK [1][-]{section.6.1}{The Model to Test}{chapter.6}% 66
+\BOOKMARK [1][-]{section.6.2}{The Instrument}{chapter.6}% 67
+\BOOKMARK [2][-]{subsection.6.2.1}{LoggerPro Curve Fitting.}{section.6.2}% 68
+\BOOKMARK [1][-]{section.6.3}{Lab Assignment}{chapter.6}% 69
+\BOOKMARK [0][-]{chapter.7}{DataLogging}{part.2}% 70
+\BOOKMARK [1][-]{section.7.1}{Arduino Shields}{chapter.7}% 71
+\BOOKMARK [1][-]{section.7.2}{Data Logger Shield}{chapter.7}% 72
+\BOOKMARK [1][-]{section.7.3}{Set up}{chapter.7}% 73
+\BOOKMARK [1][-]{section.7.4}{Lab Assignment}{chapter.7}% 74
+\BOOKMARK [0][-]{chapter.8}{Inductance and Series RLC Circuits Part 1}{part.2}% 75
+\BOOKMARK [1][-]{section.8.1}{The Model: Self Inductance}{chapter.8}% 76
+\BOOKMARK [2][-]{subsection.8.1.1}{Inductance of a solenoid}{section.8.1}% 77
+\BOOKMARK [1][-]{section.8.2}{RLC Series circuits}{chapter.8}% 78
+\BOOKMARK [1][-]{section.8.3}{Lab Assignment}{chapter.8}% 79
+\BOOKMARK [0][-]{chapter.9}{Inductance and Series RLC circuits Part 2}{part.2}% 80
+\BOOKMARK [1][-]{section.9.1}{The Instrument}{chapter.9}% 81
+\BOOKMARK [1][-]{section.9.2}{Sampling Theory, a complication}{chapter.9}% 82
+\BOOKMARK [1][-]{section.9.3}{Lab Assignment}{chapter.9}% 83
+\BOOKMARK [-1][-]{part.3}{III Student Designed Experiments}{}% 84
+\BOOKMARK [0][-]{chapter.10}{Student Designed Experiments}{part.3}% 85
+\BOOKMARK [1][-]{section.10.1}{Proposal}{chapter.10}% 86
+\BOOKMARK [1][-]{section.10.2}{Performing the experiment}{chapter.10}% 87
+\BOOKMARK [1][-]{section.10.3}{Written report}{chapter.10}% 88
+\BOOKMARK [1][-]{section.10.4}{Oral report}{chapter.10}% 89
+\BOOKMARK [1][-]{section.10.5}{Lab Notebook}{chapter.10}% 90
+\BOOKMARK [2][-]{subsection.10.5.1}{Designing the Experiment}{section.10.5}% 91
+\BOOKMARK [2][-]{subsection.10.5.2}{Performing the Experiment}{section.10.5}% 92
