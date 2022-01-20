@@ -65,11 +65,12 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces A representation of data at the serial port}}{76}{figure.caption.72}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Finding which serial port the Arduino is connected to}}{78}{figure.caption.73}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces An Arduino prototyping shield}}{88}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces A data logging shield}}{90}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Powering an Arduino with a 9 V battery}}{95}{figure.caption.77}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Top of a prototyping shield\relax }}{134}{figure.caption.117}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Bottom of a prototyping shield\relax }}{134}{figure.caption.118}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Top of Data Logger Shield\relax }}{135}{figure.caption.119}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
