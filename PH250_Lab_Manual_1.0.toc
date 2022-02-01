@@ -59,41 +59,40 @@
 \contentsline {part}{II\hspace {1em}Testing Models}{97}{part.2}%
 \contentsline {chapter}{\numberline {6}Validation of Ohm's Law}{99}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Ohm's Law Revisited}{99}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Measuring current with our Arduino}{100}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Actually making an Arduino measure current}{102}{subsection.6.1.2}%
-\contentsline {subsubsection}{Choosing shunt resistors}{105}{section*.84}%
-\contentsline {subsection}{\numberline {6.1.3}Finding Uncertainty in a calculated value}{107}{subsection.6.1.3}%
-\contentsline {subsubsection}{Iterate to find an optimal value}{109}{section*.86}%
-\contentsline {subsection}{\numberline {6.1.4}Using statistics to calculate uncertainty}{111}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Philosophical warning}{116}{subsection.6.1.5}%
-\contentsline {section}{\numberline {6.2}Lab Assignment}{117}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Resistors and Capacitors}{119}{chapter.7}%
-\contentsline {section}{\numberline {7.1}The Model to Test}{119}{section.7.1}%
-\contentsline {section}{\numberline {7.2}The Instrument}{121}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}LoggerPro Curve Fitting.}{126}{subsection.7.2.1}%
-\contentsline {section}{\numberline {7.3}Lab Assignment}{135}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Inductance and Series RLC Circuits Part 1}{137}{chapter.8}%
-\contentsline {section}{\numberline {8.1}The Model: Self Inductance}{137}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Inductance of a solenoid}{138}{subsection.8.1.1}%
-\contentsline {section}{\numberline {8.2}RLC Series circuits}{139}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Lab Assignment}{142}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Inductance and Series RLC circuits Part 2}{145}{chapter.9}%
-\contentsline {section}{\numberline {9.1}The Instrument}{145}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Sampling Theory, a complication}{149}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Lab Assignment}{152}{section.9.3}%
-\contentsline {part}{III\hspace {1em}Student Designed Experiments}{155}{part.3}%
-\contentsline {chapter}{\numberline {10}Writing a Proposal}{157}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Statement of the experimental problem}{157}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Procedures and anticipated difficulties}{157}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Proposed analysis and expected results}{158}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Preliminary list of equipment needed}{158}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Designing the experiment}{159}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Using uncertainty to refine experimental design}{159}{section.10.6}%
-\contentsline {chapter}{\numberline {11}Student Designed Experiments}{163}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Proposal}{163}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Performing the experiment}{164}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Written report}{164}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Oral report}{164}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Lab Notebook}{165}{section.11.5}%
-\contentsline {subsection}{\numberline {11.5.1}Designing the Experiment}{165}{subsection.11.5.1}%
-\contentsline {subsection}{\numberline {11.5.2}Performing the Experiment}{166}{subsection.11.5.2}%
+\contentsline {section}{\numberline {6.2}Measuring current with our Arduino}{101}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Making an Arduino measure current}{102}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Choosing shunt resistors}{105}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}Finding Uncertainty in a Calculated Value}{107}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Iterate to find an optimal value}{109}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Using statistics to calculate uncertainty}{112}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Philosophical warning}{114}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Resistors and Capacitors}{117}{chapter.7}%
+\contentsline {section}{\numberline {7.1}The Model to Test}{117}{section.7.1}%
+\contentsline {section}{\numberline {7.2}The Instrument}{119}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}LoggerPro Curve Fitting.}{124}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Lab Assignment}{133}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Inductance and Series RLC Circuits Part 1}{135}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The Model: Self Inductance}{135}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Inductance of a solenoid}{136}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}RLC Series circuits}{137}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Lab Assignment}{140}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Inductance and Series RLC circuits Part 2}{143}{chapter.9}%
+\contentsline {section}{\numberline {9.1}The Instrument}{143}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Sampling Theory, a complication}{147}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Lab Assignment}{150}{section.9.3}%
+\contentsline {part}{III\hspace {1em}Student Designed Experiments}{153}{part.3}%
+\contentsline {chapter}{\numberline {10}Writing a Proposal}{155}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Statement of the experimental problem}{155}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Procedures and anticipated difficulties}{155}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Proposed analysis and expected results}{156}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Preliminary list of equipment needed}{156}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Designing the experiment}{157}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Using uncertainty to refine experimental design}{157}{section.10.6}%
+\contentsline {chapter}{\numberline {11}Student Designed Experiments}{161}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Proposal}{161}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Performing the experiment}{162}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Written report}{162}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Oral report}{162}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Lab Notebook}{163}{section.11.5}%
+\contentsline {subsection}{\numberline {11.5.1}Designing the Experiment}{163}{subsection.11.5.1}%
+\contentsline {subsection}{\numberline {11.5.2}Performing the Experiment}{164}{subsection.11.5.2}%

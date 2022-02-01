@@ -1,8 +1,19 @@
 %Validation_OhmsLaw
 \chapter{Validation of Ohm's Law}
+
+\objectives
+{
+\item Use an Arduino to make simultaneous measurements of voltage and 
+	current.
+\item Explain the considerations associated with choosing a good shunt
+	resistance.
+\item Conduct a linear fit to data, accounting for uncertainties in the fit 
+	parameters.
+}
+
 What physicists do is to try to understand how the universe works. To do
-this we use the Scientific Method. And what makes the Scientific Method
-different from philosophy is the use of experimentation to verify our ideas.
+this we use the scientific method, and what differentiates the scientific method
+from philosophy is the use of experimentation to verify our ideas.
 So in a physics lab class, we need to test ideas about how the universe
 works. We call these ideas \textquotedblleft mental
 models\textquotedblright\ or just \textquotedblleft
@@ -16,7 +27,7 @@ We learned several labs ago that voltage and current are linearly related to
 each other. This is what we would call a \emph{model}, a mental
 understanding of how part of the universe works. Usually in physics we
 distil the model into an equation . We call this equation a law. In this
-case, Ohm's law. 
+case, Ohm's law
 \begin{equation*}
 \Delta V=IR
 \end{equation*}%
@@ -26,105 +37,138 @@ being a \textquotedblleft law\textquotedblright\ doesn't mean the equation
 is always true. The word \textquotedblleft law\textquotedblright\ generally
 implies that the equation is true at least some of the time, but really it
 is telling us we have distilled our model into math.
+We can plot our equation for Ohm's law 
+to show the $\Delta V$ vs. $I$ relationship, as in Figure \ref{fig:ohm}.
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.6\textwidth]{PH4CAV2O}
+	\caption[Ohm's law]{Ohm's law, showing the linear relationship between
+	current and potential difference for an Ohmic resistance.}
+	\label{fig:ohm}
+\end{figure}
 
-We might plot our equation to show the $\Delta V$ vs. $I$ relationship.
-
-\begin{figure}[h!]
-\includegraphics[width=2.4898in,height=1.6535in]{PH4CAV2O}
-\end{figure}But as scientists, we should ask,
+As scientists, we should ask,
 does our model work for all materials? What if we graphed $\Delta V$ vs $I$
-for some device and found a graph that looks like this?\begin{figure}[h!]
-\includegraphics[width=%
-2.2606in,height=1.5177in]{PH4CAV2P}
-\end{figure}Such a device would \emph{not}
+for some device and found a graph that looks like Figure \ref{fig:nonohm}
+instead?
+Such a device would \emph{not}
 follow Ohm's law. We would say that such a device is \emph{nonohmic}.
+\begin{figure}[htbp!]
+	\centering
+\includegraphics[width=0.6\textwidth]{PH4CAV2P}
+	\caption[Voltage v. current for a non-Ohmic resistance]{Voltage v.
+	current for a non-Ohmic resistance.}
+	\label{fig:nonohm}
+\end{figure}
 
 Today we will test our model by taking $\Delta V$ and $I\ $measurements and
 seeing if the equation $\Delta V=IR$ describes the data well. Of course,
-this means we need to measure two things at once with our Arduino. We need
-both $\Delta V$ and $I.$ But this isn't a problem because our Arduninos have
-five analog inputs. So we just need to have one measurement attached to,
-say, pin A0 and another to, say, pin A1. Of course both will need to be
+this means we need to measure two things at once with our Arduino
+(both $\Delta V$ and $I$). This isn't a problem, though, 
+because our Arduninos have
+five analog inputs. We just need to have one measurement attached to,
+say, pin A0 and another to, say, pin A1. Of course, both will need to be
 connected to GND as the second measurement because $\Delta V$ measurements
 take two leads.
 
-But wait if we are testing Ohm's law, we don't want two $\Delta V$
+But wait! If we are testing Ohm's law, we don't want two $\Delta V$
 measurements, we want $\Delta V$ and $I.$ How do we get $I$ measured by an
 Arduino?
 
-\subsection{Measuring current with our Arduino}
+\section{Measuring current with our Arduino}
 
 Arduinos and other DAQs only measure voltages. Let's review how we measure
 the voltage across a resistor, and then review how to turn that voltage
 measurement into a current measurement.
 
-\begin{figure}[h!]
-\includegraphics[width=3.2785in,height=1.6449in]{PH4CAV2Q}
-\end{figure}We put the two leads of a
+\begin{figure}[htbp!]
+	\centering
+\includegraphics[width=0.8\textwidth]{PH4CAV2Q}
+	\caption[Measuring the voltage drop across a resistor]{Measuring the
+	voltage drop across a resistor.}
+	\label{fig:vdrop}
+\end{figure}
+As seen in Figure \ref{fig:vdrop},
+ee put the two leads of a
 voltmeter (shown as a circle with a $\Delta V$\ in it) on either side of the
 resistor that we are testing. If the voltmeter is our Arduino, the leads on
 the side of the resister connected to the positive side of the battery
 should go to A0 and the lead connected to the negative side of the battery
-should be connected to GND. This is all what an Arduino (or any other DAQ)
-can do.
+should be connected to GND. 
 
 To measure a current with our Arduino we have to somehow turn that current
-into a voltage. This is true of most measurements we will do. We need to
+into a voltage. This is true of all measurements we make with an Arduino
+or any other DAQ. We need to
 turn temperature, or humidity, or magnetic field, or light intensity into a
 voltage. Turning magnetic field into a voltage is a little tricky, but we
 already know all we need to know to handle current.
 
-To turn a current into a voltage, think of Ohm's law again.%
+To turn a current into a voltage, think of Ohm's law again
 \begin{equation*}
 \Delta V_{s}=IR_{s}
 \end{equation*}%
-we can solve for $I$%
+which we can solve for $I$%
 \begin{equation*}
 I=\frac{\Delta V_{s}}{R_{s}}
 \end{equation*}%
-so if we add a new resistor, $R_{s}$ to the circuit, \begin{figure}[h!]
-\includegraphics[width=3.7395in,height=%
-2.7423in]{PH4CAV2R}
-\end{figure}and measure the voltage across
+If we add a second resistor, $R_{s}$ to the circuit, 
+as seen in Figure \ref{fig:shunt},
+and measure the voltage across
 that circuit, we will be able to calculate the current.
+\begin{figure}[htbp!]
+	\centering
+\includegraphics[width=0.8\textwidth]{PH4CAV2R}
+	\caption[Adding a shunt resistor to measure current]{Adding a shunt
+	resistor to measure current.}
+\end{figure}
 
-Of course, if $R_{s}$ is very large, then $R_{s},$ itself, will slow down
-the current. So we want to choose a $R_{s}$ that is much less than $%
-R_{test}. $%
+Of course, if $R_{s}$ is very large, then $R_{s}$, itself, will slow down
+the current. So we want to choose a $R_{s}$ that is much less than 
+$R_{test}$.
 \begin{equation*}
 R_{s}\ll R_{test}
 \end{equation*}
-
-But so long as this is true, our $R_{s}$ won't change the current much, and
+As this is true, our $R_{s}$ won't change the current much, and
 since we know $R_{s}$ we know the current 
 \begin{equation*}
 I=\frac{\Delta V_{s}}{R_{s}}
 \end{equation*}%
 We have turned our current measurement into a voltage measurement!
 
-\subsection{Actually making an Arduino measure current}
+\section{Making an Arduino measure current}
 
 This idea is great, but let's talk a little bit about how to wire this dual
 measurement. Think again about our two voltage measurements, $\Delta V$ and $%
 \Delta V_{s}.$ Each $\Delta $ implies two measurements. That means we need a
 total of four measurements to make this work! Let's see where these
-measurements would be on our circuit diagram.
+measurements would be on our circuit diagram (Figure \ref{fig:shunt2}).
+\begin{figure}[htbp!]
+	\centering
+\includegraphics[width=0.8\textwidth]{PH4CAV2S}
+	\caption[Voltage locations needed to test Ohm's law]{Voltage locations
+	needed to test Ohm's law.}
+	\label{fig:shunt2}
+\end{figure}
 
-\begin{figure}[h!]
-\includegraphics[width=4.2583in,height=3.1185in]{PH4CAV2S}
-\end{figure}By drawing the diagram, we
+By drawing the diagram in Figure \ref{fig:shunt2}, we
 realize that we can create both $\Delta V$ measurements with only three
-individual voltage measurements because the voltage at point 2 and the
-voltage at point 3 should be the same. So we could wire our circuit like
-this:\begin{figure}[h!]
-\includegraphics[width=4.2004in,height=2.8928in]{PH4CAV2T}
-\end{figure}and of course we need to wire the
+individual voltage measurements, because the voltage at point 2 and the
+voltage at point 3 should be the same. So we could wire our circuit as
+in Figure \ref{fig:shunt3}.
+Of course, we need to wire the
 negative pole of the battery or power supply to the GND pin. Then our two
 voltage difference measurements will be formed from 
 \begin{eqnarray*}
 \Delta V &=&V_{A2}-V_{A1} \\
 \Delta V_{s} &=&V_{A1}-V_{A0}
 \end{eqnarray*}
+\begin{figure}[htbp!]
+	\centering
+\includegraphics[width=0.8\textwidth]{PH4CAV2T}
+	\caption[Wiring the Arduino to test Ohm's law]{Wiring the Arduino to
+	test Ohm's law.}
+	\label{fig:shunt3}
+\end{figure}
 
 If we keep our voltage from our battery or power supply in the $0\unit{V}$
 to $+5\unit{V}$ range, then we can use our simple voltmeter sketch. We do
@@ -136,14 +180,14 @@ R=\frac{\Delta V}{I}
 \end{equation*}%
 and we might as well. Here is an example sketch.
 
-\href{https://dtoliphant.github.io/PH250Manual/Code/OhmsLaw_SimpleVA.ino}{Download here}
+%\href{https://dtoliphant.github.io/PH250Manual/Code/OhmsLaw_SimpleVA.ino}{Download here}
 \lstinputlisting[language=Arduino]{Code/OhmsLaw_SimpleVA.ino}
 
-\subsubsection{Choosing shunt resistors}
+\subsection{Choosing shunt resistors}
 
 It's harder than you might think to choose a good shunt resistor. The shunt
 resistor resistance shouldn't be big enough to cause too much error in our $%
-\Delta V$ measurement for the resistor we want to measure. Nor should it be
+\Delta V$ measurement for the resistor we want to measure, nor should it be
 so large that it effects the current much. But suppose we find the smallest
 resistor that we can, say, $10\unit{%
 %TCIMACRO{\U{3a9}}%
@@ -165,9 +209,10 @@ Suppose we have a circuit where the input voltage from the power supply is $%
 %BeginExpansion
 \Omega%
 %EndExpansion
-}.$ \begin{figure}[h!]
-\includegraphics[width=4.6527in,height=2.9265in]{PH4CAV2U}
-\end{figure}
+}.$ 
+%\begin{figure}[h!]
+%\includegraphics[width=4.6527in,height=2.9265in]{PH4CAV2U}
+%\end{figure}
 
 The two resistors together are a voltage divider. We recognize this from our
 previous labs. So we expect the voltage drop across each resistor to sum to
@@ -324,13 +369,15 @@ changing shunt resistors when you change the dial setting, trying to balance
 these errors. By changing shunt resistors in our circuit we are doing the
 same thing as turning the dial on the current settings of a multimeter.
 
-\subsection{Finding Uncertainty in a calculated value}
+\section{Finding Uncertainty in a Calculated Value}
 
-In the last section I\ gave errors in $\Delta V_{s},$ but didn't finish the
+In the last section we calculated 
+errors in $\Delta V_{s},$ but didn't finish the
 error in the current, $I.$ Of course, since we had to calculate the current,
 we also need to find the uncertainty in our current using error propagation.
 Fortunately we \textquotedblleft remember\textquotedblright\ how to do this
-from PH150. We use our basic form for standard error propagation. If we have
+from previous lab work. 
+We use our basic form for standard error propagation. If we have
 a function $f\left( x,y,z\right) $ then the uncertainty in $f$ would be 
 \begin{equation*}
 \delta f=\sqrt{\left( \left( \frac{\partial f}{\partial x}\right) \left(
@@ -456,7 +503,7 @@ give better uncertainties. But after doing the uncertainty calculations, we
 find that there is an optimal range for $R_{s}.$ Big $R_{s}$ is still bad,
 but very small $R_{s}$ is also bad. You have to do the math to find this out.
 
-\subsubsection{Iterate to find an optimal value}
+\subsection{Iterate to find an optimal value}
 
 Since there is an $R_{s}$ in the bottom of both terms in our current
 uncertainty, let's try changing the $R_{s}$ value and see if the uncertainty
@@ -466,7 +513,6 @@ spreadsheet or symbolic math processor might be a good way to go so you
 aren't putting the same things in your calculator over and over.
 
 We start by finding the current in the circuit
-
 \begin{equation*}
 I=\left( \frac{\Delta V_{ps}}{R+R_{s}}\right)
 \end{equation*}%
@@ -485,7 +531,6 @@ uncertainty in $\Delta V_{s}$
 \delta \Delta V_{s}=\frac{\Delta V_{s}}{N_{ADC}}
 \end{equation*}%
 and now we need can find the uncertainty in $I$
-
 \begin{equation*}
 \delta I=\sqrt{\left( \left( \frac{1}{R_{s}}\right) \left( \delta \Delta
 V_{s}\right) \right) ^{2}+\left( \left( -\frac{\Delta V_{s}}{R_{s}^{2}}%
@@ -508,7 +553,6 @@ Let's try this once more with $R_{s}=500\unit{%
 \Omega%
 %EndExpansion
 }$ just to see what would happen.
-
 \begin{eqnarray*}
 I &=&\left( \frac{2\unit{V}}{5000\unit{%
 %TCIMACRO{\U{3a9}}%
@@ -613,9 +657,8 @@ computer do this for $R=5000\unit{%
 \Omega%
 %EndExpansion
 }$ and $\Delta V_{ps}=2\unit{V}$ I asked it to plot $f_{I}$ as a function of 
-$R_{s}$ \begin{figure}[h!]
-\includegraphics[width=4.4997in,height=1.4165in]{PH4CAV2V}
-\end{figure}Notice that after about $500\unit{%
+$R_{s}$ (Figure \ref{fig:uncplot}).
+Notice that after about $500\unit{%
 %TCIMACRO{\U{3a9}}%
 %BeginExpansion
 \Omega%
@@ -629,6 +672,13 @@ R_{s}=500\unit{%
 }$ seems good for this situation. Once you have a symbolic package or
 spreadsheet version of this calculation, picking different shunt resistors
 becomes fairly easy.
+\begin{figure}[htbp!]
+	\centering
+\includegraphics[width=0.8\textwidth]{PH4CAV2V}
+	\caption[Fractional uncertainty in current v. shunt resistance]
+	{Fractional uncertainty in current v. shunt resistance.}
+	\label{fig:uncplot}
+\end{figure}
 
 We should check, though. What did our $500\unit{%
 %TCIMACRO{\U{3a9}}%
@@ -683,7 +733,7 @@ find $R_{test}$ uncertainty $\delta R_{test}$ to see if Ohm's law really
 works. In finding the uncertainty in our measuring devices we haven't found $%
 \delta R_{test}.$ We will review a different way to do that analysis.
 
-\subsection{Using statistics to calculate uncertainty}
+\section{Using statistics to calculate uncertainty}
 
 By now in a experimental design, I am usually at my tolerance limit for
 calculating uncertainties. You might ask, can't we get our powerful
@@ -692,24 +742,35 @@ all, we went to all the trouble to get the data on the computer. The answer
 is, yes!
 
 Let's suppose we have done our experiment and we have some data that look
-like this: \begin{figure}[h!]
-\includegraphics[width=3.563in,height=2.7345in]{PH4CAV2W}
+like Figure \ref{fig:ohmdata}. 
+\begin{figure}[htbp!]
+	\centering
+\includegraphics[width=0.8\textwidth]{PH4CAV2W}
+	\caption[Sample data for testing Ohm's law]{Sample data for testing 
+	Ohm's law.}
+	\label{fig:ohmdata}
 \end{figure}
 
 This looks pretty good. It seems to be sort of linear. We might guess from
-this that Ohm's law is begin obeyed. But we want $R_{test}$ and $R_{test}$
+this that Ohm's law is begin obeyed. But we want $R_{test}$, and $R_{test}$
 is the slope of this line. We could calculate $R_{test}$ from each pair of $%
 \Delta V$ and $I$ points and find it's uncertainty using standard error
 propagation. But it seems that it would be better to take all the points
 into our analysis to find $R_{test}.$ More data should give us a better
-estimate for $R_{test}.$ Back in PH150 you may have done such a thing using
-a \emph{curve fit}. In the next figure, a curve fit is shown for the data
-from the last figure. \begin{figure}[h!]
-\includegraphics[width=3.966in,height=3.0441in]{PH4CAV2X}
+estimate for $R_{test}.$ In the past, you may have done such a thing using
+a \emph{curve fit}. In Figure \ref{fig:ohmdata2}, 
+a curve fit is shown for the data
+from the last figure. 
+\begin{figure}[htbp!]
+	\centering
+\includegraphics[width=0.8\textwidth]{PH4CAV2X}
+	\caption[A linear fit to the Ohm's law data]{A linear fit to the Ohm's
+	law data.}
+	\label{fig:ohmdata2}
 \end{figure}
 
-Notice that I\ performed this curve fit in MicroSoft Excel, but if you are a
-great Python programer you could do this directly in Python. You could also
+Notice that this fit was performed using Microsoft Excel, but you
+could also do this directly in Python. You could also
 do this in LoggerPro or many other data analysis programs. From the curve
 fit equation we can see that we have a slope of $1092.9.$ Since our graph
 has $\Delta V$ on the vertical axis and $I$ on the horizontal axis we
@@ -732,81 +793,85 @@ The answer is, of course, Yes! And that will save us a bunch of math! In
 some data analysis programs this is easy. LoggerPro, for example, just gives
 you the uncertainty in $m$ and $b.$ Excel does not. If you want to use
 LoggerPro, that is fine. If you know how to do this in Python, go ahead.
-But, if you want to use Excel, let's see how to find the uncertainty.
+These uncertainties can also be found using Microsoft Excel, using the
+\code{linst} function. That process, however, is relatively clunky, and you
+will be far better off using a different tool to complete your fit.
 
-We will use the \texttt{linst} function in Excel. To find this, select the 
-\emph{insert function tool.}
+%But, if you want to use Excel, let's see how to find the uncertainty.
 
-\begin{figure}[h!]
-\includegraphics[width=3.7395in,height=3.0018in]{PH4CAV2Y}
-\end{figure}This will bring up a dialog box
-that allows you to select functions. We want the linst function and it is
-categorized under \emph{statistical}, so in the category drop down box 
-\begin{figure}[h!]
-\includegraphics[width=4.1252in,height=3.154in]{PH4CAV2Z}
-\end{figure}Then in the \emph{Select a
-function:} box you should find \texttt{LINST} in the list.\begin{figure}[h!]
-\includegraphics[width=%
-3.9738in,height=3.0277in]{PH4CAV30}
-\end{figure}%
-When you choose \texttt{LINST}, another dialog box will open.\begin{figure}[h!]
-\includegraphics[width=%
-4.7288in,height=2.2554in]{PH4CAV31}
-\end{figure}
-It will ask you for your $y$-values and your $x$-values. It asks for a
-Constant, but leave that input blank. It also asks if we want statistics. We
-do, so fill this in with the word \textquotedblleft TRUE\textquotedblright\
-in all caps.
+%We will use the \texttt{linst} function in Excel. To find this, select the 
+%\emph{insert function tool.}
 
-When you click on OK, you will get a number in a spreadsheet cell. That is
-good, It should be our slope. But we want the uncertainty in that slope. To
-do this highlight the cells near the slope value. The region needs to be two
-columns by five rows. \begin{figure}[h!]
-\includegraphics[width=2.7172in,height=2.7596in]{PH4CAV32}
-\end{figure}With the region highlighted,
-click the formula in the formula bar with your mouse.\begin{figure}[h!]
-\includegraphics[width=3.128in,height=%
-2.8262in]{PH4CAV33}
-\end{figure} It should light up parts of your
-spreadsheet. \begin{figure}[h!]
-\includegraphics[width=4.2445in,height=2.3212in]{PH4CAV34}
-\end{figure}Type CTRL+SHIFT+ENTER all at the
-same time. This will fill in the region with statistics on our data. The top
-left cell in our region is still the slope, but now right under this slope
-is the uncertainty in the slope. We also have in the top, right cell the $y$%
--intercept and below it the $y$-intercept uncertainty. \begin{figure}[h!]
-\includegraphics[width=6.3797in%
-,height=2.0721in]{PH4CAW35}
-\end{figure}
+%\begin{figure}[h!]
+%\includegraphics[width=3.7395in,height=3.0018in]{PH4CAV2Y}
+%\end{figure}This will bring up a dialog box
+%that allows you to select functions. We want the linst function and it is
+%categorized under \emph{statistical}, so in the category drop down box 
+%\begin{figure}[h!]
+%\includegraphics[width=4.1252in,height=3.154in]{PH4CAV2Z}
+%\end{figure}Then in the \emph{Select a
+%function:} box you should find \texttt{LINST} in the list.\begin{figure}[h!]
+%\includegraphics[width=%
+%3.9738in,height=3.0277in]{PH4CAV30}
+%\end{figure}%
+%When you choose \texttt{LINST}, another dialog box will open.\begin{figure}[h!]
+%\includegraphics[width=%
+%4.7288in,height=2.2554in]{PH4CAV31}
+%\end{figure}
+%It will ask you for your $y$-values and your $x$-values. It asks for a
+%Constant, but leave that input blank. It also asks if we want statistics. We
+%do, so fill this in with the word \textquotedblleft TRUE\textquotedblright\
+%in all caps.
 
-There are other numbers that are useful, but for now the two rows have given
-us what we needed. We have the slope, $m,$ the $y$-intercept, $b,$ and their
-uncertainties. For the data in the figures, we would have 
-\begin{equation*}
-R_{test}=1100\unit{%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}\pm 100\unit{%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-}
-\end{equation*}
+%When you click on OK, you will get a number in a spreadsheet cell. That is
+%good, It should be our slope. But we want the uncertainty in that slope. To
+%do this highlight the cells near the slope value. The region needs to be two
+%columns by five rows. \begin{figure}[h!]
+%\includegraphics[width=2.7172in,height=2.7596in]{PH4CAV32}
+%\end{figure}With the region highlighted,
+%click the formula in the formula bar with your mouse.\begin{figure}[h!]
+%\includegraphics[width=3.128in,height=%
+%2.8262in]{PH4CAV33}
+%\end{figure} It should light up parts of your
+%spreadsheet. \begin{figure}[h!]
+%\includegraphics[width=4.2445in,height=2.3212in]{PH4CAV34}
+%\end{figure}Type CTRL+SHIFT+ENTER all at the
+%same time. This will fill in the region with statistics on our data. The top
+%left cell in our region is still the slope, but now right under this slope
+%is the uncertainty in the slope. We also have in the top, right cell the $y$%
+%-intercept and below it the $y$-intercept uncertainty. \begin{figure}[h!]
+%\includegraphics[width=6.3797in%
+%,height=2.0721in]{PH4CAW35}
+%\end{figure}
 
-This was a little tricky, but was far less mathematical work than doing the
-uncertainty for every $\left( I,\Delta V\right) $ pair. We will often use
-this technique to find uncertainty.
+%There are other numbers that are useful, but for now the two rows have given
+%us what we needed. We have the slope, $m,$ the $y$-intercept, $b,$ and their
+%uncertainties. For the data in the figures, we would have 
+%\begin{equation*}
+%R_{test}=1100\unit{%
+%%TCIMACRO{\U{3a9}}%
+%%BeginExpansion
+%\Omega%
+%%EndExpansion
+%}\pm 100\unit{%
+%%TCIMACRO{\U{3a9}}%
+%%BeginExpansion
+%\Omega%
+%%EndExpansion
+%}
+%\end{equation*}
 
-Also notice that in this analysis technique, we can afford some error in our 
-$\Delta V$ and $I$ values. So maybe a $9\%$ error (like we found in one of
-our instrument desigs) is not so bad. We may not have to work too hard to
-get a wonderful choice of shunt resistor if we are going to use many data
-points and the power of statistics to analyze the data in the end!
+%This was a little tricky, but was far less mathematical work than doing the
+%uncertainty for every $\left( I,\Delta V\right) $ pair. We will often use
+%this technique to find uncertainty.
 
-\subsection{Philosophical warning}
+%Also notice that in this analysis technique, we can afford some error in our 
+%$\Delta V$ and $I$ values. So maybe a $9\%$ error (like we found in one of
+%our instrument desigs) is not so bad. We may not have to work too hard to
+%get a wonderful choice of shunt resistor if we are going to use many data
+%points and the power of statistics to analyze the data in the end!
+
+\section{Philosophical warning}
 
 There was a lot to this reading. We talked about designing and building an
 instrument. We used some physics, Ohm's law, in our design process. Then we
@@ -819,11 +884,13 @@ This lab is practice, but it is imperfect practice. We do know that Ohm's
 law works, so we are going to use it in designing instruments. But you
 really need a different instrument, one that does not depend on Ohm's law,
 to test Ohm's law in a credible way. In next week's lab, we will test a
-different physical model with the same basic instrument that we build today.
+different physical model with the same basic instrument that we built today.
 The instrument will depend on Ohm's law, but the new physical model must not
 if the experiment is to be valid.
+\vfill
 
-\section{Lab Assignment}
+\activity
+{
 
 \begin{enumerate}
 \item Build the instrument
@@ -848,11 +915,13 @@ resistance that will work.
 current. (Check the voltage, currents, and their uncertainties with the
 serial monitor to make sure things seem good).
 
+\begin{center}
+\includegraphics[width=1.8507in,height=0.9677in]{PH4CAW36}
+\end{center}
 \item Build your voltmeter and ammeter so your Arduino is taking $\left(
 I,\Delta V\right) $ pares and reporting them. Reporting to the serial
-monitor is fine for a start. \begin{figure}[h!]
-\includegraphics[width=1.8507in,height=0.9677in]{PH4CAW36}
-\end{figure}if you based your sketch on the
+monitor is fine for a start. 
+if you based your sketch on the
 simple voltmeter, make sure you don't use voltages outside the $0\unit{V}$
 to $+5\unit{V}$ range! Include expected uncertainties for your $\Delta V$
 and $I$ measurements.
@@ -873,7 +942,7 @@ measurement change the $\Delta V$ setting on the power supply a small amount
 \item Determine the resistance from this curve fit and its uncertainty.
 
 \item Finally, determine if your results support the Ohm model for how
-potential and current are related?
+potential and current are related.
 
 \item Compare your data and conclusions to the data and conclusions of your
 lab group members. Have them look at your results as well.
@@ -886,8 +955,4 @@ support the Ohm model for how potential and current are related?
 for $\Delta V,$ $I,$ and $R?$ If you have time (you probably won't) give
 this a try.
 \end{enumerate}
-
-%TCIMACRO{\TeXButton{vfill}{\vfill}}%
-%BeginExpansion
-\vfill%
-%EndExpansion
+}
