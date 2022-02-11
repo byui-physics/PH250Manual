@@ -43,18 +43,18 @@
 \contentsline {figure}{\numberline {2.23}{\ignorespaces Variation in a function of two variables}}{48}{figure.caption.50}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Gravitational potential energy difference.}}{52}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Measuring electric potential energy difference}}{52}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Measuring electric potential energy difference}}{53}{figure.caption.53}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Example warning sign}}{53}{figure.caption.54}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces The analog pins on the Arduino}}{54}{figure.caption.55}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Discretization of voltage measurements on an Arduino}}{55}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Serial Monitor location in the Arduino IDE}}{59}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces The Serial Monitor window}}{59}{figure.caption.59}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces The Serial Plotter window}}{60}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces The serial plotter with voltage only}}{60}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Water pump analogy for a simple resistor circuit}}{62}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces A two-resistor circuit}}{62}{figure.caption.63}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces A water pump system with two turbines}}{63}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Measuring voltage in a voltage divider}}{63}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Serial Monitor location in the Arduino IDE}}{60}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The Serial Monitor window}}{60}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The Serial Plotter window}}{61}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces The serial plotter with voltage only}}{61}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Water pump analogy for a simple resistor circuit}}{63}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces A two-resistor circuit}}{63}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces A water pump system with two turbines}}{64}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Measuring voltage in a voltage divider}}{64}{figure.caption.65}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Anaconda download confirmation}}{72}{figure.caption.66}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces The Anaconda installer welcome screen}}{73}{figure.caption.67}%
@@ -92,6 +92,10 @@
 \contentsline {figure}{\numberline {7.11}{\ignorespaces LoggerPro column options}}{127}{figure.caption.97}%
 \contentsline {figure}{\numberline {7.12}{\ignorespaces The final graph, now with error bars.\relax }}{128}{figure.caption.98}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces A simple model of a solenoid.\relax }}{132}{figure.caption.99}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Schematic diagram for a series RLC circuit.\relax }}{134}{figure.caption.100}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Energy in a series RLC circuit.\relax }}{135}{figure.caption.101}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Peak capacitor voltage v. source frequency for a series RLC circuit.\relax }}{137}{figure.caption.102}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

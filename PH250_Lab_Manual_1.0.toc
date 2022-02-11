@@ -34,13 +34,13 @@
 \contentsline {section}{\numberline {2.7}Calculating the Uncertainty in Current}{49}{section.2.7}%
 \contentsline {chapter}{\numberline {3}First DAQ Measurements: Voltage}{51}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Building a Voltmeter}{53}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Analog Pins on the Arduino}{53}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Analog to Digital Conversion}{53}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Sending the Data to the Computer}{56}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}Wiring the simple voltmeter}{58}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.1}Analog Pins on the Arduino}{54}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Analog to Digital Conversion}{54}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Sending the Data to the Computer}{57}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Wiring the simple voltmeter}{59}{subsection.3.1.4}%
 \contentsline {subsection}{\numberline {3.1.5}Seeing the data}{59}{subsection.3.1.5}%
-\contentsline {section}{\numberline {3.2}Extending our voltmeter with a voltage divider}{61}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Practice Problems}{68}{section.3.3}%
+\contentsline {section}{\numberline {3.2}Extending our voltmeter with a voltage divider}{62}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Practice Problems}{69}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Getting Data to the Computer}{71}{chapter.4}%
 \contentsline {section}{\numberline {4.1}How to get Python}{72}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Getting Anaconda Python}{72}{subsection.4.1.1}%
@@ -72,27 +72,26 @@
 \contentsline {section}{\numberline {7.3}Fitting the Data}{124}{section.7.3}%
 \contentsline {subsection}{\numberline {7.3.1}LoggerPro Curve Fitting}{124}{subsection.7.3.1}%
 \contentsline {chapter}{\numberline {8}Inductance and Series RLC Circuits Part 1}{131}{chapter.8}%
-\contentsline {section}{\numberline {8.1}The Model: Self Inductance}{131}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Inductance of a solenoid}{132}{subsection.8.1.1}%
-\contentsline {section}{\numberline {8.2}RLC Series circuits}{133}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Lab Assignment}{136}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Inductance and Series RLC circuits Part 2}{139}{chapter.9}%
-\contentsline {section}{\numberline {9.1}The Instrument}{139}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Sampling Theory, a complication}{143}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Lab Assignment}{146}{section.9.3}%
-\contentsline {part}{III\hspace {1em}Student Designed Experiments}{149}{part.3}%
-\contentsline {chapter}{\numberline {10}Writing a Proposal}{151}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Statement of the experimental problem}{151}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Procedures and anticipated difficulties}{151}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Proposed analysis and expected results}{152}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Preliminary list of equipment needed}{152}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Designing the experiment}{153}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Using uncertainty to refine experimental design}{153}{section.10.6}%
-\contentsline {chapter}{\numberline {11}Student Designed Experiments}{157}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Proposal}{157}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Performing the experiment}{158}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Written report}{158}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Oral report}{158}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Lab Notebook}{159}{section.11.5}%
-\contentsline {subsection}{\numberline {11.5.1}Designing the Experiment}{159}{subsection.11.5.1}%
-\contentsline {subsection}{\numberline {11.5.2}Performing the Experiment}{160}{subsection.11.5.2}%
+\contentsline {section}{\numberline {8.1}The Model: Self Inductance}{132}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Inductance of a solenoid}{133}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}RLC Series circuits}{134}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Inductance and Series RLC circuits Part 2}{141}{chapter.9}%
+\contentsline {section}{\numberline {9.1}The Instrument}{141}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Sampling Theory, a complication}{145}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Lab Assignment}{148}{section.9.3}%
+\contentsline {part}{III\hspace {1em}Student Designed Experiments}{151}{part.3}%
+\contentsline {chapter}{\numberline {10}Writing a Proposal}{153}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Statement of the experimental problem}{153}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Procedures and anticipated difficulties}{153}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Proposed analysis and expected results}{154}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Preliminary list of equipment needed}{154}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Designing the experiment}{155}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Using uncertainty to refine experimental design}{155}{section.10.6}%
+\contentsline {chapter}{\numberline {11}Student Designed Experiments}{159}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Proposal}{159}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Performing the experiment}{160}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Written report}{160}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Oral report}{160}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Lab Notebook}{161}{section.11.5}%
+\contentsline {subsection}{\numberline {11.5.1}Designing the Experiment}{161}{subsection.11.5.1}%
+\contentsline {subsection}{\numberline {11.5.2}Performing the Experiment}{162}{subsection.11.5.2}%
