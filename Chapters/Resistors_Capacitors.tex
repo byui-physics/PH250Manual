@@ -295,31 +295,39 @@ from our capacitor model.
 \end{equation*}%
 We need to find this particular function (which is not one of the default
 functions in Excel).
-\begin{figure}[tbp!]
-	\centering
-\includegraphics[width=3.2759in,height=1.2298in]{PH4CAX3I}
-	\caption{The LoggerPro fit function needed for our model.}
-	\label{fig:fitfunction}
-\end{figure}
+%\begin{figure}[tbp!]
+%	\centering
+%\includegraphics[width=3.2759in,height=1.2298in]{PH4CAX3I}
+%	\caption{The LoggerPro fit function needed for our model.}
+%	\label{fig:fitfunction}
+%\end{figure}
 Of course, we won't find a match
-with our exact notation. The one we want is given as 
+with our exact notation. So what do we do? We define one!
+Click on the ``Define Function'' button, and enter the function
 \begin{equation*}
-y=A\ast (1-\exp (-C\ast x))+B
-\end{equation*}%
-in LoggerPro (Figure \ref{fig:fitfunction}), 
-and now we have to match our variables with theirs. 
-Let's compare the
-equations. 
-\begin{eqnarray*}
-y &=&A\ast (1-\exp (-C\ast x))+B \\
-\Delta V_{C}\left( t\right) &=&\Delta V_{\max }\left( 1-e^{-\frac{t}{\tau }%
-}\right) +0
-\end{eqnarray*}%
-We can see that our $\Delta V_{\max }$ corresponds to their $A$, and our 
-$\tau$ corresponds to their $1/C$. Our equation doesn't have a variable
-corresponding to their $B$.
+	V*(1-exp(-x/T))
+\end{equation*}
+where the $V$ represents the maximum voltage and the $T$ represents our variable $\tau$.
+Click OK, then select this newly defined function from the list.
+%The one we want is given as 
+%\begin{equation*}
+%y=A\ast (1-\exp (-C\ast x))+B
+%\end{equation*}%
+%in LoggerPro (Figure \ref{fig:fitfunction}), 
+%and now we have to match our variables with theirs. 
+%Let's compare the
+%equations. 
+%\begin{eqnarray*}
+%y &=&A\ast (1-\exp (-C\ast x))+B \\
+%\Delta V_{C}\left( t\right) &=&\Delta V_{\max }\left( 1-e^{-\frac{t}{\tau }%
+%}\right) +0
+%\end{eqnarray*}%
+%We can see that our $\Delta V_{\max }$ corresponds to their $A$, and our 
+%$\tau$ corresponds to their $1/C$. Our equation doesn't have a variable
+%corresponding to their $B$.
 
-Knowing what the variables will represent for our equation, we can now see
+%Knowing what the variables will represent for our equation, 
+We can now see
 how well the function fits our data. Do this by clicking the ``Try Fit'' button
 in the lower right portion of the dialog. 
 %(Figure \ref{fig:tryfit}).
@@ -337,11 +345,12 @@ graph, but now with the line of best fit and a new little box
 \begin{figure}[tbp!]
 	\centering
 \includegraphics[width=0.6\textwidth]{PH4CAX3K}
-\includegraphics[width=0.3\textwidth]{PH4CAX3L}
+%\includegraphics[width=0.3\textwidth]{PH4CAX3L}
 	\caption[The LoggerPro window after completing the fit]{The LoggerPro
-	window after completing the fit. The left panel shows the main window,
-	and the right panel shows the detail of the box containing the fit
-	parameters.}
+	window after completing the fit.} 
+	%The left panel shows the main window,
+	%and the right panel shows the detail of the box containing the fit
+	%parameters.}
 	\label{fig:fitcomplete}
 \end{figure}
 The curve fit looks nice and that
@@ -349,10 +358,9 @@ is comforting. For the data shown here,
 it looks like our capacitor model might be
 correct, but we can't be sure until we add in error bars. Before we do that,
 though,
-let's look at the new little box (Figure \ref{fig:fitcomplete}, right panel). 
+let's look at the new little box that has appeared in Figure \ref{fig:fitcomplete}. 
 The box has our fit equation that
-we chose, and it has values for the fit parameters and their uncertainties.
-We will need those later!
+we chose, and it has values for the fit parameters and their uncertainties!
 
 Let's add on the error bars now. Right click on the graph if you have a PC
 or do the Mac equivalent if you have a Mac. A new dialog appears and in this
@@ -408,29 +416,30 @@ is fine. What this tells us is that our fit line must go right through the
 center of each data point, so we are really doing fine. The
 data supports the model.
 
-But now let's go back to our little box of curve fit parameters. We
-identified 
-\begin{equation*}
-\tau =\frac{1}{\mathtt{C}}
-\end{equation*}%
-and for my data I have 
-\begin{equation*}
-\mathtt{C}=0.01681\pm 3.475\times 10^{-5}
-\end{equation*}%
-\newline
-We need units, and looking at the equation we know $\tau $ has units of
-seconds, so $\mathtt{C}$ must have units of inverse seconds.%
-\begin{equation*}
-\mathtt{C}=\left( 0.01681\pm 3.475\times 10^{-5}\right) \frac{1}{\unit{s}}
-\end{equation*}%
-so we can find a value for $\tau .$ For my data, I have 
-\begin{eqnarray*}
-\tau _{measured} &=&\frac{1}{0.01681\frac{1}{\unit{s}}} \\
-&=&59.\,\allowbreak 488\unit{s}
-\end{eqnarray*}
+%But now let's go back to our little box of curve fit parameters. We
+%identified 
+%\begin{equation*}
+%\tau =\frac{1}{\mathtt{C}}
+%\end{equation*}%
+%and for my data I have 
+%\begin{equation*}
+%\mathtt{C}=0.01681\pm 3.475\times 10^{-5}
+%\end{equation*}%
+%\newline
+%We need units, and looking at the equation we know $\tau $ has units of
+%seconds, so $\mathtt{C}$ must have units of inverse seconds.%
+%\begin{equation*}
+%\mathtt{C}=\left( 0.01681\pm 3.475\times 10^{-5}\right) \frac{1}{\unit{s}}
+%\end{equation*}%
+%so we can find a value for $\tau .$ For my data, I have 
+%\begin{eqnarray*}
+%\tau _{measured} &=&\frac{1}{0.01681\frac{1}{\unit{s}}} \\
+%&=&59.\,\allowbreak 488\unit{s}
+%\end{eqnarray*}
 
-Note that we will have to calculate the uncertainty in $\tau .$ I will leave
-that for an exercise. But I can compare this $\tau _{measured}$ to the $\tau
+%Note that we will have to calculate the uncertainty in $\tau .$ I will leave
+%that for an exercise. But 
+I can compare the $\tau _{measured}$ (the $T$ parameter in our fit) to the $\tau
 =RC$ value I started with. If they are within each other's error range, this
 is a powerful confirmation of our capacitor model.
 

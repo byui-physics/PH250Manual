@@ -1,15 +1,15 @@
 %RLC_Circuits_P2
-\chapter{Series RLC circuits, Part II}
+\chapter{AC Voltages and the Arduino}
 
 \objectives
 {
-\item Build and use an Arduino based oscilloscope.
+\item Use an Arduino to measure AC voltages.
 \item Describe the problem of ``aliasing'', and how it can be mitigated.
 }
 
-In our last lab, we used an oscilloscope to measure voltage and to plot it
-as a function of time. An Arduino can do this as well (you have seen the
-serial plotter already as you have used the Arduino software). 
+In the second lab of the semester, we learned how to use an oscilloscope to
+measure AC voltages. We would like to be able to do this with the Arduino as
+well. 
 Some complications arise, however, when we try to use an Arduino as an 
 oscilloscope:
 \begin{itemize}
@@ -20,8 +20,7 @@ oscilloscope:
 		probably will - destroy the Arduino).
 	\item The Arduino may not be able to sample voltages fast enough.
 \end{itemize}
-In this lab, we will see how we can get around these issues. We'll do this 
-using the same RLC circuit that we used in the last lab.
+In this lab, we will see how we can get around these issues.
 
 \section{The Instrument}
 
@@ -95,24 +94,25 @@ using an oscilloscope.
 Our oscilloscopes have two channels where we can hook probes. Let's use one
 to measure the signal as it comes directly from the signal generator. Let's
 use the other to measure at the junction in between $R_{1}$ and $R_{2}$
-right were we will connect pin A0. That should be our output. A picture of 
-these connections can be seen in Figure \ref{fig:rlc_ground}, and a 
-schematic of the entire RLC circuit, with the voltage divider attached,
+right were we will connect pin A0. That should be our output. 
+%A picture of 
+%these connections can be seen in Figure \ref{fig:rlc_ground}, and a 
+A schematic of the entire circuit, with the voltage divider attached,
 can be seen in Figure \ref{fig:rlc_schematic}.
 
-\begin{figure}[htbp!]
-	\centering
-	\includegraphics[width=\textwidth]{PH4CAX4J}
-	\caption{Photograph of the ground connections for the voltage 
-	divider.}
-	\label{fig:rlc_ground}
-\end{figure}
+%\begin{figure}[htbp!]
+%	\centering
+%	\includegraphics[width=\textwidth]{PH4CAX4J}
+%	\caption{Photograph of the ground connections for the voltage 
+%	divider.}
+%	\label{fig:rlc_ground}
+%\end{figure}
 \begin{figure}[htbp!]
 	\centering
 	\includegraphics[width=\textwidth]{RLCschem}
-	\caption[Schematic diagram of the series RLC circuit, with the
-	voltage divider attached]{Schematic diagram of the series 
-	RLC circuit, with the 
+	\caption[Schematic diagram of the circuit, with the
+	voltage divider attached]{Schematic diagram of the 
+	circuit, with the 
 	voltage divider attached, grounds properly connected, and the
 	oscilloscope in place.}
 	\label{fig:rlc_schematic}
@@ -120,7 +120,7 @@ can be seen in Figure \ref{fig:rlc_schematic}.
 
 When the circuit is built and functioning, the signals on the oscilloscope
 should appear as in Figure \ref{fig:rlc_osc}.
-The red trace is the voltage across the capacitor.
+The red trace is the voltage at the signal generator.
 The yellow trace is the voltage from the midpoint of the voltage divider. 
 Notice that in this figure the capacitor voltage alternates between
 -5 V and +5 V, while the output from the voltage divider is from 0 to +5 V,
@@ -155,31 +155,31 @@ Once again, make sure that you use the oscilloscope to measure the output
 voltage from the voltage divider prior to attaching the Arduino.
 We can set up our circuit and clip the oscilloscope probe to either side of
 the capacitor, as seen in Figure \ref{fig:rlc_schematic}. 
-As we change the frequency of the signal generator the
-frequency of the voltage across the capacitor will change. As we get near
-the resonant frequency, the amplitude of the capacitor voltage will grow.
-Right at the resonant frequency, $\Delta V_{C}$ will be largest. We will
-need to measure this with the oscilloscope 
-before using our Arduino, just to be sure the voltage won't
-go over $5\unit{V}$. This means we need to keep the capacitor voltage
-below $\pm$5 V at resonance.
-If we keep changing the frequency the amplitude will go back
-down. So when we see the amplitude grow, max out, and then diminish we know
-we have just passed resonance. This is just what we saw in last week's lab.
+%As we change the frequency of the signal generator the
+%frequency of the voltage across the capacitor will change. As we get near
+%the resonant frequency, the amplitude of the capacitor voltage will grow.
+%Right at the resonant frequency, $\Delta V_{C}$ will be largest. We will
+%need to measure this with the oscilloscope 
+%before using our Arduino, just to be sure the voltage won't
+%go over $5\unit{V}$. This means we need to keep the capacitor voltage
+%below $\pm$5 V at resonance.
+%If we keep changing the frequency the amplitude will go back
+%down. So when we see the amplitude grow, max out, and then diminish we know
+%we have just passed resonance. This is just what we saw in last week's lab.
 
 Once we have this working on our oscilloscope, we can try it on our Arduino.
 Of course we need a sketch for this. Here is a simple example.
 \lstinputlisting[language=Arduino]{Code/RLCPart2_pm5Vsignal.ino}
 
-Our new instrument takes in an alternating voltage, and displays it. We
-will have to adjust the input voltage on the signal generator. When the
-signal generator frequency is just right, the voltage we measure should
-become large. By noting the resonant frequency we can check our model for
-inductance.
+%Our new instrument takes in an alternating voltage, and displays it. We
+%will have to adjust the input voltage on the signal generator. When the
+%signal generator frequency is just right, the voltage we measure should
+%become large. By noting the resonant frequency we can check our model for
+%inductance.
 
 \section{Sampling Theory, a complication}
 
-Before we finish designing this experiment, we need to think about another
+Before we finish, we need to think about another
 limitation of our Arduino devices, which is that they can only take up to $%
 2000$ measurements in a second. We say they have a maximum sampling rate of $%
 2000\unit{Hz}.$ To try to understand this, consider trying to measure a sine
@@ -274,77 +274,106 @@ signal frequency is much lower (like
 ten times lower) than the frequency at which we can take measurements, 
 or we run the risk of being fooled by our measurements.
 
-In the last lab, we had resonance frequencies that were around $%
-20000\unit{Hz}.$ That is way too high for our Arduinos. We need to change
-capacitors so that our resonance frequency is more like $200\unit{Hz}$, or
-our measurements will be aliased. Suppose we use the following 
-\begin{eqnarray*}
-\mathcal{E} &=&5\unit{V} \\
-L &=&2.3\times 10^{-3}\unit{H} \\
-R &=&10000\unit{%
-%TCIMACRO{\U{3a9}}%
-%BeginExpansion
-\Omega%
-%EndExpansion
-} \\
-f_{resonance} &=&18.552\unit{kHz} \\
-C &=&32\times 10^{-6}\unit{F}
-\end{eqnarray*}
-Our resonance plot will look more like Figure \ref{fig:res2},
-which we could reasonably detect using the Arduino.
-Our measurements might look somewhat ratty, but we should be able to
-see a sine wave and find when it is maximum.
-\begin{figure}[htbp!]
-	\centering
-\includegraphics[width=4.4996in,height=3in]{PH4CAX4Q}
-	\caption{Resonance plot for an RLC circuit with a resonant frequency of
-	500 Hz.}
-	\label{fig:res2}
-\end{figure}
+%In the last lab, we had resonance frequencies that were around $%
+%20000\unit{Hz}.$ That is way too high for our Arduinos. We need to change
+%capacitors so that our resonance frequency is more like $200\unit{Hz}$, or
+%our measurements will be aliased. Suppose we use the following 
+%\begin{eqnarray*}
+%\mathcal{E} &=&5\unit{V} \\
+%L &=&2.3\times 10^{-3}\unit{H} \\
+%R &=&10000\unit{%
+%%TCIMACRO{\U{3a9}}%
+%%BeginExpansion
+%\Omega%
+%%EndExpansion
+%} \\
+%f_{resonance} &=&18.552\unit{kHz} \\
+%C &=&32\times 10^{-6}\unit{F}
+%\end{eqnarray*}
+%Our resonance plot will look more like Figure \ref{fig:res2},
+%which we could reasonably detect using the Arduino.
+%Our measurements might look somewhat ratty, but we should be able to
+%see a sine wave and find when it is maximum.
+%\begin{figure}[htbp!]
+%	\centering
+%\includegraphics[width=4.4996in,height=3in]{PH4CAX4Q}
+%	\caption{Resonance plot for an RLC circuit with a resonant frequency of
+%	500 Hz.}
+%	\label{fig:res2}
+%\end{figure}
 
 \clearpage
 \activity
 {
 
 \begin{enumerate}
-\item Estimate the inductance of your coil using equation \ref{Solenoid
-Inductance}. You may use your estimate from last week and any insight into
-that estimate that last week's measurements might have given you.
+%\item Estimate the inductance of your coil using equation \ref{Solenoid
+%Inductance}. You may use your estimate from last week and any insight into
+%that estimate that last week's measurements might have given you.
+%
+%\item Measure the inductance using resonance with an Arduino based
+%oscilloscope
+%
+%\begin{enumerate}
+%\item Set up an RLC circuit like we did last lab. Select a capacitor that will
+%give you a resonant frequency of a few hundred Hertz.
+%Use a signal generators to produce as the source of variable emf. 
+%
+%\item Build and attach a voltage divider, as diagrammed in Figure 
+%\ref{fig:rlc_schematic}. 
+%
+%\item Test the circuit using an oscilloscope. Again you should see a nice
+%sine wave, but now we need to be sure that the voltage is far less than our $%
+%5\unit{V}$ limit for our Arduino. We know the voltage is going to be highest
+%at resonance. So we need to be careful!
+%\begin{center}
+%\includegraphics[width=2.8089in,height=1.4684in]{PH4CAX4S}
+%\end{center}
+%Once you are satisfied that the voltages will not damage the Arduino, connect
+%the output of the voltage divider to the Arduino.
+%
+%\item Begin collecting voltage data with the Arduino. You can use the serial
+%plotter to see your signal. 
+%Adjust the frequency of the signal generator until you reach resonance.
+%(Note what happens to the amplitude as you tune the dial. This
+%should be the same as what you saw on the oscilloscope in the last lab.)
+%
+%\item Determine your actual resonant frequency, $f_{A}$.
+%
+%\item Calculate the inductance of your coil based on $f_{A}$. Compare to
+%your estimated value. If there is a difference, try to explain it.
+%\end{enumerate}
+%
+%\item Check with your professor to make sure everything is set to start your
+%student designed project next week.
 
-\item Measure the inductance using resonance with an Arduino based
-oscilloscope
-
-\begin{enumerate}
-\item Set up an RLC circuit like we did last lab. Select a capacitor that will
-give you a resonant frequency of a few hundred Hertz.
-Use a signal generators to produce as the source of variable emf. 
-
-\item Build and attach a voltage divider, as diagrammed in Figure 
-\ref{fig:rlc_schematic}. 
-
-\item Test the circuit using an oscilloscope. Again you should see a nice
-sine wave, but now we need to be sure that the voltage is far less than our $%
-5\unit{V}$ limit for our Arduino. We know the voltage is going to be highest
-at resonance. So we need to be careful!
+\item Obtain a signal generator, and build the circuit in Figure 
+	\ref{fig:rlc_schematic}. Attach the two leads of an oscilloscope, and
+	tie all of the grounds together.
+\item Turn on the signal generator, and set the frequency to 1 Hz. Adjust the
+	DC voltage on the power supply, and make sure your oscilloscope 
+		displays an image similar to Figure \ref{fig:rlc_osc}. Note
+		that the oscilloscope channels will both need to be set to use
+		a DC coupling, and you will want to adjust the output amplitude
+		of the signal generator so that it puts out a maximum of
+		five volts.
+\item Load the appropriate code onto the Arduino.
+\item Once you are satisfied that the voltages between the two resistors in 
+	the voltage divider range only between zero and five volts, connect
+		the analog input lead of the Arduino between the resistors, 
+		and connect the ground of the Arduino to the other grounds
+		in the circuit.
 \begin{center}
 \includegraphics[width=2.8089in,height=1.4684in]{PH4CAX4S}
 \end{center}
-Once you are satisfied that the voltages will not damage the Arduino, connect
-the output of the voltage divider to the Arduino.
-
-\item Begin collecting voltage data with the Arduino. You can use the serial
-plotter to see your signal. 
-Adjust the frequency of the signal generator until you reach resonance.
-(Note what happens to the amplitude as you tune the dial. This
-should be the same as what you saw on the oscilloscope in the last lab.)
-
-\item Determine your actual resonant frequency, $f_{A}$.
-
-\item Calculate the inductance of your coil based on $f_{A}$. Compare to
-your estimated value. If there is a difference, try to explain it.
-\end{enumerate}
-
-\item Check with your professor to make sure everything is set to start your
-student designed project next week.
+\item Using the Serial Plotter in the Arduino IDE, observe the alternating
+	voltage read by the Arduino, and verify that your Arduino is 
+		``reading'' the signal generator voltages correctly.
+\item Begin increasing the frequency of the signal generator, while watching
+	the output on the Serial Plotter. At some point, you will notice that
+		your output no longer looks like a nice clean sine wave. 
+		Record the frequency at which this happens.
+\item Investigate even higher frequencies, and observe the aliasing effect on 
+	the output of your ``Arudino oscilloscope''.
 \end{enumerate}
 }

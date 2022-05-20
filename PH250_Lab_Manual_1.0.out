@@ -37,42 +37,42 @@
 \BOOKMARK [2][-]{subsection.3.1.5}{Seeing the data}{section.3.1}% 37
 \BOOKMARK [1][-]{section.3.2}{Extending our voltmeter with a voltage divider}{chapter.3}% 38
 \BOOKMARK [1][-]{section.3.3}{Practice Problems}{chapter.3}% 39
-\BOOKMARK [0][-]{chapter.4}{Getting Data to the Computer}{part.1}% 40
-\BOOKMARK [1][-]{section.4.1}{How to get Python}{chapter.4}% 41
-\BOOKMARK [2][-]{subsection.4.1.1}{Getting Anaconda Python}{section.4.1}% 42
-\BOOKMARK [2][-]{subsection.4.1.2}{Getting the PySerial library for Anaconda}{section.4.1}% 43
-\BOOKMARK [1][-]{section.4.2}{Getting data from the Arduino}{chapter.4}% 44
-\BOOKMARK [1][-]{section.4.3}{Getting Pyserial if you have a Mac}{chapter.4}% 45
-\BOOKMARK [2][-]{subsection.4.3.1}{Anaconda Mac Users 4.1.2}{section.4.3}% 46
-\BOOKMARK [2][-]{subsection.4.3.2}{Manually install Pyserial using the Terminal app}{section.4.3}% 47
-\BOOKMARK [2][-]{subsection.4.3.3}{Mac Paths and Port Notation}{section.4.3}% 48
-\BOOKMARK [0][-]{chapter.5}{DataLogging}{part.1}% 49
-\BOOKMARK [1][-]{section.5.1}{Arduino Shields}{chapter.5}% 50
-\BOOKMARK [1][-]{section.5.2}{Data Logger Shield}{chapter.5}% 51
-\BOOKMARK [1][-]{section.5.3}{Setting up the data logging shield}{chapter.5}% 52
-\BOOKMARK [1][-]{section.5.4}{Powering the Arduino}{chapter.5}% 53
-\BOOKMARK [-1][-]{part.2}{II Testing Models}{}% 54
-\BOOKMARK [0][-]{chapter.6}{Validation of Ohm's Law}{part.2}% 55
-\BOOKMARK [1][-]{section.6.1}{Ohm's Law Revisited}{chapter.6}% 56
-\BOOKMARK [1][-]{section.6.2}{Measuring current with our Arduino}{chapter.6}% 57
-\BOOKMARK [1][-]{section.6.3}{Making an Arduino measure current}{chapter.6}% 58
-\BOOKMARK [2][-]{subsection.6.3.1}{Choosing shunt resistors}{section.6.3}% 59
-\BOOKMARK [1][-]{section.6.4}{Finding Uncertainty in a Calculated Value}{chapter.6}% 60
-\BOOKMARK [2][-]{subsection.6.4.1}{Iterate to find an optimal value}{section.6.4}% 61
-\BOOKMARK [1][-]{section.6.5}{Using statistics to calculate uncertainty}{chapter.6}% 62
-\BOOKMARK [1][-]{section.6.6}{Philosophical warning}{chapter.6}% 63
-\BOOKMARK [0][-]{chapter.7}{Resistors and Capacitors}{part.2}% 64
-\BOOKMARK [1][-]{section.7.1}{The Model to Test}{chapter.7}% 65
-\BOOKMARK [1][-]{section.7.2}{The Instrument}{chapter.7}% 66
-\BOOKMARK [1][-]{section.7.3}{Fitting the Data}{chapter.7}% 67
-\BOOKMARK [2][-]{subsection.7.3.1}{LoggerPro Curve Fitting}{section.7.3}% 68
-\BOOKMARK [0][-]{chapter.8}{Series RLC Circuits, Part I}{part.2}% 69
-\BOOKMARK [1][-]{section.8.1}{The Model: Self Inductance}{chapter.8}% 70
-\BOOKMARK [2][-]{subsection.8.1.1}{Inductance of a solenoid}{section.8.1}% 71
-\BOOKMARK [1][-]{section.8.2}{RLC Series circuits}{chapter.8}% 72
-\BOOKMARK [0][-]{chapter.9}{Series RLC circuits, Part II}{part.2}% 73
-\BOOKMARK [1][-]{section.9.1}{The Instrument}{chapter.9}% 74
-\BOOKMARK [1][-]{section.9.2}{Sampling Theory, a complication}{chapter.9}% 75
+\BOOKMARK [0][-]{chapter.4}{AC Voltages and the Arduino}{part.1}% 40
+\BOOKMARK [1][-]{section.4.1}{The Instrument}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.2}{Sampling Theory, a complication}{chapter.4}% 42
+\BOOKMARK [0][-]{chapter.5}{Getting Data to the Computer}{part.1}% 43
+\BOOKMARK [1][-]{section.5.1}{How to get Python}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.1.1}{Getting Anaconda Python}{section.5.1}% 45
+\BOOKMARK [2][-]{subsection.5.1.2}{Getting the PySerial library for Anaconda}{section.5.1}% 46
+\BOOKMARK [1][-]{section.5.2}{Getting data from the Arduino}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.3}{Getting Pyserial if you have a Mac}{chapter.5}% 48
+\BOOKMARK [2][-]{subsection.5.3.1}{Anaconda Mac Users 4.1.2}{section.5.3}% 49
+\BOOKMARK [2][-]{subsection.5.3.2}{Manually install Pyserial using the Terminal app}{section.5.3}% 50
+\BOOKMARK [2][-]{subsection.5.3.3}{Mac Paths and Port Notation}{section.5.3}% 51
+\BOOKMARK [0][-]{chapter.6}{DataLogging}{part.1}% 52
+\BOOKMARK [1][-]{section.6.1}{Arduino Shields}{chapter.6}% 53
+\BOOKMARK [1][-]{section.6.2}{Data Logger Shield}{chapter.6}% 54
+\BOOKMARK [1][-]{section.6.3}{Setting up the data logging shield}{chapter.6}% 55
+\BOOKMARK [1][-]{section.6.4}{Powering the Arduino}{chapter.6}% 56
+\BOOKMARK [-1][-]{part.2}{II Testing Models}{}% 57
+\BOOKMARK [0][-]{chapter.7}{Validation of Ohm's Law}{part.2}% 58
+\BOOKMARK [1][-]{section.7.1}{Ohm's Law Revisited}{chapter.7}% 59
+\BOOKMARK [1][-]{section.7.2}{Measuring current with our Arduino}{chapter.7}% 60
+\BOOKMARK [1][-]{section.7.3}{Making an Arduino measure current}{chapter.7}% 61
+\BOOKMARK [2][-]{subsection.7.3.1}{Choosing shunt resistors}{section.7.3}% 62
+\BOOKMARK [1][-]{section.7.4}{Finding Uncertainty in a Calculated Value}{chapter.7}% 63
+\BOOKMARK [2][-]{subsection.7.4.1}{Iterate to find an optimal value}{section.7.4}% 64
+\BOOKMARK [1][-]{section.7.5}{Using statistics to calculate uncertainty}{chapter.7}% 65
+\BOOKMARK [1][-]{section.7.6}{Philosophical warning}{chapter.7}% 66
+\BOOKMARK [0][-]{chapter.8}{Resistors and Capacitors}{part.2}% 67
+\BOOKMARK [1][-]{section.8.1}{The Model to Test}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.2}{The Instrument}{chapter.8}% 69
+\BOOKMARK [1][-]{section.8.3}{Fitting the Data}{chapter.8}% 70
+\BOOKMARK [2][-]{subsection.8.3.1}{LoggerPro Curve Fitting}{section.8.3}% 71
+\BOOKMARK [0][-]{chapter.9}{Series RLC Circuits, Part I}{part.2}% 72
+\BOOKMARK [1][-]{section.9.1}{The Model: Self Inductance}{chapter.9}% 73
+\BOOKMARK [2][-]{subsection.9.1.1}{Inductance of a solenoid}{section.9.1}% 74
+\BOOKMARK [1][-]{section.9.2}{RLC Series circuits}{chapter.9}% 75
 \BOOKMARK [-1][-]{part.3}{III Student Designed Experiments}{}% 76
 \BOOKMARK [0][-]{chapter.10}{Writing a Proposal}{part.3}% 77
 \BOOKMARK [1][-]{section.10.1}{Statement of the experimental problem}{chapter.10}% 78

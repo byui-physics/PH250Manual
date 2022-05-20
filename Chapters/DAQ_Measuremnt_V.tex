@@ -295,8 +295,29 @@ will turn our ADC\ units into volts.
 
 Before we look at the entire sketch, let's introduce the new commands that
 we will need. To get the Arduino to communicate with the computer we use the
-command \code{Serial.begin();} in the setup portion, and 
-in the loop function we use the command \code{Serial.print();}.
+command \code{Serial.begin(9600);} in the setup portion, and 
+in the loop function we use the command \code{Serial.print();}. The
+\code{Serial.begin(9600);} instructs the Arduino to start sending data out
+through the serial port (physically, this is the USB cable that you connect to 
+your computer). The \code{9600} argument to this function tells the Arduino
+to send this data at 9,600 bits per second (a.k.a. 9,600 baud). (As a side
+note, we will be sending text to the serial port in today's activities. The
+text characters are represented by an eight digit - or eight bit - binary 
+number. Consequently, each text character requires eight bits to be sent to
+the serial port.) 
+
+Both ends of the serial communication - in this case our Arduino and the 
+computer - need to know what the baud rate is for the communication. If my 
+Arduino is sending information at 9,600 bits per second, but my computer is 
+only expecting to read 4,800 bits per second, the computer will ``miss'' half 
+of the data the Arduino is sending! The serial monitor built into the Arduino 
+IDE (which is where we're sending our serial data today) expects data at 
+9,600 bits per second, which is why we are sending the information at 
+9,600 baud.
+
+The \code{Serial.print()} function translates the 
+character string passed as an argument into binary and sends it down the 
+serial port pipeline.
 
 We also need to know that computers make a distinction between integer and
 real numbers. Our voltages will be real numbers, so we need to tell the
@@ -519,6 +540,30 @@ can guess that we must be back at the low electric potential we started with.
 with two turbines, analogous to a two resistor circuit.}
 \label{fig:water_pump_analogy_2}
 \end{figure}
+
+In summary, the electric potential supplied by a battery (or any other source
+of potential) will be entirely ``used up'' by the time the current goes through 
+the entire circuit. When I have two resistors in series with a battery, as in 
+\ref{fig:voltage_divider}, only part of the potential is used up in the first 
+resistor, and the rest is used up in the second resistor. Consequently, if our
+power source was a 9.0 V battery, and the two resistors had equal resistance, 
+the potential would only drop 4.5 V in the first resistor, and then the 
+remaining 4.5 volts in the second resistor. We have effectively divided a 
+(larger) voltage into two smaller parts, and consequently these two 
+resistors in series are known as a \textbf{voltage divider}.
+
+Note that you don't have to use two resistors with equal resistance in a 
+voltage divider. The fraction of the voltage ``used up'' in each resistor 
+ends up being proportional to the resistance (in comparison with the total
+resistance) as we will see. For example, if we had a 30 V power source (more 
+than sufficient to send our Arduino to the scrap bin) combined with a 
+voltage divider consisting of a 1000 Ohm resistor and 5000 Ohm resistor,
+the total resistance would be 6000 Ohms. The fraction of the voltage that 
+will be used up in the first 1000 Ohm resistor is (1000 Ohm)/(6000 Ohm), or
+1/6. 1/6 of 30 V is 5 V - a potential difference that is safe for our Arduino!
+The remaining 25 V of potential will be used up across the 5000 Ohm resistor.
+
+Let's take a look at the math in a little more detail.
 
 We know that electric potential
 is a potential energy per unit charge, and energies just add up. If 
